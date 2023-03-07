@@ -1,7 +1,7 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import Head from 'next/head'
-import { Navbar, Footer } from '@components'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import Head from "next/head";
+import { Navbar, Footer } from "@components";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,11 +13,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <div className="flex flex-col h-screen justify-between">
         <Navbar />
-        <Component {...pageProps} />  
+        <Component {...pageProps} />
         <Footer />
       </div>
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

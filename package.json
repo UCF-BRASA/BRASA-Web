@@ -2,12 +2,22 @@
   "name": "brasa-web",
   "version": "0.1.0",
   "private": true,
+  "license": "ISC",
+  "author": "UCF BRASA Tech Team",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "type-check": "tsc"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brasa-ucf/BRASA-Web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brasa-ucf/BRASA-Web/issues"
+  },
+  "homepage": "https://github.com/brasa-ucf/BRASA-Web#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
     "next": "latest",
