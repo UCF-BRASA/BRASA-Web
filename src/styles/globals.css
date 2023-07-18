@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Roobert Regular";
+    src: url(../../public/fonts/Roobert/Roobert-Regular.otf) format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Roobert Bold";
+    src: url(../../public/fonts/Roobert/Roobert-Bold.otf) format("opentype");
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: "Roobert Medium";
+    src: url(../../public/fonts/Roobert/Roobert-Medium.otf) format("opentype");
+  }
+
+  @font-face {
+    font-family: "Roobert Bold Italic";
+    src: url(../../public/fonts/Roobert/Roobert-BoldItalic.otf) format("opentype");
+    font-weight: bold;
+    font-style: italic;
+  }
+}
