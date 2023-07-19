@@ -1,47 +1,56 @@
-# TypeScript Next.js example
+<div align="center">
+  <br>
+  <img alt="Open Sauced" src="https://cdn.discordapp.com/attachments/980268278284976189/1093756002282766436/PNG-brasa-logo_1.png" width="300px">
+  <h1> 🇧🇷 BRASA Web 🇧🇷</h1>
+  <strong>🧑‍💻 UCF BRASA's student-created Website 🧑‍💻 </strong>
+</div>
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+## 📖 Prerequisites
 
-## Deploy your own
+### Environment Variables file (required)
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript)
+Before running the app, you need to fill out the `.env` file. Please reach out to either:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+- [Fachetti (enigzz)](https://discordapp.com/users/294195589820710912)
+- [Duda (joazeiro)](https://discordapp.com/users/401588155788296194)
 
-## How to use it?
+### VSC Extensions (recommended)
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
-```bash
-npx create-next-app --example with-typescript with-typescript-app
+## 🖥️ Local development
+
+### Installing
+
+Run the following command to install all the project dependencies.
+
+```shell
+npm install
 ```
 
-```bash
-yarn create next-app --example with-typescript with-typescript-app
+### Running
+
+```shell
+npm run dev
 ```
 
-```bash
-pnpm create next-app --example with-typescript with-typescript-app
-```
+The application will be available at [https://localhost:3000](http://localhost:3000)
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## 🧰 Built With
 
-## Notes
+- [TypeScript](https://www.typescriptlang.org) - JavaScript superset
+- [React](https://react.dev) - Macro framework
+- [Next.js](https://nextjs.org) - React framework
+- [TailwindCSS](https://tailwindcss.com) - CSS framework
+- [NPM](https://www.npmjs.com) - Dependency and virtual environment manager
+- [typescript-eslint](https://typescript-eslint.io) - Code Linter
+- [Prettier](https://prettier.io) - Code Formatter
 
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
+## Deployment
 
-```
-npm install --save-dev typescript
-```
+We are using [Vercel 🔺](https://vercel.com) to deploy our website.
 
-To enable TypeScript's features, we install the type declarations for React and Node.
+## License
 
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
-
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
