@@ -27,4 +27,9 @@
     font-weight: bold;
     font-style: italic;
   }
+
+  @font-face {
+    font-family: "Roobert Semi Bold";
+    src: url(../../public/fonts/Roobert/Roobert-SemiBold.otf) format("opentype");
+  }
 }

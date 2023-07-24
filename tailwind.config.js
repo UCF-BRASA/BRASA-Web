@@ -17,6 +17,7 @@ module.exports = {
       fontFamily: {
         regular: "Roobert Regular",
         medium: "Roobert Medium",
+        "semi-bold": "Roobert Semi Bold",
         bold: "Roobert Bold",
         "bold-italic": "Roobert Bold Italic",
       },
