@@ -1,21 +1,23 @@
-import "../styles/globals.css";
+import { Footer, Navbar } from "@components";
+import { useWindowDimensions } from "@hooks";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Navbar, Footer } from "@components";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const { windowWidth, windowHeight } = useWindowDimensions();
+  pageProps = { ...pageProps, windowWidth, windowHeight };
+
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="/static/favicon.ico" />
+        <link rel="BRASA icon" href="/static/favicon.ico" />
         <title>UCF BRASA</title>
       </Head>
 
-      <div className="flex flex-col h-screen justify-between">
-        <Navbar />
-        <Component {...pageProps} />
-        <Footer />
-      </div>
+      <Navbar />
+      <Component {...pageProps} />
+      <Footer />
     </>
   );
 }
