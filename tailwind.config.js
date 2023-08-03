@@ -15,8 +15,10 @@ module.exports = {
         "main-brasa-blue": "#008cff",
       },
       fontFamily: {
+        light: "Roobert Light",
         regular: "Roobert Regular",
         medium: "Roobert Medium",
+        "semi-bold": "Roobert Semi Bold",
         bold: "Roobert Bold",
         "bold-italic": "Roobert Bold Italic",
       },
