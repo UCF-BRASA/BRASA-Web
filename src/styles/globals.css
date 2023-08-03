@@ -4,16 +4,17 @@
 
 @layer base {
   @font-face {
+    font-family: "Roobert Light";
+    src: url(../../public/fonts/Roobert/Roobert-Light.otf) format("opentype");
+  }
+  @font-face {
     font-family: "Roobert Regular";
     src: url(../../public/fonts/Roobert/Roobert-Regular.otf) format("opentype");
-    font-weight: 400;
-    font-style: normal;
   }
 
   @font-face {
     font-family: "Roobert Bold";
     src: url(../../public/fonts/Roobert/Roobert-Bold.otf) format("opentype");
-    font-weight: bold;
   }
 
   @font-face {
@@ -30,4 +31,8 @@
     font-family: "Roobert Semi Bold";
     src: url(../../public/fonts/Roobert/Roobert-SemiBold.otf) format("opentype");
   }
+}
+
+.landing-page-image-ellipse {
+  clip-path: ellipse(25rem 50% at 25rem center);
 }
