@@ -12,7 +12,7 @@ const BecomeMember: NextPage<Props> = ({ windowWidth }) => {
 
       {/* Yellow blob on top-right hand corner */}
       <div className="flex justify-end bg-white mb-[8rem]">
-        <img src="become-member/intro/yellow-blob.svg" className="h-[15rem]" />
+        <img src="static/become-member/intro/yellow-blob.svg" className="h-[15rem]" />
       </div>
 
       {/*  */}
@@ -35,7 +35,12 @@ const BecomeMember: NextPage<Props> = ({ windowWidth }) => {
       </div>
 
       {/* Curvy area */}
-      <img src="become-member/intro/intro-gy-area.svg" width={windowWidth} className="mt-[10rem]" />
+      <img
+        src="/static/become-member/intro/intro-gy-area.svg"
+        alt="Intro Curvy Area"
+        width={windowWidth}
+        className="mt-[10rem]"
+      />
     </main>
   );
 };
