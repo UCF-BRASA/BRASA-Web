@@ -10,11 +10,11 @@ const JoinNewsletter: FC = () => {
       adipiscing</h2>
       <h2 className="font-medium text-white text-sm mb-12"> elit, sed do eiusmod tempor </h2>
 
-      <div className="bg-white rounded-full h-[3.5rem] container flex flex-row w-[24rem] items-center justify-between">      
-        <h1 className="text-xs order-first pl-8">Enter your email address</h1>
-        <button className="button bg-main-brasa-blue text-xs text-white m-2 py-3 px-6 rounded-full order-last">Signup</button>
-      </div>
-
+      <form className="flex flex-container overflow-hidden">
+        <input type="email" id="email" placeholder={"Enter your email address"} className="text-xs order-first pl-8 bg-white rounded-full h-[3.5rem] w-[24rem] 
+        items-end grow-0 static outline-0"/>
+        <button className="button bg-main-brasa-blue text-xs text-white m-2 py-3 px-6 rounded-full absolute ml-[18rem]">Signup</button>
+      </form>
     </div>
   );
 };
