@@ -10,7 +10,7 @@ interface Props {
 
 const BoardBox: FC<Props> = ({ imageAlt, image, officerName, officerTitle }) => {
   return (
-    <div className="w-[17rem] mb-20">
+    <div className="w-[15rem] mb-10">
       <Image
         src={image}
         alt={imageAlt}

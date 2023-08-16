@@ -10,16 +10,16 @@ interface Props {
 
 const EBoardBox: FC<Props> = ({ imageAlt, image, officerName, officerTitle }) => {
   return (
-    <div className="h-[20rem] w-[20rem] mb-32">
+    <div className="h-[20rem] w-[15rem] mb-10">
       <Image
         src={image}
         alt={imageAlt}
         sizes="100vw"
-        className="rounded-t-[2rem] h-[20rem] w-full"
+        className="rounded-t-[2rem] h-[15rem] w-full object-cover"
       />
-      <div className="h-[6rem] w-full bg-main-brasa-blue rounded-b-[2rem] text-center">
-        <h3 className="text-white font-medium text-lg pt-5">{officerName}</h3>
-        <p className="text-white font-light text-base">{officerTitle}</p>
+      <div className="h-[5.5rem] w-full bg-main-brasa-blue rounded-b-[2rem] text-center ">
+        <h3 className="text-white font-medium text-lg pt-[1rem]">{officerName}</h3>
+        <p className="text-white font-lighttext-base ">{officerTitle}</p>
       </div>
     </div>
   );
