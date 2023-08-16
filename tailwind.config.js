@@ -8,8 +8,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bgbeige: "#fdf0e0",
-        myblue: "#0288d1",
         "main-brasa-yellow": "#fef000",
         "main-brasa-green": "#7cb342",
         "main-brasa-blue": "#008cff",
