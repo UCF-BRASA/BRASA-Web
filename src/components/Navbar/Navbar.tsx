@@ -45,7 +45,7 @@ const Navbar: FC<Props> = ({ isMobile }) => {
         // Mobile Navbar
         <nav className={styles["new-nav"]}>
           <div className="bg-gradient-to-r from-main-brasa-yellow via-main-brasa-green to-main-brasa-blue h-2"></div>
-          <div className="bg-white h-[4.5rem] flex justify-between items-center px-8">
+          <div className="bg-white h-[4.5rem] flex justify-between items-center px-8 shadow-md">
             <div className="px-[0.6rem]">
               <FontAwesomeIcon icon={faBars} color={COLORS.black} className="fa-2x min-w-fit" />
             </div>
