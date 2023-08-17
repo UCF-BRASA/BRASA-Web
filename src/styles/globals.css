@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  --main-brasa-yellow: "#fef000";
+  --main-brasa-green: "#7cb342";
+  --main-brasa-blue: "#008cff";
+}
+
 @layer base {
   @font-face {
     font-family: "Roobert Light";
@@ -38,7 +44,7 @@
   }
 }
 
-/* Landing Page */
+/* Landing Page - Desktop */
 .landing-page-image-ellipse {
   clip-path: ellipse(25rem 50% at 25rem center);
 }

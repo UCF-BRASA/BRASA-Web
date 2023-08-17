@@ -1,3 +1,3 @@
-import { COLORS, MOBILE_THRESHOLD } from "./constants";
+import { COLORS, IMAGES, MOBILE_THRESHOLD } from "./constants";
 
-export { COLORS, MOBILE_THRESHOLD };
+export { COLORS, IMAGES, MOBILE_THRESHOLD };
