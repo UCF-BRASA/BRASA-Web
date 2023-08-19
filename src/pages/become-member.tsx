@@ -1,5 +1,7 @@
 import { JoinNewsletter } from "@components";
+import { IMAGES } from "@util";
 import { NextPage } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
@@ -80,10 +82,10 @@ const BecomeMember: NextPage<Props> = ({ windowWidth, isMobile }) => {
                   dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
                 </p>
                 <div
-                  className="flex text-center justify-center items-center mt-16 self-center rounded-full bg-blue-500 
+                  className="flex text-center justify-center items-center mt-16 self-center rounded-full bg-blue-500
               text-white font-medium h-[4rem] w-[12rem]"
                 >
-                  <Link href="/become-member"> Join BRASA @ UCF </Link>
+                  <Link href="/log-in"> Join BRASA @ UCF </Link>
                 </div>
               </div>
             </div>
@@ -93,7 +95,106 @@ const BecomeMember: NextPage<Props> = ({ windowWidth, isMobile }) => {
           <div className="h-[4rem] bg-white"></div>
         </main>
       ) : (
-        <main className="h-full bg-white"></main>
+        <main className="h-full bg-white">
+          {/* Section 1 - Intro */}
+          {/* Yellow blob on top-right hand corner */}
+          <div className="flex justify-end bg-white mb-[8rem]">
+            <img src="/static/become-member/intro/yellow-blob.svg" className="h-[15rem]" />
+          </div>
+          {/*  */}
+          <div className="absolute flex flex-row pl-24 my-[-13rem] overflow-x-hidden w-full">
+            <div className="order-first w-screen">
+              <h3 className="pt-16 font-bold text-base tracking-[0.20em]">
+                EMPOWERING BRAZILIAN STUDENTS
+              </h3>
+              <h1 className="pt-5 leading-200 font-bold text-7xl">
+                Shaping Minds,
+                <br /> Transforming Futures
+              </h1>
+              <p className="pt-5 font-medium text-base text-black/60 w-[30rem] break-normal">
+                Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea comm consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+              </p>
+            </div>
+          </div>
+          {/* Curvy area */}
+          <img
+            src="/static/become-member/intro/intro-gy-area.svg"
+            alt="Intro Curvy Area"
+            width={windowWidth}
+            className="mt-[10rem]"
+          />
+
+          <div className="bg-main-brasa-green">
+            {/* Section 2 - Our Mission */}
+            <div className="Items-center justify-center text-center">
+              <h1 className="pt-36 font-bold tracking-[0.20em]">OUR MISSION</h1>
+              <h1 className="pt-5 leading-200 font-semi-bold text-7xl">
+                Committed with providing
+                <br /> resources and guidance.
+              </h1>
+            </div>
+            <div className="flex flex-row justify-center items-center mt-24 text-center">
+              <div className="flex flex-col">
+                <div className="flex flex-col rounded-full bg-white justify-center items-center h-40 w-[31rem]">
+                  <h1 className="leading-200 font-bold text-2xl">Best University Support</h1>
+                  <h3 className="font-regular items-center justify-center">Inc. Magazine</h3>
+                </div>
+                <div className="flex flex-col mt-8 rounded-full bg-white justify-center items-center h-40 w-[31rem]">
+                  <h1 className="leading-200 font-bold text-2xl">Most Promising Startup</h1>
+                  <h3 className="font-regular items-center justify-center">Israeli Globes Award</h3>
+                </div>
+              </div>
+              <div className="flex flex-col ml-10">
+                <div className="flex flex-col rounded-full bg-white justify-center items-center h-40 w-[31rem]">
+                  <h1 className="leading-200 font-bold text-2xl">Best Hybrid Places to work</h1>
+                  <h3 className="font-regular items-center justify-center">2023 Built In</h3>
+                </div>
+                <div className="flex flex-col mt-8 rounded-full bg-white justify-center items-center h-40 w-[31rem]">
+                  <h1 className="leading-200 font-bold text-2xl">Best Hybrid Places to Work</h1>
+                  <h3 className="font-regular items-center justify-center">Inc Magazine</h3>
+                </div>
+              </div>
+            </div>
+
+            {/* Yellow background and image */}
+            <div className="  bg-main-brasa-yellow m-40 rounded-[5rem] h-[40rem] flex flex-row">
+              <div className="text-left float-left mt-24 ml-24">
+                <h3 className="font-bold tracking-[0.20em]">MEMBERSHIP</h3>
+                <h1 className="leading-200 font-bold text-5xl mt-8">Become a Member</h1>
+                <p className="mt-10 font-medium text-base text-justify text-black/60 w-[25rem] break-normal">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea comm consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+                </p>
+                <div className="mt-28 text-base rounded-full md:h-14 md:w-44 bg-blue-500 text-white font-medium">
+                  <Link
+                    className="flex text-center justify-center items-center w-full h-full"
+                    href="/log-in"
+                  >
+                    Join BRASA @ UCF
+                  </Link>
+                </div>
+              </div>
+              <div className="">
+                <Image
+                  src={IMAGES.board_pic}
+                  alt=""
+                  sizes="100vw"
+                  className=" w-[40rem] h-[40rem] p-16 ml-12 rounded-[5rem]"
+                />
+              </div>
+            </div>
+            {/* Background after yellow board */}
+            <div className="pt-2 bg-main-brasa-green"></div>
+          </div>
+          <div className="mt-20">
+            <JoinNewsletter isMobile={false} />
+          </div>
+        </main>
       )}
     </section>
   );
