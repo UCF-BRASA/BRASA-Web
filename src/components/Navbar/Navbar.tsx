@@ -76,7 +76,7 @@ const Navbar: FC<Props> = ({ isMobile }) => {
         </nav>
       ) : (
         // Desktop Navbar
-        <nav className="absolute pl-24 w-full">
+        <nav className="absolute pl-24 w-full z-50">
           <div className="px-2 sm:px-4 pt-7 bg-transparent">
             <div className="container flex flex-row items-center justify-between mx-auto top-25">
               <div className="order-first w-full md:block md:w-auto">
