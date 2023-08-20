@@ -1,6 +1,6 @@
 <div align="center">
   <br>
-  <img alt="Open Sauced" src="https://cdn.discordapp.com/attachments/980268278284976189/1093756002282766436/PNG-brasa-logo_1.png" width="300px">
+  <img alt="UCF BRASA Logo" src="/public/brasa-logo.png">
   <h1> 🇧🇷 BRASA Web 🇧🇷</h1>
   <strong>🧑‍💻 UCF BRASA's student-created Website 🧑‍💻 </strong>
 </div>

@@ -1,0 +1,25 @@
+/* Test */
+.new-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: all 300ms ease-in-out;
+}
+
+.scroll-down .new-nav {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up .new-nav {
+  filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+}
+
+.menu-is-open {
+  overflow: hidden;
+}
+
+.menu-is-open .new-nav {
+  filter: none;
+}

@@ -1,47 +1,146 @@
+import { faArrowRightToBracket, faBars, faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { COLORS } from "@util";
+import Image from "next/image";
 import Link from "next/link";
-import { useState, type FC } from "react";
+import { useEffect, type FC } from "react";
 
-const Navbar: FC = () => {
-  const [showLogin, setShowLogin] = useState<boolean>(true);
+import LoggedUser from "@lib/user";
+import styles from "./Navbar.module.css";
+import brasa_logo from "/public/static/brasa-logo.png";
+
+type Props = {
+  isMobile: boolean;
+};
+
+const Navbar: FC<Props> = ({ isMobile }) => {
+  useEffect(() => {
+    const body = document.body;
+    let lastScroll = 0;
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll <= 0) {
+        body.classList.remove(styles["scroll-up"]);
+        return;
+      }
+
+      if (currentScroll > lastScroll && !body.classList.contains(styles["scroll-down"])) {
+        body.classList.remove(styles["scroll-up"]);
+        body.classList.add(styles["scroll-down"]);
+      } else if (currentScroll < lastScroll && body.classList.contains(styles["scroll-down"])) {
+        body.classList.remove(styles["scroll-down"]);
+        body.classList.add(styles["scroll-up"]);
+      }
+      lastScroll = currentScroll;
+    });
+  });
 
   return (
-    <header className="p-2 bg-myblue">
-      <nav className="bg-myblue border-blue-200 px-2 sm:px-4 py-2.5 dark:bg-grey-900">
-        <div className="container flex flex-row items-center justify-between mx-auto">
-          <div className="order-first bg-inherit w-full md:block md:w-auto">
-            <ul className="flex flex-row items-center p-4 rounded-lg md:space-x-8 md:text-sm md:font-medium">
-              <li>
+    <header>
+      {isMobile ? (
+        // Mobile Navbar
+        <nav className={styles["new-nav"]}>
+          <div className="bg-gradient-to-r from-main-brasa-yellow via-main-brasa-green to-main-brasa-blue h-2"></div>
+          <div className="bg-white h-[4.5rem] flex justify-between items-center px-8 shadow-md">
+            <div className="px-[0.6rem]">
+              <FontAwesomeIcon icon={faBars} color={COLORS.black} className="fa-2x min-w-fit" />
+            </div>
+            <div>
+              <h1 className="font-medium text-black text-lg justify-self-center text-center">
+                BRASA @ UCF
+              </h1>
+            </div>
+            <div className="">
+              <div
+                className="text-base rounded-lg h-[3rem] w-[3rem] bg-main-brasa-blue text-center text-white hover:cursor-pointer 
+                font-medium"
+              >
+                <div className="flex justify-center items-center h-full">
+                  {!LoggedUser.id ? (
+                    <Link href="/login">
+                      <div className="flex flex-row items-center">
+                        <FontAwesomeIcon
+                          icon={faArrowRightToBracket}
+                          color={COLORS.white}
+                          className="fa-xl min-w-fit"
+                        />
+                      </div>
+                    </Link>
+                  ) : (
+                    // TODO - Add logged in profile design here
+                    <Link
+                      className="flex flex-row justify-center hover:cursor-pointer"
+                      href="/profile"
+                    >
+                      <FontAwesomeIcon
+                        icon={faUser}
+                        color={COLORS.white}
+                        className="fa-lg min-w-fit"
+                      />
+                    </Link>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      ) : (
+        // Desktop Navbar
+        <nav className="absolute pl-24 w-full z-50">
+          <div className="px-2 sm:px-4 pt-2 bg-transparent">
+            <div className="container flex flex-row items-center justify-between mx-auto top-25">
+              <div className="order-first w-full md:block md:w-auto">
                 <Link href="/" className="flex items-center">
-                  <img src="/brasa-logo.png" className="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-                  <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                    Survey
-                  </span>
+                  {/* <img src="/static/brasa-logo.png" className="md:h-28" alt="BRASA Logo" /> */}
+                  <Image src={brasa_logo} sizes="100vw" alt="BRASA Logo" className="w-[90%]" />
                 </Link>
-              </li>
-              <li className="block py-2 pl-3 pr-4 text-white md:p-0 hover:cursor-pointer">
-                <Link href="/follow-us">Follow Us</Link>
-              </li>
-              <li className="block py-2 pl-3 pr-4 text-white md:p-0 hover:cursor-pointer">
-                <Link href="/become-member">Become a Member</Link>
-              </li>
-              <li className="block py-2 pl-3 pr-4 text-white md:p-0 hover:cursor-pointer">
-                <Link href="/meet-the-board">Meet the Board</Link>
-              </li>
-            </ul>
-          </div>
+              </div>
 
-          <div className="order-last">
-            <ul className="flex flex-row items-center p-4 rounded-lg text-white md:space-x-8 md:text-sm md:font-medium">
-              <li>
-                <Link href="/">Sign In</Link>
-              </li>
-              <li>
-                <Link href="/">Log In</Link>
-              </li>
-            </ul>
+              <div className="order-last">
+                <ul className="flex flex-row items-center p-4 pr-12 md:space-x-20 md:text-sm md:font-medium">
+                  <li className="block py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-bold text-base">
+                    <Link href="/meet-the-board">E-Board</Link>
+                  </li>
+                  <li className="block py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-bold text-base">
+                    <Link href="/become-member">Become a Member</Link>
+                  </li>
+                  <li className="block py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-bold text-base">
+                    <Link href="#desktop-brasa-footer" scroll={false}>
+                      Contact
+                    </Link>
+                  </li>
+
+                  {!LoggedUser.id ? (
+                    <li className="block mx-auto text-base rounded-full h-14 w-28 bg-blue-500 text-center text-white py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-medium">
+                      <div className="flex justify-center items-center h-full">
+                        <Link href="/login">Log In</Link>
+                      </div>
+                    </li>
+                  ) : (
+                    // TODO - Add logged in profile design here
+                    <Link
+                      className="flex flex-row justify-center hover:cursor-pointer"
+                      href="/profile"
+                    >
+                      <div className="flex justify-center items-center rounded-full h-14 w-14 bg-main-brasa-blue text-center text-white py-2 md:p-0 font-medium">
+                        <FontAwesomeIcon icon={faUser} color={COLORS.white} className="fa-xl" />
+                      </div>
+
+                      <li className="flex flex-col pl-4 mt-2">
+                        <div className="text-center text-sm font-bold">
+                          {LoggedUser.firstName + " " + LoggedUser.lastName}
+                        </div>
+                        <div className="text-sm">View Profile</div>
+                      </li>
+                    </Link>
+                  )}
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      )}
     </header>
   );
 };
