@@ -49,6 +49,10 @@ export const COLORS = {
 
 export const MOBILE_THRESHOLD = 1000;
 
+export const DEBUG_MODE = process.env.DEBUG === "development";
+export const API_PROD_URL = process.env.API_PROD_URL;
+export const API_DEV_URL = process.env.API_DEV_URL;
+
 export const IMAGES = {
   bailinho_pic,
   churras_pic,

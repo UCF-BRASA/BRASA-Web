@@ -1,3 +1,4 @@
+import { DEBUG_MODE } from "@util";
 import axios, { AxiosError } from "axios";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
@@ -53,13 +54,17 @@ const SignIn: NextPage<Props> = ({ isMobile }) => {
       school_year: target.schoolYear.value,
     };
 
-    const url = "http://localhost:8080/api/v0.1/auth/register"; // Replace with your API endpoint URL
-    // const url = "http://localhost:8080/"; // Replace with your API endpoint URL
+    const apiDomain = DEBUG_MODE ? "http://localhost:8080" : "https://brasa-api.up.railway.app";
+    const endpoint = "/api/v0.1/auth/register";
+    const url = apiDomain + endpoint; // Replace with your API endpoint URL
+
+    console.log("apiDomain" + apiDomain);
+    console.log("endpoint" + endpoint);
+    console.log("url" + url);
 
     const headers = {
       "Content-Type": "application/json", // Adjust based on your API requirements
       Accept: "application/json",
-      // Other headers can be added here
     };
 
     console.log(JSON.stringify(payload, null, 4));
