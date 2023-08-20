@@ -3,20 +3,18 @@ import BottomNavbar from "@components/Navbar/BottomNavbar";
 import { config as fortawesomeConfig } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { useWindowDimensions } from "@hooks";
-import { User } from "@interfaces";
 import { MOBILE_THRESHOLD } from "@util";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { useState } from "react";
 import "../styles/globals.css";
 fortawesomeConfig.autoAddCss = false;
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { windowWidth, windowHeight } = useWindowDimensions();
   const isMobile = (windowWidth || 350) < MOBILE_THRESHOLD;
-  const [userLogin, setUserLogin] = useState<User>();
+  // const [userLogin, setUserLogin] = useState<User>();
 
-  pageProps = { ...pageProps, windowWidth, windowHeight, isMobile, userLogin };
+  pageProps = { ...pageProps, windowWidth, windowHeight, isMobile };
 
   return (
     <>
@@ -32,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>UCF BRASA</title>
       </Head>
 
-      <Navbar isMobile={isMobile} userLogged={userLogin} />
+      <Navbar isMobile={isMobile} />
       <Component {...pageProps} />
       <Footer isMobile={isMobile} />
       {isMobile ? <BottomNavbar /> : <div></div>}
