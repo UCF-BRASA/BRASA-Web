@@ -65,40 +65,39 @@ const SignIn: NextPage<Props> = ({isMobile}) => {
     return(
         <section>
             {isMobile ? (
-                <main></main>
-            ) : (
-                <main className="h-full w-full bg-[url('/static/sign_up/background_pic.jpg')] bg-cover bg-center opacity-90">
-                    
-                        <div className="pt-60 pb-60">
-                        
-                            <form onSubmit={handleSubmit} className="pt-6 h-full w-1/2 ml-[25%] container shadow-xl 
-                            mt-auto rounded-[5rem] border-main-brasa-blue border-solid border-8 bg-white" >
-                                <h3 className="pt-2 text-white font-bold text-center text-[3rem] tracking-[0.20em]">Sign-Up</h3>
-                                <div className="flex flex-col m-12">
-                                    <label htmlFor="email" className="pt-2 pl-4 text-white font-bold">Email</label>
+                <main className="h-[70rem] w-full bg-main-brasa-green bg-cover bg-center">
+                    <div className="pt-40 mr-4"/>
+
+                        <div className="mt-30 flex flex-row pt-6 h-auto container shadow-xl 
+                            rounded-[5rem] border-main-brasa-blue border-solid border-8 bg-white items-center mr-8">
+
+                            <form onSubmit={handleSubmit} className="mx-auto">
+                                <h3 className="pt-2 font-bold text-center text-[3rem] tracking-[0.20em]">Sign-Up</h3>
+                                <div className="flex flex-col m-auto">
+                                    <label htmlFor="email" className="pt-2 pl-4 font-bold">Email</label>
                                     <input type="email" ref={inputEmail} placeholder={"Enter your email address"} className="text-xs
-                                    bg-white placeholder-gray-500 rounded-full px-2 h-[3rem] w-full border-main-brasa-blue border-solid border-4"/>
+                                    bg-white placeholder-gray-500 rounded-full px-2 h-[3rem] border-main-brasa-blue border-solid border-2"/>
                                 </div>
 
-                                <div className="flex flex-row w-full mx-12 space-x-[1rem]">
+                                <div className="flex flex-row w-full space-x-[1rem]">
                                     <div className="flex flex-col">
-                                        <label htmlFor="firstname" className="pt-2  text-white pl-4 font-bold">First Name</label>
+                                        <label htmlFor="firstname" className="pt-2   pl-4 font-bold">First Name</label>
                                         <input type="text" ref={inputFirstName} placeholder={"Enter your First Name"} className="text-xs placeholder-gray-500
-                                        bg-white rounded-full px-2 h-[3rem] w-[18rem] border-main-brasa-blue border-solid border-4"/>
+                                        bg-white rounded-full px-2 h-[3rem] border-main-brasa-blue border-solid border-2"/>
                                     </div>
                                     <div className="flex flex-col">
-                                        <label htmlFor="lastname" className="pt-2 pl-4 text-white font-bold">Last Name</label>
+                                        <label htmlFor="lastname" className="pt-2 pl-4 font-bold">Last Name</label>
                                         <input type="text" ref={inputLastName} placeholder={"Enter your Last Name"} className="text-xs placeholder-gray-500
-                                        bg-white rounded-full px-2 h-[3rem] w-[18rem] border-main-brasa-blue border-solid border-4"/>
+                                        bg-white rounded-full px-2 h-[3rem] border-main-brasa-blue border-solid border-2"/>
                                     </div>
                                 </div>  
 
-                                <div className="flex flex-row w-full m-12 space-x-[1rem]">
+                                <div className="flex flex-row w-full space-x-[1rem]">
                                     <div className="flex flex-col">
-                                        <h1 className="pt-2 pl-4 text-white font-bold">Gender</h1>
+                                        <h1 className="pt-2 pl-4 font-bold">Gender</h1>
                                         <label htmlFor="gender"></label>
-                                        <select ref={inputGender} className=" bg-white rounded-full font-bold px-2 h-[3rem] w-[18rem] 
-                                        border-main-brasa-blue border-solid border-4 text-sm">
+                                        <select ref={inputGender} className=" bg-white rounded-full font-bold px-2 h-[3rem] 
+                                        border-main-brasa-blue w-[10rem] border-solid border-2 text-sm">
                                             <option value = "Man">Man</option>
                                             <option value = "Woman">Woman</option>
                                             <option value = "Non-binary">Non-Binary</option>
@@ -108,26 +107,26 @@ const SignIn: NextPage<Props> = ({isMobile}) => {
                                     </div>
 
                                     <div className="flex flex-col">
-                                        <label htmlFor="dob" className="pt-2 pl-4 text-white font-bold">Date of Birth</label>
+                                        <label htmlFor="dob" className="pt-2 pl-4  font-bold">Date of Birth</label>
                                         <input type="date" ref={inputDob} placeholder={"Enter your Last Name"} className="text-xs
-                                        bg-white rounded-full px-2 h-[3rem] w-[18rem] border-main-brasa-blue border-solid border-4"/>
+                                        bg-white rounded-full px-2 h-[3rem] w-[10rem] border-main-brasa-blue border-solid border-2"/>
                                     </div>
 
 
                                 </div>  
 
-                                <div className="flex flex-col m-12">
-                                    <label htmlFor="cos" className="pt-2 pl-4 text-white font-bold">Course of Study</label>
+                                <div className="flex flex-col ">
+                                    <label htmlFor="cos" className="pt-2 pl-4  font-bold">Course of Study</label>
                                     <input type="text" ref={inputCos} placeholder={"Enter your course of study"} className="text-xs placeholder-gray-500
-                                    bg-white rounded-full px-2 h-[3rem] w-full border-main-brasa-blue border-solid border-4"/>
+                                    bg-white rounded-full px-2 h-[3rem] w-full border-main-brasa-blue border-solid border-2"/>
                                 </div>
 
-                                <div className="flex flex-row w-full m-12 space-x-[1rem]">
+                                <div className="flex flex-row w-full space-x-[1rem]">
                                     <div className="flex flex-col">
-                                        <p className="pt-2 pl-4 text-white font-bold">School Year</p>
+                                        <p className="pt-2 pl-4  font-bold">School Year</p>
                                         <label htmlFor="grade"></label>
-                                        <select ref={inputGrade} className=" bg-white rounded-full font-bold px-2 h-[3rem] w-[18rem]
-                                        border-main-brasa-blue border-solid border-4 text-sm">
+                                        <select ref={inputGrade} className=" bg-white rounded-full font-bold px-2 h-[3rem]
+                                        border-main-brasa-blue w-[10rem] border-solid border-2 text-sm">
                                             <option value = "Freshman">Freshman</option>
                                             <option value = "Sophomore">Sophomore</option>
                                             <option value = "Junior">Junior</option>
@@ -136,29 +135,133 @@ const SignIn: NextPage<Props> = ({isMobile}) => {
                                         </select> 
                                     </div>
                                     <div className="flex flex-col">
-                                        <p className="pt-2 text-white pl-4 font-bold">Origin City</p>
+                                        <p className="pt-2  pl-4 font-bold">Origin City</p>
                                         <input type="text" ref={inputCity} placeholder={"Enter your origin city"} className="text-xs placeholder-gray-500
-                                        bg-white rounded-full px-2 h-[3rem] w-[18rem] border-main-brasa-blue border-solid border-4"/>
+                                        bg-white rounded-full px-2 h-[3rem] w-[10rem] border-main-brasa-blue border-solid border-2"/>
+                                    </div>
+                                </div>  
+                                
+                                <div className="flex flex-col">
+                                    <p className="pt-2 pl-4  font-bold">Password</p>
+                                    <input type="password" ref={inputPass} /*onChange={(e)=> setPassword(e.target.value)} */ placeholder={"Enter your password"} className="text-xs
+                                    placeholder-gray-500 bg-white rounded-full px-2 h-[3rem] w-full border-main-brasa-blue border-solid border-2"/>
+                                </div>
+
+                                <div className="flex flex-col mb-8">
+                                    <p className="pt-2 pl-4  font-bold">Confirm Password</p>
+                                    <input type="password" ref={inputConfPass}/*onChange={(e)=> setConfPassword(e.target.value)}*/ 
+                                    placeholder={"Confirm your password"} className="text-xs placeholder-gray-500
+                                    bg-white rounded-full px-2 h-[3rem] border-main-brasa-blue border-solid border-2"/>
+                                </div>
+
+                                <input type="submit" className="button bg-main-brasa-blue text-xs text-white mb-8 py-3 px-6 
+                                rounded-full  hover:cursor-pointer ml-[7.5rem]" /> 
+                            
+                            </form>
+
+                            <div>
+
+                            </div>
+                        </div>
+                </main>
+            ) : (
+                <main className="h-full w-full bg-main-brasa-green bg-cover bg-center opacity-90">
+                    <div className="pt-60"/>
+
+                        <div className="mt-30 flex flex-row pt-6 h-full w-1/2 ml-[25%] container shadow-xl 
+                            rounded-[5rem] border-main-brasa-blue border-solid border-8 bg-white">
+                        
+                            <form onSubmit={handleSubmit} >
+                                <h3 className="pt-2 font-bold text-center text-[3rem] tracking-[0.20em]">Sign-Up</h3>
+                                <div className="flex flex-col m-12">
+                                    <label htmlFor="email" className="pt-2 pl-4  font-bold">Email</label>
+                                    <input type="email" ref={inputEmail} placeholder={"Enter your email address"} className="text-xs
+                                    bg-white placeholder-gray-500 rounded-full px-2 h-[3rem] w-full border-main-brasa-blue border-solid border-2"/>
+                                </div>
+
+                                <div className="flex flex-row w-full mx-12 space-x-[1rem]">
+                                    <div className="flex flex-col">
+                                        <label htmlFor="firstname" className="pt-2   pl-4 font-bold">First Name</label>
+                                        <input type="text" ref={inputFirstName} placeholder={"Enter your First Name"} className="text-xs placeholder-gray-500
+                                        bg-white rounded-full px-2 h-[3rem] w-[18rem] border-main-brasa-blue border-solid border-2"/>
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <label htmlFor="lastname" className="pt-2 pl-4 font-bold">Last Name</label>
+                                        <input type="text" ref={inputLastName} placeholder={"Enter your Last Name"} className="text-xs placeholder-gray-500
+                                        bg-white rounded-full px-2 h-[3rem] w-[18rem] border-main-brasa-blue border-solid border-2"/>
+                                    </div>
+                                </div>  
+
+                                <div className="flex flex-row w-full m-12 space-x-[1rem]">
+                                    <div className="flex flex-col">
+                                        <h1 className="pt-2 pl-4 font-bold">Gender</h1>
+                                        <label htmlFor="gender"></label>
+                                        <select ref={inputGender} className=" bg-white rounded-full font-bold px-2 h-[3rem] w-[18rem] 
+                                        border-main-brasa-blue border-solid border-2 text-sm">
+                                            <option value = "Man">Man</option>
+                                            <option value = "Woman">Woman</option>
+                                            <option value = "Non-binary">Non-Binary</option>
+                                            <option value = "Other">Other</option>
+                                            <option value = "Prefer Not to Say">Prefer Not to Say</option>
+                                        </select> 
+                                    </div>
+
+                                    <div className="flex flex-col">
+                                        <label htmlFor="dob" className="pt-2 pl-4  font-bold">Date of Birth</label>
+                                        <input type="date" ref={inputDob} placeholder={"Enter your Last Name"} className="text-xs
+                                        bg-white rounded-full px-2 h-[3rem] w-[18rem] border-main-brasa-blue border-solid border-2"/>
+                                    </div>
+
+
+                                </div>  
+
+                                <div className="flex flex-col m-12">
+                                    <label htmlFor="cos" className="pt-2 pl-4  font-bold">Course of Study</label>
+                                    <input type="text" ref={inputCos} placeholder={"Enter your course of study"} className="text-xs placeholder-gray-500
+                                    bg-white rounded-full px-2 h-[3rem] w-full border-main-brasa-blue border-solid border-2"/>
+                                </div>
+
+                                <div className="flex flex-row w-full m-12 space-x-[1rem]">
+                                    <div className="flex flex-col">
+                                        <p className="pt-2 pl-4  font-bold">School Year</p>
+                                        <label htmlFor="grade"></label>
+                                        <select ref={inputGrade} className=" bg-white rounded-full font-bold px-2 h-[3rem] w-[18rem]
+                                        border-main-brasa-blue border-solid border-2 text-sm">
+                                            <option value = "Freshman">Freshman</option>
+                                            <option value = "Sophomore">Sophomore</option>
+                                            <option value = "Junior">Junior</option>
+                                            <option value = "Senior">Senior</option>
+                                            <option value = "Grad">Graduate</option>
+                                        </select> 
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <p className="pt-2  pl-4 font-bold">Origin City</p>
+                                        <input type="text" ref={inputCity} placeholder={"Enter your origin city"} className="text-xs placeholder-gray-500
+                                        bg-white rounded-full px-2 h-[3rem] w-[18rem] border-main-brasa-blue border-solid border-2"/>
                                     </div>
                                 </div>  
                                 
                                 <div className="flex flex-col m-12">
-                                    <p className="pt-2 pl-4 text-white font-bold">Password</p>
+                                    <p className="pt-2 pl-4  font-bold">Password</p>
                                     <input type="password" ref={inputPass} /*onChange={(e)=> setPassword(e.target.value)} */ placeholder={"Enter your password"} className="text-xs
-                                    placeholder-gray-500 bg-white rounded-full px-2 h-[3rem] w-full border-main-brasa-blue border-solid border-4"/>
+                                    placeholder-gray-500 bg-white rounded-full px-2 h-[3rem] w-full border-main-brasa-blue border-solid border-2"/>
                                 </div>
 
                                 <div className="flex flex-col m-12">
-                                    <p className="pt-2 pl-4 text-white font-bold">Confirm Password</p>
+                                    <p className="pt-2 pl-4  font-bold">Confirm Password</p>
                                     <input type="password" ref={inputConfPass}/*onChange={(e)=> setConfPassword(e.target.value)}*/ 
                                     placeholder={"Confirm your password"} className="text-xs placeholder-gray-500
-                                    bg-white rounded-full px-2 h-[3rem] w-full border-main-brasa-blue border-solid border-4"/>
+                                    bg-white rounded-full px-2 h-[3rem] w-full border-main-brasa-blue border-solid border-2"/>
                                 </div>
 
                                 <input type="submit" className="button bg-main-brasa-blue text-xs text-white mb-8 py-3 px-6 
                                 rounded-full ml-[18rem] hover:cursor-pointer" /> 
                             
                             </form>
+
+                            <div>
+
+                            </div>
                         </div>
                    
 
