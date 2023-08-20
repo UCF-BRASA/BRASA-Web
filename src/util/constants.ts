@@ -15,7 +15,7 @@ import enzo_pic from "/public/static/meet-board/enzo_pic.jpeg";
 import eric_pic from "/public/static/meet-board/eric_pic.png";
 import fachetti_pic from "/public/static/meet-board/fachetti_pic.jpg";
 import gabriel_pic from "/public/static/meet-board/gabriel_pic.jpeg";
-import guilherme_pic from "/public/static/meet-board/guilherme_pic.jpeg";
+import guilherme_pic from "/public/static/meet-board/guilherme_pic.jpg";
 import gustavo_pic from "/public/static/meet-board/gustavo_pic.jpg";
 import jean_thomas_pic from "/public/static/meet-board/jean_thomas_pic.jpeg";
 import julie_pic from "/public/static/meet-board/julie_pic.png";
