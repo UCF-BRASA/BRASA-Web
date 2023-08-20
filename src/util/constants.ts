@@ -30,10 +30,14 @@ import saki_pic from "/public/static/meet-board/saki_pic.png";
 import sophia_pic from "/public/static/meet-board/sophia_pic.png";
 import victoria_pic from "/public/static/meet-board/victoria_pic.jpeg";
 
+//Board pic
 import board_pic from "/public/static/become-member/member-box/board_pic.jpg";
 
 // Profile icon
 import profile_pic from "/public/static/profile/profile-icon.png";
+
+//Login photo
+import login_pic from "/public/static/login/login_pic.jpg";
 
 export const COLORS = {
   "main-brasa-yellow": "#fef000",
@@ -76,4 +80,5 @@ export const IMAGES = {
   victoria_pic,
   board_pic,
   profile_pic,
+  login_pic,
 };
