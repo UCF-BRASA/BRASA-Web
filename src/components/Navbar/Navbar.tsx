@@ -56,7 +56,8 @@ const Navbar: FC<Props> = ({ isMobile }) => {
             </div>
             <div className="">
               <div
-                className="text-base rounded-lg h-[3rem] w-[3rem] bg-main-brasa-blue text-center text-white hover:cursor-pointer font-medium"
+                className="text-base rounded-lg h-[3rem] w-[3rem] bg-main-brasa-blue text-center text-white hover:cursor-pointer 
+                font-medium"
                 onClick={() => setShowLogin(false)}
               >
                 <div className="flex justify-center items-center h-full">
@@ -102,7 +103,9 @@ const Navbar: FC<Props> = ({ isMobile }) => {
 
                   {showLogin ? (
                     <li
-                      className="block mx-auto text-base rounded-full h-14 w-28 bg-blue-500 text-center text-white py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-medium"
+                      className="block mx-auto text-base rounded-full h-14 w-28 bg-blue-500 text-center text-white 
+                      py-2 pl-3 pr-4 md:p-0 
+                      hover:cursor-pointer font-medium"
                       onClick={() => setShowLogin(false)}
                     >
                       <div className="flex justify-center items-center h-full">
@@ -111,11 +114,19 @@ const Navbar: FC<Props> = ({ isMobile }) => {
                     </li>
                   ) : (
                     // TODO - Add logged in profile design here
-                    <li className="block mx-auto text-base rounded-full h-14 w-28 bg-blue-500 text-center text-white py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-medium">
-                      <Link href="/" onClick={() => setShowLogin(true)}>
-                        PROFILE STUFF HERE
-                      </Link>
-                    </li>
+                    <Link className="flex flex-row justify-center hover:cursor-pointer" href="/become-member">
+                      <div className=" relative rounded-full h-14 w-14 bg-main-brasa-green text-center
+                      text-white py-2 md:p-0 font-medium">
+                        <img src="/Users/matheusseabra/Documents/BRASA/BrasaBoard.jpg" className=" py-1 px-1 rounded-full 
+                        h-12 w-12"></img>
+                      </div>
+                      
+
+                      <li className="flex flex-col pl-4 mt-2">
+                        <div className="text-center text-sm font-bold">FirstName LastName</div>
+                        <div className="text-sm">View Profile</div>
+                      </li>
+                    </Link>
                   )}
                 </ul>
               </div>
