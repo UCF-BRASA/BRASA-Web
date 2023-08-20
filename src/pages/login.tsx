@@ -35,9 +35,13 @@ const SignIn: NextPage<Props> = ({ isMobile }) => {
     };
 
     try {
-      const extraHeader = DEBUG_MODE ? "http://localhost:3000" : "https://brasa-api.up.railway.app";
+      const extraHeader = DEBUG_MODE
+        ? "http://localhost:3000"
+        : "https://brasa-web-git-development-ucf-brasa.vercel.app/";
 
-      const apiDomain = DEBUG_MODE ? "http://localhost:8080" : "https://brasa-api.up.railway.app";
+      const apiDomain = DEBUG_MODE
+        ? "http://localhost:8080"
+        : "https://brasa-web-git-development-ucf-brasa.vercel.app/";
       const endpoint = "/api/v0.1/auth/login";
       const url = apiDomain + endpoint; // Replace with your API endpoint URL
 
