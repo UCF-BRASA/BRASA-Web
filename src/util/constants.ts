@@ -32,6 +32,9 @@ import victoria_pic from "/public/static/meet-board/victoria_pic.jpeg";
 
 import board_pic from "/public/static/become-member/member-box/board_pic.jpg";
 
+// Profile icon
+import profile_pic from "/public/static/profile/profile-icon.png";
+
 export const COLORS = {
   "main-brasa-yellow": "#fef000",
   "main-brasa-green": "#7cb342",
@@ -72,4 +75,5 @@ export const IMAGES = {
   sophia_pic,
   victoria_pic,
   board_pic,
+  profile_pic,
 };
