@@ -54,6 +54,8 @@ const SignIn: NextPage<Props> = ({ isMobile }) => {
       school_year: target.schoolYear.value,
     };
 
+    const extraHeader = DEBUG_MODE ? "http://localhost:3000" : "https://brasa-api.up.railway.app";
+
     const apiDomain = DEBUG_MODE ? "http://localhost:8080" : "https://brasa-api.up.railway.app";
     const endpoint = "/api/v0.1/auth/register";
     const url = apiDomain + endpoint; // Replace with your API endpoint URL
@@ -65,6 +67,7 @@ const SignIn: NextPage<Props> = ({ isMobile }) => {
     const headers = {
       "Content-Type": "application/json", // Adjust based on your API requirements
       Accept: "application/json",
+      "Access-Control-Allow-Origin": extraHeader,
     };
 
     console.log(JSON.stringify(payload, null, 4));

@@ -35,7 +35,7 @@ const SignIn: NextPage<Props> = ({ isMobile }) => {
     };
 
     try {
-      const extraHeader = DEBUG_MODE ? "http://localhost:3000" : "https://brasaucf.com";
+      const extraHeader = DEBUG_MODE ? "http://localhost:3000" : "https://brasa-api.up.railway.app";
 
       const apiDomain = DEBUG_MODE ? "http://localhost:8080" : "https://brasa-api.up.railway.app";
       const endpoint = "/api/v0.1/auth/login";
