@@ -1,4 +1,5 @@
 import { setLoggedUser } from "@lib/user";
+import { DEBUG_MODE } from "@util";
 import axios, { AxiosError } from "axios";
 import { NextPage } from "next";
 import Link from "next/link";
@@ -34,12 +35,16 @@ const SignIn: NextPage<Props> = ({ isMobile }) => {
     };
 
     try {
-      const url = "http://localhost:8080/api/v0.1/auth/login"; // Replace with your API endpoint URL
+      const extraHeader = DEBUG_MODE ? "http://localhost:3000" : "https://brasaucf.com";
+
+      const apiDomain = DEBUG_MODE ? "http://localhost:8080" : "https://brasa-api.up.railway.app";
+      const endpoint = "/api/v0.1/auth/login";
+      const url = apiDomain + endpoint; // Replace with your API endpoint URL
 
       const headers = {
         "Content-Type": "application/json", // Adjust based on your API requirements
         Accept: "application/json",
-        "Access-Control-Allow-Origin": "http://localhost:3000",
+        "Access-Control-Allow-Origin": extraHeader,
       };
 
       const response = await axios.post(url, payload, { headers, withCredentials: true });
