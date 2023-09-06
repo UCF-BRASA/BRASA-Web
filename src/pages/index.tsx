@@ -1,4 +1,4 @@
-import { EventCard, GridSection, ImageCarousel } from "@components";
+import { EventCard, GridSection, ImageCarousel, JoinNewsletter } from "@components";
 import { EventCardImageObject } from "@interfaces";
 import { IMAGES } from "@util";
 import { NextPage } from "next";
@@ -18,7 +18,7 @@ const eventImagesData: EventCardImageObject[] = [
     tag: "Main Event",
     eventTitle: "BRASA Churrasco",
     eventDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "All you can eat and drink Brazilian Churrasco! Come enjoy the full Brazilian experience with live DJ music and the best caipirinhas in Orlando!",
   },
   {
     image: IMAGES.bailinho_pic,
@@ -26,7 +26,7 @@ const eventImagesData: EventCardImageObject[] = [
     tag: "Main Event",
     eventTitle: "Baile da BRASA",
     eventDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Baile Funk da BRASA! Partnerships with the best clubs in Orlando with open-bars and premium discounts!",
   },
   {
     image: IMAGES.hangout_pic,
@@ -34,7 +34,7 @@ const eventImagesData: EventCardImageObject[] = [
     tag: "Casual",
     eventTitle: "BRASA Hangout",
     eventDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
   },
 ];
 const professionalImagesData: EventCardImageObject[] = [
@@ -44,7 +44,7 @@ const professionalImagesData: EventCardImageObject[] = [
     tag: "Networking",
     eventTitle: "Guest Speakers",
     eventDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Connect with experts of your field with our re-ocurrent Guest Speaker events! Whatever area you are in, we have professinals to help you out!",
   },
   {
     image: IMAGES.workshop_pic,
@@ -52,7 +52,7 @@ const professionalImagesData: EventCardImageObject[] = [
     tag: "Learning",
     eventTitle: "BRASA Workshops",
     eventDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Expand your skillsets with our workshops! Our workshop areas include finance, marketing, coding, how to get a job and general networking!",
   },
   {
     image: IMAGES.study_pic,
@@ -60,7 +60,7 @@ const professionalImagesData: EventCardImageObject[] = [
     tag: "Casual",
     eventTitle: "BRASA Study",
     eventDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A light, fun and collaborative environment for you to study with fellow BRASA members! We have weekly study sessions for everyone!",
   },
 ];
 
@@ -72,7 +72,7 @@ const displayEventCards = (isSocial: boolean, isMobile: boolean) => {
         imageAlt="UCF BRASA Churrasco Picture"
         tag="Main Event"
         eventTitle="BRASA Churrasco"
-        eventDescription="Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        eventDescription="All you can eat and drink Brazilian Churrasco! Come enjoy the full Brazilian experience with live DJ music and the best caipirinhas in Orlando!"
         isMobile={isMobile}
       />
       <EventCard
@@ -80,7 +80,7 @@ const displayEventCards = (isSocial: boolean, isMobile: boolean) => {
         imageAlt="UCF BRASA Baile da BRASA Picture"
         tag="Main Event"
         eventTitle="Baile da BRASA"
-        eventDescription="Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        eventDescription="Baile Funk da BRASA! Partnerships with the best clubs in Orlando with open-bars and premium discounts!"
         isMobile={isMobile}
       />
       <EventCard
@@ -88,7 +88,7 @@ const displayEventCards = (isSocial: boolean, isMobile: boolean) => {
         imageAlt="UCF BRASA Hangout Picture"
         tag="Casual"
         eventTitle="BRASA Hangout"
-        eventDescription="Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        eventDescription="Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!"
         isMobile={isMobile}
       />
     </div>
@@ -99,7 +99,7 @@ const displayEventCards = (isSocial: boolean, isMobile: boolean) => {
         imageAlt="UCF BRASA Guest Speakers Picture"
         tag="Networking"
         eventTitle="Guest Speakers"
-        eventDescription="Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        eventDescription="Connect with experts of your field with our re-ocurrent Guest Speaker events! Whatever area you are in, we have professinals to help you out!"
         isMobile={isMobile}
       />
       <EventCard
@@ -107,7 +107,7 @@ const displayEventCards = (isSocial: boolean, isMobile: boolean) => {
         imageAlt="UCF BRASA Workshops Picture"
         tag="Learning"
         eventTitle="BRASA Workshops"
-        eventDescription="Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        eventDescription="Expand your skillsets with our workshops! Our workshop areas include finance, marketing, coding, how to get a job and general networking!"
         isMobile={isMobile}
       />
       <EventCard
@@ -115,7 +115,7 @@ const displayEventCards = (isSocial: boolean, isMobile: boolean) => {
         imageAlt="UCF BRASA Study Picture"
         tag="Casual"
         eventTitle="BRASA Study"
-        eventDescription="Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        eventDescription="A light, fun and collaborative environment for you to study with fellow BRASA members! We have weekly study sessions for everyone!"
         isMobile={isMobile}
       />
     </div>
@@ -161,10 +161,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
             </div>
             <div className="flex justify-center w-full relative z-30">
               <div className="text-base rounded-full bg-blue-500 text-white font-medium h-16 w-44">
-                <Link
-                  className="flex justify-center items-center w-full h-full"
-                  href="/become-member"
-                >
+                <Link className="flex justify-center items-center w-full h-full" href="/sign-up">
                   Become a Member
                 </Link>
               </div>
@@ -186,13 +183,6 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
             </div>
 
             <div className="container mx-auto grid gap-x-20 gap-y-16 grid-cols-1 px-5 mt-20 w-full">
-              <GridSection
-                imageAlt="DB icon"
-                imagePath="static/landing/what-we-do/db-icon.svg"
-                title="Extensive University Database"
-                description="We've compiled an extensive database of universities and colleges both in Brazil and abroad"
-              />
-
               <GridSection
                 imageAlt="Exam Icon"
                 imagePath="static/landing/what-we-do/exam-icon.svg"
@@ -226,6 +216,12 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
                 imagePath="static/landing/what-we-do/community-icon.svg"
                 title="Community Support"
                 description="Join our online forums and connect with fellow students, educators, and professionals. balbaskdhasidasildhio"
+              />
+              <GridSection
+                imageAlt="DB icon"
+                imagePath="static/landing/what-we-do/db-icon.svg"
+                title="BRASA @ UCF Tech Team"
+                description="Our tech team is always looking for new members to help us build our website and other projects."
               />
             </div>
           </section>
@@ -307,10 +303,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
               </p>
 
               <div className="mt-10 text-base rounded-full md:h-14 md:w-44 bg-blue-500 text-white font-medium">
-                <Link
-                  className="flex justify-center items-center w-full h-full"
-                  href="/become-member"
-                >
+                <Link className="flex justify-center items-center w-full h-full" href="/sign-up">
                   Become a Member
                 </Link>
               </div>
@@ -335,13 +328,6 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
             <h1 className="pt-5 font-bold text-5xl">We offer support & guidance</h1>
 
             <div className="container mx-auto grid gap-x-20 gap-y-24 grid-cols-3 grid-rows-2 p-20 mt-8 w-full">
-              <GridSection
-                imageAlt="DB icon"
-                imagePath="static/landing/what-we-do/db-icon.svg"
-                title="Extensive University Database"
-                description="We've compiled an extensive database of universities and colleges both in Brazil and abroad"
-              />
-
               <GridSection
                 imageAlt="Exam Icon"
                 imagePath="static/landing/what-we-do/exam-icon.svg"
@@ -374,14 +360,21 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
                 imageAlt="Community Support Icon"
                 imagePath="static/landing/what-we-do/community-icon.svg"
                 title="Community Support"
-                description="Join our online forums and connect with fellow students, educators, and professionals. balbaskdhasidasildhio"
+                description="Join our online forums and connect with fellow students, educators, and professionals"
+              />
+
+              <GridSection
+                imageAlt="DB icon"
+                imagePath="static/landing/what-we-do/db-icon.svg"
+                title="BRASA @ UCF Tech Team"
+                description="Our tech team is always looking for new members to help us build our website and other projects."
               />
             </div>
           </div>
           {/* End of Section 2 */}
 
           {/* Section 3 */}
-          <div className="h-[70rem] bg-main-brasa-blue rounded-t-[3rem] overflow-x-hidden mt-16">
+          <div className="h-[65rem] bg-main-brasa-blue rounded-t-[3rem] overflow-x-hidden mt-16">
             <div className="flex flex-col items-center text-white p-10 w-full">
               <h3 className="pt-16 font-semi-bold text-base tracking-[0.20em]">OUR EVENTS</h3>
               <h1 className="pt-5 font-semi-bold text-5xl tracking-[0.02em] mb-12">
@@ -423,8 +416,12 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
             {displayEventCards(isSocial, isMobile)}
           </div>
 
+          <div className="absolute w-full h-48 bg-main-brasa-blue">
+            <JoinNewsletter isMobile={false} />
+          </div>
+
           {/* Footer spacing */}
-          <div className="bg-white h-16"></div>
+          <div className="bg-white h-[34rem]"></div>
         </div>
       )}
     </main>

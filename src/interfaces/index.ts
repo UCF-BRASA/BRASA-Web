@@ -11,9 +11,15 @@ export type ResponseData = {
 };
 
 export interface User {
-  id: null | number;
-  token: null | string;
+  id: null | string;
   email: null | string;
+  firstName: null | string;
+  lastName: null | string;
+  dateOfBirth: null | string;
+  gender: null | string;
+  originCity: null | string;
+  major: null | string;
+  schoolYear: null | string;
 }
 
 export interface LoginProps {

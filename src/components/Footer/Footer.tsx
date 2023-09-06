@@ -90,7 +90,7 @@ const Footer: FC<Props> = ({ isMobile }) => {
                 <Link href="/" className="text-base font-bold mt-5">
                   Home
                 </Link>
-                <Link href="/" className="text-base font-bold mt-5">
+                <Link href="/profile" className="text-base font-bold mt-5">
                   Profile
                 </Link>
                 <Link href="/meet-the-board" className="text-base font-bold mt-5">
@@ -216,7 +216,7 @@ const Footer: FC<Props> = ({ isMobile }) => {
 
           {/* CopyRight section */}
           <p className="font-regular pt-4 ml-28 mb-4 text-left text-black/60">
-            © Copyright 2023 All Rights Reserved by BRASA
+            © Copyright 2023 All Rights Reserved by UCF BRASA
           </p>
         </footer>
       )}

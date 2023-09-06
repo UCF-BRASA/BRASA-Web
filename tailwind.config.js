@@ -11,6 +11,7 @@ module.exports = {
         "main-brasa-yellow": "#fef000",
         "main-brasa-green": "#7cb342",
         "main-brasa-blue": "#008cff",
+        "light-grey": "#f7f7f7",
       },
       fontFamily: {
         light: "Roobert Light",

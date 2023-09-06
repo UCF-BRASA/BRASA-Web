@@ -85,7 +85,7 @@ const GridSection: FC<Props> = ({
           </p>
           <div className="mt-12 mb-4 h-32 w-full flex justify-center items-center">
             <div className="w-[90%] h-full text-base rounded-full bg-blue-500 text-white font-medium">
-              <Link className="flex justify-center items-center w-full h-full" href="/events">
+              <Link className="flex justify-center items-center w-full h-full" href="/">
                 View Details
               </Link>
             </div>

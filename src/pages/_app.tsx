@@ -3,20 +3,48 @@ import BottomNavbar from "@components/Navbar/BottomNavbar";
 import { config as fortawesomeConfig } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { useWindowDimensions } from "@hooks";
-import { User } from "@interfaces";
+import { setLoggedUser } from "@lib";
 import { MOBILE_THRESHOLD } from "@util";
+import Cookies from "js-cookie";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect } from "react";
 import "../styles/globals.css";
 fortawesomeConfig.autoAddCss = false;
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { windowWidth, windowHeight } = useWindowDimensions();
   const isMobile = (windowWidth || 350) < MOBILE_THRESHOLD;
-  const [userLogin, setUserLogin] = useState<User>();
 
-  pageProps = { ...pageProps, windowWidth, windowHeight, isMobile, userLogin };
+  pageProps = { ...pageProps, windowWidth, windowHeight, isMobile };
+
+  useEffect(() => {
+    const id = Cookies.get("_id");
+
+    // Check if the user is authenticated globally
+    if (id) {
+      const username = Cookies.get("username");
+      const firstName = Cookies.get("firstName");
+      const lastName = Cookies.get("lastName");
+      const dateOfBirth = Cookies.get("dateOfBirth");
+      const gender = Cookies.get("gender");
+      const originCity = Cookies.get("originCity");
+      const major = Cookies.get("major");
+      const schoolYear = Cookies.get("schoolYear");
+
+      setLoggedUser(
+        id!,
+        username!,
+        firstName!,
+        lastName!,
+        dateOfBirth!,
+        gender!,
+        originCity!,
+        major!,
+        schoolYear!
+      );
+    }
+  }, []);
 
   return (
     <>
@@ -32,7 +60,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>UCF BRASA</title>
       </Head>
 
-      <Navbar isMobile={isMobile} userLogged={userLogin} />
+      <Navbar isMobile={isMobile} />
       <Component {...pageProps} />
       <Footer isMobile={isMobile} />
       {isMobile ? <BottomNavbar /> : <div></div>}
