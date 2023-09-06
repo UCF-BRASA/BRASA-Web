@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, type FC } from "react";
 
-import LoggedUser from "@lib/user";
+import { loggedUser } from "@lib";
 import styles from "./Navbar.module.css";
 import brasa_logo from "/public/static/brasa-logo.png";
 
@@ -57,17 +57,7 @@ const Navbar: FC<Props> = ({ isMobile }) => {
                 font-medium"
               >
                 <div className="flex justify-center items-center h-full">
-                  {!LoggedUser.id ? (
-                    <Link href="/login">
-                      <div className="flex flex-row items-center">
-                        <FontAwesomeIcon
-                          icon={faArrowRightToBracket}
-                          color={COLORS.white}
-                          className="fa-xl min-w-fit"
-                        />
-                      </div>
-                    </Link>
-                  ) : (
+                  {loggedUser.id ? (
                     // TODO - Add logged in profile design here
                     <Link
                       className="flex flex-row justify-center hover:cursor-pointer"
@@ -78,6 +68,16 @@ const Navbar: FC<Props> = ({ isMobile }) => {
                         color={COLORS.white}
                         className="fa-lg min-w-fit"
                       />
+                    </Link>
+                  ) : (
+                    <Link href="/login">
+                      <div className="flex flex-row items-center">
+                        <FontAwesomeIcon
+                          icon={faArrowRightToBracket}
+                          color={COLORS.white}
+                          className="fa-xl min-w-fit"
+                        />
+                      </div>
                     </Link>
                   )}
                 </div>
@@ -111,13 +111,7 @@ const Navbar: FC<Props> = ({ isMobile }) => {
                     </Link>
                   </li>
 
-                  {!LoggedUser.id ? (
-                    <li className="block mx-auto text-base rounded-full h-14 w-28 bg-blue-500 text-center text-white py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-medium">
-                      <div className="flex justify-center items-center h-full">
-                        <Link href="/login">Log In</Link>
-                      </div>
-                    </li>
-                  ) : (
+                  {loggedUser.id ? (
                     // TODO - Add logged in profile design here
                     <Link
                       className="flex flex-row justify-center hover:cursor-pointer"
@@ -129,11 +123,17 @@ const Navbar: FC<Props> = ({ isMobile }) => {
 
                       <li className="flex flex-col pl-4 mt-2">
                         <div className="text-center text-sm font-bold">
-                          {LoggedUser.firstName + " " + LoggedUser.lastName}
+                          {loggedUser.firstName + " " + loggedUser.lastName}
                         </div>
                         <div className="text-sm">View Profile</div>
                       </li>
                     </Link>
+                  ) : (
+                    <li className="block mx-auto text-base rounded-full h-14 w-28 bg-blue-500 text-center text-white py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-medium">
+                      <div className="flex justify-center items-center h-full">
+                        <Link href="/login">Log In</Link>
+                      </div>
+                    </li>
                   )}
                 </ul>
               </div>

@@ -1,6 +1,6 @@
-import { setLoggedUser } from "@lib/user";
-import { DEBUG_MODE } from "@util";
-import axios, { AxiosError } from "axios";
+import { setLoggedUser } from "@lib";
+import { callGetUserInfoEndpoint, callLoginEndpoint } from "@util";
+import Cookies from "js-cookie";
 import { NextPage } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -29,57 +29,55 @@ const SignIn: NextPage<Props> = ({ isMobile }) => {
 
     const target = event.currentTarget.elements;
 
-    const payload = {
+    const loginPayload = {
       username: target.email.value,
       password: target.password.value,
+      grant_type: "",
+      scope: "",
+      client_id: "",
+      client_secret: "",
     };
 
-    try {
-      const extraHeader = DEBUG_MODE ? "http://localhost:3000" : "https://brasaucf.com";
+    await callLoginEndpoint(loginPayload);
 
-      const apiDomain = DEBUG_MODE ? "http://localhost:8080" : "https://brasaucf.com";
-      const endpoint = "/api/v0.1/auth/login";
-      const url = apiDomain + endpoint; // Replace with your API endpoint URL
+    const getUserInfoResponse = await callGetUserInfoEndpoint();
 
-      const headers = {
-        "Content-Type": "application/json", // Adjust based on your API requirements
-        Accept: "application/json",
-        "Access-Control-Allow-Origin": extraHeader,
-      };
+    const {
+      _id,
+      username,
+      firstName,
+      lastName,
+      dateOfBirth,
+      gender,
+      originCity,
+      major,
+      schoolYear,
+    } = getUserInfoResponse.data;
 
-      const response = await axios.post(url, payload, { headers, withCredentials: true });
+    // set all cookies to be gathered later
+    Cookies.set("_id", _id);
+    Cookies.set("username", username);
+    Cookies.set("firstName", firstName);
+    Cookies.set("lastName", lastName);
+    Cookies.set("dateOfBirth", dateOfBirth);
+    Cookies.set("gender", gender);
+    Cookies.set("originCity", originCity);
+    Cookies.set("major", major);
+    Cookies.set("schoolYear", schoolYear);
 
-      const {
-        token,
-        id,
-        username,
-        first_name,
-        last_name,
-        date_of_birth,
-        gender,
-        origin_city,
-        major,
-        school_year,
-      } = response.data.data;
+    setLoggedUser(
+      _id,
+      username,
+      firstName,
+      lastName,
+      dateOfBirth,
+      gender,
+      originCity,
+      major,
+      schoolYear
+    );
 
-      setLoggedUser(
-        id,
-        token,
-        username,
-        first_name,
-        last_name,
-        date_of_birth,
-        gender,
-        origin_city,
-        major,
-        school_year
-      );
-
-      router.push("/");
-    } catch (e) {
-      const error = e as AxiosError;
-      console.error(error);
-    }
+    router.push("/");
   };
 
   return (

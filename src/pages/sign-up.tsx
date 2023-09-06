@@ -1,4 +1,4 @@
-import { DEBUG_MODE } from "@util";
+import { ACCESS_CONTROL_ALLOW_ORIGIN, APPLICATION_JSON, SIGNUP_ENDPOINT } from "@util";
 import axios, { AxiosError } from "axios";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
@@ -45,35 +45,28 @@ const SignIn: NextPage<Props> = ({ isMobile }) => {
     const payload = {
       username: target.email.value,
       password: target.password.value,
-      first_name: target.firstName.value,
-      last_name: target.lastName.value,
-      date_of_birth: target.dateOfBirth.value,
+      firstName: target.firstName.value,
+      lastName: target.lastName.value,
+      dateOfBirth: target.dateOfBirth.value,
       gender: target.gender.value,
-      origin_city: target.originCity.value,
+      originCity: target.originCity.value,
       major: target.major.value,
-      school_year: target.schoolYear.value,
+      schoolYear: target.schoolYear.value,
     };
 
-    const extraHeader = DEBUG_MODE ? "http://localhost:3000" : "https://brasaucf.com";
-
-    const apiDomain = DEBUG_MODE ? "http://localhost:8080" : "https://brasaucf.com";
-    const endpoint = "/api/v0.1/auth/register";
-    const url = apiDomain + endpoint; // Replace with your API endpoint URL
-
-    console.log("apiDomain" + apiDomain);
-    console.log("endpoint" + endpoint);
-    console.log("url" + url);
+    const url = SIGNUP_ENDPOINT; // Replace with your API endpoint URL
 
     const headers = {
-      "Content-Type": "application/json", // Adjust based on your API requirements
-      Accept: "application/json",
-      "Access-Control-Allow-Origin": extraHeader,
+      Accept: APPLICATION_JSON,
+      "Content-Type": APPLICATION_JSON, // Adjust based on your API requirements
+      "Access-Control-Allow-Origin": ACCESS_CONTROL_ALLOW_ORIGIN,
     };
 
-    console.log(JSON.stringify(payload, null, 4));
-
     try {
-      await axios.post(url, payload, { headers });
+      await axios.post(url, payload, {
+        headers,
+        withCredentials: true,
+      });
 
       router.push("/login");
     } catch (e) {

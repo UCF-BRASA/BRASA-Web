@@ -153,13 +153,6 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
               isMobile={isMobile}
             />
             <BoardBox
-              image={IMAGES.alexia_pic}
-              imageAlt="Alexia Uhlendorf Picture"
-              officerTitle="Marketing Analyst"
-              officerName="Alexia Uhlendorf"
-              isMobile={isMobile}
-            />
-            <BoardBox
               image={IMAGES.eric_pic}
               imageAlt="Eric Tavora Picture"
               officerTitle="Marketing Analyst"

@@ -7,7 +7,6 @@ import study_pic from "/public/static/landing/our-events/study_pic.jpg";
 import workshop_pic from "/public/static/landing/our-events/workshop_pic.jpg";
 
 // Meet the Board imaegs
-import alexia_pic from "/public/static/meet-board/alexia_pic.jpeg";
 import chris_pic from "/public/static/meet-board/chris_pic.png";
 import duda_pic from "/public/static/meet-board/duda_pic.jpeg";
 import ella_pic from "/public/static/meet-board/ella_pic.jpeg";
@@ -30,14 +29,31 @@ import saki_pic from "/public/static/meet-board/saki_pic.png";
 import sophia_pic from "/public/static/meet-board/sophia_pic.png";
 import victoria_pic from "/public/static/meet-board/victoria_pic.jpeg";
 
-//Board pic
+// Board pic
 import board_pic from "/public/static/become-member/member-box/board_pic.jpg";
 
 // Profile icon
 import profile_pic from "/public/static/profile/profile-icon.png";
 
-//Login photo
+// Login photo
+import { getApiInstanceUrl, getWebInstanceUrl } from "./instanceUrl";
 import login_pic from "/public/static/login/login_pic.jpg";
+
+export const MOBILE_THRESHOLD = 1000;
+
+// .env values
+export const DEBUG_MODE = process.env.APP_ENV === "development" || process.env.APP_ENV === "test";
+
+// endpoint values
+const API_ROOT = getApiInstanceUrl() + "/api/v0.1";
+export const LOGIN_ENDPOINT = API_ROOT + "/auth/token";
+export const SIGNUP_ENDPOINT = API_ROOT + "/auth/register";
+export const USER_PROFILE_ENDPOINT = API_ROOT + "/auth/user-profile";
+
+// content-types headers
+export const APPLICATION_JSON = "application/json";
+export const APPLICATION_URLENCODED = "application/x-www-form-urlencoded";
+export const ACCESS_CONTROL_ALLOW_ORIGIN = getWebInstanceUrl();
 
 export const COLORS = {
   "main-brasa-yellow": "#fef000",
@@ -47,12 +63,6 @@ export const COLORS = {
   white: "#ffffff",
 };
 
-export const MOBILE_THRESHOLD = 1000;
-
-export const DEBUG_MODE = process.env.DEBUG === "development";
-export const API_PROD_URL = process.env.API_PROD_URL;
-export const API_DEV_URL = process.env.API_DEV_URL;
-
 export const IMAGES = {
   bailinho_pic,
   churras_pic,
@@ -60,7 +70,6 @@ export const IMAGES = {
   guest_speaker_pic,
   study_pic,
   workshop_pic,
-  alexia_pic,
   chris_pic,
   duda_pic,
   ella_pic,

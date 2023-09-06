@@ -90,7 +90,7 @@ const Footer: FC<Props> = ({ isMobile }) => {
                 <Link href="/" className="text-base font-bold mt-5">
                   Home
                 </Link>
-                <Link href="/" className="text-base font-bold mt-5">
+                <Link href="/profile" className="text-base font-bold mt-5">
                   Profile
                 </Link>
                 <Link href="/meet-the-board" className="text-base font-bold mt-5">

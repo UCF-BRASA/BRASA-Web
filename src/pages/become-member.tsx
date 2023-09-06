@@ -58,7 +58,7 @@ const BecomeMember: NextPage<Props> = ({ windowWidth, isMobile }) => {
                   className="flex text-center justify-center items-center mt-16 self-center rounded-full bg-blue-500
               text-white font-medium h-[4rem] w-[12rem]"
                 >
-                  <Link href="/log-in"> Join BRASA @ UCF </Link>
+                  <Link href="/sign-up"> Join BRASA @ UCF </Link>
                 </div>
               </div>
             </div>
@@ -117,7 +117,7 @@ const BecomeMember: NextPage<Props> = ({ windowWidth, isMobile }) => {
                 <div className="flex justify-center items-center mt-28 text-base rounded-full md:h-14 md:w-44 bg-blue-500 text-white font-medium">
                   <Link
                     className="flex text-center justify-center items-center w-full h-full"
-                    href="/log-in"
+                    href="/sign-up"
                   >
                     Join BRASA @ UCF
                   </Link>
@@ -143,5 +143,47 @@ const BecomeMember: NextPage<Props> = ({ windowWidth, isMobile }) => {
     </section>
   );
 };
+
+// export const getServerSideProps: GetServerSideProps = async (context) => {
+//   // Extract JWT from cookies
+//   const allCokies = parseCookies(context.req.headers.cookie);
+
+//   // console.log("Cookies Str: " + context.req.headers.cookie);
+//   console.log("Parsed Cookies: ");
+//   console.log(allCokies);
+
+//   // Check if the user is authenticated globally
+//   if (allCokies) {
+//     const {
+//       _id,
+//       username,
+//       firstName,
+//       lastName,
+//       dateOfBirth,
+//       gender,
+//       originCity,
+//       major,
+//       schoolYear,
+//     } = allCokies;
+
+//     setLoggedUser(
+//       _id,
+//       username,
+//       firstName,
+//       lastName,
+//       dateOfBirth,
+//       gender,
+//       originCity,
+//       major,
+//       schoolYear
+//     );
+
+//     console.log("Logged User: ");
+//     console.log(loggedUser);
+//   }
+//   return {
+//     props: {},
+//   };
+// };
 
 export default BecomeMember;

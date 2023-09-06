@@ -12,7 +12,6 @@ export type ResponseData = {
 
 export interface User {
   id: null | string;
-  token: null | string;
   email: null | string;
   firstName: null | string;
   lastName: null | string;
