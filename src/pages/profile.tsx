@@ -141,6 +141,7 @@ const Profile: NextPage<ProfileProps> = ({ isMobile }) => {
                     color={COLORS["main-brasa-blue"]}
                     className="px-1 mr-3 fa-xl"
                   />
+
                   <h3 className="font-semi-bold text-black">{loggedUser.schoolYear}</h3>
                 </div>
               </li>
@@ -268,14 +269,14 @@ const Profile: NextPage<ProfileProps> = ({ isMobile }) => {
                   </ul>
                 </div>
                 {/* Upload Resume & Logout buttons */}
-                <div className="mt-[10rem] mb-4 h-12 w-full flex justify-end">
+                {/* <div className="mt-[10rem] mb-4 h-12 w-full flex justify-end">
                   <div className="w-[36%] h-full flex justify-center items-center text-base rounded-full bg-main-brasa-blue text-white font-medium mr-6">
                     Upload Resume
                   </div>
                   <div className="w-[26%] h-full flex justify-center items-center text-base rounded-full bg-white border border-main-brasa-blue text-main-brasa-blue font-medium">
                     Logout
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
