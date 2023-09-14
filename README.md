@@ -1,6 +1,6 @@
 <div align="center">
   <br>
-  <img alt="UCF BRASA Logo" src="/public/brasa-logo.png">
+  <img alt="UCF BRASA Logo" src="https://d3qh8l6tau8lfp.cloudfront.net/brasa-logo.png">
   <h1> 🇧🇷 BRASA Web 🇧🇷</h1>
   <strong>🧑‍💻 UCF BRASA's student-created Website 🧑‍💻 </strong>
 </div>
