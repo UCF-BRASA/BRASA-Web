@@ -16,7 +16,7 @@ const Footer: FC<Props> = ({ isMobile }) => {
     <>
       {isMobile ? (
         // CHECK FIXED VS STICKY ON THIS DIV!!!
-        <footer className="mb-48 bg-white">
+        <footer className="mb-48 bg-white justify-center items-center">
           <div className="flex flex-col justify-center items-center">
             <h3 className="text-black text-lg font-bold pt-4">Follow BRASA @ UCF</h3>
             <div className="grid grid-cols-4 gap-x-4 justify-center items-center mt-4">
