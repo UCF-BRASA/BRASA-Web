@@ -22,66 +22,66 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
             <div className="absolute z-30 w-full px-2">
               <div className="flex flex-wrap justify-evenly mx-auto w-full mt-20">
                 <EBoardBox
-                  image={IMAGES.fachetti_pic}
-                  imageAlt="Pedro Fachetti Picture"
+                  image={IMAGES.luca_pic}
+                  imageAlt="Luca De Vincenzo Picture"
                   officerTitle="President"
-                  officerName="Pedro Fachetti"
+                  officerName="Luca de Vincenzo"
                   isMobile={isMobile}
                 />
                 <EBoardBox
-                  image={IMAGES.matheus_pic}
-                  imageAlt="Matheus Agramunt Picture"
+                  image={IMAGES.guilherme_pic}
+                  imageAlt="Guilherme Tonini Picture"
                   officerTitle="Vice President"
-                  officerName="Matheus Agramunt"
+                  officerName="Guilherme Tonini"
                   isMobile={isMobile}
                 />
                 <EBoardBox
-                  image={IMAGES.ella_pic}
-                  imageAlt="Ella Santucci Picture"
+                  image={IMAGES.gio_pic}
+                  imageAlt="Giovana Vincentim Picture"
                   officerTitle="Co-Head of Events"
-                  officerName="Ella Santucci"
+                  officerName="Giovana Vincentim"
                   isMobile={isMobile}
                 />
                 <EBoardBox
-                  image={IMAGES.gabriel_pic}
-                  imageAlt="Gabriel Couto Picture"
+                  image={IMAGES.nino_pic}
+                  imageAlt="Nino Picture"
                   officerTitle="Co-Head of Events"
-                  officerName="Gabriel Couto"
+                  officerName="Nino Portugal"
                   isMobile={isMobile}
                 />
                 <EBoardBox
-                  image={IMAGES.julie_pic}
-                  imageAlt="Julie Rodriguez Picture"
+                  image={IMAGES.isa_pic}
+                  imageAlt="Isadora Prado Picture"
                   officerTitle="Co-Head of Marketing"
-                  officerName="Julie Rodriguez"
+                  officerName="Isadora Prado"
                   isMobile={isMobile}
                 />
                 <EBoardBox
-                  image={IMAGES.jean_thomas_pic}
-                  imageAlt="Jean-Thomas Mateesco Picture"
+                  image={IMAGES.eric_pic}
+                  imageAlt="Eric Picture"
                   officerTitle="Co-Head of Marketing"
-                  officerName="Jean-Thomas Mateesco"
+                  officerName="Eric Tavora"
+                  isMobile={isMobile}
+                />
+                <EBoardBox
+                  image={IMAGES.leo_pic}
+                  imageAlt="Leonora Carvalho Picture"
+                  officerTitle="Head of Finance"
+                  officerName="Leonora Carvalho"
+                  isMobile={isMobile}
+                />
+                <EBoardBox
+                  image={IMAGES.sophia_pic}
+                  imageAlt="Sophia Sakakibara Picture"
+                  officerTitle="Head of Professional Development"
+                  officerName="Sophia Sakakibara"
                   isMobile={isMobile}
                 />
                 <EBoardBox
                   image={IMAGES.lucas_pic}
-                  imageAlt="Lucas Guilherme Medeiros de Carvalho Picture"
-                  officerTitle="Head of Finance"
-                  officerName="Lucas Guilherme"
-                  isMobile={isMobile}
-                />
-                <EBoardBox
-                  image={IMAGES.nicole_pic}
-                  imageAlt="Nicole Weeden Martins Picture"
-                  officerTitle="Head of Professional Development"
-                  officerName="Nicole Weeden"
-                  isMobile={isMobile}
-                />
-                <EBoardBox
-                  image={IMAGES.duda_pic}
-                  imageAlt="Maria Eduarda (Duda) Joazeiro Gomes Picture"
+                  imageAlt="Lucas Silveira Picture"
                   officerTitle="Head of Technology"
-                  officerName="Eduarda Joazeiro"
+                  officerName="Lucas Bassotto Silveira"
                   isMobile={isMobile}
                 />
               </div>
@@ -105,16 +105,16 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
 
           <div className="text-center flex flex-col justify-center items-center w-full">
             <h3 className="pt-16 font-bold text-base tracking-[0.3rem]">MEET THE BOARD</h3>
-            <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem]">Department Members</h1>
+            <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem]">Department Analysts</h1>
           </div>
 
           {/* Board Section */}
           <div className="flex flex-wrap justify-evenly mx-auto w-full mt-20 mb-32">
             <BoardBox
-              image={IMAGES.luca_pic}
-              imageAlt="Luca de Vincenzo Picture"
-              officerTitle="Professional Development Analyst"
-              officerName="Luca de Vincenzo"
+              image={IMAGES.carlos_pic}
+              imageAlt="Carlos Picture"
+              officerTitle="Tech Team Analyst"
+              officerName="Carlos Eduardo Torres"
               isMobile={isMobile}
             />
             <BoardBox
@@ -128,35 +128,28 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
               image={IMAGES.pedro_pic}
               imageAlt="Pedro Evans Picture"
               officerTitle="Finance Analyst"
-              officerName="Pedro Evans"
+              officerName="Pedro Evangelista"
               isMobile={isMobile}
             />
             <BoardBox
-              image={IMAGES.enzo_pic}
-              imageAlt="Enzo Alisson Lima Barros Picture"
-              officerTitle="Event Planning Analyst"
-              officerName="Enzo Alisson Lima Barros"
-              isMobile={isMobile}
-            />
-            <BoardBox
-              image={IMAGES.sophia_pic}
-              imageAlt="Sophia Cury Picture"
+              image={IMAGES.ana_pic}
+              imageAlt="Ana Picture"
               officerTitle="Marketing Analyst"
-              officerName="Sophia Cury"
+              officerName="Ana Beatriz Dantas"
               isMobile={isMobile}
             />
             <BoardBox
-              image={IMAGES.leo_pic}
-              imageAlt="Leonora Carvalho Picture"
-              officerTitle="Event Planning Analyst"
-              officerName="Leonora Carvalho"
-              isMobile={isMobile}
-            />
-            <BoardBox
-              image={IMAGES.eric_pic}
-              imageAlt="Eric Tavora Picture"
+              image={IMAGES.leticia_pic}
+              imageAlt="Leticia Bispo Picture"
               officerTitle="Marketing Analyst"
-              officerName="Eric Tavora"
+              officerName="Leticia Bispo"
+              isMobile={isMobile}
+            />
+            <BoardBox
+              image={IMAGES.paulo_pic}
+              imageAlt="Paulo Nascimento Picture"
+              officerTitle="Tech Team Analyst"
+              officerName="Paulo Nascimento"
               isMobile={isMobile}
             />
             <BoardBox
@@ -167,31 +160,66 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
               isMobile={isMobile}
             />
             <BoardBox
-              image={IMAGES.saki_pic}
-              imageAlt="Sophia Sakakibara Picture"
-              officerTitle="Professional Development Analyst"
-              officerName="Sophia Sakakibara"
+              image={IMAGES.seabra_pic}
+              imageAlt="Matheus Seabra Picture"
+              officerTitle="Tech Team Analyst"
+              officerName="Matheus Seabra"
               isMobile={isMobile}
             />
             <BoardBox
-              image={IMAGES.victoria_pic}
-              imageAlt="Victoria Ferreira Picture"
+              image={IMAGES.daghum_pic}
+              imageAlt="Lucas Daghum Picture"
+              officerTitle="Tech Team Analyst"
+              officerName="Lucas Daghum"
+              isMobile={isMobile}
+            />
+            <BoardBox
+              image={IMAGES.matheus_pic}
+              imageAlt="Matheus Gomes Picture"
+              officerTitle="Finance Analyst"
+              officerName="Matheus Gomes"
+              isMobile={isMobile}
+            />
+            <BoardBox
+              image={IMAGES.mktgiovanna_pic}
+              imageAlt="Giovanna Vesselizza Picture"
               officerTitle="Marketing Analyst"
-              officerName="Victoria Ferreira"
+              officerName="Giovanna Vesselizza"
               isMobile={isMobile}
             />
             <BoardBox
-              image={IMAGES.nino_pic}
-              imageAlt="Nino Portugal Picture"
-              officerTitle="Event Planning Analyst"
-              officerName="Nino Portugal"
-              isMobile={isMobile}
-            />
-            <BoardBox
-              image={IMAGES.guilherme_pic}
-              imageAlt="Guilherme Tonini Aranega Picture"
+              image={IMAGES.mel_pic}
+              imageAlt="Mel Wolf Picture"
               officerTitle="Professional Development Analyst"
-              officerName="Guilherme Tonini Aranega"
+              officerName="Mel Wolf"
+              isMobile={isMobile}
+            />
+            <BoardBox
+              image={IMAGES.carol_pic}
+              imageAlt="Carol Picture"
+              officerTitle="Events Analyst"
+              officerName="Carolina Fernandes Tello"
+              isMobile={isMobile}
+            />
+            <BoardBox
+              image={IMAGES.fernanda_pic}
+              imageAlt="Carol Picture"
+              officerTitle="Events Analyst"
+              officerName="Fernanda Signorelli"
+              isMobile={isMobile}
+            />
+            <BoardBox
+              image={IMAGES.fernando_pic}
+              imageAlt="Fernando Picture"
+              officerTitle="Events Analyst"
+              officerName="Fernando Mendes"
+              isMobile={isMobile}
+            />
+            <BoardBox
+              image={IMAGES.isabele_pic}
+              imageAlt="Carol Picture"
+              officerTitle="Events Analyst"
+              officerName="Isabele Miguel"
               isMobile={isMobile}
             />
           </div>
@@ -211,66 +239,66 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
             <div className="absolute z-30 w-4/5 mx-auto">
               <div className="flex flex-wrap justify-between mx-auto w-full mt-20">
                 <EBoardBox
-                  image={IMAGES.fachetti_pic}
-                  imageAlt="Pedro Fachetti Picture"
+                  image={IMAGES.luca_pic}
+                  imageAlt="Luca de Vincenzo Picture"
                   officerTitle="President"
-                  officerName="Pedro Fachetti"
+                  officerName="Luca de Vincenzo"
                   isMobile={isMobile}
                 />
                 <EBoardBox
-                  image={IMAGES.matheus_pic}
-                  imageAlt="Matheus Agramunt Picture"
+                  image={IMAGES.guilherme_pic}
+                  imageAlt="Guilherme Picture"
                   officerTitle="Vice President"
-                  officerName="Matheus Agramunt"
+                  officerName="Guilherme Tonini"
                   isMobile={isMobile}
                 />
                 <EBoardBox
-                  image={IMAGES.ella_pic}
-                  imageAlt="Ella Santucci Picture"
+                  image={IMAGES.gio_pic}
+                  imageAlt="Gio Picture"
                   officerTitle="Co-Head of Events"
-                  officerName="Ella Santucci"
+                  officerName="Giovana Vincentin"
                   isMobile={isMobile}
                 />
                 <EBoardBox
-                  image={IMAGES.gabriel_pic}
-                  imageAlt="Gabriel Couto Picture"
+                  image={IMAGES.nino_pic}
+                  imageAlt="Nino Picture"
                   officerTitle="Co-Head of Events"
-                  officerName="Gabriel Couto"
+                  officerName="Nino"
                   isMobile={isMobile}
                 />
                 <EBoardBox
-                  image={IMAGES.julie_pic}
-                  imageAlt="Julie Rodriguez Picture"
+                  image={IMAGES.isa_pic}
+                  imageAlt="Isadora Picture"
                   officerTitle="Co-Head of Marketing"
-                  officerName="Julie Rodriguez"
+                  officerName="Isadora Prado"
                   isMobile={isMobile}
                 />
                 <EBoardBox
-                  image={IMAGES.jean_thomas_pic}
-                  imageAlt="Jean-Thomas Mateesco Picture"
+                  image={IMAGES.eric_pic}
+                  imageAlt="Eric Picture"
                   officerTitle="Co-Head of Marketing"
-                  officerName="Jean-Thomas Mateesco"
+                  officerName="Eric Tavora"
+                  isMobile={isMobile}
+                />
+                <EBoardBox
+                  image={IMAGES.leo_pic}
+                  imageAlt="Leonora Picture"
+                  officerTitle="Head of Finance"
+                  officerName="Leonora Carvalho"
+                  isMobile={isMobile}
+                />
+                <EBoardBox
+                  image={IMAGES.sophia_pic}
+                  imageAlt="Saki Picture"
+                  officerTitle="Head of Professional Development"
+                  officerName="Sophia Sakakibara"
                   isMobile={isMobile}
                 />
                 <EBoardBox
                   image={IMAGES.lucas_pic}
-                  imageAlt="Lucas Guilherme Medeiros de Carvalho Picture"
-                  officerTitle="Head of Finance"
-                  officerName="Lucas Guilherme"
-                  isMobile={isMobile}
-                />
-                <EBoardBox
-                  image={IMAGES.nicole_pic}
-                  imageAlt="Nicole Weeden Martins Picture"
-                  officerTitle="Head of Professional Development"
-                  officerName="Nicole Weeden"
-                  isMobile={isMobile}
-                />
-                <EBoardBox
-                  image={IMAGES.duda_pic}
-                  imageAlt="Maria Eduarda (Duda) Joazeiro Gomes Picture"
+                  imageAlt="Lucas Silveira Picture"
                   officerTitle="Head of Technology"
-                  officerName="Eduarda Joazeiro"
+                  officerName="Lucas Bassotto Silveira"
                   isMobile={isMobile}
                 />
               </div>
@@ -294,16 +322,16 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
 
           <div className="flex flex-col justify-center items-center w-full mt-16">
             <h3 className="pt-16 font-bold text-base tracking-[0.3rem]">MEET THE BOARD</h3>
-            <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem]">Department Members</h1>
+            <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem]">Department Analysts</h1>
           </div>
 
           {/* <div className="grid gap-x-[-10rem] gap-y-42 grid-cols-5 w-full place-items-center mt-20"> */}
           <div className="flex flex-wrap justify-evenly mx-auto w-full mt-20">
             <BoardBox
-              image={IMAGES.luca_pic}
-              imageAlt="Luca de Vincenzo Picture"
+              image={IMAGES.carlos_pic}
+              imageAlt="Carlos Picture"
               officerTitle="Professional Development Analyst"
-              officerName="Luca de Vincenzo"
+              officerName="Carlos Eduardo Torres"
               isMobile={isMobile}
             />
             <BoardBox
@@ -317,35 +345,28 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
               image={IMAGES.pedro_pic}
               imageAlt="Pedro Evans Picture"
               officerTitle="Finance Analyst"
-              officerName="Pedro Evans"
+              officerName="Pedro Evangelista"
               isMobile={isMobile}
             />
             <BoardBox
-              image={IMAGES.enzo_pic}
-              imageAlt="Enzo Alisson Barros Picture"
-              officerTitle="Event Planning Analyst"
-              officerName="Enzo Alisson Barros"
-              isMobile={isMobile}
-            />
-            <BoardBox
-              image={IMAGES.sophia_pic}
-              imageAlt="Sophia Cury Picture"
+              image={IMAGES.ana_pic}
+              imageAlt="Ana Picture"
               officerTitle="Marketing Analyst"
-              officerName="Sophia Cury"
+              officerName="Ana Beatriz Dantas"
               isMobile={isMobile}
             />
             <BoardBox
-              image={IMAGES.leo_pic}
-              imageAlt="Leonora Carvalho Picture"
-              officerTitle="Event Planning Analyst"
-              officerName="Leonora Carvalho"
-              isMobile={isMobile}
-            />
-            <BoardBox
-              image={IMAGES.eric_pic}
-              imageAlt="Eric Tavora Picture"
+              image={IMAGES.leticia_pic}
+              imageAlt="Leticia Bispo Picture"
               officerTitle="Marketing Analyst"
-              officerName="Eric Tavora"
+              officerName="Leticia Bispo"
+              isMobile={isMobile}
+            />
+            <BoardBox
+              image={IMAGES.paulo_pic}
+              imageAlt="Paulo Nascimento Picture"
+              officerTitle="Tech Team Analyst"
+              officerName="Paulo Nascimento"
               isMobile={isMobile}
             />
             <BoardBox
@@ -356,31 +377,66 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
               isMobile={isMobile}
             />
             <BoardBox
-              image={IMAGES.saki_pic}
-              imageAlt="Sophia Sakakibara Picture"
-              officerTitle="Professional Development Analyst"
-              officerName="Sophia Sakakibara"
+              image={IMAGES.seabra_pic}
+              imageAlt="Matheus Seabra Picture"
+              officerTitle="Tech Team Analyst"
+              officerName="Matheus Seabra"
               isMobile={isMobile}
             />
             <BoardBox
-              image={IMAGES.victoria_pic}
-              imageAlt="Victoria Ferreira Picture"
+              image={IMAGES.daghum_pic}
+              imageAlt="Lucas Daghum Picture"
+              officerTitle="Tech Team Analyst"
+              officerName="Lucas Daghum"
+              isMobile={isMobile}
+            />
+            <BoardBox
+              image={IMAGES.matheus_pic}
+              imageAlt="Matheus Picture"
+              officerTitle="Finance Analyst"
+              officerName="Matheus Gomes"
+              isMobile={isMobile}
+            />
+            <BoardBox
+              image={IMAGES.mktgiovanna_pic}
+              imageAlt="Giovanna Vesselizza Picture"
               officerTitle="Marketing Analyst"
-              officerName="Victoria Ferreira"
+              officerName="Giovanna Vesselizza"
               isMobile={isMobile}
             />
             <BoardBox
-              image={IMAGES.nino_pic}
-              imageAlt="Nino Portugal Picture"
-              officerTitle="Event Planning Analyst"
-              officerName="Nino Portugal"
-              isMobile={isMobile}
-            />
-            <BoardBox
-              image={IMAGES.guilherme_pic}
-              imageAlt="Guilherme Tonini Aranega Picture"
+              image={IMAGES.mel_pic}
+              imageAlt="Mel Wolf Picture"
               officerTitle="Professional Development Analyst"
-              officerName="Guilherme Tonini Aranega"
+              officerName="Mel Wolf"
+              isMobile={isMobile}
+            />
+            <BoardBox
+              image={IMAGES.carol_pic}
+              imageAlt="Carol Picture"
+              officerTitle="Events Analyst"
+              officerName="Carolina Fernandes Tello"
+              isMobile={isMobile}
+            />
+            <BoardBox
+              image={IMAGES.fernanda_pic}
+              imageAlt="Carol Picture"
+              officerTitle="Events Analyst"
+              officerName="Fernanda Signorelli"
+              isMobile={isMobile}
+            />
+            <BoardBox
+              image={IMAGES.fernando_pic}
+              imageAlt="Fernando Picture"
+              officerTitle="Events Analyst"
+              officerName="Fernando Mendes"
+              isMobile={isMobile}
+            />
+            <BoardBox
+              image={IMAGES.isabele_pic}
+              imageAlt="Carol Picture"
+              officerTitle="Events Analyst"
+              officerName="Isabele Miguel"
               isMobile={isMobile}
             />
           </div>
