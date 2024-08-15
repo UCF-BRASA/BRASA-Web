@@ -39,6 +39,9 @@ import profile_pic from "/public/static/profile/profile-icon.png";
 import { getApiInstanceUrl, getWebInstanceUrl } from "./instanceUrl";
 import login_pic from "/public/static/login/login_pic.jpg";
 
+//Events Background
+//import events_background from "public/static/Events/events_background.jpg";
+
 export const MOBILE_THRESHOLD = 1000;
 
 // .env values
@@ -94,4 +97,5 @@ export const IMAGES = {
   board_pic,
   profile_pic,
   login_pic,
+  //events_background,
 };
