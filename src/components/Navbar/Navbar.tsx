@@ -110,8 +110,11 @@ const Navbar: FC<Props> = ({ isMobile }) => {
                       Contact
                     </Link>
                   </li>
+                  <li className="block py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-bold text-base">
+                    <Link href="/resource">Resources</Link>
+                  </li>
 
-                  {loggedUser.id ? (
+                  {/* {loggedUser.id ? (
                     // TODO - Add logged in profile design here
                     <Link
                       className="flex flex-row justify-center hover:cursor-pointer"
@@ -134,7 +137,7 @@ const Navbar: FC<Props> = ({ isMobile }) => {
                         <Link href="/login">Log In</Link>
                       </div>
                     </li>
-                  )}
+                  )} */}
                 </ul>
               </div>
             </div>
