@@ -6,7 +6,7 @@ import ImageCarousel from "./Landing/ImageCarousel";
 import BoardBox from "./Meet-Board/BoardBox";
 import EBoardBox from "./Meet-Board/EBoardBox";
 import Navbar from "./Navbar/Navbar";
-
+import UpcomingEvents from "./UpcomingEvents/UpcomingEvents";
 export {
   BoardBox,
   EBoardBox,
@@ -16,4 +16,5 @@ export {
   ImageCarousel,
   JoinNewsletter,
   Navbar,
+  UpcomingEvents,
 };

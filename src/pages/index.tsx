@@ -132,7 +132,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
         <div>
           <section>
             {/* Main section 1's content */}
-            <div className="bg-[url('/static/landing/intro/main-pic.png')] bg-cover bg-center">
+            <div className="">
               <div className="flex flex-col items-center justify-center text-center overflow-x-hidden w-full backdrop-brightness-[0.4] h-screen">
                 <h1 className="relative tracking-[0.1rem] font-bold text-xs break-normal text-white">
                   EMPOWERING BRAZILIAN STUDENTS
