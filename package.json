@@ -6,6 +6,7 @@
   "author": "UCF BRASA Tech Team",
   "scripts": {
     "dev": "next",
+    "dev:fix": "npx next",
     "build": "next build",
     "start": "next start",
     "tsc": "tsc"
@@ -27,7 +28,7 @@
     "dotenv": "^16.0.3",
     "js-cookie": "^3.0.5",
     "jsonwebtoken": "^9.0.2",
-    "next": "latest",
+    "next": "13.0.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-slideshow-image": "^4.2.1"
