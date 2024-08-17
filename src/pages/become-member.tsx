@@ -2,7 +2,6 @@ import { JoinNewsletter } from "@components";
 import { IMAGES } from "@util";
 import { NextPage } from "next";
 import Image from "next/image";
-import Link from "next/link";
 
 interface Props {
   windowWidth: number;
@@ -58,7 +57,10 @@ const BecomeMember: NextPage<Props> = ({ windowWidth, isMobile }) => {
                   className="flex text-center justify-center items-center mt-16 self-center rounded-full bg-blue-500
               text-white font-medium h-[4rem] w-[12rem]"
                 >
-                  <Link href="/sign-up"> Join BRASA @ UCF </Link>
+                  <a href="https://knightconnect.campuslabs.com/engage/organization/brasa">
+                    {" "}
+                    Join BRASA @ UCF{" "}
+                  </a>
                 </div>
               </div>
             </div>
@@ -115,12 +117,12 @@ const BecomeMember: NextPage<Props> = ({ windowWidth, isMobile }) => {
                   to thrive in their educational journey.
                 </p>
                 <div className="flex justify-center items-center mt-28 text-base rounded-full md:h-14 md:w-44 bg-blue-500 text-white font-medium">
-                  <Link
+                  <a
                     className="flex text-center justify-center items-center w-full h-full"
-                    href="/sign-up"
+                    href="https://knightconnect.campuslabs.com/engage/organization/brasa"
                   >
                     Join BRASA @ UCF
-                  </Link>
+                  </a>
                 </div>
               </div>
               <div className="">
