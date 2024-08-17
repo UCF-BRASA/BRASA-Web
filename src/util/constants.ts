@@ -7,32 +7,27 @@ import study_pic from "/public/static/landing/our-events/study_pic.jpg";
 import workshop_pic from "/public/static/landing/our-events/workshop_pic.jpg";
 
 // Meet the Board imaegs
-import ana_pic from "/public/static/meet-board/ana_pic.jpg";
-import carlos_pic from "/public/static/meet-board/carlos_pic.jpg";
-import carol_pic from "/public/static/meet-board/carol_pic.jpg";
 import chris_pic from "/public/static/meet-board/chris_pic.png";
-import daghum_pic from "/public/static/meet-board/daghum_pic.jpg";
-import enzo_pic from "/public/static/meet-board/enzo_pic.jpg";
+import duda_pic from "/public/static/meet-board/duda_pic.jpeg";
+import ella_pic from "/public/static/meet-board/ella_pic.jpeg";
+import enzo_pic from "/public/static/meet-board/enzo_pic.jpeg";
 import eric_pic from "/public/static/meet-board/eric_pic.png";
-import fernanda_pic from "/public/static/meet-board/fernanda_pic.jpg";
-import fernando_pic from "/public/static/meet-board/fernando_pic.jpg";
-import gio_pic from "/public/static/meet-board/gio_pic.jpg";
+import fachetti_pic from "/public/static/meet-board/fachetti_pic.jpg";
+import gabriel_pic from "/public/static/meet-board/gabriel_pic.jpeg";
 import guilherme_pic from "/public/static/meet-board/guilherme_pic.jpg";
 import gustavo_pic from "/public/static/meet-board/gustavo_pic.jpg";
-import isa_pic from "/public/static/meet-board/isa_pic.jpg";
-import isabele_pic from "/public/static/meet-board/isabele_pic.jpg";
+import jean_thomas_pic from "/public/static/meet-board/jean_thomas_pic.jpeg";
+import julie_pic from "/public/static/meet-board/julie_pic.png";
 import leo_pic from "/public/static/meet-board/leo_pic.png";
-import leticia_pic from "/public/static/meet-board/leticia_pic.png";
 import luca_pic from "/public/static/meet-board/luca_pic.png";
-import lucas_pic from "/public/static/meet-board/lucas_pic.jpg";
+import lucas_pic from "/public/static/meet-board/lucas_pic.jpeg";
 import matheus_pic from "/public/static/meet-board/matheus_pic.jpg";
-import mel_pic from "/public/static/meet-board/mel_pic.jpg";
-import mktgiovanna_pic from "/public/static/meet-board/mktgiovanna_pic.jpg";
+import nicole_pic from "/public/static/meet-board/nicole_pic.png";
 import nino_pic from "/public/static/meet-board/nino_pic.jpeg";
-import paulo_pic from "/public/static/meet-board/paulo_pic.jpg";
-import pedro_pic from "/public/static/meet-board/pedro_pic.jpg";
-import seabra_pic from "/public/static/meet-board/seabra_pic.jpg";
-import sophia_pic from "/public/static/meet-board/sophia_pic.jpg";
+import pedro_pic from "/public/static/meet-board/pedro_pic.jpeg";
+import saki_pic from "/public/static/meet-board/saki_pic.png";
+import sophia_pic from "/public/static/meet-board/sophia_pic.png";
+import victoria_pic from "/public/static/meet-board/victoria_pic.jpeg";
 
 // Board pic
 import board_pic from "/public/static/become-member/member-box/board_pic.jpg";
@@ -78,33 +73,28 @@ export const IMAGES = {
   guest_speaker_pic,
   study_pic,
   workshop_pic,
-  ana_pic,
   chris_pic,
-  isa_pic,
-  daghum_pic,
-  fernanda_pic,
+  duda_pic,
+  ella_pic,
   enzo_pic,
   eric_pic,
-  fernando_pic,
-  gio_pic,
+  fachetti_pic,
+  gabriel_pic,
   guilherme_pic,
   gustavo_pic,
-  isabele_pic,
-  mel_pic,
+  jean_thomas_pic,
+  julie_pic,
   leo_pic,
   luca_pic,
   lucas_pic,
   matheus_pic,
-  mktgiovanna_pic,
+  nicole_pic,
   nino_pic,
   pedro_pic,
-  carlos_pic,
+  saki_pic,
   sophia_pic,
-  paulo_pic,
-  seabra_pic,
+  victoria_pic,
   board_pic,
   profile_pic,
   login_pic,
-  carol_pic,
-  leticia_pic,
 };
