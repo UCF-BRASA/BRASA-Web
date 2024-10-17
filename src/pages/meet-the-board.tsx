@@ -142,7 +142,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
               image={IMAGES.carlos_pic}
               imageAlt="Carlos Eduardo Picture"
               officerTitle="Technology Analyst"
-              officerName="Carlos Eduardo"
+              officerName="Carlos Eduardo Torres"
               isMobile={isMobile}
             />
             <BoardBox
@@ -373,14 +373,14 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
               image={IMAGES.carlos_pic}
               imageAlt="Carlos Eduardo Picture"
               officerTitle="Technology Analyst"
-              officerName="Carlos Eduardo"
+              officerName="Carlos Eduardo Torres"
               isMobile={isMobile}
             />
             <BoardBox
               image={IMAGES.seabra_pic}
               imageAlt="Matheus Seabra Picture"
               officerTitle="Technology Analyst"
-              officerName="Matheus seabra"
+              officerName="Matheus Seabra"
               isMobile={isMobile}
             />
             <BoardBox
