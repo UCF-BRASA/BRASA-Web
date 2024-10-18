@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
   env: {
     APP_ENV: process.env.APP_ENV,
@@ -13,3 +13,9 @@ module.exports = {
     ALGORITHM: process.env.ALGORITHM,
   },
 };
+
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
+
+module.exports = withBundleAnalyzer({ nextConfig });

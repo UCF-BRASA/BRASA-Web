@@ -1,50 +1,29 @@
-import { Footer, Navbar } from "@components";
-import BottomNavbar from "@components/Navbar/BottomNavbar";
 import { config as fortawesomeConfig } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { useWindowDimensions } from "@hooks";
-import { setLoggedUser } from "@lib";
-import { MOBILE_THRESHOLD } from "@util";
-import Cookies from "js-cookie";
+import { MOBILE_THRESHOLD } from "@util/constants";
 import type { AppProps } from "next/app";
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import { useEffect } from "react";
 import "../styles/globals.css";
 fortawesomeConfig.autoAddCss = false;
+
+const BottomNavbar = dynamic(() => import("@components/Navbar/BottomNavbar"), { ssr: false });
+const DesktopNavbar = dynamic(() => import("@components/Navbar/DesktopNavbar"), { ssr: false });
+const MobileNavbar = dynamic(() => import("@components/Navbar/MobileNavbar"), { ssr: false });
+const DesktopFooter = dynamic(() => import("@components/Footer/DesktopFooter"), {
+  ssr: false,
+});
+const MobileFooter = dynamic(() => import("@components/Footer/MobileFooter"), {
+  ssr: false,
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { windowWidth, windowHeight } = useWindowDimensions();
   const isMobile = (windowWidth || 350) < MOBILE_THRESHOLD;
+  // const isMobile = false;
 
   pageProps = { ...pageProps, windowWidth, windowHeight, isMobile };
-
-  useEffect(() => {
-    const id = Cookies.get("_id");
-
-    // Check if the user is authenticated globally
-    if (id) {
-      const username = Cookies.get("username");
-      const firstName = Cookies.get("firstName");
-      const lastName = Cookies.get("lastName");
-      const dateOfBirth = Cookies.get("dateOfBirth");
-      const gender = Cookies.get("gender");
-      const originCity = Cookies.get("originCity");
-      const major = Cookies.get("major");
-      const schoolYear = Cookies.get("schoolYear");
-
-      setLoggedUser(
-        id!,
-        username!,
-        firstName!,
-        lastName!,
-        dateOfBirth!,
-        gender!,
-        originCity!,
-        major!,
-        schoolYear!
-      );
-    }
-  }, []);
 
   return (
     <>
@@ -56,14 +35,14 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="description"
           content="BRASA at UCF, the Brazilian Student Association at UCF, is the biggest student organization dedicated to supporting Brazilian students in Orlando."
         />
-        <link rel="UCF BRASA icon" href="/static/favicon.ico" />
+        <link rel="icon" href="/static/favicon.ico" />
         <title>UCF BRASA</title>
       </Head>
 
-      <Navbar isMobile={isMobile} />
+      {isMobile ? <MobileNavbar /> : <DesktopNavbar />}
       <Component {...pageProps} />
-      <Footer isMobile={isMobile} />
-      {isMobile ? <BottomNavbar /> : <div></div>}
+      {isMobile ? <MobileFooter /> : <DesktopFooter />}
+      {isMobile && <BottomNavbar />}
     </>
   );
 }

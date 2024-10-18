@@ -1,4 +1,5 @@
 // Landing Page images
+import mainPicLanding from "/public/static/landing/intro/main-pic.png";
 import bailinho_pic from "/public/static/landing/our-events/bailinho_pic.png";
 import churras_pic from "/public/static/landing/our-events/churras_pic.png";
 import guest_speaker_pic from "/public/static/landing/our-events/guest_speaker_pic.jpg";
@@ -37,12 +38,13 @@ import profile_pic from "/public/static/profile/profile-icon.png";
 
 // Login photo
 import { getApiInstanceUrl, getWebInstanceUrl } from "./instanceUrl";
+import brasa_logo from "/public/static/brasa-logo.png";
 import login_pic from "/public/static/login/login_pic.jpg";
 
 //Events Background
 //import events_background from "public/static/Events/events_background.jpg";
 
-export const MOBILE_THRESHOLD = 1000;
+export const MOBILE_THRESHOLD = 1050;
 
 // .env values
 export const DEBUG_MODE = process.env.APP_ENV === "development" || process.env.APP_ENV === "test";
@@ -68,6 +70,8 @@ export const COLORS = {
 
 export const IMAGES = {
   bailinho_pic,
+  mainPicLanding,
+  brasa_logo,
   churras_pic,
   hangout_pic,
   guest_speaker_pic,
