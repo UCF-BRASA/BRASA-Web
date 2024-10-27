@@ -7,27 +7,35 @@ import study_pic from "/public/static/landing/our-events/study_pic.jpg";
 import workshop_pic from "/public/static/landing/our-events/workshop_pic.jpg";
 
 // Meet the Board imaegs
+import ana_pic from "/public/static/meet-board/ana_pic.jpg";
+import caio_pic from "/public/static/meet-board/caio_pic.jpeg";
+import carlos_pic from "/public/static/meet-board/carlos_pic.jpg";
+import carol_pic from "/public/static/meet-board/carol_pic.jpg";
 import chris_pic from "/public/static/meet-board/chris_pic.png";
-import duda_pic from "/public/static/meet-board/duda_pic.jpeg";
-import ella_pic from "/public/static/meet-board/ella_pic.jpeg";
-import enzo_pic from "/public/static/meet-board/enzo_pic.jpeg";
-import eric_pic from "/public/static/meet-board/eric_pic.png";
-import fachetti_pic from "/public/static/meet-board/fachetti_pic.jpg";
-import gabriel_pic from "/public/static/meet-board/gabriel_pic.jpeg";
+import daghum_pic from "/public/static/meet-board/daghum_pic.jpg";
+import eric_newpic from "/public/static/meet-board/eric_newpic.jpeg";
+import fernanda_pic from "/public/static/meet-board/fernanda_pic.jpg";
+import gio_pic from "/public/static/meet-board/gio_pic.jpg";
 import guilherme_pic from "/public/static/meet-board/guilherme_pic.jpg";
-import gustavo_pic from "/public/static/meet-board/gustavo_pic.jpg";
-import jean_thomas_pic from "/public/static/meet-board/jean_thomas_pic.jpeg";
-import julie_pic from "/public/static/meet-board/julie_pic.png";
+import gustavo_new_pic from "/public/static/meet-board/gustavo_new_pic.jpeg";
+import isa_pic from "/public/static/meet-board/isa_pic.jpeg";
+import isabele_pic from "/public/static/meet-board/isabele_pic.jpg";
 import leo_pic from "/public/static/meet-board/leo_pic.png";
+import leticia_pic from "/public/static/meet-board/leticia_pic.png";
+import luana_pic from "/public/static/meet-board/luana_pic.jpeg";
 import luca_pic from "/public/static/meet-board/luca_pic.png";
-import lucas_pic from "/public/static/meet-board/lucas_pic.jpeg";
+import lucas_pic from "/public/static/meet-board/lucas_pic.jpg";
+import manu_pic from "/public/static/meet-board/manu_pic.jpeg";
 import matheus_pic from "/public/static/meet-board/matheus_pic.jpg";
-import nicole_pic from "/public/static/meet-board/nicole_pic.png";
+import matheusf_pic from "/public/static/meet-board/matheusf_pic.jpg";
+import mel_pic from "/public/static/meet-board/mel_pic.jpg";
+import mktgiovanna_pic from "/public/static/meet-board/mktgiovanna_pic.jpg";
+import nino_newpic from "/public/static/meet-board/nino_newpic.jpeg";
 import nino_pic from "/public/static/meet-board/nino_pic.jpeg";
-import pedro_pic from "/public/static/meet-board/pedro_pic.jpeg";
+import paulo_pic from "/public/static/meet-board/paulo_pic.jpg";
+import pedro_pic from "/public/static/meet-board/pedro_pic.jpg";
 import saki_pic from "/public/static/meet-board/saki_pic.png";
-import sophia_pic from "/public/static/meet-board/sophia_pic.png";
-import victoria_pic from "/public/static/meet-board/victoria_pic.jpeg";
+import seabra_pic from "/public/static/meet-board/seabra_pic.jpg";
 
 // Board pic
 import board_pic from "/public/static/become-member/member-box/board_pic.jpg";
@@ -74,26 +82,34 @@ export const IMAGES = {
   study_pic,
   workshop_pic,
   chris_pic,
-  duda_pic,
-  ella_pic,
-  enzo_pic,
-  eric_pic,
-  fachetti_pic,
-  gabriel_pic,
+  caio_pic,
+  ana_pic,
+  carlos_pic,
+  carol_pic,
+  eric_newpic,
+  daghum_pic,
+  fernanda_pic,
   guilherme_pic,
-  gustavo_pic,
-  jean_thomas_pic,
-  julie_pic,
+  gio_pic,
+  gustavo_new_pic,
+  isa_pic,
+  isabele_pic,
   leo_pic,
   luca_pic,
   lucas_pic,
   matheus_pic,
-  nicole_pic,
+  manu_pic,
+  leticia_pic,
+  nino_newpic,
   nino_pic,
   pedro_pic,
   saki_pic,
-  sophia_pic,
-  victoria_pic,
+  luana_pic,
+  matheusf_pic,
+  mel_pic,
+  mktgiovanna_pic,
+  paulo_pic,
+  seabra_pic,
   board_pic,
   profile_pic,
   login_pic,
