@@ -56,7 +56,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           name="description"
           content="BRASA at UCF, the Brazilian Student Association at UCF, is the biggest student organization dedicated to supporting Brazilian students in Orlando."
         />
-        <link rel="UCF BRASA icon" href="/static/favicon.ico" />
+        <link rel="icon" href="/static/favicon.ico" />
         <title>UCF BRASA</title>
       </Head>
 
