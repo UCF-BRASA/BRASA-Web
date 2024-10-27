@@ -61,6 +61,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Leonora Carvalho Picture"
                   officerTitle="Head of Finance"
                   officerName="Leonora Carvalho"
+
                   isMobile={isMobile}
                 />
                 <EBoardBox
@@ -292,6 +293,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Leonora Carvalho Picture"
                   officerTitle="Head of Finance"
                   officerName="Leonora Carvalho"
+
                   isMobile={isMobile}
                 />
                 <EBoardBox
