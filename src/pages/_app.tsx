@@ -5,6 +5,7 @@ import { MOBILE_THRESHOLD } from "@util/constants";
 import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import "../styles/globals.css";
 fortawesomeConfig.autoAddCss = false;
 
@@ -20,8 +21,14 @@ const MobileFooter = dynamic(() => import("@components/Footer/MobileFooter"), {
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { windowWidth, windowHeight } = useWindowDimensions();
-  const isMobile = (windowWidth || 350) < MOBILE_THRESHOLD;
-  // const isMobile = false;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (windowWidth && windowHeight) {
+      const mobileStatus = windowWidth < MOBILE_THRESHOLD;
+      setIsMobile(mobileStatus);
+    }
+  }, [windowWidth, windowHeight]);
 
   pageProps = { ...pageProps, windowWidth, windowHeight, isMobile };
 
