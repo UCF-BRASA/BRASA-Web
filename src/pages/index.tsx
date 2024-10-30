@@ -1,68 +1,13 @@
 import { EventCard, GridSection, ImageCarousel, JoinNewsletter } from "@components";
-import { EventCardImageObject } from "@interfaces";
-import { IMAGES } from "@util";
+import { eventImagesData, IMAGES, professionalImagesData } from "@util";
 import { NextPage } from "next";
-import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 interface HomeProps {
   windowWidth: number;
-  windowHeight: number;
   isMobile: boolean;
 }
-
-const eventImagesData: EventCardImageObject[] = [
-  {
-    image: IMAGES.churras_pic,
-    imageAlt: "UCF BRASA Churrasco Picture",
-    tag: "Main Event",
-    eventTitle: "BRASA Churrasco",
-    eventDescription:
-      "All you can eat and drink Brazilian Churrasco! Come enjoy the full Brazilian experience with live DJ music and the best caipirinhas in Orlando!",
-  },
-  {
-    image: IMAGES.bailinho_pic,
-    imageAlt: "UCF BRASA Baile da BRASA Picture",
-    tag: "Main Event",
-    eventTitle: "Baile da BRASA",
-    eventDescription:
-      "Baile Funk da BRASA! Partnerships with the best clubs in Orlando with open-bars and premium discounts!",
-  },
-  {
-    image: IMAGES.hangout_pic,
-    imageAlt: "UCF BRASA Hangout Picture",
-    tag: "Casual",
-    eventTitle: "BRASA Hangout",
-    eventDescription:
-      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
-  },
-];
-const professionalImagesData: EventCardImageObject[] = [
-  {
-    image: IMAGES.guest_speaker_pic,
-    imageAlt: "UCF BRASA Guest Speakers Picture",
-    tag: "Networking",
-    eventTitle: "Guest Speakers",
-    eventDescription:
-      "Connect with experts of your field with our re-ocurrent Guest Speaker events! Whatever area you are in, we have professinals to help you out!",
-  },
-  {
-    image: IMAGES.workshop_pic,
-    imageAlt: "UCF BRASA Workshops Picture",
-    tag: "Learning",
-    eventTitle: "BRASA Workshops",
-    eventDescription:
-      "Expand your skillsets with our workshops! Our workshop areas include finance, marketing, coding, how to get a job and general networking!",
-  },
-  {
-    image: IMAGES.study_pic,
-    imageAlt: "UCF BRASA Study Picture",
-    tag: "Casual",
-    eventTitle: "BRASA Study",
-    eventDescription:
-      "A light, fun and collaborative environment for you to study with fellow BRASA members! We have weekly study sessions for everyone!",
-  },
-];
 
 const displayEventCards = (isSocial: boolean, isMobile: boolean) => {
   return isSocial ? (
@@ -129,22 +74,21 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
     <main>
       {isMobile ? (
         // MOBILE LANDING PAGE
-        <div>
-          <section>
+        <>
+          <section className="rounded-b-lg">
             {/* Main section 1's content */}
-            <div className="">
-              <div className="flex flex-col items-center justify-center text-center overflow-x-hidden w-full backdrop-brightness-[0.4] h-screen">
-                <h1 className="relative tracking-[0.1rem] font-bold text-xs break-normal text-white">
-                  EMPOWERING BRAZILIAN STUDENTS
-                </h1>
-                <br />
-                <h1 className="relative leading-200 font-bold text-5xl break-normal text-main-brasa-yellow">
-                  Unlocking <br />
-                  potential, <br />
-                  building <br />
-                  futures
-                </h1>
-              </div>
+            <Image src={IMAGES.mainPicLanding} alt="Landing Pic" fill className="bg-cover" />
+            <div className="flex flex-col items-center justify-center text-center overflow-x-hidden w-full backdrop-brightness-[0.4] h-screen">
+              <h1 className="relative tracking-[0.1rem] font-bold text-xs break-normal text-white">
+                EMPOWERING BRAZILIAN STUDENTS
+              </h1>
+              <br />
+              <h1 className="relative leading-200 font-bold text-5xl break-normal text-main-brasa-yellow">
+                Unlocking <br />
+                potential, <br />
+                building <br />
+                futures
+              </h1>
             </div>
           </section>
           <section id="section-salve" className="h-[30rem] bg-main-brasa-yellow">
@@ -161,9 +105,12 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
             </div>
             <div className="flex justify-center w-full relative z-30">
               <div className="text-base rounded-full bg-blue-500 text-white font-medium h-16 w-44">
-                <Link className="flex justify-center items-center w-full h-full" href="/sign-up">
+                <a
+                  className="flex justify-center items-center w-full h-full"
+                  href="https://knightconnect.campuslabs.com/engage/organization/brasa"
+                >
                   Become a Member
-                </Link>
+                </a>
               </div>
             </div>
           </section>
@@ -275,7 +222,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
 
           {/* Footer spacing */}
           <div className="bg-white h-40"></div>
-        </div>
+        </>
       ) : (
         <div className="h-full bg-white">
           {/* Section 1 */}
@@ -303,18 +250,23 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
               </p>
 
               <div className="mt-10 text-base rounded-full md:h-14 md:w-44 bg-blue-500 text-white font-medium">
-                <Link className="flex justify-center items-center w-full h-full" href="/sign-up">
+                <a
+                  className="flex justify-center items-center w-full h-full"
+                  href="https://knightconnect.campuslabs.com/engage/organization/brasa"
+                >
                   Become a Member
-                </Link>
+                </a>
               </div>
             </div>
-            <div className="order-last w-screen h-screen landing-page-image-ellipse">
-              <img
-                className="h-full w-auto"
-                src="static/landing/intro/main-pic.png"
-                alt="Landing Pic"
-              />
-            </div>
+          </div>
+          <div className="absolute -top-[-10rem] -right-[10rem] w-[54rem] aspect-square overflow-hidden rounded-full shadow-xl">
+            <Image
+              src={IMAGES.mainPicLanding}
+              sizes="33vw"
+              placeholder="blur"
+              className="h-full w-auto"
+              alt="Landing Pic"
+            />
           </div>
 
           {/* Curvy landing page area */}
@@ -417,7 +369,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
           </div>
 
           <div className="absolute w-full h-48 bg-main-brasa-blue">
-            <JoinNewsletter isMobile={false} />
+            <JoinNewsletter />
           </div>
 
           {/* Footer spacing */}

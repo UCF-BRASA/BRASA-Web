@@ -7,14 +7,7 @@ interface Props extends EventCardImageObject {
   isMobile: boolean;
 }
 
-const GridSection: FC<Props> = ({
-  image,
-  imageAlt,
-  tag,
-  eventTitle,
-  eventDescription,
-  isMobile,
-}) => {
+const EventCard: FC<Props> = ({ image, imageAlt, tag, eventTitle, eventDescription, isMobile }) => {
   return (
     <section>
       {isMobile ? (
@@ -65,6 +58,7 @@ const GridSection: FC<Props> = ({
               <Image
                 src={image}
                 alt={imageAlt}
+                // priority
                 sizes="100vw"
                 className="rounded-[2rem] overflow-hidden"
               />
@@ -96,4 +90,4 @@ const GridSection: FC<Props> = ({
   );
 };
 
-export default GridSection;
+export default EventCard;

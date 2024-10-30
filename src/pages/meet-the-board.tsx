@@ -477,7 +477,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
               isMobile={isMobile}
             />
           </div>
-          <JoinNewsletter isMobile={false} />
+          <JoinNewsletter />
         </div>
       )}
     </main>
