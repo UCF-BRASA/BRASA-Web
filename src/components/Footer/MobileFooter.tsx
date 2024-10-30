@@ -6,7 +6,6 @@ import { FC } from "react";
 const MobileFooter: FC = () => {
   return (
     <>
-      // CHECK FIXED VS STICKY ON THIS DIV!!!
       <footer className="mb-48 bg-white justify-center items-center">
         <div className="flex flex-col justify-center items-center">
           <h3 className="text-black text-lg font-bold pt-4">Follow BRASA @ UCF</h3>

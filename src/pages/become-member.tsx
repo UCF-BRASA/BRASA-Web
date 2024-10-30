@@ -5,7 +5,6 @@ import Image from "next/image";
 
 interface Props {
   windowWidth: number;
-  windowHeight: number;
   isMobile: boolean;
 }
 
@@ -66,7 +65,7 @@ const BecomeMember: NextPage<Props> = ({ windowWidth, isMobile }) => {
             </div>
           </div>
 
-          <JoinNewsletter isMobile={true} />
+          <JoinNewsletter />
           <div className="h-[4rem] bg-white"></div>
         </main>
       ) : (
@@ -105,18 +104,18 @@ const BecomeMember: NextPage<Props> = ({ windowWidth, isMobile }) => {
           <div className="bg-main-brasa-green">
             <div className="h-20 w-full bg-main-brasa-green"></div>
             {/* Yellow background and image */}
-            <div className="bg-main-brasa-yellow mx-40 mb-40 rounded-[5rem] h-[40rem] flex flex-row">
-              <div className="text-left mt-24 ml-24">
+            <div className="container flex flex-row items-center justify-between mx-auto bg-main-brasa-yellow mx-40 mb-40 rounded-[5rem] h-[38rem] w-[75rem]">
+              <div className="flex flex-col gap-y-10 text-left ml-20">
                 <h3 className="font-bold tracking-[0.20em]">MEMBERSHIP</h3>
-                <h1 className="leading-200 font-bold text-5xl mt-8">Become a Member</h1>
-                <p className="mt-10 font-medium text-base text-justify text-black/60 w-[25rem] break-normal">
+                <h1 className="leading-200 font-bold text-5xl">Become a Member</h1>
+                <p className="font-medium text-base text-justify text-black/60 w-[25rem] break-normal">
                   BRASA @ UCF, the Brazilian Student Association at the University of Central
                   Florida, is a prominent organization dedicated to supporting Brazilian students in
                   Orlando. With a strong focus on academic, professional, and social development,
                   BRASA UCF serves as a vital resource and community for Brazilian students seeking
                   to thrive in their educational journey.
                 </p>
-                <div className="flex justify-center items-center mt-28 text-base rounded-full md:h-14 md:w-44 bg-blue-500 text-white font-medium">
+                <div className="flex justify-center items-center text-base rounded-full md:h-14 md:w-44 bg-blue-500 text-white font-medium">
                   <a
                     className="flex text-center justify-center items-center w-full h-full"
                     href="https://knightconnect.campuslabs.com/engage/organization/brasa"
@@ -125,7 +124,7 @@ const BecomeMember: NextPage<Props> = ({ windowWidth, isMobile }) => {
                   </a>
                 </div>
               </div>
-              <div className="">
+              <div>
                 <Image
                   src={IMAGES.board_pic}
                   alt=""
@@ -138,54 +137,12 @@ const BecomeMember: NextPage<Props> = ({ windowWidth, isMobile }) => {
             <div className="pt-2 bg-main-brasa-green"></div>
           </div>
           <div className="mt-20">
-            <JoinNewsletter isMobile={false} />
+            <JoinNewsletter />
           </div>
         </main>
       )}
     </section>
   );
 };
-
-// export const getServerSideProps: GetServerSideProps = async (context) => {
-//   // Extract JWT from cookies
-//   const allCokies = parseCookies(context.req.headers.cookie);
-
-//   // console.log("Cookies Str: " + context.req.headers.cookie);
-//   console.log("Parsed Cookies: ");
-//   console.log(allCokies);
-
-//   // Check if the user is authenticated globally
-//   if (allCokies) {
-//     const {
-//       _id,
-//       username,
-//       firstName,
-//       lastName,
-//       dateOfBirth,
-//       gender,
-//       originCity,
-//       major,
-//       schoolYear,
-//     } = allCokies;
-
-//     setLoggedUser(
-//       _id,
-//       username,
-//       firstName,
-//       lastName,
-//       dateOfBirth,
-//       gender,
-//       originCity,
-//       major,
-//       schoolYear
-//     );
-
-//     console.log("Logged User: ");
-//     console.log(loggedUser);
-//   }
-//   return {
-//     props: {},
-//   };
-// };
 
 export default BecomeMember;

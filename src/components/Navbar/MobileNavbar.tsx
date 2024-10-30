@@ -1,13 +1,12 @@
-import { faArrowRightToBracket, faBars, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightToBracket, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { loggedUser } from "@lib";
 import { COLORS } from "@util";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState, type FC } from "react";
 import styles from "./Navbar.module.css";
 
-const Navbar: FC = () => {
+const MobileNavbar: FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const router = useRouter();
 
@@ -71,29 +70,11 @@ const Navbar: FC = () => {
                 font-medium"
             >
               <div className="flex justify-center items-center h-full">
-                {loggedUser.id ? (
-                  // TODO - Add logged in profile design here
-                  <Link
-                    className="flex flex-row justify-center hover:cursor-pointer"
-                    href="/profile"
-                  >
-                    <FontAwesomeIcon
-                      icon={faUser}
-                      color={COLORS.white}
-                      className="fa-lg min-w-fit"
-                    />
-                  </Link>
-                ) : (
-                  <Link href="/login">
-                    <div className="flex flex-row items-center">
-                      <FontAwesomeIcon
-                        icon={faArrowRightToBracket}
-                        color={COLORS.white}
-                        className="fa-xl min-w-fit"
-                      />
-                    </div>
-                  </Link>
-                )}
+                <FontAwesomeIcon
+                  icon={faArrowRightToBracket}
+                  color={COLORS.white}
+                  className="fa-xl min-w-fit"
+                />
               </div>
             </div>
           </div>
@@ -122,4 +103,4 @@ const Navbar: FC = () => {
   );
 };
 
-export default Navbar;
+export default MobileNavbar;

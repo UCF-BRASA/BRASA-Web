@@ -155,7 +155,7 @@ const DesktopFooter: FC = () => {
 
         {/* CopyRight section */}
         <p className="font-regular pt-4 ml-28 mb-4 text-left text-black/60">
-          © Copyright 2023 All Rights Reserved by UCF BRASA
+          © Copyright {new Date().getFullYear()} All Rights Reserved by UCF BRASA
         </p>
       </footer>
     </>

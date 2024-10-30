@@ -9,10 +9,10 @@ import {
   MOBILE_THRESHOLD,
   SIGNUP_ENDPOINT,
   USER_PROFILE_ENDPOINT,
+  eventImagesData,
+  professionalImagesData,
 } from "./constants";
-import { callGetUserInfoEndpoint, callLoginEndpoint } from "./endpointCalls";
 import { getApiInstanceUrl, getWebInstanceUrl } from "./instanceUrl";
-import { parseCookies } from "./parseCookies";
 
 export {
   ACCESS_CONTROL_ALLOW_ORIGIN,
@@ -25,9 +25,8 @@ export {
   MOBILE_THRESHOLD,
   SIGNUP_ENDPOINT,
   USER_PROFILE_ENDPOINT,
-  callGetUserInfoEndpoint,
-  callLoginEndpoint,
+  eventImagesData,
   getApiInstanceUrl,
   getWebInstanceUrl,
-  parseCookies,
+  professionalImagesData,
 };
