@@ -1,11 +1,11 @@
 // Landing Page images
-import mainPicLanding from "/public/static/landing/intro/main-pic.png";
+import mainPicLanding from "/public/static/landing/intro/main-pic.webp";
 import bailinho_pic from "/public/static/landing/our-events/bailinho_pic.png";
 import churras_pic from "/public/static/landing/our-events/churras_pic.png";
-import guest_speaker_pic from "/public/static/landing/our-events/guest_speaker_pic.jpg";
+import guest_speaker_pic from "/public/static/landing/our-events/guest_speaker_pic.webp";
 import hangout_pic from "/public/static/landing/our-events/hangout_pic.png";
-import study_pic from "/public/static/landing/our-events/study_pic.jpg";
-import workshop_pic from "/public/static/landing/our-events/workshop_pic.jpg";
+import study_pic from "/public/static/landing/our-events/study_pic.webp";
+import workshop_pic from "/public/static/landing/our-events/workshop_pic.webp";
 
 // Meet the Board imaegs
 import chris_pic from "/public/static/meet-board/chris_pic.png";
@@ -40,7 +40,6 @@ import profile_pic from "/public/static/profile/profile-icon.png";
 import { EventCardImageObject } from "@interfaces";
 import { getApiInstanceUrl, getWebInstanceUrl } from "./instanceUrl";
 import brasa_logo from "/public/static/brasa-logo.png";
-import login_pic from "/public/static/login/login_pic.jpg";
 
 //Events Background
 //import events_background from "public/static/Events/events_background.jpg";
@@ -101,7 +100,6 @@ export const IMAGES = {
   victoria_pic,
   board_pic,
   profile_pic,
-  login_pic,
 };
 
 export const eventImagesData: EventCardImageObject[] = [

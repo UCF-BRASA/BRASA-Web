@@ -18,19 +18,19 @@ const DesktopNavbar: FC = () => {
 
             <div className="order-last">
               <ul className="flex flex-row items-center p-4 pr-12 md:space-x-20 md:text-sm md:font-medium">
-                <li className="block py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-bold text-base">
+                <li className="py-1 px-2 rounded font-bold text-lg hover:cursor-pointer hover:bg-slate-800/[.2] transition duration-200">
                   <Link href="/events">Events</Link>
                 </li>
-                <li className="block py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-bold text-base">
+                <li className="py-1 px-2 rounded font-bold text-lg hover:cursor-pointer hover:bg-slate-800/[.2] transition duration-200">
                   <Link href="/meet-the-board">E-Board</Link>
                 </li>
-                <li className="block py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-bold text-base">
+                <li className="py-1 px-2 rounded font-bold text-lg hover:cursor-pointer hover:bg-slate-800/[.2] transition duration-200">
                   <Link href="/become-member">Become a Member</Link>
                 </li>
-                <li className="block py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-bold text-base">
+                <li className="py-1 px-2 rounded font-bold text-lg hover:cursor-pointer hover:bg-slate-800/[.2] transition duration-200">
                   <Link href="/resource">Resources</Link>
                 </li>
-                <li className="block py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-bold text-base">
+                <li className="font-bold text-lg navigation-link">
                   <Link href="#desktop-brasa-footer" scroll={false}>
                     Contact
                   </Link>

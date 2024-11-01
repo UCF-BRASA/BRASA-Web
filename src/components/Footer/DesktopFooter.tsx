@@ -26,16 +26,25 @@ const DesktopFooter: FC = () => {
           <div className="text-left">
             <h1 className="text-main-brasa-blue text-lg font-bold pt-4">Quick Links</h1>
             <div className="flex flex-col text-left">
-              <Link href="/" className="text-base font-bold mt-5">
+              <Link href="/" className="text-base font-bold mt-5 navigation-link ml-[-0.5rem]">
                 Home
               </Link>
-              <Link href="/profile" className="text-base font-bold mt-5">
+              <Link
+                href="/profile"
+                className="text-base font-bold mt-5 navigation-link ml-[-0.5rem]"
+              >
                 Profile
               </Link>
-              <Link href="/meet-the-board" className="text-base font-bold mt-5">
+              <Link
+                href="/meet-the-board"
+                className="text-base font-bold mt-5 navigation-link ml-[-0.5rem]"
+              >
                 Meet the Board
               </Link>
-              <Link href="/become-member" className="text-base font-bold mt-5">
+              <Link
+                href="/become-member"
+                className="text-base font-bold mt-5 navigation-link ml-[-0.5rem]"
+              >
                 Become a Member
               </Link>
             </div>
@@ -49,14 +58,14 @@ const DesktopFooter: FC = () => {
                 <a
                   href="https://github.com/UCF-BRASA/BRASA-Web"
                   target="_blank"
-                  className="text-base font-bold mt-5"
+                  className="text-base font-bold mt-5 navigation-link ml-[-0.5rem]"
                 >
                   Terms & Conditions
                 </a>
                 <a
                   href="https://github.com/UCF-BRASA/BRASA-Web/blob/main/LICENSE"
                   target="_blank"
-                  className="text-base font-bold mt-5"
+                  className="text-base font-bold mt-5 navigation-link ml-[-0.5rem]"
                 >
                   Website License
                 </a>
@@ -149,14 +158,28 @@ const DesktopFooter: FC = () => {
         </div>
 
         {/* Horizontal line section */}
-        <div className="ml-28 mr-28 font-bold items-center justify-Center">
+        <div className="ml-28 mr-28 font-bold items-center justify-center">
           <hr className="mt-10 border-black/60"></hr>
         </div>
 
         {/* CopyRight section */}
-        <p className="font-regular pt-4 ml-28 mb-4 text-left text-black/60">
-          © Copyright {new Date().getFullYear()} All Rights Reserved by UCF BRASA
-        </p>
+        <div className="w-full flex flex-row justify-between overflow-hidden px-28 pt-4">
+          <div className="flex flex-row mb-4">
+            <p className="font-regular text-left text-black/60">Made with </p>
+            <img
+              width="20rem"
+              height="20rem"
+              src="static/footer/heart-brasil.svg"
+              loading="lazy"
+              className="ml-1"
+            ></img>
+            <p className="font-regular text-left text-black/60 ml-1">by our Tech Team</p>
+          </div>
+
+          <p className="font-regular text-left text-black/60 overflow-hidden">
+            © Copyright {new Date().getFullYear()} All Rights Reserved by UCF BRASA
+          </p>
+        </div>
       </footer>
     </>
   );

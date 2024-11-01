@@ -249,7 +249,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
                 <br /> and addressing any additional inquiries with UCF Global.
               </p>
 
-              <div className="mt-10 text-base rounded-full md:h-14 md:w-44 bg-blue-500 text-white font-medium">
+              <div className="mt-10 text-base rounded-full md:h-14 md:w-44 bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200">
                 <a
                   className="flex justify-center items-center w-full h-full"
                   href="https://knightconnect.campuslabs.com/engage/organization/brasa"
@@ -259,18 +259,27 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
               </div>
             </div>
           </div>
-          <div className="absolute -top-[-10rem] -right-[10rem] w-[54rem] aspect-square overflow-hidden rounded-full shadow-xl">
-            <Image
-              src={IMAGES.mainPicLanding}
-              sizes="33vw"
-              placeholder="blur"
-              className="h-full w-auto"
-              alt="Landing Pic"
-            />
+          {/* <div className="relative overflow-x-hidden"> */}
+          <div className="relative overflow-hidden w-full h-full">
+            <div className="absolute -top-[-10rem] -right-[10rem] w-[54rem] max-w-full aspect-square overflow-hidden rounded-full shadow-xl">
+              <Image
+                src={IMAGES.mainPicLanding}
+                sizes="33vw"
+                placeholder="blur"
+                className="h-full w-auto object-cover"
+                alt="Landing Pic"
+              />
+            </div>
           </div>
+          {/* </div> */}
 
           {/* Curvy landing page area */}
-          <img id="desktop-image" src="static/landing/intro/landing-area.svg" width={windowWidth} />
+          <img
+            id="desktop-image"
+            src="static/landing/intro/landing-area.svg"
+            width={windowWidth}
+            loading="lazy"
+          />
 
           {/* End of Section 1 */}
 

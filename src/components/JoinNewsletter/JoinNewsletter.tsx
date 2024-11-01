@@ -22,7 +22,7 @@ const JoinNewsletter: FC = () => {
             className="text-xs order-first pl-8 bg-white rounded-full h-[3.5rem] w-[24rem]
           items-end grow-0 static outline-0"
           />
-          <button className="button bg-main-brasa-blue text-xs text-white m-2 py-3 px-6 rounded-full absolute ml-[18rem]">
+          <button className="button bg-main-brasa-blue text-xs text-white m-2 py-3 px-6 rounded-full absolute ml-[18rem] hover:bg-blue-400 transition duration-200">
             Signup
           </button>
         </form>

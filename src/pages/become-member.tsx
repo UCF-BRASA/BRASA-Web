@@ -104,33 +104,35 @@ const BecomeMember: NextPage<Props> = ({ windowWidth, isMobile }) => {
           <div className="bg-main-brasa-green">
             <div className="h-20 w-full bg-main-brasa-green"></div>
             {/* Yellow background and image */}
-            <div className="container flex flex-row items-center justify-between mx-auto bg-main-brasa-yellow mx-40 mb-40 rounded-[5rem] h-[38rem] w-[75rem]">
-              <div className="flex flex-col gap-y-10 text-left ml-20">
-                <h3 className="font-bold tracking-[0.20em]">MEMBERSHIP</h3>
-                <h1 className="leading-200 font-bold text-5xl">Become a Member</h1>
-                <p className="font-medium text-base text-justify text-black/60 w-[25rem] break-normal">
-                  BRASA @ UCF, the Brazilian Student Association at the University of Central
-                  Florida, is a prominent organization dedicated to supporting Brazilian students in
-                  Orlando. With a strong focus on academic, professional, and social development,
-                  BRASA UCF serves as a vital resource and community for Brazilian students seeking
-                  to thrive in their educational journey.
-                </p>
-                <div className="flex justify-center items-center text-base rounded-full md:h-14 md:w-44 bg-blue-500 text-white font-medium">
-                  <a
-                    className="flex text-center justify-center items-center w-full h-full"
-                    href="https://knightconnect.campuslabs.com/engage/organization/brasa"
-                  >
-                    Join BRASA @ UCF
-                  </a>
+            <div className="w-full flex justify-center">
+              <div className="container flex flex-row items-center justify-between mx-auto bg-main-brasa-yellow mx-40 mb-40 rounded-[5rem] h-[38rem] w-[75rem]">
+                <div className="flex flex-col gap-y-10 text-left ml-20">
+                  <h3 className="font-bold tracking-[0.20em]">MEMBERSHIP</h3>
+                  <h1 className="leading-200 font-bold text-5xl">Become a Member</h1>
+                  <p className="font-medium text-base text-justify text-black/60 w-[25rem] break-normal">
+                    BRASA @ UCF, the Brazilian Student Association at the University of Central
+                    Florida, is a prominent organization dedicated to supporting Brazilian students
+                    in Orlando. With a strong focus on academic, professional, and social
+                    development, BRASA UCF serves as a vital resource and community for Brazilian
+                    students seeking to thrive in their educational journey.
+                  </p>
+                  <div className="flex justify-center items-center text-base rounded-full md:h-14 md:w-44 bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200">
+                    <a
+                      className="flex text-center justify-center items-center w-full h-full"
+                      href="https://knightconnect.campuslabs.com/engage/organization/brasa"
+                    >
+                      Join BRASA @ UCF
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <Image
-                  src={IMAGES.board_pic}
-                  alt=""
-                  sizes="100vw"
-                  className=" w-[40rem] h-[40rem] p-16 ml-12 rounded-[5rem]"
-                />
+                <div>
+                  <Image
+                    src={IMAGES.board_pic}
+                    alt=""
+                    sizes="100vw"
+                    className=" w-[40rem] h-[40rem] p-16 ml-12 rounded-[5rem]"
+                  />
+                </div>
               </div>
             </div>
             {/* Background after yellow board */}
