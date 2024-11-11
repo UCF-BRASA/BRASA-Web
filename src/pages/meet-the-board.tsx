@@ -61,7 +61,6 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Leonora Carvalho Picture"
                   officerTitle="Head of Finance"
                   officerName="Leonora Carvalho"
-
                   isMobile={isMobile}
                 />
                 <EBoardBox
@@ -259,7 +258,8 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
 
           <div className="flex justify-center">
             <div className="absolute z-30 w-4/5 mx-auto">
-              <div className="flex flex-wrap justify-between mx-auto w-full mt-20">
+              {/* <div className="flex flex-wrap justify-between mx-auto w-full mt-20"> */}
+              <div className="grid grid-cols-4 mx-auto w-full mt-20">
                 <EBoardBox
                   image={IMAGES.luca_pic}
                   imageAlt="Luca De Vincenzo Picture"
@@ -300,7 +300,6 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Leonora Carvalho Picture"
                   officerTitle="Head of Finance"
                   officerName="Leonora Carvalho"
-
                   isMobile={isMobile}
                 />
                 <EBoardBox
