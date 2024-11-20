@@ -9,11 +9,11 @@
 }
 
 .scroll-down .new-nav {
-  transform: translate3d(0, -100%, 0);
+  transform: translateY(-100%);
 }
 
 .scroll-up .new-nav {
-  filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+  transform: translateY(0);
 }
 
 .menu-is-open {
