@@ -52,8 +52,13 @@ const MobileNavbar: FC = () => {
       <nav className={styles["new-nav"]}>
         <div className="bg-gradient-to-r from-main-brasa-yellow via-main-brasa-green to-main-brasa-blue h-2"></div>
         <div className="bg-white h-[4.5rem] flex justify-between items-center px-8 shadow-md">
-          <div className="px-[0.6rem]" onClick={toggleSidebar}>
-            <FontAwesomeIcon icon={faBars} color={COLORS.black} className="fa-2x cursor-pointer" />
+          <div className="px-[0.6rem]">
+            <FontAwesomeIcon
+              onClick={toggleSidebar}
+              icon={faBars}
+              color={COLORS.black}
+              className="fa-2x cursor-pointer"
+            />
           </div>
           <div>
             <h1 className="font-medium text-black text-lg justify-self-center text-center">
