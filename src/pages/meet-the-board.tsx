@@ -82,8 +82,8 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
           </div>
 
           <div className="z-10 absolute h-[100rem] w-screen bg-main-brasa-green rounded-t-[2rem] mt-[87.5rem]"></div>
-          <div className="z-20 absolute h-[100rem] w-full bg-main-brasa-yellow rounded-t-[2rem] mt-[155rem]">
-            <div className="flex flex-col items-center w-full mt-[70rem] text-center">
+          <div className="z-20 absolute h-[65rem] w-full bg-main-brasa-yellow rounded-t-[2rem] rounded-b-[2rem] mt-[155rem]">
+            <div className="flex flex-col items-center w-full mt-[40rem] text-center">
               <h3 className="pt-16 font-bold text-4xl">Our Mission</h3>
               <p className="pt-5 font-base text-base w-auto px-[1rem]">
                 Engage and support current Brazilian students at UCF by providing access to all
@@ -94,7 +94,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
           </div>
 
           {/* Div to add some white space because of the absolutes above */}
-          <div className="w-full h-[260rem]"></div>
+          <div className="w-full h-[225rem]"></div>
 
           <div className="text-center flex flex-col justify-center items-center w-full">
             <h3 className="pt-16 font-bold text-base tracking-[0.3rem]">MEET THE BOARD</h3>
@@ -244,8 +244,6 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
               isMobile={isMobile}
             />
           </div>
-
-          <div className="w-full bg-white h-[10rem]"></div>
         </div>
       ) : (
         <div className="h-full bg-white">

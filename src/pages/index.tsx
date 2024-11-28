@@ -93,10 +93,10 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
           </section>
           <section id="section-salve" className="h-[30rem] bg-main-brasa-yellow">
             <div className="h-full w-full flex flex-col justify-center pt-24 ">
-              <h3 className="font-bold text-center text-xl tracking-[0.08em]">
+              <h3 className="font-semi-bold text-center text-2xl tracking-[0.08em]">
                 What is BRASA @ UCF?
               </h3>
-              <p className="font-medium text-base text-black text-left mt-4 pr-8 pl-10">
+              <p className="font-medium text-base text-black text-justify mt-4 pr-8 pl-10">
                 Assist Brazilians interested in studying at UCF by providing guidance
                 <br /> throughout the application process via our social media channels,
                 <br /> offering campus tours, sharing insights about life in the US and Orlando,
@@ -172,8 +172,8 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
               />
             </div>
           </section>
-          <section className="bg-main-brasa-blue rounded-t-[2rem] overflow-x-hidden mt-24">
-            <div className="flex flex-col items-center text-white w-full mb-40">
+          <section className="bg-main-brasa-blue rounded-[2rem] overflow-x-hidden mt-24">
+            <div className="flex flex-col items-center text-white w-full mb-16">
               <div className="text-center">
                 <h3 className="pt-16 font-semi-bold text-base tracking-[0.20em]">OUR EVENTS</h3>
                 <h1 className="pt-5 font-semi-bold text-[2.5rem] leading-none tracking-[0.02em] mb-12">
@@ -229,53 +229,56 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
 
           {/* White Blob */}
           <div className="flex items-center justify-between mx-auto top-25 bg-main-brasa-yellow">
-            <img src="static/landing/intro/white-blob.svg" />
+            <img src="static/landing/intro/white-blob.svg" alt="navbar-white-blob" />
           </div>
 
           {/* Main section 1's content */}
-          <div id="desktop-area" className="absolute flex flex-row pl-24 overflow-x-hidden w-full">
-            <div className="order-first w-screen">
-              <h3 className="pt-16 font-bold text-base tracking-[0.20em]">
-                EMPOWERING BRAZILIAN STUDENTS
-              </h3>
-              <h1 className="pt-5 leading-200 font-bold text-7xl">
-                Unlocking potential, <br />
-                building futures
-              </h1>
-              <p className="pt-5 font-medium text-base text-black/60">
-                Assist Brazilians interested in studying at UCF by providing guidance
-                <br /> throughout the application process via our social media channels,
-                <br /> offering campus tours, sharing insights about life in the US and Orlando,
-                <br /> and addressing any additional inquiries with UCF Global.
-              </p>
+          <div id="desktop-area" className="absolute pl-24 overflow-x-hidden w-full">
+            <div className="grid grid-cols-2">
+              <div className="flex flex-row">
+                <div className="order-first w-screen">
+                  <h3 className="pt-16 font-bold text-base tracking-[0.20em]">
+                    EMPOWERING BRAZILIAN STUDENTS
+                  </h3>
+                  <h1 className="pt-5 leading-200 font-bold text-7xl">
+                    Unlocking potential, <br />
+                    building futures
+                  </h1>
+                  <p className="pt-5 font-medium text-base text-black/60">
+                    Assist Brazilians interested in studying at UCF by providing guidance
+                    <br /> throughout the application process via our social media channels,
+                    <br /> offering campus tours, sharing insights about life in the US and Orlando,
+                    <br /> and addressing any additional inquiries with UCF Global.
+                  </p>
 
-              <div className="mt-10 text-base rounded-full md:h-14 md:w-44 bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200">
-                <a
-                  className="flex justify-center items-center w-full h-full"
-                  href="https://knightconnect.campuslabs.com/engage/organization/brasa"
-                >
-                  Become a Member
-                </a>
+                  <div className="mt-10 text-base rounded-full md:h-14 md:w-44 bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200">
+                    <a
+                      className="flex justify-center items-center w-full h-full"
+                      href="https://knightconnect.campuslabs.com/engage/organization/brasa"
+                    >
+                      Become a Member
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="relative w-full">
+                <div className="-top-[-10rem] -right-[10rem] w-[54rem] aspect-square overflow-hidden rounded-full shadow-xl">
+                  <Image
+                    src={IMAGES.mainPicLanding}
+                    sizes="33vw"
+                    placeholder="blur"
+                    className="h-full w-full object-cover"
+                    alt="Landing Pic"
+                  />
+                </div>
               </div>
             </div>
           </div>
-          {/* <div className="relative overflow-x-hidden"> */}
-          <div className="relative overflow-hidden w-full h-full">
-            <div className="absolute -top-[-10rem] -right-[10rem] w-[54rem] max-w-full aspect-square overflow-hidden rounded-full shadow-xl">
-              <Image
-                src={IMAGES.mainPicLanding}
-                sizes="33vw"
-                placeholder="blur"
-                className="h-full w-auto object-cover"
-                alt="Landing Pic"
-              />
-            </div>
-          </div>
-          {/* </div> */}
 
           {/* Curvy landing page area */}
           <img
             id="desktop-image"
+            alt="Curvy area on BRASA @ UCF Landing page"
             src="static/landing/intro/landing-area.svg"
             width={windowWidth}
             loading="lazy"

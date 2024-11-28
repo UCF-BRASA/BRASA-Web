@@ -11,7 +11,7 @@ const EventCard: FC<Props> = ({ image, imageAlt, tag, eventTitle, eventDescripti
   return (
     <section>
       {isMobile ? (
-        <div className="flex flex-col w-[22rem] h-[32rem] bg-white rounded-[2rem] select-none">
+        <div className="flex flex-col w-[22rem] bg-white rounded-[2rem] select-none">
           {/* Image Section */}
           <div className="flex justify-center">
             <div className="w-[20rem] mt-5 overflow-hidden">
@@ -37,8 +37,8 @@ const EventCard: FC<Props> = ({ image, imageAlt, tag, eventTitle, eventDescripti
           <p className="font-medium text-base text-black/60 mt-6 pl-6 px-4 break-normal">
             {eventDescription}
           </p>
-          <div className="mt-16 mb-4 h-32 w-full flex justify-center items-center">
-            <div className="w-[90%] h-full text-base rounded-full bg-blue-500 text-white font-medium">
+          <div className="mt-16 h-32 w-full flex justify-center items-center">
+            <div className="w-[90%] h-[50%] text-base rounded-full bg-blue-500 text-white font-medium">
               <Link
                 className="flex justify-center items-center w-full h-full"
                 href="/"
@@ -50,7 +50,7 @@ const EventCard: FC<Props> = ({ image, imageAlt, tag, eventTitle, eventDescripti
           </div>
         </div>
       ) : (
-        <div className="flex flex-col w-[25rem] h-[32rem] bg-white rounded-[2rem] select-none">
+        <div className="flex flex-col w-[25rem] bg-white rounded-[2rem] select-none">
           {/* Image Section */}
           <div className="flex justify-center">
             <div className="w-[23rem] h-[230px] mt-4 overflow-hidden">
@@ -74,11 +74,11 @@ const EventCard: FC<Props> = ({ image, imageAlt, tag, eventTitle, eventDescripti
           <div className="w-full mt-4">
             <h2 className="font-bold text-[1.6rem] grow text-black text-center">{eventTitle}</h2>
           </div>
-          <p className="font-medium text-base text-black/60 mt-6 px-4 break-normal">
+          <p className="text-event-card font-medium text-base text-black/60 mt-6 px-6">
             {eventDescription}
           </p>
-          <div className="mt-12 mb-4 h-32 w-full flex justify-center items-center">
-            <div className="w-[90%] h-full text-base rounded-full bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200">
+          <div className="mt-12 h-32 w-full flex justify-center items-center">
+            <div className="w-[90%] h-[55%] text-base rounded-full bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200">
               <Link className="flex justify-center items-center w-full h-full" href="/events">
                 View Details
               </Link>

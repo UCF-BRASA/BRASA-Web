@@ -6,7 +6,6 @@ import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import "semantic-ui-css/semantic.min.css";
 import "../styles/globals.css";
 fortawesomeConfig.autoAddCss = false;
 

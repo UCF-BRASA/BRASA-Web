@@ -8,8 +8,8 @@ const MobileFooter: FC = () => {
     <>
       <footer className="mb-48 bg-white justify-center items-center">
         <div className="flex flex-col justify-center items-center">
-          <h3 className="text-black text-lg font-bold pt-4">Follow BRASA @ UCF</h3>
-          <div className="grid grid-cols-4 gap-x-4 justify-center items-center mt-4">
+          <h3 className="text-black text-[1.3rem] font-semi-bold pt-4">Follow BRASA @ UCF</h3>
+          <div className="grid grid-cols-4 gap-x-4 justify-center items-center mt-6">
             <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue">
               <a href="https://www.instagram.com/brasa.ucf/">
                 <div className="flex justify-center bg-auto">
@@ -60,6 +60,8 @@ const MobileFooter: FC = () => {
           </div>
         </div>
       </footer>
+      <div className="h-2 bg-white" />
+      {/* This is a spacer (used to trigger the margin from footer) */}
     </>
   );
 };
