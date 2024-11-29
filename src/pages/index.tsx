@@ -77,7 +77,13 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
         <>
           <section className="rounded-b-lg">
             {/* Main section 1's content */}
-            <Image src={IMAGES.mainPicLanding} alt="Landing Pic" fill className="bg-cover" />
+            <Image
+              src={IMAGES.mainPicLanding}
+              alt="Landing Pic"
+              fill
+              priority
+              className="bg-cover"
+            />
             <div className="flex flex-col items-center justify-center text-center overflow-x-hidden w-full backdrop-brightness-[0.4] h-screen">
               <h1 className="relative tracking-[0.1rem] font-bold text-xs break-normal text-white">
                 EMPOWERING BRAZILIAN STUDENTS
@@ -266,6 +272,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
                   <Image
                     src={IMAGES.mainPicLanding}
                     sizes="33vw"
+                    // priority
                     placeholder="blur"
                     className="h-full w-full object-cover"
                     alt="Landing Pic"

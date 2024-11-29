@@ -1,13 +1,25 @@
 import { NextPage } from "next";
 
-import { BoardBox, EBoardBox, JoinNewsletter } from "@components";
-import { IMAGES } from "@util";
+import { BoardBox, EBoardBox, ImageCarousel, JoinNewsletter } from "@components";
+import { eventImagesData, IMAGES } from "@util";
+import { useState } from "react";
 
 interface Props {
   isMobile: boolean;
+  searchParams: Record<string, string> | null | undefined;
 }
 
-const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
+// interface BoardYear {
+//   year: "2021" | "2022" | "2023";
+// }
+
+const MeetTheBoard: NextPage<Props> = ({ isMobile, searchParams }) => {
+  const show = searchParams?.show;
+  console.log("aaaaa");
+  console.log(searchParams);
+
+  const [boardYear, setBoardYear] = useState<"2021" | "2022" | "2023">("2021");
+
   return (
     <main>
       {isMobile ? (
@@ -26,6 +38,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Luca De Vincenzo Picture"
                   officerTitle="President"
                   officerName="Luca De Vincenzo"
+                  searchParams={searchParams}
                   isMobile={isMobile}
                 />
                 <EBoardBox
@@ -33,6 +46,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Guilherme Aranega Picture"
                   officerTitle="Vice President"
                   officerName="Guilherme Tonini"
+                  searchParams={searchParams}
                   isMobile={isMobile}
                 />
                 <EBoardBox
@@ -40,6 +54,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Nino Picture"
                   officerTitle="Co-Head of Events"
                   officerName="Nino Portugal"
+                  searchParams={searchParams}
                   isMobile={isMobile}
                 />
                 <EBoardBox
@@ -47,6 +62,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Giovana Vicentin Picture"
                   officerTitle="Co-Head of Events"
                   officerName="Giovana Vicentin"
+                  searchParams={searchParams}
                   isMobile={isMobile}
                 />
                 <EBoardBox
@@ -54,6 +70,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Isadora Prado Picture"
                   officerTitle="Head of Marketing"
                   officerName="Isadora Prado"
+                  searchParams={searchParams}
                   isMobile={isMobile}
                 />
                 <EBoardBox
@@ -61,6 +78,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Leonora Carvalho Picture"
                   officerTitle="Head of Finance"
                   officerName="Leonora Carvalho"
+                  searchParams={searchParams}
                   isMobile={isMobile}
                 />
                 <EBoardBox
@@ -68,6 +86,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Sophia Sakakibara Picture"
                   officerTitle="Head of Professional Development"
                   officerName="Sophia Sakakibara"
+                  searchParams={searchParams}
                   isMobile={isMobile}
                 />
                 <EBoardBox
@@ -75,15 +94,16 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Lucas Bassotto Silveira Picture"
                   officerTitle="Head of Technology"
                   officerName="Lucas Bassotto Silveira"
+                  searchParams={searchParams}
                   isMobile={isMobile}
                 />
               </div>
             </div>
           </div>
 
-          <div className="z-10 absolute h-[100rem] w-screen bg-main-brasa-green rounded-t-[2rem] mt-[87.5rem]"></div>
-          <div className="z-20 absolute h-[65rem] w-full bg-main-brasa-yellow rounded-t-[2rem] rounded-b-[2rem] mt-[155rem]">
-            <div className="flex flex-col items-center w-full mt-[40rem] text-center">
+          <div className="z-10 absolute h-[130rem] w-screen bg-main-brasa-green rounded-t-[2rem] mt-[87.5rem]"></div>
+          <div className="z-20 absolute h-[120rem] w-full bg-main-brasa-yellow rounded-t-[2rem] rounded-b-[2rem] mt-[190rem]">
+            <div className="flex flex-col items-center w-full mt-[90rem] text-center">
               <h3 className="pt-16 font-bold text-4xl">Our Mission</h3>
               <p className="pt-5 font-base text-base w-auto px-[1rem]">
                 Engage and support current Brazilian students at UCF by providing access to all
@@ -94,7 +114,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
           </div>
 
           {/* Div to add some white space because of the absolutes above */}
-          <div className="w-full h-[225rem]"></div>
+          <div className="w-full h-[315rem]"></div>
 
           <div className="text-center flex flex-col justify-center items-center w-full">
             <h3 className="pt-16 font-bold text-base tracking-[0.3rem]">MEET THE BOARD</h3>
@@ -255,14 +275,15 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
           </div>
 
           <div className="flex justify-center">
-            <div className="absolute z-30 w-4/5 mx-auto">
+            <div className="absolute z-30">
               {/* <div className="flex flex-wrap justify-between mx-auto w-full mt-20"> */}
-              <div className="grid grid-cols-4 mx-auto w-full mt-20">
+              <div className="grid grid-cols-4 gap-x-8 w-full mt-20">
                 <EBoardBox
                   image={IMAGES.luca_pic}
                   imageAlt="Luca De Vincenzo Picture"
                   officerTitle="President"
                   officerName="Luca De Vincenzo"
+                  searchParams={searchParams}
                   isMobile={isMobile}
                 />
                 <EBoardBox
@@ -270,6 +291,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Guilherme Aranega Picture"
                   officerTitle="Vice President"
                   officerName="Guilherme Aranega"
+                  searchParams={searchParams}
                   isMobile={isMobile}
                 />
                 <EBoardBox
@@ -277,6 +299,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Giovana Vicentin Picture"
                   officerTitle="Co-Head of Events"
                   officerName="Giovana Vicentin"
+                  searchParams={searchParams}
                   isMobile={isMobile}
                 />
                 <EBoardBox
@@ -284,6 +307,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Nino Picture"
                   officerTitle="Co-Head of Events"
                   officerName="Nino Portugal"
+                  searchParams={searchParams}
                   isMobile={isMobile}
                 />
                 <EBoardBox
@@ -291,6 +315,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Isadora Prado Picture"
                   officerTitle="Head of Marketing"
                   officerName="Isadora Prado"
+                  searchParams={searchParams}
                   isMobile={isMobile}
                 />
                 <EBoardBox
@@ -298,6 +323,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Leonora Carvalho Picture"
                   officerTitle="Head of Finance"
                   officerName="Leonora Carvalho"
+                  searchParams={searchParams}
                   isMobile={isMobile}
                 />
                 <EBoardBox
@@ -305,6 +331,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Sophia Sakakibara Picture"
                   officerTitle="Head of Professional Development"
                   officerName="Sophia Sakakibara"
+                  searchParams={searchParams}
                   isMobile={isMobile}
                 />
                 <EBoardBox
@@ -312,6 +339,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   imageAlt="Lucas Bassotto Silveira Picture"
                   officerTitle="Head of Technology"
                   officerName="Lucas Bassotto Silveira"
+                  searchParams={searchParams}
                   isMobile={isMobile}
                 />
               </div>
@@ -319,7 +347,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
           </div>
 
           <div className="z-10 absolute h-[70rem] w-full bg-main-brasa-green rounded-t-[2rem] mt-[25rem]"></div>
-          <div className="z-20 absolute h-[30rem] w-full bg-main-brasa-yellow rounded-t-[2rem] mt-[81rem]">
+          <div className="z-20 absolute h-[30rem] w-full bg-main-brasa-yellow rounded-t-[2rem] mt-[90rem]">
             <div className="flex flex-col items-center w-full mt-40 text-center">
               <h3 className="pt-16 font-bold text-4xl">Our Mission</h3>
               <p className="pt-5 font-base text-base w-[25rem]">
@@ -333,13 +361,12 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
           {/* Div to add some white space because of the absolutes above */}
           <div className="w-full h-[110rem]"></div>
 
-          <div className="flex flex-col justify-center items-center w-full mt-16">
+          <div className="flex flex-col justify-center items-center w-full mt-52">
             <h3 className="pt-16 font-bold text-base tracking-[0.3rem]">MEET THE BOARD</h3>
-            <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem]">Department Members</h1>
+            <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem]">Department Analysts</h1>
           </div>
 
-          {/* <div className="grid gap-x-[-10rem] gap-y-42 grid-cols-5 w-full place-items-center mt-20"> */}
-          <div className="flex flex-wrap justify-evenly mx-auto w-full mt-20">
+          <section className="flex flex-wrap justify-evenly mx-auto w-full mt-20">
             <BoardBox
               image={IMAGES.chris_pic}
               imageAlt="Christopher Pavie Suarez Picture"
@@ -480,7 +507,49 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
               officerName="Pedro Evangelista"
               isMobile={isMobile}
             />
-          </div>
+          </section>
+          <section className="bg-main-brasa-blue rounded-[2rem] overflow-x-hidden mt-24">
+            <div className="flex flex-col items-center text-white w-full mb-16">
+              <div className="text-center">
+                <h3 className="pt-16 font-semi-bold text-base tracking-[0.20em]">BRASA HISTORY</h3>
+                <h1 className="pt-5 font-semi-bold text-[2.5rem] leading-none tracking-[0.02em] mb-12">
+                  Previous Boards
+                </h1>
+              </div>
+
+              {/* <!-- Social/Professional Toggle --> */}
+              <div className="flex items-center justify-center w-full mb-12 mt-3">
+                <label htmlFor="toggleB" className="flex items-center cursor-pointer">
+                  {/* <!-- toggle --> */}
+                  <div className="relative">
+                    {/* <!-- input --> */}
+                    <input
+                      type="checkbox"
+                      id="toggleB"
+                      className="sr-only select-none"
+                      onClick={() => setBoardYear("2022")}
+                    />
+
+                    {/* <!-- dot --> */}
+                    <div className="dot absolute inset-y-[0.265rem] left-1 bg-white w-[49.1%] h-[85%] rounded-full transition">
+                      <p className="pt-3.5 text-center text-main-brasa-blue select-none font-semi-bold">
+                        {boardYear}
+                      </p>
+                    </div>
+
+                    {/* <!-- line --> */}
+                    <div className="grid grid-cols-3 justify-center items-center text-center bg-transparent border-[2.5px] border-solid border-white w-[30rem] h-[3.7rem] rounded-full">
+                      <p className="order-1 w-auto letter select-none font-semi-bold">2021</p>
+                      <p className="order-2 w-auto letter select-none font-semi-bold">2022</p>
+                      <p className="order-3 w-auto letter select-none font-semi-bold">2023</p>
+                    </div>
+                  </div>
+                </label>
+              </div>
+
+              <ImageCarousel imageData={eventImagesData} isMobile={true} />
+            </div>
+          </section>
           <JoinNewsletter />
         </div>
       )}

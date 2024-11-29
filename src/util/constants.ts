@@ -45,7 +45,7 @@ import board_pic from "/public/static/become-member/member-box/board_pic.jpg";
 import profile_pic from "/public/static/profile/profile-icon.png";
 
 // Login photo
-import { EventCardImageObject } from "@interfaces";
+import { EBoardData, EventCardImageObject } from "@interfaces";
 import { getApiInstanceUrl, getWebInstanceUrl } from "./instanceUrl";
 import brasa_logo from "/public/static/brasa-logo.png";
 
@@ -169,5 +169,56 @@ export const professionalImagesData: EventCardImageObject[] = [
     eventTitle: "BRASA Study",
     eventDescription:
       "A light, fun and collaborative environment for you to study with fellow BRASA members! We have weekly study sessions for everyone!",
+  },
+];
+
+export const BOARD_MEMBERS: EBoardData[] = [
+  {
+    image: IMAGES.luca_pic,
+    imageAlt: "Luca De Vincenzo Picture",
+    officerName: "Luca De Vincenzo",
+    officerTitle: "President",
+  },
+  {
+    image: IMAGES.guilherme_pic,
+    imageAlt: "Guilherme Aranega Picture",
+    officerName: "Guilherme Tonini",
+    officerTitle: "Vice President",
+  },
+  {
+    image: IMAGES.nino_newpic,
+    imageAlt: "Nino Picture",
+    officerName: "Nino Portugal",
+    officerTitle: "Co-Head of Events",
+  },
+  {
+    image: IMAGES.gio_pic,
+    imageAlt: "Giovana Vicentin Picture",
+    officerName: "Giovana Vicentin",
+    officerTitle: "Co-Head of Events",
+  },
+  {
+    image: IMAGES.isa_pic,
+    imageAlt: "Isadora Prado Picture",
+    officerName: "Isadora Prado",
+    officerTitle: "Head of Marketing",
+  },
+  {
+    image: IMAGES.leo_pic,
+    imageAlt: "Leonora Carvalho Picture",
+    officerName: "Leonora Carvalho",
+    officerTitle: "Head of Finance",
+  },
+  {
+    image: IMAGES.saki_pic,
+    imageAlt: "Sophia Sakakibara Picture",
+    officerName: "Sophia Sakakibara",
+    officerTitle: "Head of Professional Development",
+  },
+  {
+    image: IMAGES.lucas_pic,
+    imageAlt: "Lucas Bassotto Silveira Picture",
+    officerName: "Lucas Bassotto Silveira",
+    officerTitle: "Head of Technology",
   },
 ];

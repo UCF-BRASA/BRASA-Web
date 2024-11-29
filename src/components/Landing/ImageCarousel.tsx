@@ -15,6 +15,7 @@ const ImageCarousel: FC<Props> = ({ imageData, isMobile }) => {
     duration: 5000, // image change duration
     transitionDuration: 300, // transition per images time
     infinity: true, // loop the transition to infinity
+    canSwipe: true,
 
     // icons (will add them later)
     prevArrow: (
@@ -31,26 +32,20 @@ const ImageCarousel: FC<Props> = ({ imageData, isMobile }) => {
 
   return (
     <section className="w-full h-full">
-      {isMobile ? (
-        <div className="w-auto h-auto">
-          <Zoom {...zoomInProperties}>
-            {imageData.map((each, index) => (
-              <div key={index} className="flex justify-center items-start w-full h-full relative">
-                <EventCard
-                  image={each.image}
-                  imageAlt={each.imageAlt}
-                  tag={each.tag}
-                  eventTitle={each.eventTitle}
-                  eventDescription={each.eventDescription}
-                  isMobile={isMobile}
-                />
-              </div>
-            ))}
-          </Zoom>
-        </div>
-      ) : (
-        <div></div>
-      )}
+      <Zoom {...zoomInProperties}>
+        {imageData.map((each, index) => (
+          <div key={index} className="flex justify-center items-start w-full h-full relative">
+            <EventCard
+              image={each.image}
+              imageAlt={each.imageAlt}
+              tag={each.tag}
+              eventTitle={each.eventTitle}
+              eventDescription={each.eventDescription}
+              isMobile={isMobile}
+            />
+          </div>
+        ))}
+      </Zoom>
     </section>
   );
 };
