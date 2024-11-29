@@ -5,6 +5,7 @@
   "license": "MIT",
   "author": "UCF BRASA Tech Team",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "next",
     "dev:fix": "npx next",
     "build": "next build",
