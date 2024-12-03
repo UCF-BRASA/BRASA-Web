@@ -1,7 +1,7 @@
 import { faInstagram, faLinkedinIn, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IMAGES } from "@util";
+import { IMAGES } from "@util/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";

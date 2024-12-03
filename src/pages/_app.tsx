@@ -1,6 +1,6 @@
 import { config as fortawesomeConfig } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { useWindowDimensions } from "@hooks";
+import useWindowDimensions from "@hooks/useWindowDimension";
 import { MOBILE_THRESHOLD } from "@util/constants";
 import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
@@ -36,7 +36,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <meta charSet="UTF-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"

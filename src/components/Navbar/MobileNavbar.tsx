@@ -1,6 +1,6 @@
 import { faArrowRightToBracket, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { COLORS } from "@util";
+import { COLORS } from "@util/constants";
 import { useEffect, type FC } from "react";
 import styles from "./Navbar.module.css";
 

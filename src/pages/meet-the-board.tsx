@@ -1,7 +1,10 @@
 import { NextPage } from "next";
 
-import { BoardBox, EBoardBox, ImageCarousel, JoinNewsletter } from "@components";
-import { eventImagesData, IMAGES } from "@util";
+import JoinNewsletter from "@components/JoinNewsletter/JoinNewsletter";
+import ImageCarousel from "@components/Landing/ImageCarousel";
+import BoardBox from "@components/Meet-Board/BoardBox";
+import EBoardBox from "@components/Meet-Board/EBoardBox";
+import { IMAGES, eventImagesData } from "@util/constants";
 import { useState } from "react";
 
 interface Props {

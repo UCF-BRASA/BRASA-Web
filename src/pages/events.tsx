@@ -1,5 +1,5 @@
 import UpcomingEvents from "@components/UpcomingEvents/UpcomingEvents";
-import { IMAGES } from "@util";
+import { IMAGES } from "@util/constants";
 import { NextPage } from "next";
 
 export interface Props {

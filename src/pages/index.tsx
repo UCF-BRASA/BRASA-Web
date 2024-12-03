@@ -1,5 +1,8 @@
-import { EventCard, GridSection, ImageCarousel, JoinNewsletter } from "@components";
-import { eventImagesData, IMAGES, professionalImagesData } from "@util";
+import JoinNewsletter from "@components/JoinNewsletter/JoinNewsletter";
+import EventCard from "@components/Landing/EventCard";
+import GridSection from "@components/Landing/GridSection";
+import ImageCarousel from "@components/Landing/ImageCarousel";
+import { IMAGES, eventImagesData, professionalImagesData } from "@util/constants";
 import { NextPage } from "next";
 import Image from "next/image";
 import { useState } from "react";

@@ -1,8 +1,8 @@
-import { EventCard } from "@components";
 import { EventCardImageObject } from "@interfaces";
 import { FC } from "react";
 import { Zoom } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import EventCard from "./EventCard";
 
 interface Props {
   imageData: EventCardImageObject[];

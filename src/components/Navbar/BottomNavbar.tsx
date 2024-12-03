@@ -4,7 +4,7 @@ import { FC } from "react";
 
 import { faBriefcase, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { COLORS, IMAGES } from "@util";
+import { COLORS, IMAGES } from "@util/constants";
 
 const BottomNavbar: FC = () => {
   return (
