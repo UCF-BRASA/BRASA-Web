@@ -22,7 +22,7 @@ const BoardModal: FC<Props> = ({ id, isMobile, onClose }) => {
     <div>
       {isMobile ? (
         <ModalWrapper>
-          <div className="bg-white rounded-lg w-[90%] max-w-full max-h-[35rem] overflow-auto flex flex-col mx-auto">
+          <div className="bg-white rounded-lg w-[90%] max-w-full max-h-[80%] overflow-auto flex flex-col mx-auto">
             <div className="p-4 flex justify-between items-center border-b border-gray-200">
               <h2 className="text-xl font-semi-bold">{officerTitle}</h2>
               <button

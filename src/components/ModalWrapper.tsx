@@ -20,7 +20,7 @@ const ModalWrapper: FC<Props> = ({
       open={true}
       onClose={onClose}
       initialFocus={overlayRef}
-      className="fixed inset-0 bg-black bg-opacity-70 shadow-2xl h-auto w-auto flex items-center justify-center z-[1000]"
+      className="fixed inset-0 bg-black bg-opacity-70 shadow-2xl h-auto w-auto flex items-center justify-center z-[9999]"
     >
       <div>{children}</div>
     </Dialog>
