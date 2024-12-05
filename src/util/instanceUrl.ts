@@ -1,9 +1,8 @@
+import { DEBUG_MODE } from "./constants";
+
 /**
  * This function returns the Web app URL
  */
-
-import { DEBUG_MODE } from "./constants";
-
 export const getWebInstanceUrl = (): string | undefined => {
   switch (process.env.APP_ENV) {
     case "production":

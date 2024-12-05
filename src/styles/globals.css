@@ -52,3 +52,22 @@
 input:checked ~ .dot {
   transform: translateX(100%);
 }
+
+.navigation-link {
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  transition: 200ms;
+}
+
+.navigation-link:hover {
+  cursor: pointer;
+  background-color: rgba(30, 41, 59, 0.2);
+}
+
+.text-event-card {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

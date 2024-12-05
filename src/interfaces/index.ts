@@ -4,27 +4,7 @@
 //
 // import { ResponseData } from 'path/to/interfaces';
 
-import { StaticImageData } from "next/image";
-
-export type ResponseData = {
-  status: "success" | "error";
-};
-
-export interface User {
-  id: null | string;
-  email: null | string;
-  firstName: null | string;
-  lastName: null | string;
-  dateOfBirth: null | string;
-  gender: null | string;
-  originCity: null | string;
-  major: null | string;
-  schoolYear: null | string;
-}
-
-export interface LoginProps {
-  setShowLogin: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import { type StaticImageData } from "next/image";
 
 export interface EventCardImageObject {
   image: StaticImageData;
@@ -32,4 +12,20 @@ export interface EventCardImageObject {
   tag: string;
   eventTitle: string;
   eventDescription: string;
+}
+export interface EBoardData {
+  id: number;
+  image: StaticImageData;
+  imageAlt: string;
+  officerName: string;
+  officerTitle: string;
+  officerBio: string;
+  officerLinkedIn: string;
+}
+
+export interface BoardData {
+  image: StaticImageData;
+  imageAlt: string;
+  officerName: string;
+  officerTitle: string;
 }
