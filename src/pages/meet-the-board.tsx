@@ -1,23 +1,15 @@
 import { NextPage } from "next";
 
 import JoinNewsletter from "@components/JoinNewsletter/JoinNewsletter";
-import ImageCarousel from "@components/Landing/ImageCarousel";
 import BoardBox from "@components/Meet-Board/BoardBox";
 import EBoardGrid from "@components/Meet-Board/EBoardGrid";
-import { BOARD_MEMBERS, eventImagesData } from "@util/constants";
-import { useState } from "react";
+import { BOARD_MEMBERS } from "@util/constants";
 
 interface Props {
   isMobile: boolean;
 }
 
-// interface BoardYear {
-//   year: "2021" | "2022" | "2023";
-// }
-
 const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
-  const [boardYear, setBoardYear] = useState<"2021" | "2022" | "2023">("2021");
-
   return (
     <main>
       {isMobile ? (
@@ -116,48 +108,6 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                 isMobile={isMobile}
               />
             ))}
-          </section>
-          <section className="bg-main-brasa-blue rounded-[2rem] overflow-x-hidden mt-24">
-            <div className="flex flex-col items-center text-white w-full mb-16">
-              <div className="text-center">
-                <h3 className="pt-16 font-semi-bold text-base tracking-[0.20em]">BRASA HISTORY</h3>
-                <h1 className="pt-5 font-semi-bold text-[2.5rem] leading-none tracking-[0.02em] mb-12">
-                  Previous Boards
-                </h1>
-              </div>
-
-              {/* <!-- Social/Professional Toggle --> */}
-              <div className="flex items-center justify-center w-full mb-12 mt-3">
-                <label htmlFor="toggleB" className="flex items-center cursor-pointer">
-                  {/* <!-- toggle --> */}
-                  <div className="relative">
-                    {/* <!-- input --> */}
-                    <input
-                      type="checkbox"
-                      id="toggleB"
-                      className="sr-only select-none"
-                      onClick={() => setBoardYear("2022")}
-                    />
-
-                    {/* <!-- dot --> */}
-                    <div className="dot absolute inset-y-[0.265rem] left-1 bg-white w-[49.1%] h-[85%] rounded-full transition">
-                      <p className="pt-3.5 text-center text-main-brasa-blue select-none font-semi-bold">
-                        {boardYear}
-                      </p>
-                    </div>
-
-                    {/* <!-- line --> */}
-                    <div className="grid grid-cols-3 justify-center items-center text-center bg-transparent border-[2.5px] border-solid border-white w-[30rem] h-[3.7rem] rounded-full">
-                      <p className="order-1 w-auto letter select-none font-semi-bold">2021</p>
-                      <p className="order-2 w-auto letter select-none font-semi-bold">2022</p>
-                      <p className="order-3 w-auto letter select-none font-semi-bold">2023</p>
-                    </div>
-                  </div>
-                </label>
-              </div>
-
-              <ImageCarousel imageData={eventImagesData} isMobile={true} />
-            </div>
           </section>
           <JoinNewsletter />
         </div>

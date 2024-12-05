@@ -1,23 +1,25 @@
 import { faArrowRightToBracket, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { COLORS } from "@util/constants";
-import { useEffect, type FC } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useState, type FC } from "react";
 import styles from "./Navbar.module.css";
 
 const MobileNavbar: FC = () => {
-  // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  // const router = useRouter();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const router = useRouter();
 
-  // useEffect(() => {
-  //   const handleRouteChange = () => {
-  //     setIsSidebarOpen(false);
-  //   };
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setIsSidebarOpen(false);
+    };
 
-  //   router.events.on("routeChangeStart", handleRouteChange);
-  //   return () => {
-  //     router.events.off("routeChangeStart", handleRouteChange);
-  //   };
-  // }, [router.events]);
+    router.events.on("routeChangeStart", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, [router.events]);
 
   useEffect(() => {
     const body = document.body;
@@ -41,9 +43,9 @@ const MobileNavbar: FC = () => {
     });
   }, []);
 
-  // const toggleSidebar = () => {
-  //   setIsSidebarOpen(!isSidebarOpen);
-  // };
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   return (
     <header>
@@ -52,7 +54,7 @@ const MobileNavbar: FC = () => {
         <div className="bg-white h-[4.5rem] flex justify-between items-center px-8 shadow-md">
           <div className="px-[0.6rem]">
             <FontAwesomeIcon
-              // onClick={toggleSidebar}
+              onClick={toggleSidebar}
               icon={faBars}
               color={COLORS.black}
               className="fa-2x cursor-pointer"
@@ -80,7 +82,7 @@ const MobileNavbar: FC = () => {
         </div>
 
         {/* Sidebar */}
-        {/* <div
+        <div
           className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform ${
             isSidebarOpen ? "translate-x-0" : "-translate-x-full"
           } transition-transform duration-300 ease-in-out`}
@@ -96,7 +98,7 @@ const MobileNavbar: FC = () => {
               <Link href="/become-member">Become a Member</Link>
             </li>
           </ul>
-        </div> */}
+        </div>
       </nav>
     </header>
   );
