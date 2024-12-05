@@ -14,6 +14,14 @@ export interface EventCardImageObject {
   eventDescription: string;
 }
 export interface EBoardData {
+  id: number;
+  image: StaticImageData;
+  imageAlt: string;
+  officerName: string;
+  officerTitle: string;
+}
+
+export interface BoardData {
   image: StaticImageData;
   imageAlt: string;
   officerName: string;

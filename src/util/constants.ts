@@ -45,7 +45,7 @@ import board_pic from "/public/static/become-member/member-box/board_pic.jpg";
 import profile_pic from "/public/static/profile/profile-icon.png";
 
 // Login photo
-import { EBoardData, EventCardImageObject } from "@interfaces";
+import { BoardData, EBoardData, EventCardImageObject } from "@interfaces";
 import { getApiInstanceUrl, getWebInstanceUrl } from "./instanceUrl";
 import brasa_logo from "/public/static/brasa-logo.png";
 
@@ -172,53 +172,185 @@ export const professionalImagesData: EventCardImageObject[] = [
   },
 ];
 
-export const BOARD_MEMBERS: EBoardData[] = [
+// Move this to DB
+export const EBOARD_MEMBERS: EBoardData[] = [
   {
+    id: 1,
     image: IMAGES.luca_pic,
     imageAlt: "Luca De Vincenzo Picture",
     officerName: "Luca De Vincenzo",
     officerTitle: "President",
   },
   {
+    id: 2,
     image: IMAGES.guilherme_pic,
     imageAlt: "Guilherme Aranega Picture",
     officerName: "Guilherme Tonini",
     officerTitle: "Vice President",
   },
   {
+    id: 3,
     image: IMAGES.nino_newpic,
     imageAlt: "Nino Picture",
     officerName: "Nino Portugal",
     officerTitle: "Co-Head of Events",
   },
   {
+    id: 4,
     image: IMAGES.gio_pic,
     imageAlt: "Giovana Vicentin Picture",
     officerName: "Giovana Vicentin",
     officerTitle: "Co-Head of Events",
   },
   {
+    id: 5,
     image: IMAGES.isa_pic,
     imageAlt: "Isadora Prado Picture",
     officerName: "Isadora Prado",
     officerTitle: "Head of Marketing",
   },
   {
+    id: 6,
     image: IMAGES.leo_pic,
     imageAlt: "Leonora Carvalho Picture",
     officerName: "Leonora Carvalho",
     officerTitle: "Head of Finance",
   },
   {
+    id: 7,
     image: IMAGES.saki_pic,
     imageAlt: "Sophia Sakakibara Picture",
     officerName: "Sophia Sakakibara",
     officerTitle: "Head of Professional Development",
   },
   {
+    id: 8,
     image: IMAGES.lucas_pic,
     imageAlt: "Lucas Bassotto Silveira Picture",
     officerName: "Lucas Bassotto Silveira",
     officerTitle: "Head of Technology",
+  },
+];
+
+export const BOARD_MEMBERS: BoardData[] = [
+  {
+    image: IMAGES.chris_pic,
+    imageAlt: "Christopher Pavie Suarez Picture",
+    officerTitle: "Event Planning Analyst",
+    officerName: "Chris Pavie Suarez",
+  },
+  {
+    image: IMAGES.gustavo_new_pic,
+    imageAlt: "Gustavo Manfredini picture",
+    officerTitle: "Event Planning Analyst",
+    officerName: "Gustavo Manfredini",
+  },
+  {
+    image: IMAGES.fernanda_pic,
+    imageAlt: "Fernanda Goncalves Picture",
+    officerTitle: "Event Planning Analyst",
+    officerName: "Fernanda Goncalves",
+  },
+  {
+    image: IMAGES.carol_pic,
+    imageAlt: "Carolina Tello Picture",
+    officerTitle: "Event Planning Analyst",
+    officerName: "Carolina Tello",
+  },
+  {
+    image: IMAGES.caio_pic,
+    imageAlt: "Caio Amaral Picture",
+    officerTitle: "Event Planning Analyst",
+    officerName: "Caio Amaral",
+  },
+  {
+    image: IMAGES.carlos_pic,
+    imageAlt: "Carlos Eduardo Picture",
+    officerTitle: "Technology Analyst",
+    officerName: "Carlos Eduardo Torres",
+  },
+  {
+    image: IMAGES.seabra_pic,
+    imageAlt: "Matheus Seabra Picture",
+    officerTitle: "Technology Analyst",
+    officerName: "Matheus Seabra",
+  },
+  {
+    image: IMAGES.daghum_pic,
+    imageAlt: "Lucas Daghum Picture",
+    officerTitle: "Technology Analyst",
+    officerName: "Lucas Daghum",
+  },
+  {
+    image: IMAGES.paulo_pic,
+    imageAlt: "Paulo Nascimento Picture",
+    officerTitle: "Technology Analyst",
+    officerName: "Paulo Nascimento",
+  },
+  {
+    image: IMAGES.leticia_pic,
+    imageAlt: "Leticia Novaes Bispo Picture",
+    officerTitle: "Marketing Analyst",
+    officerName: "Leticia Novaes Bispo",
+  },
+  {
+    image: IMAGES.mktgiovanna_pic,
+    imageAlt: "Giovanna Vesselizza Picture",
+    officerTitle: "Marketing Analyst",
+    officerName: "Giovanna Vesselizza",
+  },
+  {
+    image: IMAGES.ana_pic,
+    imageAlt: "Ana Beatriz Dantas Picture",
+    officerTitle: "Marketing Analyst",
+    officerName: "Ana Beatriz Dantas",
+  },
+  {
+    image: IMAGES.luana_pic,
+    imageAlt: "Luana Agramunt Picture",
+    officerTitle: "Marketing Analyst",
+    officerName: "Luana Agramunt",
+  },
+  {
+    image: IMAGES.eric_newpic,
+    imageAlt: "Eric Tavora Picture",
+    officerTitle: "Marketing Analyst",
+    officerName: "Eric Tavora",
+  },
+  {
+    image: IMAGES.matheus_pic,
+    imageAlt: "Matheus Agramunt Picture",
+    officerTitle: "Professional Development Analyst",
+    officerName: "Matheus Agramunt",
+  },
+  {
+    image: IMAGES.isabele_pic,
+    imageAlt: "Isabelle Miguel Picture",
+    officerTitle: "Professional Development Analyst",
+    officerName: "Isabelle Miguel",
+  },
+  {
+    image: IMAGES.mel_pic,
+    imageAlt: "Mel Wolff Picture",
+    officerTitle: "Professional Development Analyst",
+    officerName: "Mel Wolff",
+  },
+  {
+    image: IMAGES.matheusf_pic,
+    imageAlt: "Matheus Gomes Picture",
+    officerTitle: "Finance Analyst",
+    officerName: "Matheus Gomes",
+  },
+  {
+    image: IMAGES.manu_pic,
+    imageAlt: "Manuela Martins Picture",
+    officerTitle: "Finance Analyst",
+    officerName: "Manuela Martins",
+  },
+  {
+    image: IMAGES.pedro_pic,
+    imageAlt: "Pedro Evangelista Picture",
+    officerTitle: "Finance Analyst",
+    officerName: "Pedro Evangelista",
   },
 ];
