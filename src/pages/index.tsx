@@ -195,9 +195,41 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
               </div>
 
               {isSocial ? (
-                <ImageCarousel imageData={eventImagesData} isMobile={true} />
+                <ImageCarousel>
+                  {eventImagesData.map((each, index) => (
+                    <div
+                      key={each.imageAlt}
+                      className="flex justify-center items-start w-full h-full relative"
+                    >
+                      <EventCard
+                        image={each.image}
+                        imageAlt={each.imageAlt}
+                        tag={each.tag}
+                        eventTitle={each.eventTitle}
+                        eventDescription={each.eventDescription}
+                        isMobile={isMobile}
+                      />
+                    </div>
+                  ))}
+                </ImageCarousel>
               ) : (
-                <ImageCarousel imageData={professionalImagesData} isMobile={true} />
+                <ImageCarousel>
+                  {professionalImagesData.map((each, index) => (
+                    <div
+                      key={each.imageAlt}
+                      className="flex justify-center items-start w-full h-full relative"
+                    >
+                      <EventCard
+                        image={each.image}
+                        imageAlt={each.imageAlt}
+                        tag={each.tag}
+                        eventTitle={each.eventTitle}
+                        eventDescription={each.eventDescription}
+                        isMobile={isMobile}
+                      />
+                    </div>
+                  ))}
+                </ImageCarousel>
               )}
             </div>
           </section>

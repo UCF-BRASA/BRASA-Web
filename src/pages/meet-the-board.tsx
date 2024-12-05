@@ -1,13 +1,77 @@
-import { NextPage } from "next";
-
 import JoinNewsletter from "@components/JoinNewsletter/JoinNewsletter";
+import ImageCarousel from "@components/Landing/ImageCarousel";
 import BoardBox from "@components/Meet-Board/BoardBox";
 import EBoardGrid from "@components/Meet-Board/EBoardGrid";
+import { Tab, Tabs } from "@nextui-org/tabs";
 import { BOARD_MEMBERS } from "@util/constants";
+import { NextPage } from "next";
 
 interface Props {
   isMobile: boolean;
 }
+
+interface ITabs {
+  id: string;
+  year: "2021" | "2022" | "2023";
+  boardData: { id: number; nani: string }[];
+}
+
+const tabs: ITabs[] = [
+  {
+    id: "photos",
+    year: "2021",
+    boardData: [
+      {
+        id: 1,
+        nani: "salve",
+      },
+      {
+        id: 2,
+        nani: "salve2",
+      },
+      {
+        id: 3,
+        nani: "salve3",
+      },
+    ],
+  },
+  {
+    id: "music",
+    year: "2022",
+    boardData: [
+      {
+        id: 1,
+        nani: "mama",
+      },
+      {
+        id: 2,
+        nani: "mama2",
+      },
+      {
+        id: 3,
+        nani: "mama3",
+      },
+    ],
+  },
+  {
+    id: "videos",
+    year: "2023",
+    boardData: [
+      {
+        id: 1,
+        nani: "cavalo",
+      },
+      {
+        id: 2,
+        nani: "cavalo2",
+      },
+      {
+        id: 3,
+        nani: "cavalo3",
+      },
+    ],
+  },
+];
 
 const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
   return (
@@ -108,6 +172,46 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                 isMobile={isMobile}
               />
             ))}
+          </section>
+          <section className="bg-main-brasa-blue rounded-[2rem] overflow-x-hidden mt-24">
+            <div className="flex flex-col items-center text-white w-full mb-16">
+              <div className="text-center">
+                <h3 className="pt-16 font-semi-bold text-base tracking-[0.20em]">BRASA HISTORY</h3>
+                <h1 className="pt-5 font-semi-bold text-[2.5rem] leading-none tracking-[0.02em] mb-8">
+                  Previous Executive Boards
+                </h1>
+              </div>
+
+              <Tabs
+                aria-label="Previous Executive Boards"
+                items={tabs}
+                size="md"
+                radius="full"
+                color="primary"
+                classNames={{
+                  tabList: "bg-transparent border-[2.5px] border-white text-white",
+                  cursor: "w-full bg-white",
+                  tab: "h-12 w-32",
+                  tabContent:
+                    "group-data-[selected=true]:text-main-brasa-blue text-white font-semi-bold",
+                }}
+              >
+                {(item) => (
+                  <Tab key={item.id} title={item.year}>
+                    <ImageCarousel>
+                      {item.boardData.map((each) => {
+                        console.log(each);
+                        return (
+                          <div key={each.id} className="flex flex-col items-center justify-center">
+                            <p className="text-white">{each.nani}</p>
+                          </div>
+                        );
+                      })}
+                    </ImageCarousel>
+                  </Tab>
+                )}
+              </Tabs>
+            </div>
           </section>
           <JoinNewsletter />
         </div>

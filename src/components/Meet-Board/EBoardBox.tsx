@@ -8,7 +8,7 @@ interface Props {
   officerName: string;
   officerTitle: string;
   isMobile: boolean;
-  onLearnMoreClick: (id: number) => void;
+  onLearnMoreClick?: (id: number) => void;
 }
 
 const EBoardBox: FC<Props> = ({
@@ -17,7 +17,7 @@ const EBoardBox: FC<Props> = ({
   imageAlt,
   officerName,
   officerTitle,
-  onLearnMoreClick,
+  onLearnMoreClick = () => {},
   isMobile,
 }) => {
   return (
