@@ -19,6 +19,8 @@ export interface EBoardData {
   imageAlt: string;
   officerName: string;
   officerTitle: string;
+  officerBio: string;
+  officerLinkedIn: string;
 }
 
 export interface BoardData {

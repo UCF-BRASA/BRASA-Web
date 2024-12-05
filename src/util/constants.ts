@@ -180,6 +180,9 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     imageAlt: "Luca De Vincenzo Picture",
     officerName: "Luca De Vincenzo",
     officerTitle: "President",
+    officerBio:
+      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts! Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+    officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
   },
   {
     id: 2,
@@ -187,6 +190,9 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     imageAlt: "Guilherme Aranega Picture",
     officerName: "Guilherme Tonini",
     officerTitle: "Vice President",
+    officerBio:
+      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts! Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+    officerLinkedIn: "https://www.linkedin.com/in/guilherme-tonini-aranega-b2a4101a1/",
   },
   {
     id: 3,
@@ -194,6 +200,9 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     imageAlt: "Nino Picture",
     officerName: "Nino Portugal",
     officerTitle: "Co-Head of Events",
+    officerBio:
+      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts! Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+    officerLinkedIn: "https://www.linkedin.com/in/ninoportugal/",
   },
   {
     id: 4,
@@ -201,6 +210,9 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     imageAlt: "Giovana Vicentin Picture",
     officerName: "Giovana Vicentin",
     officerTitle: "Co-Head of Events",
+    officerBio:
+      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts! Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+    officerLinkedIn: "https://www.linkedin.com/in/giovanavicentinr/",
   },
   {
     id: 5,
@@ -208,6 +220,9 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     imageAlt: "Isadora Prado Picture",
     officerName: "Isadora Prado",
     officerTitle: "Head of Marketing",
+    officerBio:
+      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts! Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+    officerLinkedIn: "https://www.linkedin.com/in/isadora-mendon%C3%A7a-prado-6418b021a/",
   },
   {
     id: 6,
@@ -215,6 +230,9 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     imageAlt: "Leonora Carvalho Picture",
     officerName: "Leonora Carvalho",
     officerTitle: "Head of Finance",
+    officerBio:
+      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts! Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+    officerLinkedIn: "https://www.linkedin.com/in/leonora-carvalho-vaz-de-siqueira-525095210/",
   },
   {
     id: 7,
@@ -222,6 +240,9 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     imageAlt: "Sophia Sakakibara Picture",
     officerName: "Sophia Sakakibara",
     officerTitle: "Head of Professional Development",
+    officerBio:
+      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts! Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+    officerLinkedIn: "https://www.linkedin.com/in/sophiacapello/",
   },
   {
     id: 8,
@@ -229,6 +250,9 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     imageAlt: "Lucas Bassotto Silveira Picture",
     officerName: "Lucas Bassotto Silveira",
     officerTitle: "Head of Technology",
+    officerBio:
+      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts! Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+    officerLinkedIn: "https://www.linkedin.com/in/lucasbassottosilveira/",
   },
 ];
 

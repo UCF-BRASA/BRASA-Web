@@ -6,7 +6,12 @@ interface Props {
   children: ReactNode;
 }
 
-const ModalWrapper: FC<Props> = ({ onClose = () => {}, children }) => {
+const ModalWrapper: FC<Props> = ({
+  onClose = () => {
+    null;
+  },
+  children,
+}) => {
   const overlayRef = useRef<HTMLDivElement | null>(null);
 
   return (

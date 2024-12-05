@@ -3,8 +3,8 @@ import { NextPage } from "next";
 import JoinNewsletter from "@components/JoinNewsletter/JoinNewsletter";
 import ImageCarousel from "@components/Landing/ImageCarousel";
 import BoardBox from "@components/Meet-Board/BoardBox";
-import EBoardBox from "@components/Meet-Board/EBoardBox";
-import { BOARD_MEMBERS, EBOARD_MEMBERS, eventImagesData } from "@util/constants";
+import EBoardGrid from "@components/Meet-Board/EBoardGrid";
+import { BOARD_MEMBERS, eventImagesData } from "@util/constants";
 import { useState } from "react";
 
 interface Props {
@@ -31,7 +31,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
           <div className="">
             <div className="absolute z-30 w-full px-2">
               <div className="flex flex-wrap justify-evenly mx-auto w-full mt-20">
-                {EBOARD_MEMBERS.map((boardMember) => (
+                {/* {EBOARD_MEMBERS.map((boardMember) => (
                   <EBoardBox
                     key={boardMember.id}
                     id={boardMember.id}
@@ -41,7 +41,8 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                     officerTitle={boardMember.officerTitle}
                     isMobile={isMobile}
                   />
-                ))}
+                ))} */}
+                <EBoardGrid isMobile={isMobile} />
               </div>
             </div>
           </div>
@@ -90,10 +91,10 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
           </div>
 
           <div className="relative flex justify-center">
-            <div className="absolute z-30">
+            <div className="absolute z-30 mt-20">
               {/* <div className="flex flex-wrap justify-between mx-auto w-full mt-20"> */}
-              <div className="grid grid-cols-4 gap-x-8 w-full mt-20">
-                {EBOARD_MEMBERS.map((boardMember) => (
+              {/* <div className="grid grid-cols-4 gap-x-8 w-full mt-20"> */}
+              {/* {EBOARD_MEMBERS.map((boardMember) => (
                   <EBoardBox
                     key={boardMember.id}
                     id={boardMember.id}
@@ -103,8 +104,9 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                     officerTitle={boardMember.officerTitle}
                     isMobile={isMobile}
                   />
-                ))}
-              </div>
+                ))} */}
+              <EBoardGrid isMobile={isMobile} />
+              {/* </div> */}
             </div>
           </div>
 
