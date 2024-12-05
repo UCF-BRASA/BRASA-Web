@@ -30,20 +30,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
 
           <div className="">
             <div className="absolute z-30 w-full px-2">
-              <div className="flex flex-wrap justify-evenly mx-auto w-full mt-20">
-                {/* {EBOARD_MEMBERS.map((boardMember) => (
-                  <EBoardBox
-                    key={boardMember.id}
-                    id={boardMember.id}
-                    image={boardMember.image}
-                    imageAlt={boardMember.imageAlt}
-                    officerName={boardMember.officerName}
-                    officerTitle={boardMember.officerTitle}
-                    isMobile={isMobile}
-                  />
-                ))} */}
-                <EBoardGrid isMobile={isMobile} />
-              </div>
+              <EBoardGrid isMobile={isMobile} />
             </div>
           </div>
 
@@ -92,21 +79,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
 
           <div className="relative flex justify-center">
             <div className="absolute z-30 mt-20">
-              {/* <div className="flex flex-wrap justify-between mx-auto w-full mt-20"> */}
-              {/* <div className="grid grid-cols-4 gap-x-8 w-full mt-20"> */}
-              {/* {EBOARD_MEMBERS.map((boardMember) => (
-                  <EBoardBox
-                    key={boardMember.id}
-                    id={boardMember.id}
-                    image={boardMember.image}
-                    imageAlt={boardMember.imageAlt}
-                    officerName={boardMember.officerName}
-                    officerTitle={boardMember.officerTitle}
-                    isMobile={isMobile}
-                  />
-                ))} */}
               <EBoardGrid isMobile={isMobile} />
-              {/* </div> */}
             </div>
           </div>
 

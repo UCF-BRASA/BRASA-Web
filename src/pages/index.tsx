@@ -2,7 +2,7 @@ import JoinNewsletter from "@components/JoinNewsletter/JoinNewsletter";
 import EventCard from "@components/Landing/EventCard";
 import GridSection from "@components/Landing/GridSection";
 import ImageCarousel from "@components/Landing/ImageCarousel";
-import { IMAGES, eventImagesData, professionalImagesData } from "@util/constants";
+import { IMAGES, eventImagesData, gridSectionsData, professionalImagesData } from "@util/constants";
 import { NextPage } from "next";
 import Image from "next/image";
 import { useState } from "react";
@@ -68,6 +68,18 @@ const displayEventCards = (isSocial: boolean, isMobile: boolean) => {
       />
     </div>
   );
+};
+
+const displayGridIconSection = () => {
+  return gridSectionsData.map((section) => (
+    <GridSection
+      key={section.imageAlt}
+      imageAlt={section.imageAlt}
+      imagePath={section.imagePath}
+      title={section.title}
+      description={section.description}
+    />
+  ));
 };
 
 const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
@@ -139,46 +151,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
             </div>
 
             <div className="container mx-auto grid gap-x-20 gap-y-16 grid-cols-1 px-5 mt-20 w-full">
-              <GridSection
-                imageAlt="Exam Icon"
-                imagePath="static/landing/what-we-do/exam-icon.svg"
-                title="Exam Preparation"
-                description="We offer comprehensive resources and study materials to help you prepare for entrance exams"
-              />
-
-              <GridSection
-                imageAlt="Study Abroad Icon"
-                imagePath="static/landing/what-we-do/study-abroad-icon.svg"
-                title="Study Abroad Opportunities"
-                description="We guide you through the application process and also assist with the visa requirements"
-              />
-
-              <GridSection
-                imageAlt="Career Guidance Icon"
-                imagePath="static/landing/what-we-do/career-icon.svg"
-                title="Career Guidance"
-                description="We offer career counselling services to help you explore different options & identify your strengths and interests"
-              />
-
-              <GridSection
-                imageAlt="Educational Resources Icon"
-                imagePath="static/landing/what-we-do/education-icon.svg"
-                title="Educational Resources"
-                description="We offer educational resources to support your learning journey from study tips to time management techniques"
-              />
-
-              <GridSection
-                imageAlt="Community Support Icon"
-                imagePath="static/landing/what-we-do/community-icon.svg"
-                title="Community Support"
-                description="Join our online forums and connect with fellow students, educators, and professionals. balbaskdhasidasildhio"
-              />
-              <GridSection
-                imageAlt="DB icon"
-                imagePath="static/landing/what-we-do/db-icon.svg"
-                title="BRASA @ UCF Tech Team"
-                description="Our tech team is always looking for new members to help us build our website and other projects."
-              />
+              {displayGridIconSection()}
             </div>
           </section>
           <section className="bg-main-brasa-blue rounded-[2rem] overflow-x-hidden mt-24">
@@ -302,47 +275,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
             <h1 className="pt-5 font-bold text-5xl">We offer support & guidance</h1>
 
             <div className="container mx-auto grid gap-x-20 gap-y-24 grid-cols-3 grid-rows-2 p-20 mt-8 w-full">
-              <GridSection
-                imageAlt="Exam Icon"
-                imagePath="static/landing/what-we-do/exam-icon.svg"
-                title="Exam Preparation"
-                description="We offer comprehensive resources and study materials to help you prepare for entrance exams"
-              />
-
-              <GridSection
-                imageAlt="Study Abroad Icon"
-                imagePath="static/landing/what-we-do/study-abroad-icon.svg"
-                title="Study Abroad Opportunities"
-                description="We guide you through the application process and also assist with the visa requirements"
-              />
-
-              <GridSection
-                imageAlt="Career Guidance Icon"
-                imagePath="static/landing/what-we-do/career-icon.svg"
-                title="Career Guidance"
-                description="We offer career counselling services to help you explore different options & identify your strengths and interests"
-              />
-
-              <GridSection
-                imageAlt="Educational Resources Icon"
-                imagePath="static/landing/what-we-do/education-icon.svg"
-                title="Educational Resources"
-                description="We offer educational resources to support your learning journey from study tips to time management techniques"
-              />
-
-              <GridSection
-                imageAlt="Community Support Icon"
-                imagePath="static/landing/what-we-do/community-icon.svg"
-                title="Community Support"
-                description="Join our online forums and connect with fellow students, educators, and professionals"
-              />
-
-              <GridSection
-                imageAlt="DB icon"
-                imagePath="static/landing/what-we-do/db-icon.svg"
-                title="BRASA @ UCF Tech Team"
-                description="Our tech team is always looking for new members to help us build our website and other projects."
-              />
+              {displayGridIconSection()}
             </div>
           </div>
           {/* End of Section 2 */}

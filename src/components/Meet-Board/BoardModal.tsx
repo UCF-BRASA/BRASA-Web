@@ -22,17 +22,49 @@ const BoardModal: FC<Props> = ({ id, isMobile, onClose }) => {
     <div>
       {isMobile ? (
         <ModalWrapper>
-          <div />
+          <div className="bg-white rounded-lg w-[90%] max-w-full max-h-[90%] overflow-auto flex flex-col mx-auto">
+            <div className="p-4 flex justify-between items-center border-b border-gray-200">
+              <h2 className="text-xl font-semi-bold">{officerTitle}</h2>
+              <button
+                onClick={onClose}
+                className="px-4 py-2 bg-main-brasa-blue text-white text-base font-medium 
+                  rounded-md shadow-md hover:bg-gray-400 transition duration-200 ease-in-out"
+              >
+                <FontAwesomeIcon icon={faClose} />
+              </button>
+            </div>
+            <div className="relative w-full h-[20rem]">
+              <Image src={image} alt={imageAlt} layout="fill" objectFit="cover" />
+            </div>
+            <div className="p-4">
+              <h3 className="text-lg font-semi-bold mb-2">Description</h3>
+              <p className="text-sm leading-relaxed font-light">{officerBio}</p>
+            </div>
+            <div className="bg-gray-100 p-4 flex justify-center border-t border-gray-200">
+              <a
+                href={officerLinkedIn}
+                target="_blank"
+                className="flex items-center text-[#0077b5] no-underline text-sm font-regular"
+              >
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  style={{ color: "#008cff" }}
+                  className="w-5 h-5 mr-1"
+                />
+                Connect with {officerName}
+              </a>
+            </div>
+          </div>
         </ModalWrapper>
       ) : (
         <ModalWrapper>
-          <div className="border shadow-lg rounded-md bg-white">
+          <div className="shadow-lg rounded-md bg-white w-[80rem]">
             <div id="modal-header">
-              <div className="w-full flex flex-row items-center justify-between p-8 px-6 border-b-1 border-b-black">
+              <div className="w-full flex flex-row items-center justify-between p-8 px-6">
                 <p className="justify-self-start font-semi-bold text-3xl">{officerTitle}</p>
                 <button
                   onClick={onClose}
-                  className="px-4 py-2 bg-gray-400 text-white text-base font-medium rounded-md shadow-md hover:bg-main-brasa-blue transition duration-200 ease-in-out"
+                  className="px-4 py-2 bg-main-brasa-blue text-white text-base font-medium rounded-md shadow-md hover:bg-gray-400 transition duration-200 ease-in-out"
                 >
                   <FontAwesomeIcon icon={faClose} />
                 </button>
@@ -41,13 +73,9 @@ const BoardModal: FC<Props> = ({ id, isMobile, onClose }) => {
             <hr />
 
             {/* Modal Body */}
-            <div id="modal-body" className="border-b-1 border-b-black">
+            <div id="modal-body">
               <div className="flex flex-row">
-                <Image
-                  src={image}
-                  alt={imageAlt}
-                  className="block w-auto h-auto max-w-[30rem] max-h-[40rem]"
-                />
+                <Image src={image} alt={imageAlt} className="h-[40rem] w-1/2 object-cover" />
                 {/* Description */}
                 <div className="p-8">
                   <h3 className="font-semi-bold text-xl tracking-[0.02em]">Description</h3>
@@ -72,8 +100,8 @@ const BoardModal: FC<Props> = ({ id, isMobile, onClose }) => {
                   style={{ color: "#008cff" }}
                   className="w-5 h-5"
                 />
-                <p className="pl-1 font-regular text-regular text-gray-500">
-                  Connect with {officerName}!
+                <p className="pl-1 font-regular text-regular text-main-brasa-blue">
+                  Connect with {officerName}
                 </p>
               </a>
             </div>

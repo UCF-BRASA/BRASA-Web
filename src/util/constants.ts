@@ -181,7 +181,7 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     officerName: "Luca De Vincenzo",
     officerTitle: "President",
     officerBio:
-      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts! Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
   },
   {
@@ -191,7 +191,7 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     officerName: "Guilherme Tonini",
     officerTitle: "Vice President",
     officerBio:
-      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts! Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     officerLinkedIn: "https://www.linkedin.com/in/guilherme-tonini-aranega-b2a4101a1/",
   },
   {
@@ -201,7 +201,7 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     officerName: "Nino Portugal",
     officerTitle: "Co-Head of Events",
     officerBio:
-      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts! Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     officerLinkedIn: "https://www.linkedin.com/in/ninoportugal/",
   },
   {
@@ -211,7 +211,7 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     officerName: "Giovana Vicentin",
     officerTitle: "Co-Head of Events",
     officerBio:
-      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts! Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     officerLinkedIn: "https://www.linkedin.com/in/giovanavicentinr/",
   },
   {
@@ -221,7 +221,7 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     officerName: "Isadora Prado",
     officerTitle: "Head of Marketing",
     officerBio:
-      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts! Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     officerLinkedIn: "https://www.linkedin.com/in/isadora-mendon%C3%A7a-prado-6418b021a/",
   },
   {
@@ -231,7 +231,7 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     officerName: "Leonora Carvalho",
     officerTitle: "Head of Finance",
     officerBio:
-      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts! Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     officerLinkedIn: "https://www.linkedin.com/in/leonora-carvalho-vaz-de-siqueira-525095210/",
   },
   {
@@ -241,7 +241,7 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     officerName: "Sophia Sakakibara",
     officerTitle: "Head of Professional Development",
     officerBio:
-      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts! Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     officerLinkedIn: "https://www.linkedin.com/in/sophiacapello/",
   },
   {
@@ -251,7 +251,7 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     officerName: "Lucas Bassotto Silveira",
     officerTitle: "Head of Technology",
     officerBio:
-      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts! Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     officerLinkedIn: "https://www.linkedin.com/in/lucasbassottosilveira/",
   },
 ];
@@ -376,5 +376,50 @@ export const BOARD_MEMBERS: BoardData[] = [
     imageAlt: "Pedro Evangelista Picture",
     officerTitle: "Finance Analyst",
     officerName: "Pedro Evangelista",
+  },
+];
+
+export const gridSectionsData = [
+  {
+    imageAlt: "Exam Icon",
+    imagePath: "static/landing/what-we-do/exam-icon.svg",
+    title: "Exam Preparation",
+    description:
+      "We offer comprehensive resources and study materials to help you prepare for entrance exams",
+  },
+  {
+    imageAlt: "Study Abroad Icon",
+    imagePath: "static/landing/what-we-do/study-abroad-icon.svg",
+    title: "Study Abroad Opportunities",
+    description:
+      "We guide you through the application process and also assist with the visa requirements",
+  },
+  {
+    imageAlt: "Career Guidance Icon",
+    imagePath: "static/landing/what-we-do/career-icon.svg",
+    title: "Career Guidance",
+    description:
+      "We offer career counselling services to help you explore different options & identify your strengths and interests",
+  },
+  {
+    imageAlt: "Educational Resources Icon",
+    imagePath: "static/landing/what-we-do/education-icon.svg",
+    title: "Educational Resources",
+    description:
+      "We offer educational resources to support your learning journey from study tips to time management techniques",
+  },
+  {
+    imageAlt: "Community Support Icon",
+    imagePath: "static/landing/what-we-do/community-icon.svg",
+    title: "Community Support",
+    description:
+      "Join our online forums and connect with fellow students, educators, and professionals",
+  },
+  {
+    imageAlt: "DB icon",
+    imagePath: "static/landing/what-we-do/db-icon.svg",
+    title: "BRASA @ UCF Tech Team",
+    description:
+      "Our tech team is always looking for new members to help us build our website and other projects.",
   },
 ];

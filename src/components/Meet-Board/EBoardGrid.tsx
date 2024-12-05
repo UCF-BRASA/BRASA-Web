@@ -20,20 +20,37 @@ const EBoardGrid: FC<Props> = ({ isMobile }) => {
 
   return (
     <>
-      <div className="grid grid-cols-4 gap-8">
-        {EBOARD_MEMBERS.map((boardMember) => (
-          <EBoardBox
-            key={boardMember.id}
-            id={boardMember.id}
-            image={boardMember.image}
-            imageAlt={boardMember.imageAlt}
-            officerName={boardMember.officerName}
-            officerTitle={boardMember.officerTitle}
-            isMobile={isMobile}
-            onLearnMoreClick={handleLearnMoreClick}
-          />
-        ))}
-      </div>
+      {isMobile ? (
+        <div className="flex flex-wrap justify-evenly mx-auto w-full mt-14">
+          {EBOARD_MEMBERS.map((boardMember) => (
+            <EBoardBox
+              key={boardMember.id}
+              id={boardMember.id}
+              image={boardMember.image}
+              imageAlt={boardMember.imageAlt}
+              officerName={boardMember.officerName}
+              officerTitle={boardMember.officerTitle}
+              isMobile={isMobile}
+              onLearnMoreClick={handleLearnMoreClick}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="grid grid-cols-4 gap-16">
+          {EBOARD_MEMBERS.map((boardMember) => (
+            <EBoardBox
+              key={boardMember.id}
+              id={boardMember.id}
+              image={boardMember.image}
+              imageAlt={boardMember.imageAlt}
+              officerName={boardMember.officerName}
+              officerTitle={boardMember.officerTitle}
+              isMobile={isMobile}
+              onLearnMoreClick={handleLearnMoreClick}
+            />
+          ))}
+        </div>
+      )}
 
       {/* Modal */}
       {selectedId !== null && (
