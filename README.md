@@ -11,8 +11,7 @@
 
 Before running the app, you need to fill out the `.env` file. Please reach out to either:
 
-- [Fachetti (enigzz)](https://discordapp.com/users/294195589820710912)
-- [Duda (joazeiro)](https://discordapp.com/users/401588155788296194)
+- [Matheus Seabra](https://discordapp.com/users/335558950948831233)
 
 ### VSC Extensions (recommended)
 
@@ -35,13 +34,13 @@ npm install
 npm run dev
 ```
 
-The application will be available at [https://localhost:3000](http://localhost:3000)
+The application will be available at [http://localhost:3000](http://localhost:3000)
 
 ## 🧰 Built With
 
 - [TypeScript](https://www.typescriptlang.org) - JavaScript superset
 - [React](https://react.dev) - Macro framework
-- [Next.js](https://nextjs.org) - React framework
+- [Next.js](https://nextjs.org) - React meta-framework
 - [TailwindCSS](https://tailwindcss.com) - CSS framework
 - [NPM](https://www.npmjs.com) - Dependency and virtual environment manager
 - [typescript-eslint](https://typescript-eslint.io) - Code Linter

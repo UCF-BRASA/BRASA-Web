@@ -4,8 +4,7 @@ import { FC } from "react";
 
 import { faBriefcase, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { COLORS } from "@util";
-import brasa_logo from "/public/static/brasa-logo.png";
+import { COLORS, IMAGES } from "@util/constants";
 
 const BottomNavbar: FC = () => {
   return (
@@ -31,7 +30,7 @@ const BottomNavbar: FC = () => {
                 <Link href="/">
                   <div className="flex justify-center items-center hover:cursor-pointer">
                     <Image
-                      src={brasa_logo}
+                      src={IMAGES.brasa_logo}
                       alt="BRASA Logo on Navbar placed on Footer"
                       sizes="100vw"
                       className="w-[95%%] p-2" // THIS %% IS NOT A TYPO

@@ -1,68 +1,16 @@
-import { EventCard, GridSection, ImageCarousel, JoinNewsletter } from "@components";
-import { EventCardImageObject } from "@interfaces";
-import { IMAGES } from "@util";
+import JoinNewsletter from "@components/JoinNewsletter/JoinNewsletter";
+import EventCard from "@components/Landing/EventCard";
+import GridSection from "@components/Landing/GridSection";
+import ImageCarousel from "@components/Landing/ImageCarousel";
+import { IMAGES, eventImagesData, gridSectionsData, professionalImagesData } from "@util/constants";
 import { NextPage } from "next";
-import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 interface HomeProps {
   windowWidth: number;
-  windowHeight: number;
   isMobile: boolean;
 }
-
-const eventImagesData: EventCardImageObject[] = [
-  {
-    image: IMAGES.churras_pic,
-    imageAlt: "UCF BRASA Churrasco Picture",
-    tag: "Main Event",
-    eventTitle: "BRASA Churrasco",
-    eventDescription:
-      "All you can eat and drink Brazilian Churrasco! Come enjoy the full Brazilian experience with live DJ music and the best caipirinhas in Orlando!",
-  },
-  {
-    image: IMAGES.bailinho_pic,
-    imageAlt: "UCF BRASA Baile da BRASA Picture",
-    tag: "Main Event",
-    eventTitle: "Baile da BRASA",
-    eventDescription:
-      "Baile Funk da BRASA! Partnerships with the best clubs in Orlando with open-bars and premium discounts!",
-  },
-  {
-    image: IMAGES.hangout_pic,
-    imageAlt: "UCF BRASA Hangout Picture",
-    tag: "Casual",
-    eventTitle: "BRASA Hangout",
-    eventDescription:
-      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
-  },
-];
-const professionalImagesData: EventCardImageObject[] = [
-  {
-    image: IMAGES.guest_speaker_pic,
-    imageAlt: "UCF BRASA Guest Speakers Picture",
-    tag: "Networking",
-    eventTitle: "Guest Speakers",
-    eventDescription:
-      "Connect with experts of your field with our re-ocurrent Guest Speaker events! Whatever area you are in, we have professinals to help you out!",
-  },
-  {
-    image: IMAGES.workshop_pic,
-    imageAlt: "UCF BRASA Workshops Picture",
-    tag: "Learning",
-    eventTitle: "BRASA Workshops",
-    eventDescription:
-      "Expand your skillsets with our workshops! Our workshop areas include finance, marketing, coding, how to get a job and general networking!",
-  },
-  {
-    image: IMAGES.study_pic,
-    imageAlt: "UCF BRASA Study Picture",
-    tag: "Casual",
-    eventTitle: "BRASA Study",
-    eventDescription:
-      "A light, fun and collaborative environment for you to study with fellow BRASA members! We have weekly study sessions for everyone!",
-  },
-];
 
 const displayEventCards = (isSocial: boolean, isMobile: boolean) => {
   return isSocial ? (
@@ -122,6 +70,18 @@ const displayEventCards = (isSocial: boolean, isMobile: boolean) => {
   );
 };
 
+const displayGridIconSection = () => {
+  return gridSectionsData.map((section) => (
+    <GridSection
+      key={section.imageAlt}
+      imageAlt={section.imageAlt}
+      imagePath={section.imagePath}
+      title={section.title}
+      description={section.description}
+    />
+  ));
+};
+
 const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
   const [isSocial, setIsSocial] = useState<boolean>(true);
 
@@ -129,30 +89,35 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
     <main>
       {isMobile ? (
         // MOBILE LANDING PAGE
-        <div>
-          <section>
+        <>
+          <section className="rounded-b-lg">
             {/* Main section 1's content */}
-            <div className="">
-              <div className="flex flex-col items-center justify-center text-center overflow-x-hidden w-full backdrop-brightness-[0.4] h-screen">
-                <h1 className="relative tracking-[0.1rem] font-bold text-xs break-normal text-white">
-                  EMPOWERING BRAZILIAN STUDENTS
-                </h1>
-                <br />
-                <h1 className="relative leading-200 font-bold text-5xl break-normal text-main-brasa-yellow">
-                  Unlocking <br />
-                  potential, <br />
-                  building <br />
-                  futures
-                </h1>
-              </div>
+            <Image
+              src={IMAGES.mainPicLanding}
+              alt="Landing Pic"
+              fill
+              priority
+              className="bg-cover"
+            />
+            <div className="flex flex-col items-center justify-center text-center overflow-x-hidden w-full backdrop-brightness-[0.4] h-screen">
+              <h1 className="relative tracking-[0.1rem] font-bold text-xs break-normal text-white">
+                EMPOWERING BRAZILIAN STUDENTS
+              </h1>
+              <br />
+              <h1 className="relative leading-200 font-bold text-5xl break-normal text-main-brasa-yellow">
+                Unlocking <br />
+                potential, <br />
+                building <br />
+                futures
+              </h1>
             </div>
           </section>
           <section id="section-salve" className="h-[30rem] bg-main-brasa-yellow">
             <div className="h-full w-full flex flex-col justify-center pt-24 ">
-              <h3 className="font-bold text-center text-xl tracking-[0.08em]">
+              <h3 className="font-semi-bold text-center text-2xl tracking-[0.08em]">
                 What is BRASA @ UCF?
               </h3>
-              <p className="font-medium text-base text-black text-left mt-4 pr-8 pl-10">
+              <p className="font-medium text-base text-black text-justify mt-4 pr-8 pl-10">
                 Assist Brazilians interested in studying at UCF by providing guidance
                 <br /> throughout the application process via our social media channels,
                 <br /> offering campus tours, sharing insights about life in the US and Orlando,
@@ -161,9 +126,12 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
             </div>
             <div className="flex justify-center w-full relative z-30">
               <div className="text-base rounded-full bg-blue-500 text-white font-medium h-16 w-44">
-                <Link className="flex justify-center items-center w-full h-full" href="/sign-up">
+                <a
+                  className="flex justify-center items-center w-full h-full"
+                  href="https://knightconnect.campuslabs.com/engage/organization/brasa"
+                >
                   Become a Member
-                </Link>
+                </a>
               </div>
             </div>
           </section>
@@ -183,50 +151,11 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
             </div>
 
             <div className="container mx-auto grid gap-x-20 gap-y-16 grid-cols-1 px-5 mt-20 w-full">
-              <GridSection
-                imageAlt="Exam Icon"
-                imagePath="static/landing/what-we-do/exam-icon.svg"
-                title="Exam Preparation"
-                description="We offer comprehensive resources and study materials to help you prepare for entrance exams"
-              />
-
-              <GridSection
-                imageAlt="Study Abroad Icon"
-                imagePath="static/landing/what-we-do/study-abroad-icon.svg"
-                title="Study Abroad Opportunities"
-                description="We guide you through the application process and also assist with the visa requirements"
-              />
-
-              <GridSection
-                imageAlt="Career Guidance Icon"
-                imagePath="static/landing/what-we-do/career-icon.svg"
-                title="Career Guidance"
-                description="We offer career counselling services to help you explore different options & identify your strengths and interests"
-              />
-
-              <GridSection
-                imageAlt="Educational Resources Icon"
-                imagePath="static/landing/what-we-do/education-icon.svg"
-                title="Educational Resources"
-                description="We offer educational resources to support your learning journey from study tips to time management techniques"
-              />
-
-              <GridSection
-                imageAlt="Community Support Icon"
-                imagePath="static/landing/what-we-do/community-icon.svg"
-                title="Community Support"
-                description="Join our online forums and connect with fellow students, educators, and professionals. balbaskdhasidasildhio"
-              />
-              <GridSection
-                imageAlt="DB icon"
-                imagePath="static/landing/what-we-do/db-icon.svg"
-                title="BRASA @ UCF Tech Team"
-                description="Our tech team is always looking for new members to help us build our website and other projects."
-              />
+              {displayGridIconSection()}
             </div>
           </section>
-          <section className="bg-main-brasa-blue rounded-t-[2rem] overflow-x-hidden mt-24">
-            <div className="flex flex-col items-center text-white w-full mb-40">
+          <section className="bg-main-brasa-blue rounded-[2rem] overflow-x-hidden mt-24">
+            <div className="flex flex-col items-center text-white w-full mb-16">
               <div className="text-center">
                 <h3 className="pt-16 font-semi-bold text-base tracking-[0.20em]">OUR EVENTS</h3>
                 <h1 className="pt-5 font-semi-bold text-[2.5rem] leading-none tracking-[0.02em] mb-12">
@@ -275,50 +204,68 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
 
           {/* Footer spacing */}
           <div className="bg-white h-40"></div>
-        </div>
+        </>
       ) : (
         <div className="h-full bg-white">
           {/* Section 1 */}
 
           {/* White Blob */}
           <div className="flex items-center justify-between mx-auto top-25 bg-main-brasa-yellow">
-            <img src="static/landing/intro/white-blob.svg" />
+            <img src="static/landing/intro/white-blob.svg" alt="navbar-white-blob" />
           </div>
 
           {/* Main section 1's content */}
-          <div id="desktop-area" className="absolute flex flex-row pl-24 overflow-x-hidden w-full">
-            <div className="order-first w-screen">
-              <h3 className="pt-16 font-bold text-base tracking-[0.20em]">
-                EMPOWERING BRAZILIAN STUDENTS
-              </h3>
-              <h1 className="pt-5 leading-200 font-bold text-7xl">
-                Unlocking potential, <br />
-                building futures
-              </h1>
-              <p className="pt-5 font-medium text-base text-black/60">
-                Assist Brazilians interested in studying at UCF by providing guidance
-                <br /> throughout the application process via our social media channels,
-                <br /> offering campus tours, sharing insights about life in the US and Orlando,
-                <br /> and addressing any additional inquiries with UCF Global.
-              </p>
+          <div id="desktop-area" className="absolute pl-24 overflow-x-hidden w-full">
+            <div className="grid grid-cols-2">
+              <div className="flex flex-row">
+                <div className="order-first w-screen">
+                  <h3 className="pt-16 font-bold text-base tracking-[0.20em]">
+                    EMPOWERING BRAZILIAN STUDENTS
+                  </h3>
+                  <h1 className="pt-5 leading-200 font-bold text-7xl">
+                    Unlocking potential, <br />
+                    building futures
+                  </h1>
+                  <p className="pt-5 font-medium text-base text-black/60">
+                    Assist Brazilians interested in studying at UCF by providing guidance
+                    <br /> throughout the application process via our social media channels,
+                    <br /> offering campus tours, sharing insights about life in the US and Orlando,
+                    <br /> and addressing any additional inquiries with UCF Global.
+                  </p>
 
-              <div className="mt-10 text-base rounded-full md:h-14 md:w-44 bg-blue-500 text-white font-medium">
-                <Link className="flex justify-center items-center w-full h-full" href="/sign-up">
-                  Become a Member
-                </Link>
+                  <div className="mt-10 text-base rounded-full md:h-14 md:w-44 bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200">
+                    <a
+                      className="flex justify-center items-center w-full h-full"
+                      href="https://knightconnect.campuslabs.com/engage/organization/brasa"
+                    >
+                      Become a Member
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="order-last w-screen h-screen landing-page-image-ellipse">
-              <img
-                className="h-full w-auto"
-                src="static/landing/intro/main-pic.png"
-                alt="Landing Pic"
-              />
+              <div className="relative w-full">
+                <div className="-top-[-10rem] -right-[10rem] w-[54rem] aspect-square overflow-hidden rounded-full shadow-xl">
+                  <Image
+                    src={IMAGES.mainPicLanding}
+                    sizes="33vw"
+                    // priority
+                    placeholder="blur"
+                    className="h-full w-full object-cover"
+                    alt="Landing Pic"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Curvy landing page area */}
-          <img id="desktop-image" src="static/landing/intro/landing-area.svg" width={windowWidth} />
+          <img
+            id="desktop-image"
+            alt="Curvy area on BRASA @ UCF Landing page"
+            src="static/landing/intro/landing-area.svg"
+            width={windowWidth}
+            loading="lazy"
+          />
 
           {/* End of Section 1 */}
 
@@ -328,47 +275,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
             <h1 className="pt-5 font-bold text-5xl">We offer support & guidance</h1>
 
             <div className="container mx-auto grid gap-x-20 gap-y-24 grid-cols-3 grid-rows-2 p-20 mt-8 w-full">
-              <GridSection
-                imageAlt="Exam Icon"
-                imagePath="static/landing/what-we-do/exam-icon.svg"
-                title="Exam Preparation"
-                description="We offer comprehensive resources and study materials to help you prepare for entrance exams"
-              />
-
-              <GridSection
-                imageAlt="Study Abroad Icon"
-                imagePath="static/landing/what-we-do/study-abroad-icon.svg"
-                title="Study Abroad Opportunities"
-                description="We guide you through the application process and also assist with the visa requirements"
-              />
-
-              <GridSection
-                imageAlt="Career Guidance Icon"
-                imagePath="static/landing/what-we-do/career-icon.svg"
-                title="Career Guidance"
-                description="We offer career counselling services to help you explore different options & identify your strengths and interests"
-              />
-
-              <GridSection
-                imageAlt="Educational Resources Icon"
-                imagePath="static/landing/what-we-do/education-icon.svg"
-                title="Educational Resources"
-                description="We offer educational resources to support your learning journey from study tips to time management techniques"
-              />
-
-              <GridSection
-                imageAlt="Community Support Icon"
-                imagePath="static/landing/what-we-do/community-icon.svg"
-                title="Community Support"
-                description="Join our online forums and connect with fellow students, educators, and professionals"
-              />
-
-              <GridSection
-                imageAlt="DB icon"
-                imagePath="static/landing/what-we-do/db-icon.svg"
-                title="BRASA @ UCF Tech Team"
-                description="Our tech team is always looking for new members to help us build our website and other projects."
-              />
+              {displayGridIconSection()}
             </div>
           </div>
           {/* End of Section 2 */}
@@ -417,7 +324,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
           </div>
 
           <div className="absolute w-full h-48 bg-main-brasa-blue">
-            <JoinNewsletter isMobile={false} />
+            <JoinNewsletter />
           </div>
 
           {/* Footer spacing */}
