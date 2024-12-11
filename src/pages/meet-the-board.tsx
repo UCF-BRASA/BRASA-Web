@@ -3,8 +3,10 @@ import ImageCarousel from "@components/Landing/ImageCarousel";
 import BoardBox from "@components/Meet-Board/BoardBox";
 import EBoardGrid from "@components/Meet-Board/EBoardGrid";
 import { Tab, Tabs } from "@nextui-org/tabs";
+
 import { BOARD_MEMBERS } from "@util/constants";
 import { NextPage } from "next";
+import { useState } from "react";
 
 interface Props {
   isMobile: boolean;
@@ -12,68 +14,124 @@ interface Props {
 
 interface ITabs {
   id: string;
+  label: string;
   year: "2021" | "2022" | "2023";
-  boardData: { id: number; nani: string }[];
+  boardData: { id: string; nani: string }[];
+  // content: string;
 }
+
+// const tabs: ITabs[] = [
+//   {
+//     id: "photos",
+//     label: "Photos",
+//     year: "2021",
+//     content:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+//   },
+//   {
+//     id: "music",
+//     label: "Music",
+//     year: "2022",
+//     content:
+//       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+//   },
+//   {
+//     id: "videos",
+//     label: "Videos",
+//     year: "2023",
+//     content:
+//       "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+//   },
+// ];
 
 const tabs: ITabs[] = [
   {
     id: "photos",
     year: "2021",
+    label: "Photos",
     boardData: [
       {
-        id: 1,
-        nani: "salve",
+        id: "photos",
+        nani: "photos",
       },
       {
-        id: 2,
-        nani: "salve2",
+        id: "photos2",
+        nani: "photos2",
       },
       {
-        id: 3,
-        nani: "salve3",
+        id: "photos3",
+        nani: "photos3",
+      },
+      {
+        id: "photos4",
+        nani: "photos4",
+      },
+      {
+        id: "photos5",
+        nani: "photos5",
       },
     ],
   },
   {
     id: "music",
+    label: "Music",
     year: "2022",
     boardData: [
       {
-        id: 1,
-        nani: "mama",
+        id: "music",
+        nani: "music",
       },
       {
-        id: 2,
-        nani: "mama2",
+        id: "music2",
+        nani: "music2",
       },
       {
-        id: 3,
-        nani: "mama3",
+        id: "music3",
+        nani: "music3",
+      },
+      {
+        id: "music4",
+        nani: "music4",
+      },
+      {
+        id: "music5",
+        nani: "music5",
       },
     ],
   },
   {
     id: "videos",
+    label: "Videos",
     year: "2023",
     boardData: [
       {
-        id: 1,
-        nani: "cavalo",
+        id: "videos",
+        nani: "videos",
       },
       {
-        id: 2,
-        nani: "cavalo2",
+        id: "videos2",
+        nani: "videos2",
       },
       {
-        id: 3,
-        nani: "cavalo3",
+        id: "videos3",
+        nani: "videos3",
+      },
+      {
+        id: "videos4",
+        nani: "videos4",
+      },
+      {
+        id: "videos5",
+        nani: "videos5",
       },
     ],
   },
 ];
 
 const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
+  const [selectedPrevBoardTab, setSelectedPrevBoardTab] = useState<"2021" | "2022" | "2023">(
+    "2021"
+  );
   return (
     <main>
       {isMobile ? (
@@ -189,27 +247,29 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                 radius="full"
                 color="primary"
                 classNames={{
-                  tabList: "bg-transparent border-[2.5px] border-white text-white",
+                  tabList: "bg-transparent border-[2.5px] border-white text-white w-[20rem]",
                   cursor: "w-full bg-white",
                   tab: "h-12 w-32",
                   tabContent:
                     "group-data-[selected=true]:text-main-brasa-blue text-white font-semi-bold",
                 }}
               >
-                {(item) => (
-                  <Tab key={item.id} title={item.year}>
-                    <ImageCarousel>
-                      {item.boardData.map((each) => {
-                        console.log(each);
-                        return (
-                          <div key={each.id} className="flex flex-col items-center justify-center">
-                            <p className="text-white">{each.nani}</p>
+                {(item) => {
+                  return (
+                    <Tab className="w-full" key={item.id} title={item.year}>
+                      <ImageCarousel>
+                        {item.boardData.map((data, index) => (
+                          <div
+                            key={data.id}
+                            className="flex flex-row justify-center items-center w-[20rem] h-[20rem] bg-white"
+                          >
+                            <p className="text-red-500">{data.nani}</p>
                           </div>
-                        );
-                      })}
-                    </ImageCarousel>
-                  </Tab>
-                )}
+                        ))}
+                      </ImageCarousel>
+                    </Tab>
+                  );
+                }}
               </Tabs>
             </div>
           </section>
