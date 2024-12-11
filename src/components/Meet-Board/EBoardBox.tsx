@@ -20,6 +20,9 @@ const EBoardBox: FC<Props> = ({
   onLearnMoreClick = () => {},
   isMobile,
 }) => {
+  //
+  // if (onLearnMoreClick === {})
+
   return (
     <div>
       {isMobile ? (
@@ -61,6 +64,7 @@ const EBoardBox: FC<Props> = ({
             </div>
             <hr className="border-black/[.1]" />
             <div className="w-full flex justify-center items-center py-4">
+              {/* Don't render "Learn More" button if "onLearnMoreClick" is empty */}
               <button
                 onClick={() => onLearnMoreClick(id)}
                 className="bg-main-brasa-blue text-center text-white py-3 w-full mx-5 rounded hover:bg-blue-400 transition duration-200"

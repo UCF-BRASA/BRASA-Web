@@ -45,7 +45,13 @@ import board_pic from "/public/static/become-member/member-box/board_pic.jpg";
 import profile_pic from "/public/static/profile/profile-icon.png";
 
 // Login photo
-import { BoardData, EBoardData, EventCardImageObject } from "@interfaces";
+import {
+  BoardData,
+  EBoardData,
+  EventCardImageObject,
+  LandingPageEventsInfo,
+  PrevBoardTabs,
+} from "@interfaces";
 import { getApiInstanceUrl, getWebInstanceUrl } from "./instanceUrl";
 import brasa_logo from "/public/static/brasa-logo.png";
 
@@ -76,6 +82,8 @@ export const COLORS = {
   white: "#ffffff",
 };
 
+// TODO: figure out a good way to expose images to app without doing it with a whole object
+// (this is currently impacting performance)
 export const IMAGES = {
   bailinho_pic,
   mainPicLanding,
@@ -118,7 +126,7 @@ export const IMAGES = {
   profile_pic,
 };
 
-export const eventImagesData: EventCardImageObject[] = [
+const eventImagesData: EventCardImageObject[] = [
   {
     image: IMAGES.churras_pic,
     imageAlt: "UCF BRASA Churrasco Picture",
@@ -145,7 +153,7 @@ export const eventImagesData: EventCardImageObject[] = [
   },
 ];
 
-export const professionalImagesData: EventCardImageObject[] = [
+const professionalImagesData: EventCardImageObject[] = [
   {
     image: IMAGES.guest_speaker_pic,
     imageAlt: "UCF BRASA Guest Speakers Picture",
@@ -169,6 +177,227 @@ export const professionalImagesData: EventCardImageObject[] = [
     eventTitle: "BRASA Study",
     eventDescription:
       "A light, fun and collaborative environment for you to study with fellow BRASA members! We have weekly study sessions for everyone!",
+  },
+];
+
+export const LANDING_PAGE_EVENTS: LandingPageEventsInfo[] = [
+  {
+    eventType: "Social",
+    eventInfo: eventImagesData,
+  },
+  {
+    eventType: "Professional",
+    eventInfo: professionalImagesData,
+  },
+];
+
+export const PREV_EBOARD_MEMBERS: PrevBoardTabs[] = [
+  {
+    year: "2021",
+    boardData: [
+      {
+        id: 1,
+        image: IMAGES.eric_newpic,
+        imageAlt: "Marco (algo) Picture",
+        officerName: "Marco (algo)",
+        officerTitle: "President",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 2,
+        image: IMAGES.matheus_pic,
+        imageAlt: "(Alguem) Picture",
+        officerName: "(Alguem)",
+        officerTitle: "Vice President",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 3,
+        image: IMAGES.fernanda_pic,
+        imageAlt: "Fernanda Barrusco Picture",
+        officerName: "Fernanda Barrusco",
+        officerTitle: "Secretary",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 4,
+        image: IMAGES.carol_pic,
+        imageAlt: "Chiara (algo no fim) Picture",
+        officerName: "Chiara (algo no fim)",
+        officerTitle: "Event Coordinator (provavelmente)",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 5,
+        image: IMAGES.matheus_pic,
+        imageAlt: "Luis Navarro (acho) Picture",
+        officerName: "Luis Navarro (acho)",
+        officerTitle: "Treasurer",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 6,
+        image: IMAGES.matheus_pic,
+        imageAlt: "Felipe (algo) Picture",
+        officerName: "Felipe (algo)",
+        officerTitle: "Director of Sports",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+    ],
+  },
+  {
+    year: "2022",
+    boardData: [
+      {
+        id: 1,
+        image: IMAGES.caio_pic,
+        imageAlt: "Rafael Itinoche Picture",
+        officerName: "Rafael Itinoche",
+        officerTitle: "President",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 2,
+        image: IMAGES.matheus_pic,
+        imageAlt: "Monique (algo) Picture",
+        officerName: "Monique (algo)",
+        officerTitle: "Vice President",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 3,
+        image: IMAGES.matheus_pic,
+        imageAlt: "Pedro Fachetti Carvalho Picture",
+        officerName: "Pedro Fachetti Carvalho",
+        officerTitle: "Secretary",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 4,
+        image: IMAGES.matheus_pic,
+        imageAlt: "Mariana Ricci Picture",
+        officerName: "Mariana Ricci",
+        officerTitle: "Treasurer",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 5,
+        image: IMAGES.matheus_pic,
+        imageAlt: "Luis Rehder Ferrari Picture",
+        officerName: "Luis Rehder Ferrari",
+        officerTitle: "Director of External Affairs (something like this)",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 6,
+        image: IMAGES.matheus_pic,
+        imageAlt: "Andre Gianesi Company Picture",
+        officerName: "Andre Gianesi Company",
+        officerTitle: "Director of Sports",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 7,
+        image: IMAGES.matheus_pic,
+        imageAlt: "Lilian Andrade (algo) Picture",
+        officerName: "Lilian Andrade (algo)",
+        officerTitle: "Director of (algo)",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 8,
+        image: IMAGES.matheus_pic,
+        imageAlt: "Julie Rodriguez Picture",
+        officerName: "Julie Rodriguez",
+        officerTitle: "Director of Marketing",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 9,
+        image: IMAGES.matheus_pic,
+        imageAlt: "Amanda (algo) Picture",
+        officerName: "Amanda (algo)",
+        officerTitle: "Event Coordinator",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+    ],
+  },
+  {
+    year: "2023",
+    boardData: [
+      {
+        id: 1,
+        image: IMAGES.pedro_pic,
+        imageAlt: "Pedro Fachetti Carvalho Picture",
+        officerName: "Pedro Fachetti Carvalho",
+        officerTitle: "President",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 2,
+        image: IMAGES.matheus_pic,
+        imageAlt: "Matheus Agramunt Picture",
+        officerName: "Matheus Agramunt",
+        officerTitle: "Vice President",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 3,
+        image: IMAGES.matheus_pic,
+        imageAlt: "Lucas (forte) Picture",
+        officerName: "Lucas (forte)",
+        officerTitle: "Head of Finance",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 4,
+        image: IMAGES.matheus_pic,
+        imageAlt: "Julie Rodriguez Picture",
+        officerName: "Julie Rodriguez",
+        officerTitle: "Co-Head of Marketing",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 5,
+        image: IMAGES.matheus_pic,
+        imageAlt: "Jean Thomas Picture",
+        officerName: "Jean Thomas",
+        officerTitle: "Co-Head of Marketing",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 6,
+        image: IMAGES.matheus_pic,
+        imageAlt: "Ella Santucci Picture",
+        officerName: "Ella Santucci",
+        officerTitle: "Co-Head of Events",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 7,
+        image: IMAGES.guilherme_pic,
+        imageAlt: "Gabriel Couto Picture",
+        officerName: "Gabriel Couto",
+        officerTitle: "Co-Head of Events",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 8,
+        image: IMAGES.ana_pic,
+        imageAlt: "Maria Eduarda Joazeiro Picture",
+        officerName: "Maria Eduarda Joazeiro",
+        officerTitle: "Head of Technology",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+      {
+        id: 8,
+        image: IMAGES.manu_pic,
+        imageAlt: "Nicole Weeden Picture",
+        officerName: "Nicole Weeden",
+        officerTitle: "Head of Professional Development",
+        officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
+      },
+    ],
   },
 ];
 
