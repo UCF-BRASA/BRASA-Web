@@ -31,11 +31,11 @@ const ImageCarousel: FC<Props> = ({ children, isMobile }) => {
   const slideProps = {
     ...arrows,
     duration: 3000, // image change duration
-    transitionDuration: 300, // transition per images time
+    transitionDuration: 600, // transition per images time
     infinity: true, // loop the transition to infinity
     autoplay: false,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
   };
 
   const zoomInProperties = {
@@ -45,9 +45,6 @@ const ImageCarousel: FC<Props> = ({ children, isMobile }) => {
     transitionDuration: 300, // transition per images time
     infinity: true, // loop the transition to infinity
   };
-
-  console.log("On the comp:");
-  console.log(isMobile);
 
   return (
     <>

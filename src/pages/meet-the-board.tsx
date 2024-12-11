@@ -90,7 +90,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   <Tab className="w-full" key={item.year} title={item.year}>
                     <ImageCarousel isMobile={isMobile}>
                       {item.boardData.map((boardMember) => (
-                        <div key={boardMember.id} className="mt-10">
+                        <div key={boardMember.id} className="mt-10 ml-4">
                           <EBoardBox
                             key={boardMember.id}
                             id={boardMember.id}
@@ -98,6 +98,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                             imageAlt={boardMember.imageAlt}
                             officerName={boardMember.officerName}
                             officerTitle={boardMember.officerTitle}
+                            officerLinkedIn={boardMember.officerLinkedIn}
                             isMobile={isMobile}
                           />
                         </div>
@@ -181,30 +182,27 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                     "group-data-[selected=true]:text-main-brasa-blue text-white font-semi-bold",
                 }}
               >
-                {(item) => {
-                  console.log("On the page level:");
-                  console.log(isMobile);
-
-                  return (
-                    <Tab className="w-full" key={item.year} title={item.year}>
-                      <ImageCarousel isMobile={isMobile}>
-                        {item.boardData.map((boardMember) => (
-                          <div key={boardMember.id} className="ml-10 mt-10">
-                            <EBoardBox
-                              key={boardMember.id}
-                              id={boardMember.id}
-                              image={boardMember.image}
-                              imageAlt={boardMember.imageAlt}
-                              officerName={boardMember.officerName}
-                              officerTitle={boardMember.officerTitle}
-                              isMobile={isMobile}
-                            />
-                          </div>
-                        ))}
-                      </ImageCarousel>
-                    </Tab>
-                  );
-                }}
+                {(item) => (
+                  <Tab className="w-full" key={item.year} title={item.year}>
+                    <ImageCarousel isMobile={isMobile}>
+                      {item.boardData.map((boardMember) => (
+                        <div key={boardMember.id} className="ml-4 mt-10">
+                          <EBoardBox
+                            key={boardMember.id}
+                            boxWidth={25}
+                            id={boardMember.id}
+                            image={boardMember.image}
+                            imageAlt={boardMember.imageAlt}
+                            officerName={boardMember.officerName}
+                            officerTitle={boardMember.officerTitle}
+                            officerLinkedIn={boardMember.officerLinkedIn}
+                            isMobile={isMobile}
+                          />
+                        </div>
+                      ))}
+                    </ImageCarousel>
+                  </Tab>
+                )}
               </Tabs>
             </div>
           </section>
