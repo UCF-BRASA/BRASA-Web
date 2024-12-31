@@ -17,18 +17,22 @@ const ImageCarousel: FC<Props> = ({ children, isMobile }) => {
       }
     : {
         prevArrow: (
-          <div className="ml-[-5.5rem]">
-            <FontAwesomeIcon icon={faArrowLeft} style={{ color: "#000000" }} />
+          <div className="ml-[-4.5rem]">
+            <div className="bg-white h-8 w-8 rounded flex justify-center items-center">
+              <FontAwesomeIcon icon={faArrowLeft} style={{ color: "#008cff" }} />
+            </div>
           </div>
         ),
         nextArrow: (
-          <div className="pr-20">
-            <FontAwesomeIcon icon={faArrowRight} style={{ color: "#000000" }} />
+          <div className="pr-10">
+            <div className="bg-white h-8 w-8 rounded flex justify-center items-center">
+              <FontAwesomeIcon icon={faArrowRight} style={{ color: "#008cff" }} />
+            </div>
           </div>
         ),
       };
 
-  const slideProps = {
+  const desktopSlideProps = {
     ...arrows,
     duration: 3000, // image change duration
     transitionDuration: 600, // transition per images time
@@ -38,23 +42,24 @@ const ImageCarousel: FC<Props> = ({ children, isMobile }) => {
     slidesToScroll: 3,
   };
 
-  const zoomInProperties = {
+  const mobileZoomProps = {
     ...arrows,
     scale: 1,
     duration: 3000, // image change duration
     transitionDuration: 300, // transition per images time
     infinity: true, // loop the transition to infinity
+    canSwipe: true,
   };
 
   return (
     <>
       {isMobile ? (
         <section className="w-full h-full">
-          <Zoom {...zoomInProperties}>{children}</Zoom>
+          <Zoom {...mobileZoomProps}>{children}</Zoom>
         </section>
       ) : (
-        <section className="w-full h-full pl-32">
-          <Slide {...slideProps}>{children}</Slide>
+        <section className="w-full h-full pl-[6.5rem]">
+          <Slide {...desktopSlideProps}>{children}</Slide>
         </section>
       )}
     </>

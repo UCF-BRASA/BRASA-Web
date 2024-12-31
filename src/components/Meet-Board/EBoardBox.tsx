@@ -10,6 +10,7 @@ interface Props {
   imageAlt: string;
   officerName: string;
   officerTitle: string;
+  officerNickname?: string;
   officerLinkedIn?: string;
   isMobile: boolean;
   onLearnMoreClick?: (id: number) => void;
@@ -22,6 +23,7 @@ const EBoardBox: FC<Props> = ({
   imageAlt,
   officerName,
   officerTitle,
+  officerNickname,
   officerLinkedIn,
   onLearnMoreClick = null,
   isMobile,
@@ -89,17 +91,15 @@ const EBoardBox: FC<Props> = ({
             </div>
             <hr className="border-black/[.1]" />
             {onLearnMoreClick ? (
-              <>
-                <div className="w-full flex justify-center items-center py-4">
-                  <button
-                    onClick={() => onLearnMoreClick(id)}
-                    className="bg-main-brasa-blue text-center text-white py-3 w-full 
+              <div className="w-full flex justify-center items-center py-4">
+                <button
+                  onClick={() => onLearnMoreClick(id)}
+                  className="bg-main-brasa-blue text-center text-white py-3 w-full 
                     mx-5 rounded hover:bg-blue-400 transition duration-200"
-                  >
-                    Learn More
-                  </button>
-                </div>
-              </>
+                >
+                  Learn More
+                </button>
+              </div>
             ) : (
               <div className="h-14 bg-light-grey flex flex-row items-center justify-center">
                 <a
@@ -113,7 +113,8 @@ const EBoardBox: FC<Props> = ({
                     className="w-5 h-5"
                   />
                   <p className="pl-1 font-regular text-regular text-main-brasa-blue">
-                    Connect with {officerName.substring(0, officerName.indexOf(" "))}
+                    Connect with{" "}
+                    {officerNickname ?? officerName.substring(0, officerName.indexOf(" "))}
                   </p>
                 </a>
               </div>

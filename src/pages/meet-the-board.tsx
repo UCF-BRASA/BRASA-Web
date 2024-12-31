@@ -6,12 +6,15 @@ import EBoardGrid from "@components/Meet-Board/EBoardGrid";
 import { Tab, Tabs } from "@nextui-org/tabs";
 import { BOARD_MEMBERS, PREV_EBOARD_MEMBERS } from "@util/constants";
 import { NextPage } from "next";
+import { useState } from "react";
 
 interface Props {
   isMobile: boolean;
 }
 
 const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
+  const currPrevBoardYear = useState<"2021" | "2022" | "2023">("2023");
+
   return (
     <main>
       {isMobile ? (
@@ -90,7 +93,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                   <Tab className="w-full" key={item.year} title={item.year}>
                     <ImageCarousel isMobile={isMobile}>
                       {item.boardData.map((boardMember) => (
-                        <div key={boardMember.id} className="mt-10 ml-4">
+                        <div key={boardMember.id} className="mt-6 flex justify-center">
                           <EBoardBox
                             key={boardMember.id}
                             id={boardMember.id}
@@ -162,7 +165,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
           <section className="bg-main-brasa-blue rounded-[2rem] mt-24">
             <div className="flex flex-col items-center text-white w-full mb-6">
               <div className="text-center">
-                <h3 className="pt-16 font-semi-bold text-base tracking-[0.20em]">BRASA HISTORY</h3>
+                <h3 className="pt-24 font-semi-bold text-base tracking-[0.20em]">BRASA HISTORY</h3>
                 <h1 className="pt-5 font-semi-bold text-[2.5rem] leading-none tracking-[0.02em] mb-8">
                   Previous Executive Boards
                 </h1>
@@ -189,12 +192,13 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                         <div key={boardMember.id} className="ml-4 mt-10">
                           <EBoardBox
                             key={boardMember.id}
-                            boxWidth={25}
                             id={boardMember.id}
+                            boxWidth={25}
                             image={boardMember.image}
                             imageAlt={boardMember.imageAlt}
                             officerName={boardMember.officerName}
                             officerTitle={boardMember.officerTitle}
+                            officerNickname={boardMember.officerNickname}
                             officerLinkedIn={boardMember.officerLinkedIn}
                             isMobile={isMobile}
                           />
