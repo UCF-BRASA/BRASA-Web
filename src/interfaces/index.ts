@@ -29,7 +29,7 @@ export interface EventCardImageObject {
 }
 
 export interface PrevBoardTabs {
-  year: "2021" | "2022" | "2023";
+  year: string;
   boardData: EBoardData[];
 }
 

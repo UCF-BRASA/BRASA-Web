@@ -6,14 +6,23 @@ import EBoardGrid from "@components/Meet-Board/EBoardGrid";
 import { Tab, Tabs } from "@nextui-org/tabs";
 import { BOARD_MEMBERS, PREV_EBOARD_MEMBERS } from "@util/constants";
 import { NextPage } from "next";
-import { useState } from "react";
+import { Key, useState } from "react";
 
 interface Props {
   isMobile: boolean;
 }
 
 const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
-  const currPrevBoardYear = useState<"2021" | "2022" | "2023">("2023");
+  const getPrevYear = (): string => {
+    return (new Date().getFullYear() - 1).toString();
+  };
+
+  const [currPrevBoardYear, setCurrPrevBoardYear] = useState<string>(getPrevYear());
+
+  // Ensure the key is converted to a string before setting the state
+  const handleSelectionChange = (key: Key): void => {
+    setCurrPrevBoardYear(String(key));
+  };
 
   return (
     <main>
@@ -78,6 +87,8 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
               <Tabs
                 aria-label="Previous Executive Boards"
                 items={PREV_EBOARD_MEMBERS}
+                selectedKey={currPrevBoardYear}
+                onSelectionChange={handleSelectionChange}
                 size="md"
                 radius="full"
                 color="primary"
@@ -101,6 +112,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                             imageAlt={boardMember.imageAlt}
                             officerName={boardMember.officerName}
                             officerTitle={boardMember.officerTitle}
+                            officerNickname={boardMember.officerNickname}
                             officerLinkedIn={boardMember.officerLinkedIn}
                             isMobile={isMobile}
                           />
@@ -174,6 +186,8 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
               <Tabs
                 aria-label="Previous Executive Boards"
                 items={PREV_EBOARD_MEMBERS}
+                selectedKey={currPrevBoardYear}
+                onSelectionChange={handleSelectionChange}
                 size="md"
                 radius="full"
                 color="primary"

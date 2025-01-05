@@ -68,8 +68,9 @@ const EBoardBox: FC<Props> = ({
                     style={{ color: "#008cff" }}
                     className="w-5 h-5"
                   />
-                  <p className="pl-1 font-regular text-regular text-main-brasa-blue">
-                    Connect with {officerName.substring(0, officerName.indexOf(" "))}
+                  <p className="pl-1 font-regular text-regular text-main-brasa-blue salve">
+                    Connect with{" "}
+                    {officerNickname ?? officerName.substring(0, officerName.indexOf(" "))}
                   </p>
                 </a>
               </div>
