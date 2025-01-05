@@ -71,7 +71,6 @@ import {
   EventCardImageObject,
   LandingPageEventsInfo,
   PrevBoardTabs,
-  UpcomingEventsData,
 } from "@interfaces";
 import { getApiInstanceUrl, getWebInstanceUrl } from "./instanceUrl";
 import brasa_logo from "/public/static/brasa-logo.png";
@@ -109,6 +108,8 @@ export const IMAGES = {
   mainPicLanding,
   brasa_logo,
   board_pic,
+  churras_pic,
+  bailinho_pic,
 };
 
 const eventImagesData: EventCardImageObject[] = [
@@ -729,32 +730,5 @@ export const gridSectionsData = [
     title: "BRASA @ UCF Tech Team",
     description:
       "Our tech team is always looking for new members to help us build our website and other projects.",
-  },
-];
-
-export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
-  {
-    date: "TBD",
-    image: churras_pic,
-    eventName: "Churrasco BRASA",
-    location: "300 Dalhausser Ln, Oviedo, FL 32765",
-    eventType: "Social",
-    isPaid: true,
-  },
-  {
-    date: "TBD",
-    image: bailinho_pic,
-    eventName: "Bailinho Brasa",
-    location: "5250 International Dr, Orlando, FL 32819",
-    eventType: "Social",
-    isPaid: true,
-  },
-  {
-    date: "TBD",
-    image: guest_speaker_pic,
-    eventName: "Guest Speaker",
-    location: "UCF",
-    eventType: "Professional",
-    isPaid: false,
   },
 ];

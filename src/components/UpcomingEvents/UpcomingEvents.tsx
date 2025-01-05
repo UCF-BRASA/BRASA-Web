@@ -1,17 +1,24 @@
 import { faCalendar, faInfo, faLocationPin, faMoneyBill } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { UpcomingEventsData } from "@interfaces";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 
-interface Props extends UpcomingEventsData {
+interface Props {
+  image: StaticImageData;
+  imageAlt: string;
+  date: Date | "TBD";
+  location: string;
+  eventsName: string;
   isMobile: boolean;
+  isPaid: boolean;
+  eventType: "Social" | "Professional";
 }
 
 const UpcomingEvents: FC<Props> = ({
+  imageAlt,
   image,
-  eventName,
+  eventsName,
   location,
   date,
   isMobile,
@@ -36,7 +43,7 @@ const UpcomingEvents: FC<Props> = ({
                 {/* Image needs to be a bit less than 2:3 */}
                 <Image
                   src={image}
-                  alt={eventName}
+                  alt={imageAlt}
                   sizes="100vw"
                   className="rounded overflow-hidden"
                 />
@@ -50,7 +57,7 @@ const UpcomingEvents: FC<Props> = ({
             </div>
 
             <div className="w-full mt-4">
-              <h2 className="font-bold text-[1.6rem] grow text-black text-left">{eventName}</h2>
+              <h2 className="font-bold text-[1.6rem] grow text-black text-left">{eventsName}</h2>
             </div>
 
             <div className="w-full mt-1 flex flex-row items-center gap-x-1">
@@ -91,16 +98,16 @@ const UpcomingEvents: FC<Props> = ({
           </div>
         </div>
       ) : (
-        <div className="bg-gray-200 shadow-2xl mb-20 grid grid-cols-3 mx-28 rounded-3xl">
+        <div className="bg-gray-200 shadow-2xl mb-20 flex flex-cols flex-rows mx-28 rounded-3xl">
           <Image
             src={image}
-            alt={eventName}
+            alt={imageAlt}
             sizes="100vw"
-            className="rounded-3xl h-[22rem] w-[50rem] object-cover gap-"
+            className="rounded-3xl h-[22rem] w-[50rem] object-cover"
           />
           <div className="ml-8">
             <h1 className="mt-10 flex-col text-black font-bold items-center text-[1.6rem]">
-              {eventName}
+              {eventsName}
             </h1>
             <h2 className="mt-10 text-black font-bold text-[1.25rem]">{date}</h2>
             <div className="flex flex-row mt-8 w-48">
@@ -120,7 +127,7 @@ const UpcomingEvents: FC<Props> = ({
           <div>
             <div className="font-medium flex flex-row justify-center items-center text-center">
               <a
-                href="https://www.instagram.com/brasa.ucf/" // TODO: modify this value to actual link
+                href="https://www.instagram.com/brasa.ucf/"
                 target="_blank"
                 className="flex bg-blue-500 text-white rounded-full right-72 mt-[17rem] p-4"
               >
@@ -129,7 +136,7 @@ const UpcomingEvents: FC<Props> = ({
               {isPaid ? (
                 <div>
                   <a
-                    href="https://www.instagram.com/brasa.ucf/" // TODO: modify this value to actual link
+                    href="https://www.instagram.com/brasa.ucf/"
                     target="_blank"
                     className="flex rounded-full bg-blue-500 text-white items-center right-40 mt-[17rem] p-4"
                   >
