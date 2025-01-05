@@ -2,73 +2,15 @@ import JoinNewsletter from "@components/JoinNewsletter/JoinNewsletter";
 import EventCard from "@components/Landing/EventCard";
 import GridSection from "@components/Landing/GridSection";
 import ImageCarousel from "@components/Landing/ImageCarousel";
-import { IMAGES, eventImagesData, gridSectionsData, professionalImagesData } from "@util/constants";
+import { Tab, Tabs } from "@nextui-org/tabs";
+import { IMAGES, LANDING_PAGE_EVENTS, gridSectionsData } from "@util/constants";
 import { NextPage } from "next";
 import Image from "next/image";
-import { useState } from "react";
 
 interface HomeProps {
   windowWidth: number;
   isMobile: boolean;
 }
-
-const displayEventCards = (isSocial: boolean, isMobile: boolean) => {
-  return isSocial ? (
-    <div className="grid grid-cols-3 justify-items-center gap-2 lg:px-24">
-      <EventCard
-        image={IMAGES.churras_pic}
-        imageAlt="UCF BRASA Churrasco Picture"
-        tag="Main Event"
-        eventTitle="BRASA Churrasco"
-        eventDescription="All you can eat and drink Brazilian Churrasco! Come enjoy the full Brazilian experience with live DJ music and the best caipirinhas in Orlando!"
-        isMobile={isMobile}
-      />
-      <EventCard
-        image={IMAGES.bailinho_pic}
-        imageAlt="UCF BRASA Baile da BRASA Picture"
-        tag="Main Event"
-        eventTitle="Baile da BRASA"
-        eventDescription="Baile Funk da BRASA! Partnerships with the best clubs in Orlando with open-bars and premium discounts!"
-        isMobile={isMobile}
-      />
-      <EventCard
-        image={IMAGES.hangout_pic}
-        imageAlt="UCF BRASA Hangout Picture"
-        tag="Casual"
-        eventTitle="BRASA Hangout"
-        eventDescription="Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!"
-        isMobile={isMobile}
-      />
-    </div>
-  ) : (
-    <div className="grid grid-cols-3 justify-items-center gap-2 lg:px-24">
-      <EventCard
-        image={IMAGES.guest_speaker_pic}
-        imageAlt="UCF BRASA Guest Speakers Picture"
-        tag="Networking"
-        eventTitle="Guest Speakers"
-        eventDescription="Connect with experts of your field with our re-ocurrent Guest Speaker events! Whatever area you are in, we have professinals to help you out!"
-        isMobile={isMobile}
-      />
-      <EventCard
-        image={IMAGES.workshop_pic}
-        imageAlt="UCF BRASA Workshops Picture"
-        tag="Learning"
-        eventTitle="BRASA Workshops"
-        eventDescription="Expand your skillsets with our workshops! Our workshop areas include finance, marketing, coding, how to get a job and general networking!"
-        isMobile={isMobile}
-      />
-      <EventCard
-        image={IMAGES.study_pic}
-        imageAlt="UCF BRASA Study Picture"
-        tag="Casual"
-        eventTitle="BRASA Study"
-        eventDescription="A light, fun and collaborative environment for you to study with fellow BRASA members! We have weekly study sessions for everyone!"
-        isMobile={isMobile}
-      />
-    </div>
-  );
-};
 
 const displayGridIconSection = () => {
   return gridSectionsData.map((section) => (
@@ -83,8 +25,6 @@ const displayGridIconSection = () => {
 };
 
 const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
-  const [isSocial, setIsSocial] = useState<boolean>(true);
-
   return (
     <main>
       {isMobile ? (
@@ -163,42 +103,48 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
                 </h1>
               </div>
 
-              {/* <!-- Social/Professional Toggle --> */}
-              <div className="flex items-center justify-center w-full mb-12 mt-3">
-                <label htmlFor="toggleB" className="flex items-center cursor-pointer">
-                  {/* <!-- toggle --> */}
-                  <div className="relative">
-                    {/* <!-- input --> */}
-                    <input
-                      type="checkbox"
-                      id="toggleB"
-                      className="sr-only select-none"
-                      onClick={() => setIsSocial(!isSocial)}
-                    />
-
-                    {/* <!-- dot --> */}
-                    <div className="dot absolute inset-y-[0.265rem] left-1 bg-white w-[48.5%] h-[85%] rounded-full transition">
-                      <p className="pt-3.5 text-center text-main-brasa-blue select-none font-semi-bold">
-                        {isSocial ? "Social" : "Professional"}
-                      </p>
+              <Tabs
+                aria-label="BRASA @ UCF Events"
+                items={LANDING_PAGE_EVENTS}
+                size="md"
+                radius="full"
+                color="primary"
+                classNames={{
+                  tabList: "bg-transparent border-[2.5px] border-white text-white w-[20rem]",
+                  cursor: "w-full bg-white",
+                  tab: "h-12 w-32",
+                  tabContent:
+                    "group-data-[selected=true]:text-main-brasa-blue text-white font-semi-bold",
+                }}
+              >
+                {(item) => (
+                  <Tab
+                    className="w-full flex flex-row justify-center items-center"
+                    key={item.eventType}
+                    title={item.eventType}
+                  >
+                    <div className="w-full flex justify-center mt-10">
+                      <ImageCarousel isMobile={isMobile}>
+                        {item.eventInfo.map((event) => (
+                          <div
+                            key={event.imageAlt}
+                            className="flex justify-center items-start w-full h-full relative"
+                          >
+                            <EventCard
+                              image={event.image}
+                              imageAlt={event.imageAlt}
+                              tag={event.tag}
+                              eventTitle={event.eventTitle}
+                              eventDescription={event.eventDescription}
+                              isMobile={isMobile}
+                            />
+                          </div>
+                        ))}
+                      </ImageCarousel>
                     </div>
-
-                    {/* <!-- line --> */}
-                    <div className="grid grid-cols-2 justify-center items-center text-center bg-transparent border-[2.5px] border-solid border-white w-[17rem] h-[3.7rem] rounded-full">
-                      <p className="order-first w-auto letter select-none font-semi-bold">Social</p>
-                      <p className="order-last w-auto letter select-none font-semi-bold">
-                        Professional
-                      </p>
-                    </div>
-                  </div>
-                </label>
-              </div>
-
-              {isSocial ? (
-                <ImageCarousel imageData={eventImagesData} isMobile={true} />
-              ) : (
-                <ImageCarousel imageData={professionalImagesData} isMobile={true} />
-              )}
+                  </Tab>
+                )}
+              </Tabs>
             </div>
           </section>
 
@@ -288,39 +234,42 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
                 Weekly & monthly events
               </h1>
 
-              {/* <!-- Social/Professional Toggle --> */}
-              <div className="flex items-center justify-center w-full mb-12">
-                <label htmlFor="toggleB" className="flex items-center cursor-pointer">
-                  {/* <!-- toggle --> */}
-                  <div className="relative">
-                    {/* <!-- input --> */}
-                    <input
-                      type="checkbox"
-                      id="toggleB"
-                      className="sr-only select-none"
-                      onClick={() => setIsSocial(!isSocial)}
-                    />
-
-                    {/* <!-- dot --> */}
-                    <div className="dot absolute inset-y-[0.265rem] left-1 bg-white w-[48.5%] h-[85%] rounded-full transition">
-                      <p className="pt-3.5 text-center text-main-brasa-blue select-none font-semi-bold">
-                        {isSocial ? "Social" : "Professional"}
-                      </p>
-                    </div>
-
-                    {/* <!-- line --> */}
-                    <div className="grid grid-cols-2 justify-center items-center text-center bg-transparent border-[2.5px] border-solid border-white w-[17rem] h-[3.7rem] rounded-full">
-                      <p className="order-first w-auto letter select-none font-semi-bold">Social</p>
-                      <p className="order-last w-auto letter select-none font-semi-bold">
-                        Professional
-                      </p>
-                    </div>
-                  </div>
-                </label>
-              </div>
+              <Tabs
+                aria-label="BRASA @ UCF Events"
+                items={LANDING_PAGE_EVENTS}
+                size="md"
+                radius="full"
+                color="primary"
+                classNames={{
+                  tabList: "bg-transparent border-[2.5px] border-white text-white w-[20rem]",
+                  cursor: "w-full bg-white",
+                  tab: "h-12 w-32",
+                  tabContent:
+                    "group-data-[selected=true]:text-main-brasa-blue text-white font-semi-bold",
+                }}
+              >
+                {(item) => (
+                  <Tab
+                    className="w-full flex flex-row justify-center items-center"
+                    key={item.eventType}
+                    title={item.eventType}
+                  >
+                    {item.eventInfo.map((event) => (
+                      <div className="w-full flex justify-center mt-10">
+                        <EventCard
+                          image={event.image}
+                          imageAlt={event.imageAlt}
+                          tag={event.tag}
+                          eventTitle={event.eventTitle}
+                          eventDescription={event.eventDescription}
+                          isMobile={isMobile}
+                        />
+                      </div>
+                    ))}
+                  </Tab>
+                )}
+              </Tabs>
             </div>
-            {/* <!-- Events Cards --> */}
-            {displayEventCards(isSocial, isMobile)}
           </div>
 
           <div className="absolute w-full h-48 bg-main-brasa-blue">

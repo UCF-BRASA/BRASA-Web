@@ -6,6 +6,11 @@
 
 import { type StaticImageData } from "next/image";
 
+export interface LandingPageEventsInfo {
+  eventType: "Social" | "Professional";
+  eventInfo: EventCardImageObject[];
+}
+
 export interface EventCardImageObject {
   image: StaticImageData;
   imageAlt: string;
@@ -13,14 +18,21 @@ export interface EventCardImageObject {
   eventTitle: string;
   eventDescription: string;
 }
+
+export interface PrevBoardTabs {
+  year: string;
+  boardData: EBoardData[];
+}
+
 export interface EBoardData {
   id: number;
   image: StaticImageData;
   imageAlt: string;
   officerName: string;
   officerTitle: string;
-  officerBio: string;
-  officerLinkedIn: string;
+  officerNickname?: string;
+  officerBio?: string;
+  officerLinkedIn?: string;
 }
 
 export interface BoardData {

@@ -1,15 +1,29 @@
-import { NextPage } from "next";
-
 import JoinNewsletter from "@components/JoinNewsletter/JoinNewsletter";
+import ImageCarousel from "@components/Landing/ImageCarousel";
 import BoardBox from "@components/Meet-Board/BoardBox";
+import EBoardBox from "@components/Meet-Board/EBoardBox";
 import EBoardGrid from "@components/Meet-Board/EBoardGrid";
-import { BOARD_MEMBERS } from "@util/constants";
+import { Tab, Tabs } from "@nextui-org/tabs";
+import { BOARD_MEMBERS, PREV_EBOARD_MEMBERS } from "@util/constants";
+import { NextPage } from "next";
+import { Key, useState } from "react";
 
 interface Props {
   isMobile: boolean;
 }
 
 const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
+  const getPrevYear = (): string => {
+    return (new Date().getFullYear() - 1).toString();
+  };
+
+  const [currPrevBoardYear, setCurrPrevBoardYear] = useState<string>(getPrevYear());
+
+  // Ensure the key is converted to a string before setting the state
+  const handleSelectionChange = (key: Key): void => {
+    setCurrPrevBoardYear(String(key));
+  };
+
   return (
     <main>
       {isMobile ? (
@@ -46,8 +60,8 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
             <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem]">Department Members</h1>
           </div>
 
-          {/* Board Section */}
-          <div className="flex flex-wrap justify-evenly mx-auto w-full mt-20 mb-32">
+          {/* Analyst board Section */}
+          <div className="flex flex-wrap justify-evenly mx-auto w-full mt-20">
             {BOARD_MEMBERS.map((member) => (
               <BoardBox
                 key={member.officerName} // Use a unique key
@@ -59,6 +73,57 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
               />
             ))}
           </div>
+
+          {/* Brasa History section */}
+          <section className="bg-main-brasa-blue rounded-[2rem] mt-4">
+            <div className="flex flex-col items-center text-white w-full mb-6">
+              <div className="text-center">
+                <h3 className="pt-16 font-semi-bold text-base tracking-[0.20em]">BRASA HISTORY</h3>
+                <h1 className="pt-5 font-semi-bold text-[2.5rem] leading-none tracking-[0.02em] mb-8">
+                  Previous Executive Boards
+                </h1>
+              </div>
+
+              <Tabs
+                aria-label="Previous Executive Boards"
+                items={PREV_EBOARD_MEMBERS}
+                selectedKey={currPrevBoardYear}
+                onSelectionChange={handleSelectionChange}
+                size="md"
+                radius="full"
+                color="primary"
+                classNames={{
+                  tabList: "bg-transparent border-[2.5px] border-white text-white w-[20rem]",
+                  cursor: "w-full bg-white",
+                  tab: "h-12 w-32",
+                  tabContent:
+                    "group-data-[selected=true]:text-main-brasa-blue text-white font-semi-bold",
+                }}
+              >
+                {(item) => (
+                  <Tab className="w-full" key={item.year} title={item.year}>
+                    <ImageCarousel isMobile={isMobile}>
+                      {item.boardData.map((boardMember) => (
+                        <div key={boardMember.id} className="mt-6 flex justify-center">
+                          <EBoardBox
+                            key={boardMember.id}
+                            id={boardMember.id}
+                            image={boardMember.image}
+                            imageAlt={boardMember.imageAlt}
+                            officerName={boardMember.officerName}
+                            officerTitle={boardMember.officerTitle}
+                            officerNickname={boardMember.officerNickname}
+                            officerLinkedIn={boardMember.officerLinkedIn}
+                            isMobile={isMobile}
+                          />
+                        </div>
+                      ))}
+                    </ImageCarousel>
+                  </Tab>
+                )}
+              </Tabs>
+            </div>
+          </section>
         </div>
       ) : (
         <div className="h-full bg-white">
@@ -108,6 +173,56 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
                 isMobile={isMobile}
               />
             ))}
+          </section>
+          <section className="bg-main-brasa-blue rounded-[2rem] mt-24">
+            <div className="flex flex-col items-center text-white w-full mb-6">
+              <div className="text-center">
+                <h3 className="pt-24 font-semi-bold text-base tracking-[0.20em]">BRASA HISTORY</h3>
+                <h1 className="pt-5 font-semi-bold text-[2.5rem] leading-none tracking-[0.02em] mb-8">
+                  Previous Executive Boards
+                </h1>
+              </div>
+
+              <Tabs
+                aria-label="Previous Executive Boards"
+                items={PREV_EBOARD_MEMBERS}
+                selectedKey={currPrevBoardYear}
+                onSelectionChange={handleSelectionChange}
+                size="md"
+                radius="full"
+                color="primary"
+                classNames={{
+                  tabList: "bg-transparent border-[2.5px] border-white text-white w-[20rem]",
+                  cursor: "w-full bg-white",
+                  tab: "h-12 w-32",
+                  tabContent:
+                    "group-data-[selected=true]:text-main-brasa-blue text-white font-semi-bold",
+                }}
+              >
+                {(item) => (
+                  <Tab className="w-full" key={item.year} title={item.year}>
+                    <ImageCarousel isMobile={isMobile}>
+                      {item.boardData.map((boardMember) => (
+                        <div key={boardMember.id} className="ml-4 mt-10">
+                          <EBoardBox
+                            key={boardMember.id}
+                            id={boardMember.id}
+                            boxWidth={25}
+                            image={boardMember.image}
+                            imageAlt={boardMember.imageAlt}
+                            officerName={boardMember.officerName}
+                            officerTitle={boardMember.officerTitle}
+                            officerNickname={boardMember.officerNickname}
+                            officerLinkedIn={boardMember.officerLinkedIn}
+                            isMobile={isMobile}
+                          />
+                        </div>
+                      ))}
+                    </ImageCarousel>
+                  </Tab>
+                )}
+              </Tabs>
+            </div>
           </section>
           <JoinNewsletter />
         </div>
