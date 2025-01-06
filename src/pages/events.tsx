@@ -1,5 +1,5 @@
-import UpcomingEvents from "@components/UpcomingEvents/UpcomingEvents";
-import { IMAGES } from "@util/constants";
+import UpcomingEventCard from "@components/UpcomingEvents/UpcomingEventCard";
+import { UPCOMING_EVENTS_DATA } from "@util/constants";
 import { NextPage } from "next";
 
 export interface Props {
@@ -12,32 +12,27 @@ export const Events: NextPage<Props> = ({ isMobile }) => {
       {isMobile ? (
         <main>
           {/* Events main */}
-          <div className="text-center flex flex-col justify-center items-center w-full mt-20 mb-10">
+          <div className="text-center flex flex-col justify-center items-center w-full mt-14 mb-10">
             <h3 className="pt-16 font-bold text-base tracking-[0.3rem]">COME HANG OUT</h3>
             <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem]">Upcoming Events</h1>
           </div>
 
-          <UpcomingEvents
-            image={IMAGES.churras_pic}
-            imageAlt="Churrasco Picture"
-            eventsName="Churrasco BRASA"
-            location="300 Dalhausser Ln, Oviedo, FL 32765"
-            date="TBD"
-            eventType="Professional"
-            isMobile={isMobile}
-            isPaid={false}
-          />
-
-          <UpcomingEvents
-            image={IMAGES.bailinho_pic}
-            imageAlt="Bailinho Picture"
-            eventsName="Bailinho Brasa"
-            location="5250 International Dr, Orlando, FL 32819"
-            date="TBD"
-            eventType="Social"
-            isMobile={isMobile}
-            isPaid={true}
-          />
+          {UPCOMING_EVENTS_DATA.map((upcomingEvent) => (
+            <UpcomingEventCard
+              key={upcomingEvent.eventName}
+              date={upcomingEvent.date}
+              time={upcomingEvent.time}
+              image={upcomingEvent.image}
+              eventName={upcomingEvent.eventName}
+              eventDescription={upcomingEvent.eventDescription}
+              location={upcomingEvent.location}
+              moreInfoLink={upcomingEvent.moreInfoLink}
+              buyTicketLink={upcomingEvent.buyTicketLink}
+              eventType={upcomingEvent.eventType}
+              isPaid={upcomingEvent.isPaid}
+              isMobile={isMobile}
+            />
+          ))}
         </main>
       ) : (
         <main>
@@ -49,27 +44,22 @@ export const Events: NextPage<Props> = ({ isMobile }) => {
               <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem]">Upcoming Events</h1>
             </div>
 
-            <UpcomingEvents
-              image={IMAGES.churras_pic}
-              imageAlt="Churrasco Picture"
-              eventsName="Churrasco BRASA"
-              location="300 Dalhausser Ln, Oviedo, FL 32765"
-              date="TBD"
-              eventType="Social"
-              isMobile={isMobile}
-              isPaid={false}
-            />
-
-            <UpcomingEvents
-              image={IMAGES.bailinho_pic}
-              imageAlt="Bailinho Picture"
-              eventsName="Bailinho Brasa"
-              location="5250 International Dr, Orlando, FL 32819"
-              date="TBD"
-              eventType="Social"
-              isMobile={isMobile}
-              isPaid={true}
-            />
+            {UPCOMING_EVENTS_DATA.map((upcomingEvent) => (
+              <UpcomingEventCard
+                key={upcomingEvent.eventName}
+                date={upcomingEvent.date}
+                time={upcomingEvent.time}
+                image={upcomingEvent.image}
+                eventName={upcomingEvent.eventName}
+                eventDescription={upcomingEvent.eventDescription}
+                location={upcomingEvent.location}
+                moreInfoLink={upcomingEvent.moreInfoLink}
+                buyTicketLink={upcomingEvent.buyTicketLink}
+                eventType={upcomingEvent.eventType}
+                isPaid={upcomingEvent.isPaid}
+                isMobile={isMobile}
+              />
+            ))}
           </div>
         </main>
       )}
