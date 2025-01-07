@@ -18,7 +18,7 @@ const SidebarOverlay: FC<Props> = ({ toggleSidebar }) => {
 
   return (
     <div
-      className="flex md:hidden fixed top-0 right-0 bottom-0 left-0 bg-black/50 z-30"
+      className="flex md:hidden fixed top-0 right-0 bottom-0 left-0 bg-black/50 z-[1000]"
       onClick={() => {
         toggleSidebar((oldVal) => !oldVal);
       }}

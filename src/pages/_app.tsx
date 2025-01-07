@@ -1,3 +1,4 @@
+import Sidebar from "@components/Sidebar/Sidebar";
 import { config as fortawesomeConfig } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import useWindowDimensions from "@hooks/useWindowDimension";
@@ -22,6 +23,7 @@ const MobileFooter = dynamic(() => import("@components/Footer/MobileFooter"), {
 function MyApp({ Component, pageProps }: AppProps) {
   const { windowWidth, windowHeight } = useWindowDimensions();
   const [isMobile, setIsMobile] = useState(false);
+  const [showSidebar, setShowSidebar] = useState<boolean>(false);
 
   useEffect(() => {
     if (windowWidth && windowHeight) {
@@ -45,7 +47,14 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>UCF BRASA</title>
       </Head>
 
-      {isMobile ? <MobileNavbar /> : <DesktopNavbar />}
+      {isMobile ? (
+        <MobileNavbar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+      ) : (
+        <DesktopNavbar />
+      )}
+      {showSidebar && isMobile && (
+        <Sidebar showSidebar={showSidebar} toggleSidebar={setShowSidebar} />
+      )}
       <Component {...pageProps} />
       {isMobile ? <MobileFooter /> : <DesktopFooter />}
       {isMobile && <BottomNavbar />}

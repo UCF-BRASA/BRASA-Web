@@ -1,5 +1,10 @@
 // @/components/Layout/Sidebar.js
-import { faInstagram, faLinkedinIn, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import {
+  faInstagram,
+  faLinkedinIn,
+  faTiktok,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IMAGES, MOBILE_SIDEBAR_DATA } from "@util/constants";
@@ -16,7 +21,7 @@ interface SidebarProps {
 const Sidebar: FC<SidebarProps> = ({ showSidebar, toggleSidebar }) => {
   // Define our base class
   const className = `bg-white w-[250px] transition-[margin-left] ease-in-out
-  duration-500 fixed md:static top-0 bottom-0 left-0 z-40 flex flex-col `;
+  duration-500 fixed md:static top-0 bottom-0 left-0 z-[1001] flex flex-col`;
 
   // Append class based on state of sidebar visiblity
   const appendClass = showSidebar ? " ml-0" : " ml-[-250px] md:ml-0";
@@ -54,7 +59,7 @@ const Sidebar: FC<SidebarProps> = ({ showSidebar, toggleSidebar }) => {
           <div className="flex flex-col justify-start items-start p-3 gap-y-1">
             <h3 className="font-bold text-lg">Follow Us</h3>
             <span className="font-light text-[0.7rem]">Here are the best ways to find us! </span>
-            <div className="grid grid-cols-4 gap-x-2 justify-center items-center mt-2">
+            <div className="grid grid-cols-5 gap-x-2 justify-center items-center mt-2">
               <div className="bg-main-brasa-blue w-fit h-fit rounded-full p-[0.6rem] flex justify-center items-center">
                 <a
                   href="https://www.instagram.com/brasa.ucf/"
@@ -67,6 +72,20 @@ const Sidebar: FC<SidebarProps> = ({ showSidebar, toggleSidebar }) => {
                   />
                 </a>
               </div>
+
+              <div className="bg-main-brasa-blue w-fit h-fit rounded-full p-[0.6rem] flex justify-center items-center">
+                <a
+                  href="https://chat.whatsapp.com/LhaUGwcrFVpL8KAACVYIlr"
+                  className="flex justify-center items-center"
+                >
+                  <FontAwesomeIcon
+                    icon={faWhatsapp}
+                    style={{ color: "#ffffff" }}
+                    className="border-main-brasa-blue"
+                  />
+                </a>
+              </div>
+
               <div className="bg-main-brasa-blue w-fit h-fit rounded-full p-[0.6rem] flex justify-center items-center">
                 <a
                   href="https://www.linkedin.com/company/brasa-at-ucf/"
@@ -82,11 +101,11 @@ const Sidebar: FC<SidebarProps> = ({ showSidebar, toggleSidebar }) => {
 
               <div className="bg-main-brasa-blue w-fit h-fit rounded-full p-[0.6rem] flex justify-center items-center">
                 <a
-                  href="https://chat.whatsapp.com/LhaUGwcrFVpL8KAACVYIlr"
+                  href="https://www.tiktok.com/@brasa.ucf"
                   className="flex justify-center items-center"
                 >
                   <FontAwesomeIcon
-                    icon={faWhatsapp}
+                    icon={faTiktok}
                     style={{ color: "#ffffff" }}
                     className="border-main-brasa-blue"
                   />
