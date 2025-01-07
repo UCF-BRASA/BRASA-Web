@@ -1,11 +1,15 @@
 import { faArrowRightToBracket, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { COLORS } from "@util/constants";
-import { useEffect, useState, type FC } from "react";
+import { useEffect, type FC } from "react";
 import styles from "./Navbar.module.css";
-import Sidebar from "./Sidebar/Sidebar";
 
-const MobileNavbar: FC = () => {
+interface Props {
+  showSidebar: boolean;
+  setShowSidebar: (value: boolean) => void;
+}
+
+const MobileNavbar: FC<Props> = ({ showSidebar, setShowSidebar }) => {
   useEffect(() => {
     const body = document.body;
     let lastScroll = 0;
@@ -27,8 +31,6 @@ const MobileNavbar: FC = () => {
       lastScroll = currentScroll;
     });
   }, []);
-
-  const [showSidebar, setShowSidebar] = useState<boolean>(false);
 
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
@@ -68,7 +70,7 @@ const MobileNavbar: FC = () => {
           </div>
         </div>
 
-        <Sidebar showSidebar={showSidebar} toggleSidebar={setShowSidebar} />
+        {/* <Sidebar showSidebar={showSidebar} toggleSidebar={setShowSidebar} /> */}
       </nav>
     </header>
   );
