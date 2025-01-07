@@ -66,10 +66,18 @@ import board_pic from "/public/static/become-member/member-box/board_pic.jpg";
 
 // Login photo
 import {
+  faCalendarDays,
+  faHandshake,
+  faHome,
+  faLayerGroup,
+  faPeopleGroup,
+} from "@fortawesome/free-solid-svg-icons";
+import {
   BoardData,
   EBoardData,
   EventCardImageObject,
   LandingPageEventsInfo,
+  MobileSidebarData,
   PrevBoardTabs,
 } from "@interfaces";
 import { getApiInstanceUrl, getWebInstanceUrl } from "./instanceUrl";
@@ -730,5 +738,33 @@ export const gridSectionsData = [
     title: "BRASA @ UCF Tech Team",
     description:
       "Our tech team is always looking for new members to help us build our website and other projects.",
+  },
+];
+
+export const MOBILE_SIDEBAR_DATA: MobileSidebarData[] = [
+  {
+    name: "Home",
+    route: "/",
+    icon: faHome,
+  },
+  {
+    name: "Events",
+    route: "/events",
+    icon: faCalendarDays,
+  },
+  {
+    name: "Meet the Board",
+    route: "/meet-the-board",
+    icon: faHandshake,
+  },
+  {
+    name: "Become a Member",
+    route: "/become-member",
+    icon: faPeopleGroup,
+  },
+  {
+    name: "Resources",
+    route: "/resource",
+    icon: faLayerGroup,
   },
 ];
