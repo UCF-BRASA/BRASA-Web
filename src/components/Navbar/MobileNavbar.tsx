@@ -59,18 +59,19 @@ const MobileNavbar: FC<Props> = ({ showSidebar, setShowSidebar }) => {
               className="text-base rounded-lg h-[3rem] w-[3rem] bg-main-brasa-blue text-center text-white hover:cursor-pointer 
                 font-medium"
             >
-              <div className="flex justify-center items-center h-full">
+              <a
+                href="https://knightconnect.campuslabs.com/engage/organization/brasa"
+                className="flex justify-center items-center h-full"
+              >
                 <FontAwesomeIcon
                   icon={faArrowRightToBracket}
                   color={COLORS.white}
                   className="fa-xl"
                 />
-              </div>
+              </a>
             </div>
           </div>
         </div>
-
-        {/* <Sidebar showSidebar={showSidebar} toggleSidebar={setShowSidebar} /> */}
       </nav>
     </header>
   );
