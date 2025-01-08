@@ -17,7 +17,7 @@ const SidebarItem: FC<Props> = ({ icon, name, route, toggleSidebar }) => {
     <Link
       href={route}
       onClick={() => {
-        toggleSidebar((oldVal) => !oldVal);
+        toggleSidebar(false);
       }}
       className={`flex gap-3 [&>*]:my-auto text-md pl-5 py-3 border-b-[1px] border-b-black/10 ${selectedItemColor}`}
     >

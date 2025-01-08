@@ -17,10 +17,8 @@ const SidebarOverlay: FC<Props> = ({ toggleSidebar }) => {
   }, []);
 
   return (
-    <div
-      className="flex fixed top-0 right-0 bottom-0 left-0 bg-black/50 z-[1000]"
-      onClick={() => toggleSidebar(false)}
-    />
+    // TODO: Add interactive element here instead of div HTML tag (bc of onClose)
+    <div className="fixed inset-0 bg-black/50 z-[1000]" onClick={() => toggleSidebar(false)} />
   );
 };
 

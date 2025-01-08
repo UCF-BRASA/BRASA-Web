@@ -1,6 +1,6 @@
 import { config as fortawesomeConfig } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { Dialog } from "@headlessui/react";
+import { Dialog } from "@headlessui/react"; // How to make this import dynamic?
 import useWindowDimensions from "@hooks/useWindowDimension";
 import { MOBILE_THRESHOLD } from "@util/constants";
 import type { AppProps } from "next/app";
@@ -61,12 +61,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       ) : (
         <DesktopNavbar />
       )}
-      {showSidebar && isMobile && (
-        <Dialog static open={true} onClose={setShowSidebar} initialFocus={overlayRef}>
-          <Sidebar showSidebar={showSidebar} toggleSidebar={setShowSidebar} />
-          <SidebarOverlay toggleSidebar={setShowSidebar} />
-        </Dialog>
-      )}
+      {/* Why does adding a conditional here fuck up the transition? */}
+      {/* {showSidebar && isMobile && ( */}
+      <Dialog static open={showSidebar} onClose={setShowSidebar} initialFocus={overlayRef}>
+        <Sidebar showSidebar={showSidebar} toggleSidebar={setShowSidebar} />
+        {showSidebar && <SidebarOverlay toggleSidebar={setShowSidebar} />}
+      </Dialog>
+      {/* )} */}
       <Component {...pageProps} />
       {isMobile ? <MobileFooter /> : <DesktopFooter />}
       {isMobile && <BottomNavbar />}

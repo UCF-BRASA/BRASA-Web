@@ -18,11 +18,11 @@ interface SidebarProps {
 
 const Sidebar: FC<SidebarProps> = ({ showSidebar, toggleSidebar }) => {
   // Define our base class
-  const className = `bg-white w-[250px] transition-[margin-left] ease-in-out
-  duration-500 fixed top-0 bottom-0 left-0 z-[1001] flex flex-col`;
+  const className = `bg-white w-[250px] fixed top-0 left-0 bottom-0
+  transform transition-transform duration-500 ease-in-out flex flex-col z-[1001]`;
 
   // Append class based on state of sidebar visiblity
-  const appendClass = showSidebar ? "ml-0" : "ml-[-250px]";
+  const appendClass = showSidebar ? "translate-x-0" : "-translate-x-full";
 
   return (
     <aside className={`${className} ${appendClass}`}>
