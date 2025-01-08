@@ -4,7 +4,7 @@ interface Props {
   readonly toggleSidebar: (value: boolean) => void;
 }
 
-// Overlay to prevent clicks in background, also serves as our close button
+// Overlay to prevent clicks & scroll in background while sidebar is open
 const SidebarOverlay: FC<Props> = ({ toggleSidebar }) => {
   useEffect(() => {
     // Disable background scrolling when the overlay is mounted
@@ -18,10 +18,8 @@ const SidebarOverlay: FC<Props> = ({ toggleSidebar }) => {
 
   return (
     <div
-      className="flex md:hidden fixed top-0 right-0 bottom-0 left-0 bg-black/50 z-[1000]"
-      onClick={() => {
-        toggleSidebar((oldVal) => !oldVal);
-      }}
+      className="flex fixed top-0 right-0 bottom-0 left-0 bg-black/50 z-[1000]"
+      onClick={() => toggleSidebar(false)}
     />
   );
 };
