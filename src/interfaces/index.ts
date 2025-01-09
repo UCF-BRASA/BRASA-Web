@@ -12,6 +12,19 @@ export interface LandingPageEventsInfo {
   eventInfo: EventCardImageObject[];
 }
 
+export interface UpcomingEventsData {
+  image: StaticImageData;
+  date: Date | "TBD";
+  time: string;
+  location: string;
+  eventName: string;
+  eventDescription: string;
+  eventType: "Social" | "Professional";
+  isPaid: boolean;
+  moreInfoLink: string;
+  buyTicketLink?: string;
+}
+
 export interface EventCardImageObject {
   image: StaticImageData;
   imageAlt: string;
