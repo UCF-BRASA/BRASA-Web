@@ -1,26 +1,15 @@
 import { faArrowRightToBracket, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { COLORS } from "@util/constants";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useEffect, useState, type FC } from "react";
+import { useEffect, type FC } from "react";
 import styles from "./Navbar.module.css";
 
-const MobileNavbar: FC = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const router = useRouter();
+interface Props {
+  showSidebar: boolean;
+  setShowSidebar: (value: boolean) => void;
+}
 
-  useEffect(() => {
-    const handleRouteChange = () => {
-      setIsSidebarOpen(false);
-    };
-
-    router.events.on("routeChangeStart", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeStart", handleRouteChange);
-    };
-  }, [router.events]);
-
+const MobileNavbar: FC<Props> = ({ showSidebar, setShowSidebar }) => {
   useEffect(() => {
     const body = document.body;
     let lastScroll = 0;
@@ -44,7 +33,7 @@ const MobileNavbar: FC = () => {
   }, []);
 
   const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
+    setShowSidebar(!showSidebar);
   };
 
   return (
@@ -70,34 +59,18 @@ const MobileNavbar: FC = () => {
               className="text-base rounded-lg h-[3rem] w-[3rem] bg-main-brasa-blue text-center text-white hover:cursor-pointer 
                 font-medium"
             >
-              <div className="flex justify-center items-center h-full">
+              <a
+                href="https://knightconnect.campuslabs.com/engage/organization/brasa"
+                className="flex justify-center items-center h-full"
+              >
                 <FontAwesomeIcon
                   icon={faArrowRightToBracket}
                   color={COLORS.white}
                   className="fa-xl"
                 />
-              </div>
+              </a>
             </div>
           </div>
-        </div>
-
-        {/* Sidebar */}
-        <div
-          className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform ${
-            isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-300 ease-in-out`}
-        >
-          <ul className="mt-10">
-            <li className="block py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-bold text-base">
-              <Link href="/events">Events</Link>
-            </li>
-            <li className="block py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-bold text-base">
-              <Link href="/meet-the-board">E-Board</Link>
-            </li>
-            <li className="block py-2 pl-3 pr-4 md:p-0 hover:cursor-pointer font-bold text-base">
-              <Link href="/become-member">Become a Member</Link>
-            </li>
-          </ul>
         </div>
       </nav>
     </header>

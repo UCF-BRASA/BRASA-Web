@@ -1,4 +1,9 @@
-import { faInstagram, faLinkedinIn, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import {
+  faInstagram,
+  faLinkedinIn,
+  faTiktok,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IMAGES } from "@util/constants";
@@ -72,11 +77,15 @@ const DesktopFooter: FC = () => {
         <div className="text-left">
           <h1 className="text-main-brasa-blue text-lg font-bold pt-4">Follow us</h1>
           <div className="-ml-1">
+            {/* Instagram section */}
             <div className="flex flex-col text-left pt-4">
-              {/* Instagram section */}
               <div className="flex flex-row items-center">
-                <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue">
-                  <a href="https://www.instagram.com/brasa.ucf/" target="_blank">
+                <a
+                  href="https://www.instagram.com/brasa.ucf/"
+                  target="_blank"
+                  className="flex flex-row justify-center items-center font-bold"
+                >
+                  <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue mr-2">
                     <div className="flex justify-center bg-auto">
                       <FontAwesomeIcon
                         icon={faInstagram}
@@ -84,18 +93,21 @@ const DesktopFooter: FC = () => {
                         className="w-5 h-5 border-8 border-main-brasa-blue"
                       />
                     </div>
-                  </a>
-                </div>
-                <a href="https://www.instagram.com/brasa.ucf/" target="_blank">
-                  <p className="pl-2 font-bold">Instagram</p>
+                  </div>
+                  Instagram
                 </a>
               </div>
             </div>
+
             {/* Whatsapp section */}
             <div className="flex flex-col text-left pt-4">
               <div className="flex flex-row items-center">
-                <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue">
-                  <a href="https://chat.whatsapp.com/LhaUGwcrFVpL8KAACVYIlr" target="_blank">
+                <a
+                  href="https://chat.whatsapp.com/LhaUGwcrFVpL8KAACVYIlr"
+                  target="_blank"
+                  className="flex flex-row justify-center items-center font-bold"
+                >
+                  <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue mr-2">
                     <div className="flex justify-center bg-auto">
                       <FontAwesomeIcon
                         icon={faWhatsapp}
@@ -103,18 +115,21 @@ const DesktopFooter: FC = () => {
                         className="w-5 h-5 border-8 border-main-brasa-blue"
                       />
                     </div>
-                  </a>
-                </div>
-                <a href="https://chat.whatsapp.com/LhaUGwcrFVpL8KAACVYIlr" target="_blank">
-                  <p className="pl-2 font-bold">Whatsapp</p>
+                  </div>
+                  Whatsapp
                 </a>
               </div>
             </div>
+
             {/* Linkedin section */}
             <div className="flex flex-col text-left pt-4">
               <div className="flex flex-row items-center">
-                <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue">
-                  <a href="https://www.linkedin.com/company/brasa-at-ucf/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/company/brasa-at-ucf/"
+                  target="_blank"
+                  className="flex flex-row justify-center items-center font-bold"
+                >
+                  <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue mr-2">
                     <div className="flex justify-center bg-auto">
                       <FontAwesomeIcon
                         icon={faLinkedinIn}
@@ -122,18 +137,43 @@ const DesktopFooter: FC = () => {
                         className="w-5 h-5 border-8 border-main-brasa-blue"
                       />
                     </div>
-                  </a>
-                </div>
-                <a href="https://www.linkedin.com/company/brasa-at-ucf/" target="_blank">
-                  <p className="pl-2 font-bold">Linkedin</p>
+                  </div>
+                  LinkedIn
                 </a>
               </div>
             </div>
+
+            {/* TikTok section */}
+            <div className="flex flex-col text-left pt-4">
+              <div className="flex flex-row items-center">
+                <a
+                  href="https://www.tiktok.com/@brasa.ucf"
+                  target="_blank"
+                  className="flex flex-row justify-center items-center font-bold"
+                >
+                  <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue mr-2">
+                    <div className="flex justify-center bg-auto">
+                      <FontAwesomeIcon
+                        icon={faTiktok}
+                        style={{ color: "#ffffff" }}
+                        className="w-5 h-5 border-8 border-main-brasa-blue"
+                      />
+                    </div>
+                  </div>
+                  TikTok
+                </a>
+              </div>
+            </div>
+
             {/* Email section */}
             <div className="flex flex-col text-left pt-4">
               <div className="flex flex-row items-center">
-                <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue">
-                  <a href="https://www.instagram.com/brasa.ucf/" target="_blank">
+                <a
+                  href="mailto:ucf@brasalocal.org"
+                  target="_blank"
+                  className="flex flex-row justify-center items-center font-bold"
+                >
+                  <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue mr-2">
                     <div className="flex justify-center bg-auto">
                       <FontAwesomeIcon
                         icon={faEnvelope}
@@ -141,10 +181,8 @@ const DesktopFooter: FC = () => {
                         className="w-5 h-5 border-8 border-main-brasa-blue"
                       />
                     </div>
-                  </a>
-                </div>
-                <a href="mailto:ucf@brasalocal.org" target="_blank">
-                  <p className="pl-2 font-bold">Email</p>
+                  </div>
+                  Email
                 </a>
               </div>
             </div>

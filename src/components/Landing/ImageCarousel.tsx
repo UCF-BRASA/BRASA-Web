@@ -1,52 +1,68 @@
-import { EventCardImageObject } from "@interfaces";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FC } from "react";
-import { Zoom } from "react-slideshow-image";
+import { Slide, Zoom } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import EventCard from "./EventCard";
 
 interface Props {
-  imageData: EventCardImageObject[];
+  children?: React.ReactNode;
   isMobile: boolean;
 }
 
-const ImageCarousel: FC<Props> = ({ imageData, isMobile }) => {
-  const zoomInProperties = {
-    scale: 1, // how large image can transform
-    duration: 5000, // image change duration
+const ImageCarousel: FC<Props> = ({ children, isMobile }) => {
+  const arrows = isMobile
+    ? {
+        prevArrow: <div />,
+        nextArrow: <div />,
+      }
+    : {
+        prevArrow: (
+          <div className="ml-[-4.5rem]">
+            <div className="bg-white h-8 w-8 rounded flex justify-center items-center">
+              <FontAwesomeIcon icon={faArrowLeft} style={{ color: "#008cff" }} />
+            </div>
+          </div>
+        ),
+        nextArrow: (
+          <div className="pr-10">
+            <div className="bg-white h-8 w-8 rounded flex justify-center items-center">
+              <FontAwesomeIcon icon={faArrowRight} style={{ color: "#008cff" }} />
+            </div>
+          </div>
+        ),
+      };
+
+  const desktopSlideProps = {
+    ...arrows,
+    duration: 3000, // image change duration
+    transitionDuration: 600, // transition per images time
+    infinity: true, // loop the transition to infinity
+    autoplay: false,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+  };
+
+  const mobileZoomProps = {
+    ...arrows,
+    scale: 1,
+    duration: 3000, // image change duration
     transitionDuration: 300, // transition per images time
     infinity: true, // loop the transition to infinity
     canSwipe: true,
-
-    // icons (will add them later)
-    prevArrow: (
-      <div className="ml-2 top-[15rem]">
-        {/* <FontAwesomeIcon icon={faArrowLeft} style={{ color: "#ffffff" }} /> */}
-      </div>
-    ),
-    nextArrow: (
-      <div className="mr-2 top-[15rem]">
-        {/* <FontAwesomeIcon icon={faArrowRight} style={{ color: "#ffffff" }} /> */}
-      </div>
-    ),
   };
 
   return (
-    <section className="w-full h-full">
-      <Zoom {...zoomInProperties}>
-        {imageData.map((each, index) => (
-          <div key={index} className="flex justify-center items-start w-full h-full relative">
-            <EventCard
-              image={each.image}
-              imageAlt={each.imageAlt}
-              tag={each.tag}
-              eventTitle={each.eventTitle}
-              eventDescription={each.eventDescription}
-              isMobile={isMobile}
-            />
-          </div>
-        ))}
-      </Zoom>
-    </section>
+    <>
+      {isMobile ? (
+        <section className="w-full h-full">
+          <Zoom {...mobileZoomProps}>{children}</Zoom>
+        </section>
+      ) : (
+        <section className="w-full h-full pl-[6.5rem]">
+          <Slide {...desktopSlideProps}>{children}</Slide>
+        </section>
+      )}
+    </>
   );
 };
 
