@@ -765,7 +765,7 @@ export const MOBILE_SIDEBAR_DATA: MobileSidebarData[] = [
     name: "Resources",
     route: "/resource",
     icon: faLayerGroup,
-  }.
+  },
 ];
 
 export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
