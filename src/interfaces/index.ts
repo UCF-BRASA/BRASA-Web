@@ -4,6 +4,7 @@
 //
 // import { ResponseData } from 'path/to/interfaces';
 
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { type StaticImageData } from "next/image";
 
 export interface LandingPageEventsInfo {
@@ -53,4 +54,10 @@ export interface BoardData {
   imageAlt: string;
   officerName: string;
   officerTitle: string;
+}
+
+export interface MobileSidebarData {
+  name: string;
+  route: string;
+  icon: IconProp;
 }

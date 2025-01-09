@@ -73,8 +73,8 @@ const EventCard: FC<Props> = ({ image, imageAlt, tag, eventTitle, eventDescripti
           <p className="text-event-card font-medium text-base text-black/60 mt-6 px-6">
             {eventDescription}
           </p>
-          <div className="mt-12 h-32 w-full flex justify-center items-center">
-            <div className="w-[90%] h-[55%] text-base rounded-full bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200">
+          <div className="mt-20 pb-5 w-full flex justify-center items-center">
+            <div className="w-[90%] py-5 text-base rounded-full bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200">
               <Link className="flex justify-center items-center w-full h-full" href="/events">
                 View Details
               </Link>

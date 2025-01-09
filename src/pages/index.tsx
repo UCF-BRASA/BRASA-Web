@@ -255,7 +255,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
                     title={item.eventType}
                   >
                     {item.eventInfo.map((event) => (
-                      <div className="w-full flex justify-center mt-10">
+                      <div key={event.eventTitle} className="w-full flex justify-center mt-10">
                         <EventCard
                           image={event.image}
                           imageAlt={event.imageAlt}
