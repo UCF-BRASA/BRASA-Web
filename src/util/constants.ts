@@ -1,3 +1,6 @@
+// Logos
+import brasa_logo from "/public/static/brasa-logo.png";
+
 // Landing Page images
 import mainPicLanding from "/public/static/landing/intro/main-pic.webp";
 import bailinho_pic from "/public/static/landing/our-events/bailinho_pic.png";
@@ -71,13 +74,11 @@ import {
   EventCardImageObject,
   LandingPageEventsInfo,
   PrevBoardTabs,
+  UpcomingEventsData,
 } from "@interfaces";
 import { getApiInstanceUrl, getWebInstanceUrl } from "./instanceUrl";
-import brasa_logo from "/public/static/brasa-logo.png";
 
-//Events Background
-//import events_background from "public/static/Events/events_background.jpg";
-
+// TODO: Change this value
 export const MOBILE_THRESHOLD = 1400;
 
 // .env values
@@ -108,8 +109,6 @@ export const IMAGES = {
   mainPicLanding,
   brasa_logo,
   board_pic,
-  churras_pic,
-  bailinho_pic,
 };
 
 const eventImagesData: EventCardImageObject[] = [
@@ -730,5 +729,43 @@ export const gridSectionsData = [
     title: "BRASA @ UCF Tech Team",
     description:
       "Our tech team is always looking for new members to help us build our website and other projects.",
+  },
+];
+
+export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
+  {
+    date: "TBD",
+    time: "2:00 PM - 8:00 PM",
+    image: churras_pic,
+    eventName: "Churrasco BRASA",
+    eventDescription: "Join us for a day full of Brazilian music, dance, and lots of fun!",
+    location: "300 Dalhausser Ln, Oviedo, FL 32765",
+    moreInfoLink: "https://www.instagram.com/brasa.ucf/",
+    buyTicketLink: "https://www.instagram.com/brasa.ucf/",
+    eventType: "Social",
+    isPaid: true,
+  },
+  {
+    date: "TBD",
+    time: "8:00 PM - 2:00 AM",
+    image: bailinho_pic,
+    eventName: "Bailinho Brasa",
+    eventDescription: "Join us for a night of Brazilian music, dance, and culture!",
+    location: "5250 International Dr, Orlando, FL 32819",
+    moreInfoLink: "https://www.instagram.com/brasa.ucf/",
+    buyTicketLink: "https://www.instagram.com/brasa.ucf/",
+    eventType: "Social",
+    isPaid: true,
+  },
+  {
+    date: "TBD",
+    time: "8:00 PM - 2:00 AM",
+    image: guest_speaker_pic,
+    eventName: "Guest Speaker",
+    eventDescription: "Join us to learn more with Brazilian professionals!",
+    location: "University of Central Florida",
+    moreInfoLink: "https://www.instagram.com/brasa.ucf/",
+    eventType: "Professional",
+    isPaid: false,
   },
 ];
