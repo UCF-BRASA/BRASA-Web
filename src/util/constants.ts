@@ -1,6 +1,22 @@
 // Logos
 import brasa_logo from "/public/static/brasa-logo.png";
 
+// Gallery Churras provisoria
+import bandera_pic from "/public/static/gallery/bandera_pic.jpeg";
+import comida_pic from "/public/static/gallery/comida_pic.jpeg";
+import desk_pic from "/public/static/gallery/desk_pic.jpeg";
+import dog_pic from "/public/static/gallery/dog_pic.jpeg";
+import lucas_luca_saki_leo_pic from "/public/static/gallery/lucas_luca_saki_leo_pic.jpeg";
+import paulo_modelo_pic from "/public/static/gallery/paulo_modelo_pic.jpeg";
+import seabra_bebo_pic from "/public/static/gallery/seabra_bebo_pic.jpeg";
+//Galleria pics updated
+import cover_aug31 from "/public/static/gallery/cover_aug31.jpg";
+import cover_feb29 from "/public/static/gallery/cover_feb29.jpg";
+import cover_jul11 from "/public/static/gallery/cover_jul11.jpg";
+import cover_mar09 from "/public/static/gallery/cover_mar09.jpg";
+import cover_mar30 from "/public/static/gallery/cover_mar30.jpg";
+import cover_oct05 from "/public/static/gallery/cover_oct05.jpg";
+
 // Landing Page images
 import mainPicLanding from "/public/static/landing/intro/main-pic.webp";
 import bailinho_pic from "/public/static/landing/our-events/bailinho_pic.png";
@@ -70,6 +86,8 @@ import board_pic from "/public/static/become-member/member-box/board_pic.jpg";
 // Login photo
 import {
   faCalendarDays,
+  //gallery mobile side bar logo
+  faCamera,
   faHandshake,
   faHome,
   faLayerGroup,
@@ -79,6 +97,7 @@ import {
   BoardData,
   EBoardData,
   EventCardImageObject,
+  GalleryBoxData,
   LandingPageEventsInfo,
   MobileSidebarData,
   PrevBoardTabs,
@@ -117,6 +136,23 @@ export const IMAGES = {
   mainPicLanding,
   brasa_logo,
   board_pic,
+  carol_pic,
+  leticia_pic,
+  //pics provisorias para a galeria
+  paulo_modelo_pic,
+  seabra_bebo_pic,
+  dog_pic,
+  bandera_pic,
+  desk_pic,
+  comida_pic,
+  lucas_luca_saki_leo_pic,
+  //Gallery updated pics
+  cover_feb29,
+  cover_mar09,
+  cover_mar30,
+  cover_jul11,
+  cover_aug31,
+  cover_oct05,
 };
 
 const eventImagesData: EventCardImageObject[] = [
@@ -766,6 +802,11 @@ export const MOBILE_SIDEBAR_DATA: MobileSidebarData[] = [
     route: "/resource",
     icon: faLayerGroup,
   },
+  {
+    name: "Gallery",
+    route: "/gallery",
+    icon: faCamera,
+  },
 ];
 
 export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
@@ -803,5 +844,63 @@ export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
     moreInfoLink: "https://www.instagram.com/brasa.ucf/",
     eventType: "Professional",
     isPaid: false,
+  },
+];
+
+//GalleryBoxData array for easier implementation with .map
+export const GALLERY_DATA: GalleryBoxData[] = [
+  {
+    //Event 1
+    image: cover_feb29,
+    imageAlt: "Churrasco",
+    date: "02/29/2024",
+    driveLink:
+      "https://drive.google.com/drive/folders/1Va_pLQMCGyjP1SPlpFw_ZVvxFscYOc1G?usp=share_link",
+    eventDesc: "CHURRASCO",
+  },
+  {
+    //Event 2
+    image: cover_mar09,
+    imageAlt: "Churrasco",
+    date: "03/09/2024",
+    driveLink:
+      "https://drive.google.com/drive/folders/1A6YB-SWCSOIUmU4mX324vqP7Mb8JqmD8?usp=share_link",
+    eventDesc: "CHURRASCO",
+  },
+  {
+    //Event 3
+    image: cover_mar30,
+    imageAlt: "Churrasco",
+    date: "03/30/2024",
+    driveLink:
+      "https://drive.google.com/drive/folders/1tp9yn6Graocbc4ShYkwQTkCHWO4w5OQr?usp=share_link",
+    eventDesc: "CHURRASCO",
+  },
+  {
+    //Event 4
+    image: cover_jul11,
+    imageAlt: "BOUNCE",
+    date: "11/07/2024",
+    driveLink:
+      "https://drive.google.com/drive/folders/1kX1vX6JnupMFxUtGwA_RFy9ASUSnep81?usp=share_link",
+    eventDesc: "BOUCNE X BRASA",
+  },
+  {
+    //Event 5
+    image: cover_aug31,
+    imageAlt: "Churrasco",
+    date: "08/31/2024",
+    driveLink:
+      "https://drive.google.com/drive/folders/1jed59sv4upr-sAXeH1NNnLqmP7x1jpfS?usp=share_link",
+    eventDesc: "CHURRASCO",
+  },
+  {
+    //Event 6
+    image: cover_oct05,
+    imageAlt: "Churrasco",
+    date: "10/05/2024",
+    driveLink:
+      "https://drive.google.com/drive/folders/1oFiy3g1Q0q6IQ7QlVYNccnWAmbMugaoT?usp=share_link",
+    eventDesc: "CHURRASCO",
   },
 ];
