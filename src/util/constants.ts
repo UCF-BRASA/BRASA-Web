@@ -1,14 +1,6 @@
 // Logos
 import brasa_logo from "/public/static/brasa-logo.png";
 
-// Gallery Churras provisoria
-import bandera_pic from "/public/static/gallery/bandera_pic.jpeg";
-import comida_pic from "/public/static/gallery/comida_pic.jpeg";
-import desk_pic from "/public/static/gallery/desk_pic.jpeg";
-import dog_pic from "/public/static/gallery/dog_pic.jpeg";
-import lucas_luca_saki_leo_pic from "/public/static/gallery/lucas_luca_saki_leo_pic.jpeg";
-import paulo_modelo_pic from "/public/static/gallery/paulo_modelo_pic.jpeg";
-import seabra_bebo_pic from "/public/static/gallery/seabra_bebo_pic.jpeg";
 //Galleria pics updated
 import cover_aug31 from "/public/static/gallery/cover_aug31.jpg";
 import cover_feb29 from "/public/static/gallery/cover_feb29.jpg";
@@ -138,14 +130,7 @@ export const IMAGES = {
   board_pic,
   carol_pic,
   leticia_pic,
-  //pics provisorias para a galeria
-  paulo_modelo_pic,
-  seabra_bebo_pic,
-  dog_pic,
-  bandera_pic,
-  desk_pic,
-  comida_pic,
-  lucas_luca_saki_leo_pic,
+
   //Gallery updated pics
   cover_feb29,
   cover_mar09,
