@@ -1,5 +1,4 @@
 import GalleryBox from "@components/Gallery/GalleryBox";
-import JoinNewsletter from "@components/JoinNewsletter/JoinNewsletter";
 import { GALLERY_DATA } from "@util/constants";
 import { NextPage } from "next";
 
@@ -13,11 +12,8 @@ const Gallery: NextPage<Props> = ({ isMobile }) => {
         <div className="h-full bg-white">
           <div className="h-[8rem]"></div>
           <div className="flex flex-col justify-center items-center w-full">
-            <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem]">GALLERY</h1>
-            <h4 className="pt-2 font-bold text-m tracking-[0.1rem]">
-              {" "}
-              CHOOSE AN EVENT TO SEE ALL PICTURES
-            </h4>
+            <h4 className="pt-2 font-bold text-m tracking-[0.1rem]"> SAVE YOUR MEMORIES</h4>
+            <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem]">Gallery</h1>
           </div>
           <div className="bg-main-brasa-green mt-12">
             <div className="flex justify-center">
@@ -37,14 +33,14 @@ const Gallery: NextPage<Props> = ({ isMobile }) => {
               </div>
             </div>
             <div className="flex flex-wrap justify-evenly mx-auto w-full mt-20"></div>
-            <JoinNewsletter />
           </div>
         </div>
       ) : (
         <div className="h-full bg-white">
-          <div className="h-[8rem]"></div>
-          <div className="flex flex-col justify-center items-center w-full">
-            <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem] mt-4">GALLERY</h1>
+          <div className="h-[10rem]"></div>
+          <div className="text-center flex flex-col justify-center items-center w-full mb-20">
+            <h3 className="pt-16 font-bold text-base tracking-[0.3rem]">SAVE YOUR MEMORIES</h3>
+            <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem]">Gallery</h1>
             <h4 className="pt-2 font-bold text-m tracking-[0.1rem]"> </h4>
           </div>
           <div className="bg-main-brasa-green mt-24">
@@ -64,9 +60,8 @@ const Gallery: NextPage<Props> = ({ isMobile }) => {
                 ))}
               </div>
             </div>
-            <div className="flex flex-wrap justify-evenly mx-auto w-full mt-20"></div>
-            <JoinNewsletter />
           </div>
+          <div className="flex flex-wrap justify-evenly mx-auto w-full mt-20"></div>
         </div>
       )}
     </main>

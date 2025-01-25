@@ -868,7 +868,7 @@ export const GALLERY_DATA: GalleryBoxData[] = [
     date: "11/07/2024",
     driveLink:
       "https://drive.google.com/drive/folders/1kX1vX6JnupMFxUtGwA_RFy9ASUSnep81?usp=share_link",
-    eventDesc: "BOUCNE X BRASA",
+    eventDesc: "BOUNCE X BRASA",
   },
   {
     //Event 5
