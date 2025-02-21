@@ -130,14 +130,6 @@ export const IMAGES = {
   board_pic,
   carol_pic,
   leticia_pic,
-
-  //Gallery updated pics
-  cover_feb29,
-  cover_mar09,
-  cover_mar30,
-  cover_jul11,
-  cover_aug31,
-  cover_oct05,
 };
 
 const eventImagesData: EventCardImageObject[] = [
