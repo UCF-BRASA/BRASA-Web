@@ -3,6 +3,7 @@ import brasa_logo from "/public/static/brasa-logo.png";
 
 //Galleria pics updated
 import cover_aug31 from "/public/static/gallery/cover_aug31.jpg";
+import cover_feb15 from "/public/static/gallery/cover_feb15.jpg";
 import cover_feb29 from "/public/static/gallery/cover_feb29.jpg";
 import cover_jul11 from "/public/static/gallery/cover_jul11.jpg";
 import cover_mar09 from "/public/static/gallery/cover_mar09.jpg";
@@ -878,6 +879,15 @@ export const GALLERY_DATA: GalleryBoxData[] = [
     date: "10/05/2024",
     driveLink:
       "https://drive.google.com/drive/folders/1oFiy3g1Q0q6IQ7QlVYNccnWAmbMugaoT?usp=share_link",
+    eventDesc: "CHURRASCO",
+  },
+  {
+    //Event 7
+    image: cover_feb15,
+    imageAlt: "Churrasco",
+    date: "02/15/2025",
+    driveLink:
+      "https://drive.google.com/drive/folders/1IlF9Mp6-HB4kn2uLd7OeZn2VUf2_ovNh?usp=sharing",
     eventDesc: "CHURRASCO",
   },
 ];
