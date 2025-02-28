@@ -41,7 +41,7 @@ const GalleryBox: FC<Props> = ({ imageAlt, image, isMobile, date, driveLink, eve
           <div className="h-[6rem] w-full pl-[0.5rem] pt-[0.5rem]"></div>
         </div>
       ) : (
-        <div onClick={handleClick} style={{ cursor: "pointer" }} className=" w-[28rem] mb-8 pt-20">
+        <div onClick={handleClick} className=" w-[28rem] mb-8 pt-20 hover:cursor-pointer">
           <div className="h-[5.5rem] w-full bg-main-brasa-blue rounded-t-[2rem] text-center">
             <p className="text-white text-3xl justify-center text-center pt-7 font-bold">
               {" "}
