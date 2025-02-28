@@ -12,6 +12,7 @@ export interface LandingPageEventsInfo {
   eventInfo: EventCardImageObject[];
 }
 
+//Decalre "structs" here
 export interface UpcomingEventsData {
   image: StaticImageData;
   date: Date | "TBD";
@@ -60,4 +61,13 @@ export interface MobileSidebarData {
   name: string;
   route: string;
   icon: IconProp;
+}
+
+//GalleryBox data interface
+export interface GalleryBoxData {
+  image: StaticImageData;
+  imageAlt: string;
+  date: string;
+  driveLink: string;
+  eventDesc: string;
 }
