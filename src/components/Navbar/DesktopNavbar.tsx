@@ -31,6 +31,9 @@ const DesktopNavbar: FC = () => {
                 <li className="py-1 px-2 rounded font-bold text-lg hover:cursor-pointer hover:bg-slate-800/[.2] transition duration-200">
                   <Link href="/resource">Resources</Link>
                 </li>
+                <li className="py-1 px-2 rounded font-bold text-lg hover:cursor-pointer hover:bg-slate-800/[.2] transition duration-200">
+                  <Link href="/gallery">Gallery</Link>
+                </li>
                 <li className="font-bold text-lg navigation-link">
                   <Link href="#desktop-brasa-footer" scroll={false}>
                     Contact
