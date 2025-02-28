@@ -130,8 +130,6 @@ export const IMAGES = {
   mainPicLanding,
   brasa_logo,
   board_pic,
-  carol_pic,
-  leticia_pic,
 };
 
 const eventImagesData: EventCardImageObject[] = [

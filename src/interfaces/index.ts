@@ -12,6 +12,7 @@ export interface LandingPageEventsInfo {
   eventInfo: EventCardImageObject[];
 }
 
+
 //Decalre "structs" here
 export interface UpcomingEventsData {
   image: StaticImageData;
