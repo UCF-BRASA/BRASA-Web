@@ -190,7 +190,9 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
                 </div>
               </div>
               <div className="relative w-full">
-                <div className="-top-[-10rem] -right-[10rem] w-[54rem] aspect-square overflow-hidden rounded-full shadow-xl">
+                <div className="-top-[-10rem] -right-[10rem] 
+                w-[45rem]
+                aspect-square overflow-hidden rounded-full shadow-xl">
                   <Image
                     src={IMAGES.mainPicLanding}
                     sizes="33vw"

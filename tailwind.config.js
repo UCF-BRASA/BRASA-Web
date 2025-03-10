@@ -8,6 +8,15 @@ module.exports = {
     "./node_modules/@nextui-org/theme/dist/components/tabs.js",
   ],
   theme: {
+    screens: {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px",
+      "3xl": "1800px",
+      "4px": "2000px"
+    },
     extend: {
       colors: {
         "main-brasa-yellow": "#fef000",
