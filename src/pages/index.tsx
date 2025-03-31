@@ -1,9 +1,5 @@
-import JoinNewsletter from "@components/JoinNewsletter/JoinNewsletter";
-import EventCard from "@components/Landing/EventCard";
 import GridSection from "@components/Landing/GridSection";
-import ImageCarousel from "@components/Landing/ImageCarousel";
-import { Tab, Tabs } from "@nextui-org/tabs";
-import { IMAGES, LANDING_PAGE_EVENTS, gridSectionsData } from "@util/constants";
+import { IMAGES, gridSectionsData } from "@util/constants";
 import { NextPage } from "next";
 import Image from "next/image";
 
@@ -33,11 +29,11 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
           <section className="rounded-b-lg">
             {/* Main section 1's content */}
             <Image
-              src={IMAGES.mainPicLanding}
+              src={IMAGES.mainPicLandingNewMobile}
               alt="Landing Pic"
               fill
               priority
-              className="bg-cover"
+              className="object-cover"
             />
             <div className="flex flex-col items-center justify-center text-center overflow-x-hidden w-full backdrop-brightness-[0.4] h-screen">
               <h1 className="relative tracking-[0.1rem] font-bold text-xs break-normal text-white">
@@ -58,10 +54,13 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
                 What is BRASA @ UCF?
               </h3>
               <p className="font-medium text-base text-black text-justify mt-4 pr-8 pl-10">
-                Assist Brazilians interested in studying at UCF by providing guidance
-                <br /> throughout the application process via our social media channels,
-                <br /> offering campus tours, sharing insights about life in the US and Orlando,
-                <br /> and addressing any additional inquiries with UCF Global.
+                The Brazilian Student Association at UCF is a dynamic community that supports
+                <br /> Brazilian and Brazilian-affiliated students through academic, social, and
+                professional
+                <br /> initiatives. We host study sessions, social events, and career-building
+                workshops to
+                <br /> foster connection, celebrate our heritage, and help our members grow both
+                <br /> personally and professionally.
               </p>
             </div>
             <div className="flex justify-center w-full relative z-30">
@@ -94,7 +93,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
               {displayGridIconSection()}
             </div>
           </section>
-          <section className="bg-main-brasa-blue rounded-[2rem] overflow-x-hidden mt-24">
+          {/* <section className="bg-main-brasa-blue rounded-[2rem] overflow-x-hidden mt-24">
             <div className="flex flex-col items-center text-white w-full mb-16">
               <div className="text-center">
                 <h3 className="pt-16 font-semi-bold text-base tracking-[0.20em]">OUR EVENTS</h3>
@@ -146,7 +145,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
                 )}
               </Tabs>
             </div>
-          </section>
+          </section> */}
 
           {/* Footer spacing */}
           <div className="bg-white h-40"></div>
@@ -173,10 +172,13 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
                     building futures
                   </h1>
                   <p className="pt-5 font-medium text-base text-black/60">
-                    Assist Brazilians interested in studying at UCF by providing guidance
-                    <br /> throughout the application process via our social media channels,
-                    <br /> offering campus tours, sharing insights about life in the US and Orlando,
-                    <br /> and addressing any additional inquiries with UCF Global.
+                    The Brazilian Student Association at UCF is a dynamic community that supports
+                    <br /> Brazilian and Brazilian-affiliated students through academic, social, and
+                    professional
+                    <br /> initiatives. We host study sessions, social events, and career-building
+                    workshops to
+                    <br /> foster connection, celebrate our heritage, and help our members grow both
+                    <br /> personally and professionally.
                   </p>
 
                   <div className="mt-10 text-base rounded-full md:h-14 md:w-44 bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200">
@@ -190,10 +192,10 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
                 </div>
               </div>
               <div className="relative w-full">
-                <div className="-top-[-10rem] -right-[10rem] w-[54rem] aspect-square overflow-hidden rounded-full shadow-xl">
+                <div className="-top-[-10rem] -right-[10rem] w-[54rem] aspect-square overflow-hidden rounded-full ">
                   <Image
-                    src={IMAGES.mainPicLanding}
-                    sizes="33vw"
+                    src={IMAGES.mainPicLandingNew}
+                    sizes="100vw"
                     // priority
                     placeholder="blur"
                     className="h-full w-full object-cover"
@@ -216,18 +218,18 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
           {/* End of Section 1 */}
 
           {/* Section 2 */}
-          <div className="flex flex-col justify-center items-center w-full">
+          <div className="flex flex-col justify-center items-center w-full mt-20">
             <h3 className="pt-16 font-bold text-base tracking-[0.20em]">WHAT WE DO</h3>
             <h1 className="pt-5 font-bold text-5xl">We offer support & guidance</h1>
 
-            <div className="container mx-auto grid gap-x-20 gap-y-24 grid-cols-3 grid-rows-2 p-20 mt-8 w-full">
+            <div className="container mx-auto grid gap-x-20 gap-y-24 grid-cols-3 grid-rows-1 p-20 mt-8 w-full">
               {displayGridIconSection()}
             </div>
           </div>
           {/* End of Section 2 */}
 
           {/* Section 3 */}
-          <div className="h-[65rem] bg-main-brasa-blue rounded-t-[3rem] overflow-x-hidden mt-16">
+          {/* <div className="h-[65rem] bg-main-brasa-blue rounded-t-[3rem] overflow-x-hidden mt-16">
             <div className="flex flex-col items-center text-white p-10 w-full">
               <h3 className="pt-16 font-semi-bold text-base tracking-[0.20em]">OUR EVENTS</h3>
               <h1 className="pt-5 font-semi-bold text-5xl tracking-[0.02em] mb-12">
@@ -274,10 +276,10 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
 
           <div className="absolute w-full h-48 bg-main-brasa-blue">
             <JoinNewsletter />
-          </div>
+          </div> */}
 
           {/* Footer spacing */}
-          <div className="bg-white h-[34rem]"></div>
+          <div className="bg-white h-[8rem]"></div>
         </div>
       )}
     </main>

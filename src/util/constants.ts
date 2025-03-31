@@ -12,7 +12,8 @@ import cover_mar30 from "/public/static/gallery/cover_mar30.jpg";
 import cover_oct05 from "/public/static/gallery/cover_oct05.jpg";
 
 // Landing Page images
-import mainPicLanding from "/public/static/landing/intro/main-pic.webp";
+import mainPicLandingNewMobile from "/public/static/landing/intro/main-pic-new-mobile.webp";
+import mainPicLandingNew from "/public/static/landing/intro/main-pic-new.webp";
 import bailinho_pic from "/public/static/landing/our-events/bailinho_pic.png";
 import churras_pic from "/public/static/landing/our-events/churras_pic.png";
 import guest_speaker_pic from "/public/static/landing/our-events/guest_speaker_pic.webp";
@@ -127,9 +128,12 @@ export const COLORS = {
 // TODO: figure out a good way to expose images to app without doing it with a whole object
 // (this is currently impacting performance)
 export const IMAGES = {
-  mainPicLanding,
   brasa_logo,
   board_pic,
+  carol_pic,
+  leticia_pic,
+  mainPicLandingNew,
+  mainPicLandingNewMobile,
 };
 
 const eventImagesData: EventCardImageObject[] = [
@@ -710,46 +714,25 @@ export const BOARD_MEMBERS: BoardData[] = [
 
 export const gridSectionsData = [
   {
-    imageAlt: "Exam Icon",
-    imagePath: "static/landing/what-we-do/exam-icon.svg",
-    title: "Exam Preparation",
-    description:
-      "We offer comprehensive resources and study materials to help you prepare for entrance exams",
-  },
-  {
-    imageAlt: "Study Abroad Icon",
-    imagePath: "static/landing/what-we-do/study-abroad-icon.svg",
-    title: "Study Abroad Opportunities",
-    description:
-      "We guide you through the application process and also assist with the visa requirements",
-  },
-  {
-    imageAlt: "Career Guidance Icon",
-    imagePath: "static/landing/what-we-do/career-icon.svg",
-    title: "Career Guidance",
-    description:
-      "We offer career counselling services to help you explore different options & identify your strengths and interests",
-  },
-  {
-    imageAlt: "Educational Resources Icon",
-    imagePath: "static/landing/what-we-do/education-icon.svg",
-    title: "Educational Resources",
-    description:
-      "We offer educational resources to support your learning journey from study tips to time management techniques",
-  },
-  {
-    imageAlt: "Community Support Icon",
+    imageAlt: "Social Events Icon",
     imagePath: "static/landing/what-we-do/community-icon.svg",
-    title: "Community Support",
+    title: "Social Events",
     description:
-      "Join our online forums and connect with fellow students, educators, and professionals",
+      "Our social events bring members together to relax, have fun, and celebrate Brazilian culture. A great way to connect and build community!",
   },
   {
-    imageAlt: "DB icon",
-    imagePath: "static/landing/what-we-do/db-icon.svg",
-    title: "BRASA @ UCF Tech Team",
+    imageAlt: "Study Session Icon",
+    imagePath: "static/landing/what-we-do/exam-icon.svg",
+    title: "Study Sessions",
     description:
-      "Our tech team is always looking for new members to help us build our website and other projects.",
+      "Join us in our study sessions where we reserve a quiet space in the library for members to focus, collaborate, and support each other academically",
+  },
+  {
+    imageAlt: "Professional Development",
+    imagePath: "static/landing/what-we-do/education-icon.svg",
+    title: "Professional Development",
+    description:
+      "We host workshops and guest speaker events to help members grow their skills, explore career paths, and connect with professionals in various fields",
   },
 ];
 
