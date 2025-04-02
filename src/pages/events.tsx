@@ -30,6 +30,7 @@ export const Events: NextPage<Props> = ({ isMobile }) => {
               buyTicketLink={upcomingEvent.buyTicketLink}
               eventType={upcomingEvent.eventType}
               isPaid={upcomingEvent.isPaid}
+              isAnnounced={upcomingEvent.isAnnounced}
               isMobile={isMobile}
             />
           ))}
@@ -57,6 +58,7 @@ export const Events: NextPage<Props> = ({ isMobile }) => {
                 buyTicketLink={upcomingEvent.buyTicketLink}
                 eventType={upcomingEvent.eventType}
                 isPaid={upcomingEvent.isPaid}
+                isAnnounced={upcomingEvent.isAnnounced}
                 isMobile={isMobile}
               />
             ))}

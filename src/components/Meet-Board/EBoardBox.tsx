@@ -1,5 +1,3 @@
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image, { StaticImageData } from "next/image";
 import { type FC } from "react";
 
@@ -15,6 +13,7 @@ interface Props {
   isMobile: boolean;
   onLearnMoreClick?: (id: number) => void;
 }
+// In the future we will uncomment the linkedin and learn more section
 
 const EBoardBox: FC<Props> = ({
   boxWidth = 20,
@@ -44,7 +43,7 @@ const EBoardBox: FC<Props> = ({
               <p className="text-slate-900/[.6] font-light text-base">{officerTitle}</p>
             </div>
             <hr className="border-black/[.1]"></hr>
-            {onLearnMoreClick ? (
+            {/* {onLearnMoreClick ? (
               <>
                 <div className="w-full flex justify-center items-center py-4">
                   <button
@@ -74,7 +73,7 @@ const EBoardBox: FC<Props> = ({
                   </p>
                 </a>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       ) : (
@@ -91,7 +90,7 @@ const EBoardBox: FC<Props> = ({
               <p className="text-slate-900/[.6] font-light text-base">{officerTitle}</p>
             </div>
             <hr className="border-black/[.1]" />
-            {onLearnMoreClick ? (
+            {/* {onLearnMoreClick ? (
               <div className="w-full flex justify-center items-center py-4">
                 <button
                   onClick={() => onLearnMoreClick(id)}
@@ -119,7 +118,7 @@ const EBoardBox: FC<Props> = ({
                   </p>
                 </a>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       )}

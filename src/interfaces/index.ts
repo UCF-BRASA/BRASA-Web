@@ -12,19 +12,19 @@ export interface LandingPageEventsInfo {
   eventInfo: EventCardImageObject[];
 }
 
-
 //Decalre "structs" here
 export interface UpcomingEventsData {
   image: StaticImageData;
-  date: Date | "TBD";
+  date: string;
   time: string;
   location: string;
   eventName: string;
   eventDescription: string;
-  eventType: "Social" | "Professional";
+  eventType: "Social" | "Professional" | "Academic";
   isPaid: boolean;
   moreInfoLink: string;
   buyTicketLink?: string;
+  isAnnounced: boolean;
 }
 
 export interface EventCardImageObject {
