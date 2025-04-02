@@ -2,7 +2,7 @@
 import brasa_logo from "/public/static/brasa-logo.png";
 
 //Galleria pics updated
-//Make sure file names are changed to lowercase "jpg" instead of "JPG"
+//Make sure file names are changed to lowercase "jpg" instead of "JPG" (EXTREMELY IMPORTANT)
 import cover_aug31 from "/public/static/gallery/cover_aug31.jpg";
 import cover_feb15 from "/public/static/gallery/cover_feb15.jpg";
 import cover_feb29 from "/public/static/gallery/cover_feb29.jpg";
