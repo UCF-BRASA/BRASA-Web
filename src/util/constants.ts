@@ -82,7 +82,7 @@ import nicole_pic from "/public/static/meet-board/prev-board/nicole_pic.jpeg";
 import rafa_pic from "/public/static/meet-board/prev-board/rafa.jpeg";
 
 // Upcoming Event Pictures
-import churras_upc_pic from "/public/static/upcoming-events/churras-upc-pic.jpg";
+import churras_upc_pic from "/public/static/upcoming-events/churras-pic-upc.png";
 import guest_speaker_pic1 from "/public/static/upcoming-events/guest-speaker-pic.png";
 import springs_pic1 from "/public/static/upcoming-events/springs-pic.jpg";
 import study_sesh_pic1 from "/public/static/upcoming-events/study-sesh-pic1.jpg";
