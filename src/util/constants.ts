@@ -21,35 +21,41 @@ import hangout_pic from "/public/static/landing/our-events/hangout_pic.png";
 import study_pic from "/public/static/landing/our-events/study_pic.webp";
 import workshop_pic from "/public/static/landing/our-events/workshop_pic.webp";
 
-// Meet the Board imaegs
-import ana_pic from "/public/static/meet-board/ana_pic.jpg";
-import caio_pic from "/public/static/meet-board/caio_pic.jpeg";
-import carlos_pic from "/public/static/meet-board/carlos_pic.jpg";
+// Current Meet the Board flicks
+import ana_pic_c from "/public/static/meet-board-new/Ana_Beatriz_Dantas.jpg";
+import bia_pic_c from "/public/static/meet-board-new/Beatriz_Bernauer.jpg";
+import caio_a_pic_c from "/public/static/meet-board-new/Caio_Amaral.jpg";
+import caio_r_pic_c from "/public/static/meet-board-new/Caio_Rosa_Rocha.jpg";
+import chales_pic_c from "/public/static/meet-board-new/Carlos_Eduardo_Vasconcelos.jpg";
+import chris_pic_c from "/public/static/meet-board-new/chris-pic-new.jpg";
+import fernanda_pic_c from "/public/static/meet-board-new/Fernanda_Gonçalves.jpeg";
+import gabs_pic_c from "/public/static/meet-board-new/Gabriel_Morais.jpg";
+import gloria_pic_c from "/public/static/meet-board-new/Gloria_Perez.jpg";
+import gustavo_pic_c from "/public/static/meet-board-new/Gustavo_Manfredini.jpg";
+import isabella_pic_c from "/public/static/meet-board-new/Isabella_Bertollo.jpg";
+import joao_pic_c from "/public/static/meet-board-new/João_Pedro_Campi.jpg";
+import luana_pic_c from "/public/static/meet-board-new/Luana_Agramunt.jpg";
+import luisa_pic_c from "/public/static/meet-board-new/Luisa_Brizolim_Quesada.jpg";
+import maria_pic_c from "/public/static/meet-board-new/Maria_Brito.jpg";
+import mariana_pic_c from "/public/static/meet-board-new/Mariana_Vicentin.jpg";
+import matheus_pic_c from "/public/static/meet-board-new/Matheus_Gomes.jpg";
+import mel_pic_c from "/public/static/meet-board-new/Mel_Wolff.jpg";
+import nino_pic_c from "/public/static/meet-board-new/Nino_Portugal.jpg";
+import paulo_pic_c from "/public/static/meet-board-new/Paulo_Nascimento.jpeg";
+import pedro_pic_c from "/public/static/meet-board-new/Pedro_Lima.jpg";
+
+// Old Meet the Board images (We might use put these on a previous board members section but its TBD)
 import carol_pic from "/public/static/meet-board/carol_pic.jpg";
-import chris_pic from "/public/static/meet-board/chris_pic.png";
-import daghum_pic from "/public/static/meet-board/daghum_pic.jpg";
-import eric_newpic from "/public/static/meet-board/eric_newpic.jpeg";
-import fernanda_pic from "/public/static/meet-board/fernanda_pic.jpg";
 import gio_pic from "/public/static/meet-board/gio_pic.jpg";
 import guilherme_pic from "/public/static/meet-board/guilherme_pic.jpg";
-import gustavo_new_pic from "/public/static/meet-board/gustavo_new_pic.jpeg";
 import isa_pic from "/public/static/meet-board/isa_pic.jpeg";
-import isabele_pic from "/public/static/meet-board/isabele_pic.jpg";
 import leo_pic from "/public/static/meet-board/leo_pic.png";
 import leticia_pic from "/public/static/meet-board/leticia_pic.png";
-import luana_pic from "/public/static/meet-board/luana_pic.jpeg";
 import luca_pic from "/public/static/meet-board/luca_pic.png";
 import lucas_pic from "/public/static/meet-board/lucas_pic.jpg";
-import manu_pic from "/public/static/meet-board/manu_pic.jpeg";
 import matheus_pic from "/public/static/meet-board/matheus_pic.jpg";
-import matheusf_pic from "/public/static/meet-board/matheusf_pic.jpg";
-import mel_pic from "/public/static/meet-board/mel_pic.jpg";
-import mktgiovanna_pic from "/public/static/meet-board/mktgiovanna_pic.jpg";
 import nino_newpic from "/public/static/meet-board/nino_newpic.jpeg";
-import paulo_pic from "/public/static/meet-board/paulo_pic.jpg";
-import pedro_pic from "/public/static/meet-board/pedro_pic.jpg";
 import saki_pic from "/public/static/meet-board/saki_pic.png";
-import seabra_pic from "/public/static/meet-board/seabra_pic.jpg";
 
 // Previous Boards pictures
 import amanda_pic from "/public/static/meet-board/prev-board/amanda.jpeg";
@@ -74,6 +80,12 @@ import mari_r_pic from "/public/static/meet-board/prev-board/mari_r.jpeg";
 import monique_pic from "/public/static/meet-board/prev-board/monique.jpeg";
 import nicole_pic from "/public/static/meet-board/prev-board/nicole_pic.jpeg";
 import rafa_pic from "/public/static/meet-board/prev-board/rafa.jpeg";
+
+// Upcoming Event Pictures
+import churras_upc_pic from "/public/static/upcoming-events/churras-upc-pic.jpg";
+import guest_speaker_pic1 from "/public/static/upcoming-events/guest-speaker-pic.png";
+import springs_pic1 from "/public/static/upcoming-events/springs-pic.jpg";
+import study_sesh_pic1 from "/public/static/upcoming-events/study-sesh-pic1.jpg";
 
 // Board pic
 import board_pic from "/public/static/become-member/member-box/board_pic.jpg";
@@ -505,22 +517,23 @@ export const PREV_EBOARD_MEMBERS: PrevBoardTabs[] = [
 ];
 
 // Move this to DB
+// officerBio and officerLinkedin are not correct and we will do this once the next board changes
 export const EBOARD_MEMBERS: EBoardData[] = [
   {
     id: 1,
-    image: luca_pic,
-    imageAlt: "Luca De Vincenzo Picture",
-    officerName: "Luca De Vincenzo",
+    image: nino_pic_c,
+    imageAlt: "Nino pic",
+    officerName: "Nino Portugal",
     officerTitle: "President",
     officerBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conseq ",
     officerLinkedIn: "https://www.linkedin.com/in/luca-de-vincenzo-4a1b8b1b3/",
   },
   {
     id: 2,
-    image: guilherme_pic,
-    imageAlt: "Guilherme Aranega Picture",
-    officerName: "Guilherme Tonini",
+    image: ana_pic_c,
+    imageAlt: "Ana pic",
+    officerName: "Ana Beatriz Dantas",
     officerTitle: "Vice President",
     officerBio:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
@@ -528,187 +541,137 @@ export const EBOARD_MEMBERS: EBoardData[] = [
   },
   {
     id: 3,
-    image: nino_newpic,
-    imageAlt: "Nino Picture",
-    officerName: "Nino Portugal",
-    officerTitle: "Co-Head of Events",
+    image: luana_pic_c,
+    imageAlt: "Luana pic",
+    officerName: "Luana Agramunt",
+    officerTitle: "Head of Marketing",
     officerBio:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     officerLinkedIn: "https://www.linkedin.com/in/ninoportugal/",
   },
   {
     id: 4,
-    image: gio_pic,
-    imageAlt: "Giovana Vicentin Picture",
-    officerName: "Giovana Vicentin",
-    officerTitle: "Co-Head of Events",
+    image: mel_pic_c,
+    imageAlt: "Mel pic",
+    officerName: "Mell Wolff",
+    officerTitle: "Head of Professional Development",
     officerBio:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     officerLinkedIn: "https://www.linkedin.com/in/giovanavicentinr/",
   },
   {
     id: 5,
-    image: isa_pic,
-    imageAlt: "Isadora Prado Picture",
-    officerName: "Isadora Prado",
-    officerTitle: "Head of Marketing",
+    image: matheus_pic_c,
+    imageAlt: "Matheus pic",
+    officerName: "Matheus Gomes",
+    officerTitle: "Head of Finance",
     officerBio:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     officerLinkedIn: "https://www.linkedin.com/in/isadora-mendon%C3%A7a-prado-6418b021a/",
   },
   {
     id: 6,
-    image: leo_pic,
-    imageAlt: "Leonora Carvalho Picture",
-    officerName: "Leonora Carvalho",
-    officerTitle: "Head of Finance",
+    image: chris_pic_c,
+    imageAlt: "Christopher pic",
+    officerName: "Christopher Pavie Suarez",
+    officerTitle: "Head of Events",
     officerBio:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     officerLinkedIn: "https://www.linkedin.com/in/leonora-carvalho-vaz-de-siqueira-525095210/",
-  },
-  {
-    id: 7,
-    image: saki_pic,
-    imageAlt: "Sophia Sakakibara Picture",
-    officerName: "Sophia Sakakibara",
-    officerTitle: "Head of Professional Development",
-    officerBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    officerLinkedIn: "https://www.linkedin.com/in/sophiacapello/",
-  },
-  {
-    id: 8,
-    image: lucas_pic,
-    imageAlt: "Lucas Bassotto Silveira Picture",
-    officerName: "Lucas Bassotto Silveira",
-    officerTitle: "Head of Technology",
-    officerBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    officerLinkedIn: "https://www.linkedin.com/in/lucasbassottosilveira/",
   },
 ];
 
 // Move this to DB
 export const BOARD_MEMBERS: BoardData[] = [
   {
-    image: chris_pic,
-    imageAlt: "Christopher Pavie Suarez Picture",
-    officerTitle: "Event Planning Analyst",
-    officerName: "Chris Pavie Suarez",
-  },
-  {
-    image: gustavo_new_pic,
-    imageAlt: "Gustavo Manfredini picture",
-    officerTitle: "Event Planning Analyst",
-    officerName: "Gustavo Manfredini",
-  },
-  {
-    image: fernanda_pic,
-    imageAlt: "Fernanda Goncalves Picture",
-    officerTitle: "Event Planning Analyst",
-    officerName: "Fernanda Goncalves",
-  },
-  {
-    image: carol_pic,
-    imageAlt: "Carolina Tello Picture",
-    officerTitle: "Event Planning Analyst",
-    officerName: "Carolina Tello",
-  },
-  {
-    image: caio_pic,
-    imageAlt: "Caio Amaral Picture",
-    officerTitle: "Event Planning Analyst",
-    officerName: "Caio Amaral",
-  },
-  {
-    image: carlos_pic,
-    imageAlt: "Carlos Eduardo Picture",
-    officerTitle: "Technology Analyst",
-    officerName: "Carlos Eduardo Torres",
-  },
-  {
-    image: seabra_pic,
-    imageAlt: "Matheus Seabra Picture",
-    officerTitle: "Technology Analyst",
-    officerName: "Matheus Seabra",
-  },
-  {
-    image: daghum_pic,
-    imageAlt: "Lucas Daghum Picture",
-    officerTitle: "Technology Analyst",
-    officerName: "Lucas Daghum",
-  },
-  {
-    image: paulo_pic,
-    imageAlt: "Paulo Nascimento Picture",
-    officerTitle: "Technology Analyst",
+    image: paulo_pic_c,
+    imageAlt: "Paulo pic",
+    officerTitle: "Tech Team Analyst",
     officerName: "Paulo Nascimento",
   },
   {
-    image: leticia_pic,
-    imageAlt: "Leticia Novaes Bispo Picture",
-    officerTitle: "Marketing Analyst",
-    officerName: "Leticia Novaes Bispo",
+    image: chales_pic_c,
+    imageAlt: "Charles pic",
+    officerTitle: "Tech Team Analyst",
+    officerName: "Carlos Eduardo",
   },
   {
-    image: mktgiovanna_pic,
-    imageAlt: "Giovanna Vesselizza Picture",
-    officerTitle: "Marketing Analyst",
-    officerName: "Giovanna Vesselizza",
+    image: luisa_pic_c,
+    imageAlt: "luisa pic",
+    officerTitle: "Tech Team Analyst",
+    officerName: "Luisa Brizolim Quesada",
   },
   {
-    image: ana_pic,
-    imageAlt: "Ana Beatriz Dantas Picture",
+    image: mariana_pic_c,
+    imageAlt: "mariana pic",
     officerTitle: "Marketing Analyst",
-    officerName: "Ana Beatriz Dantas",
+    officerName: "Mariana Vicentin",
   },
   {
-    image: luana_pic,
-    imageAlt: "Luana Agramunt Picture",
+    image: gloria_pic_c,
+    imageAlt: "gloria pic",
     officerTitle: "Marketing Analyst",
-    officerName: "Luana Agramunt",
+    officerName: "Gloria Perez",
   },
   {
-    image: eric_newpic,
-    imageAlt: "Eric Tavora Picture",
+    image: pedro_pic_c,
+    imageAlt: "pedro pic",
     officerTitle: "Marketing Analyst",
-    officerName: "Eric Tavora",
+    officerName: "Pedro Lima",
   },
   {
-    image: matheus_pic,
-    imageAlt: "Matheus Agramunt Picture",
+    image: fernanda_pic_c,
+    imageAlt: "fernanda pic",
     officerTitle: "Professional Development Analyst",
-    officerName: "Matheus Agramunt",
+    officerName: "Fernanda Gonçalves",
   },
   {
-    image: isabele_pic,
-    imageAlt: "Isabelle Miguel Picture",
+    image: caio_r_pic_c,
+    imageAlt: "caio r pic",
     officerTitle: "Professional Development Analyst",
-    officerName: "Isabelle Miguel",
+    officerName: "Caio Rocha",
   },
   {
-    image: mel_pic,
-    imageAlt: "Mel Wolff Picture",
-    officerTitle: "Professional Development Analyst",
-    officerName: "Mel Wolff",
-  },
-  {
-    image: matheusf_pic,
-    imageAlt: "Matheus Gomes Picture",
+    image: gabs_pic_c,
+    imageAlt: "gabs pic",
     officerTitle: "Finance Analyst",
-    officerName: "Matheus Gomes",
+    officerName: "Gabriel Morais",
   },
   {
-    image: manu_pic,
-    imageAlt: "Manuela Martins Picture",
+    image: isabella_pic_c,
+    imageAlt: "isa pic",
     officerTitle: "Finance Analyst",
-    officerName: "Manuela Martins",
+    officerName: "Isabella Bertollo",
   },
   {
-    image: pedro_pic,
-    imageAlt: "Pedro Evangelista Picture",
+    image: joao_pic_c,
+    imageAlt: "joao pic",
     officerTitle: "Finance Analyst",
-    officerName: "Pedro Evangelista",
+    officerName: "João Pedro Campi",
+  },
+  {
+    image: caio_a_pic_c,
+    imageAlt: "Caio pic",
+    officerTitle: "Events Analyst",
+    officerName: "Caio Amaral",
+  },
+  {
+    image: gustavo_pic_c,
+    imageAlt: "gus pic",
+    officerTitle: "Events Analyst",
+    officerName: "Gustavo Manfredini",
+  },
+  {
+    image: bia_pic_c,
+    imageAlt: "bia pic",
+    officerTitle: "Events Analyst",
+    officerName: "Beatriz Bernauer",
+  },
+  {
+    image: maria_pic_c,
+    imageAlt: "maria pic",
+    officerTitle: "Events Analyst",
+    officerName: "Maria Brito",
   },
 ];
 
@@ -771,39 +734,67 @@ export const MOBILE_SIDEBAR_DATA: MobileSidebarData[] = [
 
 export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
   {
-    date: "TBD",
-    time: "2:00 PM - 8:00 PM",
-    image: churras_pic,
-    eventName: "Churrasco BRASA",
-    eventDescription: "Join us for a day full of Brazilian music, dance, and lots of fun!",
-    location: "300 Dalhausser Ln, Oviedo, FL 32765",
+    date: "04/03/2025",
+    time: "4:00 PM - 7:30 PM",
+    image: study_sesh_pic1,
+    eventName: "Study Session",
+    eventDescription:
+      "Join us in a reserved library space where members can focus, connect, and study together productively. (Study Room 379)",
+    location: "UCF John C. Hitt Library",
     moreInfoLink: "https://www.instagram.com/brasa.ucf/",
-    buyTicketLink: "https://www.instagram.com/brasa.ucf/",
-    eventType: "Social",
-    isPaid: true,
+    eventType: "Academic",
+    isPaid: false,
+    isAnnounced: false,
   },
   {
-    date: "TBD",
-    time: "8:00 PM - 2:00 AM",
-    image: bailinho_pic,
-    eventName: "Bailinho Brasa",
-    eventDescription: "Join us for a night of Brazilian music, dance, and culture!",
-    location: "5250 International Dr, Orlando, FL 32819",
-    moreInfoLink: "https://www.instagram.com/brasa.ucf/",
-    buyTicketLink: "https://www.instagram.com/brasa.ucf/",
+    date: "04/05/2025",
+    time: "10:00 AM",
+    image: springs_pic1,
+    eventName: "BRASA Springs",
+    eventDescription: "BRASAs from UCF, UF, USF are all reuniting for an epic day at the springs",
+    location: "Silver Glen Springs, Florida",
+    moreInfoLink: "https://www.instagram.com/p/DHwf1DARK59/?img_index=1",
     eventType: "Social",
-    isPaid: true,
+    isPaid: false,
+    isAnnounced: true,
   },
   {
-    date: "TBD",
-    time: "8:00 PM - 2:00 AM",
-    image: guest_speaker_pic,
+    date: "04/10/2025",
+    time: "4:00 PM - 7:30 PM",
+    image: study_sesh_pic1,
+    eventName: "Study Session",
+    eventDescription:
+      "Join us in a reserved library space where members can focus, connect, and study together productively. (Study Room 379)",
+    location: "UCF John C. Hitt Library",
+    moreInfoLink: "https://www.instagram.com/brasa.ucf/",
+    eventType: "Academic",
+    isPaid: false,
+    isAnnounced: false,
+  },
+  {
+    date: "04/16/2025",
+    time: "4:30 PM - 5:30 PM",
+    image: guest_speaker_pic1,
     eventName: "Guest Speaker",
-    eventDescription: "Join us to learn more with Brazilian professionals!",
-    location: "University of Central Florida",
+    eventDescription:
+      "Join us to hear the Consul General discuss the Consulate's role, services, and his personal journey.",
+    location: "TBD",
     moreInfoLink: "https://www.instagram.com/brasa.ucf/",
     eventType: "Professional",
     isPaid: false,
+    isAnnounced: false,
+  },
+  {
+    date: "04/19/2025",
+    time: "1:00 PM - 6:00 PM",
+    image: churras_upc_pic,
+    eventName: "Churrasco da BRASA",
+    eventDescription: "We're bringing the vibes, the music, and of course, the Brazilian food!",
+    location: "TBD",
+    moreInfoLink: "https://www.instagram.com/brasa.ucf/",
+    eventType: "Social",
+    isPaid: false,
+    isAnnounced: false,
   },
 ];
 

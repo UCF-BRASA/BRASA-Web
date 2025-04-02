@@ -41,7 +41,7 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
           </div>
 
           <div className="z-10 absolute h-[130rem] w-screen bg-main-brasa-green rounded-t-[2rem] mt-[87.5rem]"></div>
-          <div className="z-20 absolute h-[120rem] w-full bg-main-brasa-yellow rounded-t-[2rem] rounded-b-[2rem] mt-[190rem]">
+          <div className="z-20 absolute h-[120rem] w-full bg-main-brasa-yellow rounded-t-[2rem] rounded-b-[2rem] mt-[150rem]">
             <div className="flex flex-col items-center w-full mt-[90rem] text-center">
               <h3 className="pt-16 font-bold text-4xl">Our Mission</h3>
               <p className="pt-5 font-base text-base w-auto px-[1rem]">

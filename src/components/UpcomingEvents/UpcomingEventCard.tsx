@@ -21,6 +21,7 @@ const UpcomingEventCard: FC<Props> = ({
   isMobile,
   isPaid,
   eventType,
+  isAnnounced,
 }) => {
   // Function to open Google Maps with the specified location
   const openGoogleMaps = (): void => {
@@ -59,51 +60,95 @@ const UpcomingEventCard: FC<Props> = ({
                 <FontAwesomeIcon icon={faClock} />
                 <span className="text-black/[0.6] font-regular text-base">{time}</span>
               </div>
-              <div id="location" className="flex flex-row">
-                {/* Button to open Google Maps */}
-                <button
-                  className="flex fa-lg items-center justify-start gap-2"
-                  style={{ background: "none", border: "none", cursor: "pointer" }}
-                  onClick={openGoogleMaps}
-                >
-                  <FontAwesomeIcon icon={faLocationDot} /> {/* style={{ color: "#eb0a0a" }} */}
-                  <span className="flex text-black/[0.6] text-left font-light text-base text-[1.08rem]">
-                    {location}
-                  </span>
-                </button>
-              </div>
-
-              <div className="mt-6 mb-4 w-full flex flex-row items-center justify-between">
-                <div className="w-full font-medium flex justify-center gap-x-10 text-center">
-                  {isPaid ? (
-                    <>
-                      <a
-                        href={moreInfoLink}
-                        target="_blank"
-                        className="flex items-center justify-center rounded-lg border-[0.5px] border-black/[0.2] bg-white text-black grow 
-                    hover:bg-gray-200 transition duration-200"
-                      >
-                        More info
-                      </a>
-                      <a
-                        href={buyTicketLink}
-                        target="_blank"
-                        className="flex items-center justify-center py-3 rounded-lg grow bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200"
-                      >
-                        Buy Ticket
-                      </a>
-                    </>
-                  ) : (
-                    <a
-                      href={moreInfoLink}
-                      target="_blank"
-                      className="rounded-lg p-4 grow bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200"
+              {/* isAnnounced start */}
+              {isAnnounced ? (
+                <>
+                  <div id="location" className="flex flex-row">
+                    {/* Button to open Google Maps */}
+                    <button
+                      className="flex fa-lg items-center justify-start gap-2"
+                      style={{ background: "none", border: "none", cursor: "pointer" }}
+                      onClick={openGoogleMaps}
                     >
-                      More info
-                    </a>
-                  )}
-                </div>
-              </div>
+                      <FontAwesomeIcon icon={faLocationDot} /> {/* style={{ color: "#eb0a0a" }} */}
+                      <span className="flex text-black/[0.6] text-left font-light text-base text-[1.08rem]">
+                        {location}
+                      </span>
+                    </button>
+                  </div>
+
+                  <div className="mt-6 mb-4 w-full flex flex-row items-center justify-between">
+                    <div className="w-full font-medium flex justify-center gap-x-10 text-center">
+                      {isPaid ? (
+                        <>
+                          <a
+                            href={moreInfoLink}
+                            target="_blank"
+                            className="flex items-center justify-center rounded-lg border-[0.5px] border-black/[0.2] bg-white text-black grow 
+                    hover:bg-gray-200 transition duration-200"
+                          >
+                            More info
+                          </a>
+                          <a
+                            href={buyTicketLink}
+                            target="_blank"
+                            className="flex items-center justify-center py-3 rounded-lg grow bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200"
+                          >
+                            Buy Ticket
+                          </a>
+                        </>
+                      ) : (
+                        <a
+                          href={moreInfoLink}
+                          target="_blank"
+                          className="rounded-lg p-4 grow bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200"
+                        >
+                          More info
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div>
+                    {/* Is TBD */}
+                    {location === "TBD" ? (
+                      <>
+                        <div id="location" className="flex flex-row">
+                          <p className="flex fa-lg items-center justify-start mb-5">
+                            <FontAwesomeIcon icon={faLocationDot} />{" "}
+                            {/* style={{ color: "#eb0a0a" }} */}
+                            <span className="flex text-black/[0.6] text-left font-light text-base text-[1.08rem] ml-1">
+                              {location}
+                            </span>
+                          </p>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <div id="location" className="flex flex-row">
+                          {/* Button to open Google Maps */}
+                          <button
+                            className="flex fa-lg items-center justify-start gap-2 mb-5"
+                            style={{ background: "none", border: "none", cursor: "pointer" }}
+                            onClick={openGoogleMaps}
+                          >
+                            <FontAwesomeIcon icon={faLocationDot} />{" "}
+                            {/* style={{ color: "#eb0a0a" }} */}
+                            <span className="flex text-black/[0.6] text-left font-light text-base text-[1.08rem]">
+                              {location}
+                            </span>
+                          </button>
+                        </div>
+                      </>
+                    )}
+
+                    {/* Is TBD end */}
+                  </div>
+                </>
+              )}
+              {/* isAnnounced end */}
             </div>
           </div>
         </div>
@@ -133,48 +178,95 @@ const UpcomingEventCard: FC<Props> = ({
               <FontAwesomeIcon icon={faClock} />
               <span className="text-black/[0.6] font-regular text-base">{time}</span>
             </div>
-            <div id="location" className="flex flex-row">
-              {/* Button to open Google Maps */}
-              <button
-                className="flex fa-lg items-center justify-start"
-                style={{ background: "none", border: "none", cursor: "pointer" }}
-                onClick={openGoogleMaps}
-              >
-                <FontAwesomeIcon icon={faLocationDot} /> {/* style={{ color: "#eb0a0a" }} */}
-                <span className="flex text-black/[0.6] text-left font-light text-base text-[1.08rem] ml-1">
-                  {location}
-                </span>
-              </button>
-            </div>
-            <div className="w-full font-medium flex gap-10 text-center mt-10">
-              {isPaid ? (
-                <>
-                  <a
-                    href={moreInfoLink}
-                    target="_blank"
-                    className="rounded-lg border-[0.5px] border-black/[0.2] bg-white text-black p-4 grow 
+            {/* isAnnounced start */}
+            {isAnnounced ? (
+              <>
+                <div id="location" className="flex flex-row">
+                  {/* Button to open Google Maps */}
+                  <button
+                    className="flex fa-lg items-center justify-start"
+                    style={{ background: "none", border: "none", cursor: "pointer" }}
+                    onClick={openGoogleMaps}
+                  >
+                    <FontAwesomeIcon icon={faLocationDot} /> {/* style={{ color: "#eb0a0a" }} */}
+                    <span className="flex text-black/[0.6] text-left font-light text-base text-[1.08rem] ml-1">
+                      {location}
+                    </span>
+                  </button>
+                </div>
+                <div className="w-full font-medium flex gap-10 text-center mt-10">
+                  {isPaid ? (
+                    <>
+                      <a
+                        href={moreInfoLink}
+                        target="_blank"
+                        className="rounded-lg border-[0.5px] border-black/[0.2] bg-white text-black p-4 grow 
                     hover:bg-gray-200 transition duration-200"
-                  >
-                    More info
-                  </a>
-                  <a
-                    href={buyTicketLink}
-                    target="_blank"
-                    className="rounded-lg items-center p-4 grow bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200"
-                  >
-                    Buy Ticket
-                  </a>
-                </>
-              ) : (
-                <a
-                  href={moreInfoLink}
-                  target="_blank"
-                  className="rounded-lg p-4 grow bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200"
-                >
-                  More info
-                </a>
-              )}
-            </div>
+                      >
+                        More info
+                      </a>
+                      <a
+                        href={buyTicketLink}
+                        target="_blank"
+                        className="rounded-lg items-center p-4 grow bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200"
+                      >
+                        Buy Ticket
+                      </a>
+                    </>
+                  ) : (
+                    <a
+                      href={moreInfoLink}
+                      target="_blank"
+                      className="rounded-lg p-4 grow bg-blue-500 text-white font-medium hover:bg-blue-400 transition duration-200"
+                    >
+                      More info
+                    </a>
+                  )}
+                </div>
+              </>
+            ) : (
+              // Event is not announced
+              <>
+                <div>
+                  {/* is it TBD? */}
+                  {location === "TBD" ? (
+                    <>
+                      <div id="location" className="flex flex-row">
+                        <p className="flex fa-lg items-center justify-start">
+                          <FontAwesomeIcon icon={faLocationDot} />{" "}
+                          {/* style={{ color: "#eb0a0a" }} */}
+                          <span className="flex text-black/[0.6] text-left font-light text-base text-[1.08rem] ml-1">
+                            {location}
+                          </span>
+                        </p>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div id="location" className="flex flex-row">
+                        {/* Button to open Google Maps */}
+                        <button
+                          className="flex fa-lg items-center justify-start"
+                          style={{ background: "none", border: "none", cursor: "pointer" }}
+                          onClick={openGoogleMaps}
+                        >
+                          <FontAwesomeIcon icon={faLocationDot} />{" "}
+                          {/* style={{ color: "#eb0a0a" }} */}
+                          <span className="flex text-black/[0.6] text-left font-light text-base text-[1.08rem] ml-1">
+                            {location}
+                          </span>
+                        </button>
+                      </div>
+                    </>
+                  )}
+
+                  {/* is it TBD end */}
+                </div>
+                {/* Temporary change we will be circling back to this later */}
+                <p className="mt-20 text-white">TEST</p>
+              </>
+            )}
+            {/* isAnnounced end */}
           </div>
         </div>
       )}
