@@ -163,7 +163,8 @@ const UpcomingEventCard: FC<Props> = ({
             src={image}
             alt={eventName}
             sizes="100vw"
-            className="rounded-l-3xl h-[22rem] w-[50rem] object-cover"
+            // Might have to change "fill" to object cover later
+            className="rounded-l-3xl h-[22rem] w-[50rem] fill"
           />
           <div className="flex flex-col px-10 gap-y-2 justify-center">
             <h3 className="text-black font-bold items-center text-[1.6rem]">{eventName}</h3>

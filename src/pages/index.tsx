@@ -1,5 +1,8 @@
+import EventCard from "@components/Landing/EventCard";
 import GridSection from "@components/Landing/GridSection";
-import { IMAGES, gridSectionsData } from "@util/constants";
+import ImageCarousel from "@components/Landing/ImageCarousel";
+import { Tab, Tabs } from "@nextui-org/tabs";
+import { IMAGES, LANDING_PAGE_EVENTS, gridSectionsData } from "@util/constants";
 import { NextPage } from "next";
 import Image from "next/image";
 
@@ -93,7 +96,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
               {displayGridIconSection()}
             </div>
           </section>
-          {/* <section className="bg-main-brasa-blue rounded-[2rem] overflow-x-hidden mt-24">
+          <section className="bg-main-brasa-blue rounded-[2rem] overflow-x-hidden mt-24">
             <div className="flex flex-col items-center text-white w-full mb-16">
               <div className="text-center">
                 <h3 className="pt-16 font-semi-bold text-base tracking-[0.20em]">OUR EVENTS</h3>
@@ -145,7 +148,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
                 )}
               </Tabs>
             </div>
-          </section> */}
+          </section>
 
           {/* Footer spacing */}
           <div className="bg-white h-40"></div>
@@ -229,7 +232,7 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
           {/* End of Section 2 */}
 
           {/* Section 3 */}
-          {/* <div className="h-[65rem] bg-main-brasa-blue rounded-t-[3rem] overflow-x-hidden mt-16">
+          <div className="h-[65rem] bg-main-brasa-blue rounded-t-[3rem] overflow-x-hidden mt-16">
             <div className="flex flex-col items-center text-white p-10 w-full">
               <h3 className="pt-16 font-semi-bold text-base tracking-[0.20em]">OUR EVENTS</h3>
               <h1 className="pt-5 font-semi-bold text-5xl tracking-[0.02em] mb-12">
@@ -273,13 +276,8 @@ const Home: NextPage<HomeProps> = ({ windowWidth, isMobile }) => {
               </Tabs>
             </div>
           </div>
-
-          <div className="absolute w-full h-48 bg-main-brasa-blue">
-            <JoinNewsletter />
-          </div> */}
-
           {/* Footer spacing */}
-          <div className="bg-white h-[8rem]"></div>
+          <div className="bg-white h-[6rem]"></div>
         </div>
       )}
     </main>
