@@ -28,9 +28,9 @@ const DesktopNavbar: FC = () => {
                 <li className="py-1 px-2 rounded font-bold text-lg hover:cursor-pointer hover:bg-slate-800/[.2] transition duration-200">
                   <Link href="/become-member">Become a Member</Link>
                 </li>
-                <li className="py-1 px-2 rounded font-bold text-lg hover:cursor-pointer hover:bg-slate-800/[.2] transition duration-200">
+                {/* <li className="py-1 px-2 rounded font-bold text-lg hover:cursor-pointer hover:bg-slate-800/[.2] transition duration-200">
                   <Link href="/resource">Resources</Link>
-                </li>
+                </li> */}
                 <li className="py-1 px-2 rounded font-bold text-lg hover:cursor-pointer hover:bg-slate-800/[.2] transition duration-200">
                   <Link href="/gallery">Gallery</Link>
                 </li>

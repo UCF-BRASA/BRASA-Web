@@ -12,14 +12,14 @@ import cover_mar30 from "/public/static/gallery/cover_mar30.jpg";
 import cover_oct05 from "/public/static/gallery/cover_oct05.jpg";
 
 // Landing Page images
+// Landing pic
 import mainPicLandingNewMobile from "/public/static/landing/intro/main-pic-new-mobile.webp";
 import mainPicLandingNew from "/public/static/landing/intro/main-pic-new.webp";
-import bailinho_pic from "/public/static/landing/our-events/bailinho_pic.png";
-import churras_pic from "/public/static/landing/our-events/churras_pic.png";
-import guest_speaker_pic from "/public/static/landing/our-events/guest_speaker_pic.webp";
-import hangout_pic from "/public/static/landing/our-events/hangout_pic.png";
-import study_pic from "/public/static/landing/our-events/study_pic.webp";
-import workshop_pic from "/public/static/landing/our-events/workshop_pic.webp";
+//Our events pictures
+import churras_event_pic from "/public/static/landing/our-events/churras-pic-upc.png";
+import guest_speaker_landing_pic from "/public/static/landing/our-events/guest-speaker-landing.jpg";
+import study_sesh_pic_landing from "/public/static/landing/our-events/study-sesh-pic1.jpg";
+import workshop_pic_landing from "/public/static/landing/our-events/workshop-landing.jpg";
 
 // Current Meet the Board flicks
 import ana_pic_c from "/public/static/meet-board-new/Ana_Beatriz_Dantas.jpg";
@@ -82,11 +82,7 @@ import nicole_pic from "/public/static/meet-board/prev-board/nicole_pic.jpeg";
 import rafa_pic from "/public/static/meet-board/prev-board/rafa.jpeg";
 
 // Upcoming Event Pictures
-import churras_upc_pic from "/public/static/upcoming-events/churras-pic-upc.png";
-import guest_speaker_pic1 from "/public/static/upcoming-events/guest-speaker-pic.png";
-import springs_pic1 from "/public/static/upcoming-events/springs-pic.jpg";
-import study_sesh_pic1 from "/public/static/upcoming-events/study-sesh-pic1.jpg";
-
+import op_knight_pic from "/public/static/upcoming-events/op-knight-pic.png";
 // Board pic
 import board_pic from "/public/static/become-member/member-box/board_pic.jpg";
 
@@ -97,7 +93,6 @@ import {
   faCamera,
   faHandshake,
   faHome,
-  faLayerGroup,
   faPeopleGroup,
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -148,55 +143,48 @@ export const IMAGES = {
   mainPicLandingNewMobile,
 };
 
+// We will roll out the "tag" element soon for now just put "holder"
 const eventImagesData: EventCardImageObject[] = [
   {
-    image: churras_pic,
+    image: churras_event_pic,
     imageAlt: "UCF BRASA Churrasco Picture",
-    tag: "Main Event",
+    tag: "holder",
     eventTitle: "BRASA Churrasco",
     eventDescription:
-      "All you can eat and drink Brazilian Churrasco! Come enjoy the full Brazilian experience with live DJ music and the best caipirinhas in Orlando!",
+      "Our Churrasco celebrates Brazilian culture with delicious food, live music, and an energetic atmosphere. It’s the perfect place for students to connect, have fun, and experience the spirit of Brazil.",
   },
   {
-    image: bailinho_pic,
-    imageAlt: "UCF BRASA Baile da BRASA Picture",
-    tag: "Main Event",
-    eventTitle: "Baile da BRASA",
+    image: cover_jul11,
+    imageAlt: "BRASA x Bounc pic",
+    tag: "holder",
+    eventTitle: "Bounce x BRASA",
     eventDescription:
-      "Baile Funk da BRASA! Partnerships with the best clubs in Orlando with open-bars and premium discounts!",
-  },
-  {
-    image: hangout_pic,
-    imageAlt: "UCF BRASA Hangout Picture",
-    tag: "Casual",
-    eventTitle: "BRASA Hangout",
-    eventDescription:
-      "Looking to meet new Brazilian students at UCF? We got your back! Come eat some coxinhas with us at our hangouts!",
+      "Bounce x BRASA brings the energy of Brazil with a Brazilian DJ, vibrant music, and an unforgettable night where we celebrate culture and get everyone dancing.",
   },
 ];
 
 const professionalImagesData: EventCardImageObject[] = [
   {
-    image: guest_speaker_pic,
+    image: guest_speaker_landing_pic,
     imageAlt: "UCF BRASA Guest Speakers Picture",
-    tag: "Networking",
+    tag: "holder",
     eventTitle: "Guest Speakers",
     eventDescription:
       "Connect with experts of your field with our re-ocurrent Guest Speaker events! Whatever area you are in, we have professinals to help you out!",
   },
   {
-    image: workshop_pic,
+    image: workshop_pic_landing,
     imageAlt: "UCF BRASA Workshops Picture",
-    tag: "Learning",
+    tag: "holder",
     eventTitle: "BRASA Workshops",
     eventDescription:
-      "Expand your skillsets with our workshops! Our workshop areas include finance, marketing, coding, how to get a job and general networking!",
+      "Expand your skillsets with our workshops! Our workshop areas include finance, marketing, computer science, how to get a job and general networking!",
   },
   {
-    image: study_pic,
+    image: study_sesh_pic_landing,
     imageAlt: "UCF BRASA Study Picture",
-    tag: "Casual",
-    eventTitle: "BRASA Study",
+    tag: "holder",
+    eventTitle: "Study Session",
     eventDescription:
       "A light, fun and collaborative environment for you to study with fellow BRASA members! We have weekly study sessions for everyone!",
   },
@@ -720,11 +708,11 @@ export const MOBILE_SIDEBAR_DATA: MobileSidebarData[] = [
     route: "/become-member",
     icon: faPeopleGroup,
   },
-  {
-    name: "Resources",
-    route: "/resource",
-    icon: faLayerGroup,
-  },
+  // {
+  //   name: "Resources",
+  //   route: "/resource",
+  //   icon: faLayerGroup,
+  // },
   {
     name: "Gallery",
     route: "/gallery",
@@ -734,67 +722,17 @@ export const MOBILE_SIDEBAR_DATA: MobileSidebarData[] = [
 
 export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
   {
-    date: "04/03/2025",
-    time: "4:00 PM - 7:30 PM",
-    image: study_sesh_pic1,
-    eventName: "Study Session",
+    date: "08/17/2025",
+    time: "1:00 PM - 5:00 PM",
+    image: op_knight_pic,
+    eventName: "Opening Knight 2025",
     eventDescription:
-      "Join us in a reserved library space where members can focus, connect, and study together productively. (Study Room 379)",
-    location: "UCF John C. Hitt Library",
-    moreInfoLink: "https://www.instagram.com/brasa.ucf/",
-    eventType: "Academic",
-    isPaid: false,
-    isAnnounced: false,
-  },
-  {
-    date: "04/05/2025",
-    time: "10:00 AM",
-    image: springs_pic1,
-    eventName: "BRASA Springs",
-    eventDescription: "BRASAs from UCF, UF, USF are all reuniting for an epic day at the springs",
-    location: "Silver Glen Springs, Florida",
-    moreInfoLink: "https://www.instagram.com/p/DHwf1DARK59/?img_index=1",
+      "Opening Knight lets student organizations connect with new students. Stop by BRASA’s table to learn about our mission, events, and celebrating Brazilian culture together!",
+    location: "UCF Student Union",
+    moreInfoLink: "https://www.instagram.com/p/DLkgR2oAyJX/",
     eventType: "Social",
     isPaid: false,
     isAnnounced: true,
-  },
-  {
-    date: "04/10/2025",
-    time: "4:00 PM - 7:30 PM",
-    image: study_sesh_pic1,
-    eventName: "Study Session",
-    eventDescription:
-      "Join us in a reserved library space where members can focus, connect, and study together productively. (Study Room 379)",
-    location: "UCF John C. Hitt Library",
-    moreInfoLink: "https://www.instagram.com/brasa.ucf/",
-    eventType: "Academic",
-    isPaid: false,
-    isAnnounced: false,
-  },
-  {
-    date: "04/16/2025",
-    time: "4:30 PM - 5:30 PM",
-    image: guest_speaker_pic1,
-    eventName: "Guest Speaker",
-    eventDescription:
-      "Join us to hear the Consul General discuss the Consulate's role, services, and his personal journey.",
-    location: "TBD",
-    moreInfoLink: "https://www.instagram.com/brasa.ucf/",
-    eventType: "Professional",
-    isPaid: false,
-    isAnnounced: false,
-  },
-  {
-    date: "04/19/2025",
-    time: "1:00 PM - 6:00 PM",
-    image: churras_upc_pic,
-    eventName: "Churrasco da BRASA",
-    eventDescription: "We're bringing the vibes, the music, and of course, the Brazilian food!",
-    location: "TBD",
-    moreInfoLink: "https://www.instagram.com/brasa.ucf/",
-    eventType: "Social",
-    isPaid: false,
-    isAnnounced: false,
   },
 ];
 
