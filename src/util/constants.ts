@@ -541,7 +541,7 @@ export const EBOARD_MEMBERS: EBoardData[] = [
     id: 4,
     image: mel_pic_c,
     imageAlt: "Mel pic",
-    officerName: "Mell Wolff",
+    officerName: "Mel Wolff",
     officerTitle: "Head of Professional Development",
     officerBio:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
@@ -769,7 +769,7 @@ export const GALLERY_DATA: GalleryBoxData[] = [
     //Event 4
     image: cover_jul11,
     imageAlt: "BOUNCE",
-    date: "11/07/2024",
+    date: "07/11/2024",
     driveLink:
       "https://drive.google.com/drive/folders/1kX1vX6JnupMFxUtGwA_RFy9ASUSnep81?usp=share_link",
     eventDesc: "BOUNCE X BRASA",

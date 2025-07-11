@@ -38,7 +38,7 @@ const Gallery: NextPage<Props> = ({ isMobile }) => {
       ) : (
         <div className="h-full bg-white">
           <div className="h-[10rem]"></div>
-          <div className="text-center flex flex-col justify-center items-center w-full mb-20">
+          <div className="text-center flex flex-col justify-center items-center mb-20">
             <h3 className="pt-16 font-bold text-base tracking-[0.3rem]">SAVE YOUR MEMORIES</h3>
             <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem]">Gallery</h1>
             <h4 className="pt-2 font-bold text-m tracking-[0.1rem]"> </h4>
