@@ -1,6 +1,7 @@
 import { config as fortawesomeConfig } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { Dialog } from "@headlessui/react"; // How to make this import dynamic?
+// Dialog from Headless UI is client-only (uses document/window). Import dynamically to avoid
+// server/client markup mismatch during hydration.
 import useWindowDimensions from "@hooks/useWindowDimension";
 import { MOBILE_THRESHOLD } from "@util/constants";
 import type { AppProps } from "next/app";
@@ -26,22 +27,37 @@ const Sidebar = dynamic(() => import("@components/Sidebar/Sidebar"), {
 const SidebarOverlay = dynamic(() => import("@components/Sidebar/SidebarOverlay"), {
   ssr: false,
 });
+const Dialog = dynamic(() => import("@headlessui/react").then((mod) => mod.Dialog), { ssr: false });
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { windowWidth, windowHeight } = useWindowDimensions();
   const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
 
   const overlayRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    // mark that we've mounted on the client so we can safely render
+    // client-only UI that depends on window/document without causing
+    // server/client hydration mismatches
+    setMounted(true);
+
     if (windowWidth && windowHeight) {
       const mobileStatus = windowWidth < MOBILE_THRESHOLD;
       setIsMobile(mobileStatus);
     }
   }, [windowWidth, windowHeight]);
 
-  pageProps = { ...pageProps, windowWidth, windowHeight, isMobile };
+  // Only include isMobile in pageProps after we've mounted on the client.
+  // This prevents pages from rendering differently between server and client
+  // during the initial hydration phase.
+  pageProps = {
+    ...pageProps,
+    windowWidth,
+    windowHeight,
+    ...(mounted ? { isMobile } : {}),
+  };
 
   return (
     <>
@@ -56,21 +72,24 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>UCF BRASA</title>
       </Head>
 
-      {isMobile ? (
-        <MobileNavbar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
-      ) : (
-        <DesktopNavbar />
-      )}
+      {mounted &&
+        (isMobile ? (
+          <MobileNavbar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+        ) : (
+          <DesktopNavbar />
+        ))}
       {/* Why does adding a conditional here fuck up the transition? */}
       {/* {showSidebar && isMobile && ( */}
-      <Dialog static open={showSidebar} onClose={setShowSidebar} initialFocus={overlayRef}>
-        <Sidebar showSidebar={showSidebar} toggleSidebar={setShowSidebar} />
-        {showSidebar && <SidebarOverlay toggleSidebar={setShowSidebar} />}
-      </Dialog>
+      {mounted && (
+        <Dialog static open={showSidebar} onClose={setShowSidebar} initialFocus={overlayRef}>
+          <Sidebar showSidebar={showSidebar} toggleSidebar={setShowSidebar} />
+          {showSidebar && <SidebarOverlay toggleSidebar={setShowSidebar} />}
+        </Dialog>
+      )}
       {/* )} */}
       <Component {...pageProps} />
-      {isMobile ? <MobileFooter /> : <DesktopFooter />}
-      {isMobile && <BottomNavbar />}
+      {mounted && (isMobile ? <MobileFooter /> : <DesktopFooter />)}
+      {mounted && isMobile && <BottomNavbar />}
     </>
   );
 }

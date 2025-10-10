@@ -137,7 +137,7 @@ const BecomeMember: NextPage<Props> = ({ windowWidth, isMobile }) => {
                     src={IMAGES.board_pic}
                     alt="Brasa Board Picture"
                     sizes="100vw"
-                    className=" w-[40rem] h-[40rem] p-16 ml-12 rounded-[5rem]"
+                    className=" w-[40rem] h-[40rem] p-16 ml-12 rounded-[5rem] object-cover"
                   />
                 </div>
               </div>
