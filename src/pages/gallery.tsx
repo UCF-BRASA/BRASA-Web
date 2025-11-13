@@ -57,7 +57,9 @@ const Gallery: NextPage<Props> = ({ isMobile }) => {
         <h4 className="font-bold text-sm tracking-[0.3rem] text-gray-700">SAVE YOUR MEMORIES</h4>
         <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem] text-black">Gallery</h1>
         <p className="pt-4 text-gray-500 text-sm italic">
-          Swipe or use the arrows to explore the gallery →
+          {isMobile
+            ? "Swipe or use the arrows to explore the gallery →"
+            : "Use the arrows below to explore the gallery →"}
         </p>
       </div>
 
