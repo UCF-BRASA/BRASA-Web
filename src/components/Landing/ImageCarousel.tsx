@@ -48,6 +48,7 @@ const ImageCarousel: FC<Props> = ({ children, isMobile }) => {
     duration: 3000, // image change duration
     transitionDuration: 300, // transition per images time
     infinity: true, // loop the transition to infinity
+    autoplay: false,
     canSwipe: true,
   };
 
