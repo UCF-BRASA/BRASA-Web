@@ -107,8 +107,18 @@ import {
 } from "@interfaces";
 import { getApiInstanceUrl, getWebInstanceUrl } from "./instanceUrl";
 
-// TODO: Change this value
+// DEPRECATED: Use responsive design utilities instead
+// Keeping for backward compatibility during migration
 export const MOBILE_THRESHOLD = 1400;
+
+// New responsive breakpoints - aligned with Tailwind CSS defaults
+export const RESPONSIVE_BREAKPOINTS = {
+  sm: 640,   // Small screens
+  md: 768,   // Medium screens (tablets)
+  lg: 1024,  // Large screens
+  xl: 1280,  // Extra large screens
+  '2xl': 1536 // 2X large screens
+} as const;
 
 // .env values
 export const DEBUG_MODE = process.env.APP_ENV === "development" || process.env.APP_ENV === "test";

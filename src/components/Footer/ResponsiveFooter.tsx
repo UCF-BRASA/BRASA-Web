@@ -1,0 +1,292 @@
+import {
+  faInstagram,
+  faLinkedinIn,
+  faTiktok,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IMAGES } from "@util/constants";
+import Image from "next/image";
+import Link from "next/link";
+import { FC } from "react";
+
+const ResponsiveFooter: FC = () => {
+  return (
+    <footer id="desktop-brasa-footer" className="bg-white">
+      {/* Mobile/Tablet Layout */}
+      <div className="lg:hidden mb-48 justify-center items-center">
+        <div className="flex flex-col justify-center items-center">
+          <h3 className="text-black text-[1.3rem] font-semi-bold pt-4">Follow BRASA @ UCF</h3>
+          <div className="grid grid-cols-5 gap-x-4 justify-center items-center mt-6">
+            <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue">
+              <a href="https://www.instagram.com/brasa.ucf/">
+                <div className="flex justify-center bg-auto">
+                  <FontAwesomeIcon
+                    icon={faInstagram}
+                    style={{ color: "#ffffff" }}
+                    className="w-5 h-5 border-8 border-main-brasa-blue"
+                  />
+                </div>
+              </a>
+            </div>
+
+            <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue">
+              <a href="https://chat.whatsapp.com/LhaUGwcrFVpL8KAACVYIlr">
+                <div className="flex justify-center bg-auto">
+                  <FontAwesomeIcon
+                    icon={faWhatsapp}
+                    style={{ color: "#ffffff" }}
+                    className="w-5 h-5 border-8 border-main-brasa-blue"
+                  />
+                </div>
+              </a>
+            </div>
+
+            <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue">
+              <a href="https://www.linkedin.com/company/brasa-at-ucf/">
+                <div className="flex justify-center bg-auto">
+                  <FontAwesomeIcon
+                    icon={faLinkedinIn}
+                    style={{ color: "#ffffff" }}
+                    className="w-5 h-5 border-8 border-main-brasa-blue"
+                  />
+                </div>
+              </a>
+            </div>
+
+            <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue">
+              <a href="https://www.tiktok.com/@brasa.ucf">
+                <div className="flex justify-center bg-auto">
+                  <FontAwesomeIcon
+                    icon={faTiktok}
+                    style={{ color: "#ffffff" }}
+                    className="w-5 h-5 border-8 border-main-brasa-blue"
+                  />
+                </div>
+              </a>
+            </div>
+
+            <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue">
+              <a href="mailto:ucf@brasalocal.org">
+                <div className="flex justify-center bg-auto">
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    style={{ color: "#ffffff" }}
+                    className="w-5 h-5 border-8 border-main-brasa-blue"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden lg:block">
+        <div className="flex flex-wrap items-start justify-evenly">
+          {/* Brasa Logo section */}
+          <div className="grow-[0.25]">
+            <Image
+              src={IMAGES.brasa_logo}
+              alt="UCF BRASA Logo on Footer"
+              sizes="100vh"
+              className="w-[40%]"
+            />
+          </div>
+
+          {/* Quick links section */}
+          <div className="text-left">
+            <h1 className="text-main-brasa-blue text-lg font-bold pt-4">Quick Links</h1>
+            <div className="flex flex-col text-left">
+              <Link href="/" className="text-base font-bold mt-5 navigation-link ml-[-0.5rem]">
+                Home
+              </Link>
+              <Link href="/events" className="text-base font-bold mt-5 navigation-link ml-[-0.5rem]">
+                Events
+              </Link>
+              <Link
+                href="/meet-the-board"
+                className="text-base font-bold mt-5 navigation-link ml-[-0.5rem]"
+              >
+                Meet the Board
+              </Link>
+              <Link
+                href="/become-member"
+                className="text-base font-bold mt-5 navigation-link ml-[-0.5rem]"
+              >
+                Become a Member
+              </Link>
+            </div>
+          </div>
+
+          {/* Organization and terms */}
+          <div className="text-left">
+            <h1 className="text-main-brasa-blue text-lg font-bold pt-4">Organization</h1>
+            <div className="">
+              <div className="flex flex-col text-left">
+                <a
+                  href="https://github.com/UCF-BRASA/BRASA-Web"
+                  target="_blank"
+                  className="text-base font-bold mt-5 navigation-link ml-[-0.5rem]"
+                >
+                  Terms & Conditions
+                </a>
+                <a
+                  href="https://github.com/UCF-BRASA/BRASA-Web/blob/main/LICENSE"
+                  target="_blank"
+                  className="text-base font-bold mt-5 navigation-link ml-[-0.5rem]"
+                >
+                  Website License
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Follow us heading and social media */}
+          <div className="text-left">
+            <h1 className="text-main-brasa-blue text-lg font-bold pt-4">Follow us</h1>
+            <div className="-ml-1">
+              {/* Instagram section */}
+              <div className="flex flex-col text-left pt-4">
+                <div className="flex flex-row items-center">
+                  <a
+                    href="https://www.instagram.com/brasa.ucf/"
+                    target="_blank"
+                    className="flex flex-row justify-center items-center font-bold"
+                  >
+                    <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue mr-2">
+                      <div className="flex justify-center bg-auto">
+                        <FontAwesomeIcon
+                          icon={faInstagram}
+                          style={{ color: "#ffffff" }}
+                          className="w-5 h-5 border-8 border-main-brasa-blue"
+                        />
+                      </div>
+                    </div>
+                    Instagram
+                  </a>
+                </div>
+              </div>
+
+              {/* Whatsapp section */}
+              <div className="flex flex-col text-left pt-4">
+                <div className="flex flex-row items-center">
+                  <a
+                    href="https://chat.whatsapp.com/LhaUGwcrFVpL8KAACVYIlr"
+                    target="_blank"
+                    className="flex flex-row justify-center items-center font-bold"
+                  >
+                    <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue mr-2">
+                      <div className="flex justify-center bg-auto">
+                        <FontAwesomeIcon
+                          icon={faWhatsapp}
+                          style={{ color: "#ffffff" }}
+                          className="w-5 h-5 border-8 border-main-brasa-blue"
+                        />
+                      </div>
+                    </div>
+                    Whatsapp
+                  </a>
+                </div>
+              </div>
+
+              {/* Linkedin section */}
+              <div className="flex flex-col text-left pt-4">
+                <div className="flex flex-row items-center">
+                  <a
+                    href="https://www.linkedin.com/company/brasa-at-ucf/"
+                    target="_blank"
+                    className="flex flex-row justify-center items-center font-bold"
+                  >
+                    <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue mr-2">
+                      <div className="flex justify-center bg-auto">
+                        <FontAwesomeIcon
+                          icon={faLinkedinIn}
+                          style={{ color: "#ffffff" }}
+                          className="w-5 h-5 border-8 border-main-brasa-blue"
+                        />
+                      </div>
+                    </div>
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
+
+              {/* TikTok section */}
+              <div className="flex flex-col text-left pt-4">
+                <div className="flex flex-row items-center">
+                  <a
+                    href="https://www.tiktok.com/@brasa.ucf"
+                    target="_blank"
+                    className="flex flex-row justify-center items-center font-bold"
+                  >
+                    <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue mr-2">
+                      <div className="flex justify-center bg-auto">
+                        <FontAwesomeIcon
+                          icon={faTiktok}
+                          style={{ color: "#ffffff" }}
+                          className="w-5 h-5 border-8 border-main-brasa-blue"
+                        />
+                      </div>
+                    </div>
+                    TikTok
+                  </a>
+                </div>
+              </div>
+
+              {/* Email section */}
+              <div className="flex flex-col text-left pt-4">
+                <div className="flex flex-row items-center">
+                  <a
+                    href="mailto:ucf@brasalocal.org"
+                    target="_blank"
+                    className="flex flex-row justify-center items-center font-bold"
+                  >
+                    <div className="bg-main-brasa-blue bg-cover rounded-full border-8 border-main-brasa-blue mr-2">
+                      <div className="flex justify-center bg-auto">
+                        <FontAwesomeIcon
+                          icon={faEnvelope}
+                          style={{ color: "#ffffff" }}
+                          className="w-5 h-5 border-8 border-main-brasa-blue"
+                        />
+                      </div>
+                    </div>
+                    Email
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Horizontal line section */}
+        <div className="ml-28 mr-28 font-bold items-center justify-center">
+          <hr className="mt-10 border-black/60"></hr>
+        </div>
+
+        {/* CopyRight section */}
+        <div className="w-full flex flex-row justify-between overflow-hidden px-28 pt-4">
+          <div className="flex flex-row mb-4">
+            <p className="font-regular text-left text-black/60">Made with </p>
+            <img
+              width="20rem"
+              height="20rem"
+              src="static/footer/heart-brasil.svg"
+              alt="tech team heart brasa ucf"
+              loading="lazy"
+              className="ml-1"
+            ></img>
+            <p className="font-regular text-left text-black/60 ml-1">by our Tech Team</p>
+          </div>
+
+          <p className="font-regular text-left text-black/60 overflow-hidden">
+            © Copyright {new Date().getFullYear()} All Rights Reserved by UCF BRASA
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default ResponsiveFooter;

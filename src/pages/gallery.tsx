@@ -3,67 +3,37 @@ import { GALLERY_DATA } from "@util/constants";
 import { NextPage } from "next";
 
 interface Props {
-  isMobile: boolean;
+  isMobile?: boolean; // Optional for backward compatibility
 }
+
 const Gallery: NextPage<Props> = ({ isMobile }) => {
   return (
     <main>
-      {isMobile ? (
-        <div className="h-full bg-white">
-          <div className="h-[8rem]"></div>
-          <div className="flex flex-col justify-center items-center w-full">
-            <h4 className="pt-2 font-bold text-m tracking-[0.1rem]"> SAVE YOUR MEMORIES</h4>
-            <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem]">Gallery</h1>
-          </div>
-          <div className="bg-main-brasa-green mt-12">
-            <div className="flex justify-center">
-              <div className="mt-5">
-                {GALLERY_DATA.map((Gdata) => (
-                  <GalleryBox
-                    image={Gdata.image}
-                    imageAlt={Gdata.imageAlt}
-                    date={Gdata.date}
-                    driveLink={Gdata.driveLink}
-                    isMobile={isMobile}
-                    eventDesc={Gdata.eventDesc}
-                    //key to bc of warning
-                    key={Gdata.date}
-                  />
-                ))}
-              </div>
-            </div>
-            <div className="flex flex-wrap justify-evenly mx-auto w-full mt-20"></div>
-          </div>
+      <div className="h-full bg-white">
+        {/* Top spacing - responsive */}
+        <div className="h-[8rem]"></div>
+        
+        {/* Header section - responsive */}
+        <div className="text-center flex flex-col justify-center items-center w-full mb-10 lg:mb-20">
+          <h1 className="text-3xl font-bold tracking-[0.2rem] lg:text-6xl">GALLERY</h1>
+          <p className="font-medium text-lg mt-4 lg:text-xl lg:mt-8">Here are some pictures from our past events!</p>
         </div>
-      ) : (
-        <div className="h-full bg-white">
-          <div className="h-[10rem]"></div>
-          <div className="text-center flex flex-col justify-center items-center mb-20">
-            <h3 className="pt-16 font-bold text-base tracking-[0.3rem]">SAVE YOUR MEMORIES</h3>
-            <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem]">Gallery</h1>
-            <h4 className="pt-2 font-bold text-m tracking-[0.1rem]"> </h4>
-          </div>
-          <div className="bg-main-brasa-green mt-24">
-            <div className="flex justify-center">
-              <div className="grid grid-cols-3 mt-10 gap-x-40">
-                {GALLERY_DATA.map((Gdata) => (
-                  <GalleryBox
-                    image={Gdata.image}
-                    imageAlt={Gdata.imageAlt}
-                    date={Gdata.date}
-                    driveLink={Gdata.driveLink}
-                    isMobile={isMobile}
-                    eventDesc={Gdata.eventDesc}
-                    //key to bc of warning
-                    key={Gdata.date}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-wrap justify-evenly mx-auto w-full mt-20"></div>
+
+        {/* Gallery grid - responsive layout */}
+        <div className="flex flex-col justify-center items-center w-full lg:grid lg:grid-cols-2 lg:gap-20 lg:mx-28">
+          {GALLERY_DATA.map((Gdata) => (
+            <GalleryBox
+              key={Gdata.date}
+              image={Gdata.image}
+              imageAlt={Gdata.imageAlt}
+              date={Gdata.date}
+              driveLink={Gdata.driveLink}
+              isMobile={isMobile || false}
+              eventDesc={Gdata.eventDesc}
+            />
+          ))}
         </div>
-      )}
+      </div>
     </main>
   );
 };

@@ -1,47 +1,38 @@
 import { config as fortawesomeConfig } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { Dialog } from "@headlessui/react"; // How to make this import dynamic?
-import useWindowDimensions from "@hooks/useWindowDimension";
-import { MOBILE_THRESHOLD } from "@util/constants";
+import { Dialog } from "@headlessui/react";
+// Device detection utilities no longer needed here - handled in _document.tsx
 import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import "../styles/globals.css";
 fortawesomeConfig.autoAddCss = false;
 
-// Dynamicaly imported components
+// Dynamically imported components - now using unified responsive components
+const ResponsiveNavbar = dynamic(() => import("@components/Navbar/ResponsiveNavbar"), {
+  ssr: false,
+});
+const ResponsiveFooter = dynamic(() => import("@components/Footer/ResponsiveFooter"), {
+  ssr: false,
+});
 const BottomNavbar = dynamic(() => import("@components/Navbar/BottomNavbar"), { ssr: false });
-const DesktopNavbar = dynamic(() => import("@components/Navbar/DesktopNavbar"), { ssr: false });
-const MobileNavbar = dynamic(() => import("@components/Navbar/MobileNavbar"), { ssr: false });
-const DesktopFooter = dynamic(() => import("@components/Footer/DesktopFooter"), {
-  ssr: false,
-});
-const MobileFooter = dynamic(() => import("@components/Footer/MobileFooter"), {
-  ssr: false,
-});
-const Sidebar = dynamic(() => import("@components/Sidebar/Sidebar"), {
-  ssr: false,
-});
-const SidebarOverlay = dynamic(() => import("@components/Sidebar/SidebarOverlay"), {
-  ssr: false,
-});
+const Sidebar = dynamic(() => import("@components/Sidebar/Sidebar"), { ssr: false });
+const SidebarOverlay = dynamic(() => import("@components/Sidebar/SidebarOverlay"), { ssr: false });
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { windowWidth, windowHeight } = useWindowDimensions();
-  const [isMobile, setIsMobile] = useState(false);
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
-
   const overlayRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    if (windowWidth && windowHeight) {
-      const mobileStatus = windowWidth < MOBILE_THRESHOLD;
-      setIsMobile(mobileStatus);
-    }
-  }, [windowWidth, windowHeight]);
-
-  pageProps = { ...pageProps, windowWidth, windowHeight, isMobile };
+  // Device detection is now handled in _document.tsx via CSS classes on <body>
+  // For backward compatibility, we'll pass a default isMobile value
+  // Components should primarily use CSS media queries instead
+  const enhancedPageProps = {
+    ...pageProps,
+    isMobile: false, // Deprecated - components should use CSS media queries
+    windowWidth: undefined, // Deprecated - use CSS media queries instead
+    windowHeight: undefined, // Deprecated - use CSS media queries instead
+  };
 
   return (
     <>
@@ -56,23 +47,30 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>UCF BRASA</title>
       </Head>
 
-      {isMobile ? (
-        <MobileNavbar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
-      ) : (
-        <DesktopNavbar />
-      )}
-      {/* Why does adding a conditional here fuck up the transition? */}
-      {/* {showSidebar && isMobile && ( */}
+      {/* Unified responsive navigation */}
+      <ResponsiveNavbar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+
+      {/* Sidebar - only show on mobile/tablet */}
       <Dialog static open={showSidebar} onClose={setShowSidebar} initialFocus={overlayRef}>
         <Sidebar showSidebar={showSidebar} toggleSidebar={setShowSidebar} />
         {showSidebar && <SidebarOverlay toggleSidebar={setShowSidebar} />}
       </Dialog>
-      {/* )} */}
-      <Component {...pageProps} />
-      {isMobile ? <MobileFooter /> : <DesktopFooter />}
-      {isMobile && <BottomNavbar />}
+
+      {/* Main content */}
+      <Component {...enhancedPageProps} />
+
+      {/* Unified responsive footer */}
+      <ResponsiveFooter />
+
+      {/* Bottom navbar - only visible on mobile using CSS */}
+      <div className="lg:hidden">
+        <BottomNavbar />
+      </div>
     </>
   );
 }
+
+// Device detection is now handled in _document.tsx for better performance
+// and proper SSR support in the Pages Router
 
 export default MyApp;

@@ -6,16 +6,15 @@ import "react-slideshow-image/dist/styles.css";
 
 interface Props {
   children?: React.ReactNode;
-  isMobile: boolean;
+  isMobile?: boolean; // Optional for backward compatibility
 }
 
 const ImageCarousel: FC<Props> = ({ children, isMobile }) => {
-  const arrows = isMobile
+  // Use CSS media queries to determine arrows - fallback to isMobile for compatibility
+  const showArrows = typeof window !== 'undefined' ? window.innerWidth >= 1024 : !isMobile;
+  
+  const arrows = showArrows
     ? {
-        prevArrow: <div />,
-        nextArrow: <div />,
-      }
-    : {
         prevArrow: (
           <div className="ml-[-4.5rem]">
             <div className="bg-white h-8 w-8 rounded flex justify-center items-center">
@@ -30,6 +29,10 @@ const ImageCarousel: FC<Props> = ({ children, isMobile }) => {
             </div>
           </div>
         ),
+      }
+    : {
+        prevArrow: <div />,
+        nextArrow: <div />,
       };
 
   const desktopSlideProps = {
@@ -53,15 +56,15 @@ const ImageCarousel: FC<Props> = ({ children, isMobile }) => {
 
   return (
     <>
-      {isMobile ? (
-        <section className="w-full h-full">
-          <Zoom {...mobileZoomProps}>{children}</Zoom>
-        </section>
-      ) : (
-        <section className="w-full h-full pl-[6.5rem]">
-          <Slide {...desktopSlideProps}>{children}</Slide>
-        </section>
-      )}
+      {/* Mobile/Tablet: Zoom carousel */}
+      <section className="w-full h-full lg:hidden">
+        <Zoom {...mobileZoomProps}>{children}</Zoom>
+      </section>
+      
+      {/* Desktop: Slide carousel with padding */}
+      <section className="hidden lg:block w-full h-full pl-[6.5rem]">
+        <Slide {...desktopSlideProps}>{children}</Slide>
+      </section>
     </>
   );
 };
