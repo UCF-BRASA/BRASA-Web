@@ -1,4 +1,3 @@
-import JoinNewsletter from "@components/JoinNewsletter/JoinNewsletter";
 import { IMAGES } from "@util/constants";
 import { NextPage } from "next";
 import Image from "next/image";
@@ -144,9 +143,6 @@ const BecomeMember: NextPage<Props> = ({ windowWidth, isMobile }) => {
             </div>
             {/* Background after yellow board */}
             <div className="pt-2 bg-main-brasa-green"></div>
-          </div>
-          <div className="mt-20">
-            <JoinNewsletter />
           </div>
         </section>
       )}
