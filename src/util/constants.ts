@@ -84,9 +84,6 @@ import nicole_pic from "/public/static/meet-board/prev-board/nicole_pic.jpeg";
 import rafa_pic from "/public/static/meet-board/prev-board/rafa.jpeg";
 
 // Upcoming Event Pictures
-import ginga_pic from "/public/static/upcoming-events/ginga_pic.jpeg";
-import jg_pic from "/public/static/upcoming-events/jg_pic.jpg";
-import tailgate_pic from "/public/static/upcoming-events/tailgate_pic.jpeg";
 // Board pic
 import board_pic from "/public/static/become-member/member-box/board_pic.jpg";
 
@@ -776,75 +773,6 @@ export const MOBILE_SIDEBAR_DATA: MobileSidebarData[] = [
 ];
 
 export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
-  {
-    date: "11/07/2025",
-    time: "2:30PM",
-    image: tailgate_pic,
-    eventName: "BRASA Tailgate",
-    eventDescription:
-      "Bring your friends, bring the energy, and get hyped before UCF takes on Houston!.",
-    location: "Memory Mall at UCF",
-    moreInfoLink: "https://www.instagram.com/p/DQppN5wjTHV/",
-    buyTicketLink: "https://posh.vip/e/brasa-halloween-bounce",
-    eventType: "Social",
-    isPaid: false,
-    isAnnounced: true,
-  },
-  {
-    date: "11/13/2025",
-    time: "4:30PM",
-    image: guest_speaker_landing_pic,
-    eventName: "Guest Speaker",
-    eventDescription:
-      "Join us as we bring in a special guest speaker dropping real-world insights, career gems, and stories that hit. Come learn, connect, and elevate with the community. (Room 221)",
-    location: "UCF Teaching Academy",
-    moreInfoLink: "https://www.instagram.com/p/DQrgufYjbWZ/",
-    eventType: "Professional",
-    isPaid: false,
-    isAnnounced: true,
-  },
-  {
-    date: "11/14/2025",
-    time: "9:00PM - 2:00AM",
-    image: ginga_pic,
-    eventName: "BRASA x GINGA",
-    eventDescription:
-      "We’re locking in with Ginga again and this time it’s special. It’s their 1-year anniversary and we’re bringing the energy with them. Expect music, vibes, and a night you don’t wanna miss. Pull up and celebrate with us",
-    location: "TBD",
-    moreInfoLink: "https://www.instagram.com/p/DQkvqCVkSIo/",
-    buyTicketLink: "https://posh.vip/e/ginga-1st-anniversary",
-    eventType: "Social",
-    isPaid: true,
-    isAnnounced: true,
-  },
-  {
-    date: "11/15/2025",
-    time: "1:00PM - 6:00PM",
-    image: churras_event_pic,
-    eventName: "BRASA Churrasco",
-    eventDescription:
-      "Join us for a Brazilian churrasco with a live DJ, juicy picanha, and authentic coração de galinha, plus classic sides that keep coming. Experience the rhythm, flavor, and energy of Brazil.",
-    location: "11037 Retreat Ave",
-    moreInfoLink: "https://www.instagram.com/p/DQXpR80Daff/?img_index=1",
-    buyTicketLink: "https://posh.vip/e/brasa-halloween-bounce",
-    eventType: "Social",
-    isPaid: false,
-    isAnnounced: true,
-  },
-  {
-    date: "11/16/2025",
-    time: "11:00AM",
-    image: jg_pic,
-    eventName: "Joao Gomes - Inout Productions",
-    eventDescription:
-      "We’re partnering with Inout Productions to bring you exclusive discount codes for BRASA UCF members. Front Stage: FTBRASA General Admission: GABRASA",
-    location: "Mango’s Tropical Cafe",
-    moreInfoLink: "https://www.instagram.com/p/DQcv4EfjUGd/",
-    buyTicketLink: "https://www.tickets4way.net/buy/yHmeraYeN/sao-joall-com-joao-gomes",
-    eventType: "Social",
-    isPaid: true,
-    isAnnounced: true,
-  },
 ];
 
 //GalleryBoxData array for easier implementation with .map
