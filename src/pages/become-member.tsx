@@ -145,9 +145,6 @@ const BecomeMember: NextPage<Props> = ({ windowWidth, isMobile }) => {
             {/* Background after yellow board */}
             <div className="pt-2 bg-main-brasa-green"></div>
           </div>
-          <div className="mt-20">
-            <JoinNewsletter />
-          </div>
         </section>
       )}
     </main>
