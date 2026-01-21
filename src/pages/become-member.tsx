@@ -1,4 +1,3 @@
-import JoinNewsletter from "@components/JoinNewsletter/JoinNewsletter";
 import { IMAGES } from "@util/constants";
 import { NextPage } from "next";
 import Image from "next/image";
