@@ -1,110 +1,110 @@
 // Logos
-import brasa_logo from "/public/static/brasa-logo.png";
+import brasa_logo from "../../public/static/brasa-logo.png";
 
 //Galleria pics updated
 //Make sure file names are changed to lowercase "jpg" instead of "JPG" (EXTREMELY IMPORTANT)
-import cover_aug31 from "/public/static/gallery/cover_aug31.jpg";
-import cover_feb15 from "/public/static/gallery/cover_feb15.jpg";
-import cover_feb29 from "/public/static/gallery/cover_feb29.jpg";
-import cover_jul11 from "/public/static/gallery/cover_jul11.jpg";
-import cover_mar09 from "/public/static/gallery/cover_mar09.jpg";
-import cover_mar30 from "/public/static/gallery/cover_mar30.jpg";
-import cover_oct05 from "/public/static/gallery/cover_oct05.jpg";
+import cover_aug31 from "../../public/static/gallery/cover_aug31.jpg";
+import cover_feb15 from "../../public/static/gallery/cover_feb15.jpg";
+import cover_feb29 from "../../public/static/gallery/cover_feb29.jpg";
+import cover_jul11 from "../../public/static/gallery/cover_jul11.jpg";
+import cover_mar09 from "../../public/static/gallery/cover_mar09.jpg";
+import cover_mar30 from "../../public/static/gallery/cover_mar30.jpg";
+import cover_oct05 from "../../public/static/gallery/cover_oct05.jpg";
 
 // Landing Page images
 // Landing pic
-import mainPicLandingNewMobile from "/public/static/landing/intro/main-pic-new-mobile.webp";
-import mainPicLandingNew from "/public/static/landing/intro/main-pic-new.webp";
+import mainPicLandingNewMobile from "../../public/static/landing/intro/main-pic-new-mobile.webp";
+import mainPicLandingNew from "../../public/static/landing/intro/main-pic-new.webp";
 //Our events pictures
-import churras_event_pic from "/public/static/landing/our-events/churras-pic-upc.png";
-import guest_speaker_landing_pic from "/public/static/landing/our-events/guest-speaker-landing.jpg";
-import study_sesh_pic_landing from "/public/static/landing/our-events/study-sesh-pic1.jpg";
-import workshop_pic_landing from "/public/static/landing/our-events/workshop-landing.jpg";
+import churras_event_pic from "../../public/static/landing/our-events/churras-pic-upc.png";
+import guest_speaker_landing_pic from "../../public/static/landing/our-events/guest-speaker-landing.jpg";
+import study_sesh_pic_landing from "../../public/static/landing/our-events/study-sesh-pic1.jpg";
+import workshop_pic_landing from "../../public/static/landing/our-events/workshop-landing.jpg";
 
 // Temporary pictures for 2025 "Previous Board"
-import luana_pre from "/public/static/meet-board-new/Luana_Agramunt.jpg";
-import mel_pre from "/public/static/meet-board-new/Mel_Wolff.jpg";
+import luana_pre from "../../public/static/meet-board-new/Luana_Agramunt.jpg";
+import mel_pre from "../../public/static/meet-board-new/Mel_Wolff.jpg";
 // Current meet the board pictures
-import ana25_26 from "/public/static/meet-board-25_26/Ana_Beatriz_Napravnik_Dantas.jpg";
-import bia25_26 from "/public/static/meet-board-25_26/Beatriz_Bernauer_Alencar.jpg";
-import caio_vodka25_26 from "/public/static/meet-board-25_26/Caio_Amaral_Campos.jpg";
-import caio25_26 from "/public/static/meet-board-25_26/Caio_Rosa_Rocha.jpg";
-import cecilia25_26 from "/public/static/meet-board-25_26/Cecilia_Martins.jpg";
-import chris25_26 from "/public/static/meet-board-25_26/Christopher_Pavie_Suarez.jpg";
-import david25_26 from "/public/static/meet-board-25_26/David_Duek_Guarino.jpg";
-import gabs25_26 from "/public/static/meet-board-25_26/Gabriel_Morais.jpg";
-import gui25_26 from "/public/static/meet-board-25_26/Guilherme_Vilhena.jpg";
-import bertollo25_26 from "/public/static/meet-board-25_26/Isabella_Bertollo_Garcia.jpg";
-import joao25_26 from "/public/static/meet-board-25_26/João_Pedro_Campi.jpg";
-import julia25_26 from "/public/static/meet-board-25_26/Julia_Wataki_De_Freitas.jpg";
-import luisa25_26 from "/public/static/meet-board-25_26/Luisa_Brizolim_Quesada.jpg";
-import mazi25_26 from "/public/static/meet-board-25_26/Mariana_Vicentin_Remedio.jpg";
-import seabra25_26 from "/public/static/meet-board-25_26/Matheus_De_Sá_Barreto_Seabra.jpg";
-import matheus25_26 from "/public/static/meet-board-25_26/Matheus_Santos_Gomes.jpg";
-import murilo25_26 from "/public/static/meet-board-25_26/Murilo_Marques_De_Paula.jpg";
-import paulo25_26 from "/public/static/meet-board-25_26/Paulo_Fernandes_Nascimento.jpg";
-import roberta25_26 from "/public/static/meet-board-25_26/Roberta_Adami_Barreto.jpg";
-import samuel25_26 from "/public/static/meet-board-25_26/Samuel_Schmidt.jpg";
+import ana25_26 from "../../public/static/meet-board-25_26/Ana_Beatriz_Napravnik_Dantas.jpg";
+import bia25_26 from "../../public/static/meet-board-25_26/Beatriz_Bernauer_Alencar.jpg";
+import caio_vodka25_26 from "../../public/static/meet-board-25_26/Caio_Amaral_Campos.jpg";
+import caio25_26 from "../../public/static/meet-board-25_26/Caio_Rosa_Rocha.jpg";
+import cecilia25_26 from "../../public/static/meet-board-25_26/Cecilia_Martins.jpg";
+import chris25_26 from "../../public/static/meet-board-25_26/Christopher_Pavie_Suarez.jpg";
+import david25_26 from "../../public/static/meet-board-25_26/David_Duek_Guarino.jpg";
+import gabs25_26 from "../../public/static/meet-board-25_26/Gabriel_Morais.jpg";
+import gui25_26 from "../../public/static/meet-board-25_26/Guilherme_Vilhena.jpg";
+import bertollo25_26 from "../../public/static/meet-board-25_26/Isabella_Bertollo_Garcia.jpg";
+import joao25_26 from "../../public/static/meet-board-25_26/João_Pedro_Campi.jpg";
+import julia25_26 from "../../public/static/meet-board-25_26/Julia_Wataki_De_Freitas.jpg";
+import luisa25_26 from "../../public/static/meet-board-25_26/Luisa_Brizolim_Quesada.jpg";
+import mazi25_26 from "../../public/static/meet-board-25_26/Mariana_Vicentin_Remedio.jpg";
+import seabra25_26 from "../../public/static/meet-board-25_26/Matheus_De_Sá_Barreto_Seabra.jpg";
+import matheus25_26 from "../../public/static/meet-board-25_26/Matheus_Santos_Gomes.jpg";
+import murilo25_26 from "../../public/static/meet-board-25_26/Murilo_Marques_De_Paula.jpg";
+import paulo25_26 from "../../public/static/meet-board-25_26/Paulo_Fernandes_Nascimento.jpg";
+import roberta25_26 from "../../public/static/meet-board-25_26/Roberta_Adami_Barreto.jpg";
+import samuel25_26 from "../../public/static/meet-board-25_26/Samuel_Schmidt.jpg";
 
 // Old Meet the Board images (We might use put these on a previous board members section but its TBD)
-import carol_pic from "/public/static/meet-board/carol_pic.jpg";
-import gio_pic from "/public/static/meet-board/gio_pic.jpg";
-import guilherme_pic from "/public/static/meet-board/guilherme_pic.jpg";
-import isa_pic from "/public/static/meet-board/isa_pic.jpeg";
-import leo_pic from "/public/static/meet-board/leo_pic.png";
-import leticia_pic from "/public/static/meet-board/leticia_pic.png";
-import luca_pic from "/public/static/meet-board/luca_pic.png";
-import lucas_pic from "/public/static/meet-board/lucas_pic.jpg";
-import matheus_pic from "/public/static/meet-board/matheus_pic.jpg";
-import nino_newpic from "/public/static/meet-board/nino_newpic.jpeg";
-import saki_pic from "/public/static/meet-board/saki_pic.png";
+import carol_pic from "../../public/static/meet-board/carol_pic.jpg";
+import gio_pic from "../../public/static/meet-board/gio_pic.jpg";
+import guilherme_pic from "../../public/static/meet-board/guilherme_pic.jpg";
+import isa_pic from "../../public/static/meet-board/isa_pic.jpeg";
+import leo_pic from "../../public/static/meet-board/leo_pic.png";
+import leticia_pic from "../../public/static/meet-board/leticia_pic.png";
+import luca_pic from "../../public/static/meet-board/luca_pic.png";
+import lucas_pic from "../../public/static/meet-board/lucas_pic.jpg";
+import matheus_pic from "../../public/static/meet-board/matheus_pic.jpg";
+import nino_newpic from "../../public/static/meet-board/nino_newpic.jpeg";
+import saki_pic from "../../public/static/meet-board/saki_pic.png";
 
 // Previous Boards pictures
-import amanda_pic from "/public/static/meet-board/prev-board/amanda.jpeg";
-import andre_pic from "/public/static/meet-board/prev-board/andre.jpeg";
-import chiara_pic from "/public/static/meet-board/prev-board/chiara.jpeg";
-import duda_pic from "/public/static/meet-board/prev-board/duda_pic.jpeg";
-import ella_pic from "/public/static/meet-board/prev-board/ella_pic.jpeg";
-import fachetti_pic from "/public/static/meet-board/prev-board/fachetti_pic.jpeg";
-import felipe_caseiro_pic from "/public/static/meet-board/prev-board/felipe_caseiro.jpeg";
-import fernanda_barrusco_pic from "/public/static/meet-board/prev-board/fernanda.jpeg";
-import gabriel_pic from "/public/static/meet-board/prev-board/gabriel_pic.jpeg";
-import jean_thomas_pic from "/public/static/meet-board/prev-board/jean_thomas_pic.jpeg";
-import julie_pic from "/public/static/meet-board/prev-board/julie_pic.png";
-import lilly_pic from "/public/static/meet-board/prev-board/lilly.jpeg";
-import lucas_guilherme_pic from "/public/static/meet-board/prev-board/lucas_pic.jpeg";
-import luis_2021_pic from "/public/static/meet-board/prev-board/luis_2021.jpeg";
-import luis_f_pic from "/public/static/meet-board/prev-board/luis_f.jpeg";
-import luiza_pic from "/public/static/meet-board/prev-board/luiza.jpeg";
-import manu_2021_pic from "/public/static/meet-board/prev-board/manu_2021.jpeg";
-import marco_pic from "/public/static/meet-board/prev-board/marco.jpeg";
-import mari_r_pic from "/public/static/meet-board/prev-board/mari_r.jpeg";
-import monique_pic from "/public/static/meet-board/prev-board/monique.jpeg";
-import nicole_pic from "/public/static/meet-board/prev-board/nicole_pic.jpeg";
-import rafa_pic from "/public/static/meet-board/prev-board/rafa.jpeg";
+import amanda_pic from "../../public/static/meet-board/prev-board/amanda.jpeg";
+import andre_pic from "../../public/static/meet-board/prev-board/andre.jpeg";
+import chiara_pic from "../../public/static/meet-board/prev-board/chiara.jpeg";
+import duda_pic from "../../public/static/meet-board/prev-board/duda_pic.jpeg";
+import ella_pic from "../../public/static/meet-board/prev-board/ella_pic.jpeg";
+import fachetti_pic from "../../public/static/meet-board/prev-board/fachetti_pic.jpeg";
+import felipe_caseiro_pic from "../../public/static/meet-board/prev-board/felipe_caseiro.jpeg";
+import fernanda_barrusco_pic from "../../public/static/meet-board/prev-board/fernanda.jpeg";
+import gabriel_pic from "../../public/static/meet-board/prev-board/gabriel_pic.jpeg";
+import jean_thomas_pic from "../../public/static/meet-board/prev-board/jean_thomas_pic.jpeg";
+import julie_pic from "../../public/static/meet-board/prev-board/julie_pic.png";
+import lilly_pic from "../../public/static/meet-board/prev-board/lilly.jpeg";
+import lucas_guilherme_pic from "../../public/static/meet-board/prev-board/lucas_pic.jpeg";
+import luis_2021_pic from "../../public/static/meet-board/prev-board/luis_2021.jpeg";
+import luis_f_pic from "../../public/static/meet-board/prev-board/luis_f.jpeg";
+import luiza_pic from "../../public/static/meet-board/prev-board/luiza.jpeg";
+import manu_2021_pic from "../../public/static/meet-board/prev-board/manu_2021.jpeg";
+import marco_pic from "../../public/static/meet-board/prev-board/marco.jpeg";
+import mari_r_pic from "../../public/static/meet-board/prev-board/mari_r.jpeg";
+import monique_pic from "../../public/static/meet-board/prev-board/monique.jpeg";
+import nicole_pic from "../../public/static/meet-board/prev-board/nicole_pic.jpeg";
+import rafa_pic from "../../public/static/meet-board/prev-board/rafa.jpeg";
 
 // Upcoming Event Pictures
 // Board pic
-import board_pic from "/public/static/become-member/member-box/board_pic.jpg";
+import board_pic from "../../public/static/become-member/member-box/board_pic.jpg";
 
 // Login photo
 import {
-  faCalendarDays,
-  //gallery mobile side bar logo
-  faCamera,
-  faHandshake,
-  faHome,
-  faPeopleGroup,
+    faCalendarDays,
+    //gallery mobile side bar logo
+    faCamera,
+    faHandshake,
+    faHome,
+    faPeopleGroup,
 } from "@fortawesome/free-solid-svg-icons";
 import {
-  BoardData,
-  EBoardData,
-  EventCardImageObject,
-  GalleryBoxData,
-  LandingPageEventsInfo,
-  MobileSidebarData,
-  PrevBoardTabs,
-  UpcomingEventsData,
+    BoardData,
+    EBoardData,
+    EventCardImageObject,
+    GalleryBoxData,
+    LandingPageEventsInfo,
+    MobileSidebarData,
+    PrevBoardTabs,
+    UpcomingEventsData,
 } from "@interfaces";
 import { getApiInstanceUrl, getWebInstanceUrl } from "./instanceUrl";
 

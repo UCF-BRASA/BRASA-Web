@@ -5,6 +5,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
+  turbopack: {},
   env: {
     APP_ENV: process.env.APP_ENV,
     API_PROD_URL: process.env.API_PROD_URL,
