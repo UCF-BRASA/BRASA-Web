@@ -773,20 +773,6 @@ export const MOBILE_SIDEBAR_DATA: MobileSidebarData[] = [
 ];
 
 export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
-  {
-    date: "01/22/2026",
-    time: "9:00 PM - 2:00 AM",
-    image: cover_jul11,
-    eventName: "Bounce x BRASA",
-    eventDescription:
-      "Thursday night done the right way. Free drinks 9PM–12AM",
-    location: "12100 Challenger PkwyOrlando, FL 32826",
-    moreInfoLink: "https://www.instagram.com/p/DTYND9EjQ52/",
-    buyTicketLink : "https://posh.vip/e/brasa-x-bounce-spring-kickoff",
-    eventType: "Social",
-    isPaid: true,
-    isAnnounced: true,
-  }
 ];
 
 //GalleryBoxData array for easier implementation with .map
