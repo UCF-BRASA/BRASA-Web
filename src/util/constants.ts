@@ -778,9 +778,9 @@ export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
     date: "01/29/2026",
     time: "4:00PM - 7:00PM",
     location: "UCF John C. Hitt Library",
-    eventName: "Study Session",
+    eventName: "Study Session - Room 389",
     eventDescription:
-      "Join us for a focused study session at the UCF John C. Hitt Library. Whether you're preparing for exams or working on assignments, this is a great opportunity to study in a supportive environment with fellow BRASA members. ROOM 389",
+      "Join us for a focused study session at the UCF John C. Hitt Library. Whether you're preparing for exams or working on assignments, this is a great opportunity to study in a supportive environment with fellow BRASA members.",
     eventType: "Professional",
     isPaid: false,
     moreInfoLink: "",
