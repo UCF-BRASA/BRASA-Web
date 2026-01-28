@@ -23,7 +23,7 @@ export interface UpcomingEventsData {
   eventType: "Social" | "Professional" | "Academic";
   isPaid: boolean;
   moreInfoLink: string;
-  buyTicketLink?: string;
+  buyTicketLink: string;
   isAnnounced: boolean;
 }
 
