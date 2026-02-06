@@ -83,6 +83,10 @@ import monique_pic from "../../public/static/meet-board/prev-board/monique.jpeg"
 import nicole_pic from "../../public/static/meet-board/prev-board/nicole_pic.jpeg";
 import rafa_pic from "../../public/static/meet-board/prev-board/rafa.jpeg";
 
+// Newsletter pics
+import newsletter_image from "../..newsletter-image.jpeg";
+import { faNewspaper } from "@fortawesome/free-solid-svg-icons";  
+
 // Upcoming Event Pictures
 // Board pic
 import board_pic from "../../public/static/become-member/member-box/board_pic.jpg";
@@ -103,6 +107,7 @@ import {
   GalleryBoxData,
   LandingPageEventsInfo,
   MobileSidebarData,
+  newsletterPostData,
   PrevBoardTabs,
   UpcomingEventsData,
 } from "@interfaces";
@@ -770,9 +775,125 @@ export const MOBILE_SIDEBAR_DATA: MobileSidebarData[] = [
     route: "/gallery",
     icon: faCamera,
   },
+  {
+    name: "Newsletter",
+    route: "/newsletter",
+    icon: faNewspaper,
+  }
 ];
 
 export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
+];
+
+export const NEWS_LETTER_DATA: newsletterPostData[] = [
+  // {
+  //   newsLetterDate: "02/09/26 - 02/15/26",
+  //   content:
+  //     "Welcome to this week’s BRASA newsletter! We’re sharing upcoming events, helpful resources, and highlights from our community. Join study night, mixers, workshops, and cultural celebrations. Explore career tips, internship guides, and alumni insights. Stay connected, bring friends, and check back for updates. Thank you for supporting BRASA. Your presence keeps our mission strong, vibrant, welcoming, and proudly Brazilian all year.",
+  //   events: [
+  //     {
+  //       eventTitle: "BRASA Study Night",
+  //       eventDate: "02/12/2026",
+  //       moreInfoLink: "https://www.google.com",
+  //     },
+  //     {
+  //       eventTitle: "Brazilian Culture Mixer",
+  //       eventDate: "02/20/2026",
+  //       moreInfoLink: "https://www.google.com",
+  //     },
+  //     {
+  //       eventTitle: "Guest Speaker: Career in Tech",
+  //       eventDate: "02/25/2026",
+  //       moreInfoLink: "https://www.google.com",
+  //     },
+  //     {
+  //       eventTitle: "Churrasco Social",
+  //       eventDate: "03/01/2026",
+  //       moreInfoLink: "https://www.google.com",
+  //     },
+  //     {
+  //       eventTitle: "Finance Workshop",
+  //       eventDate: "03/05/2026",
+  //       moreInfoLink: "https://www.google.com",
+  //     },
+  //   ],
+  //   dontMissThis: [
+  //     {
+  //       title: "Resume Workshop Slides",
+  //       link: "https://www.google.com",
+  //     },
+  //     {
+  //       title: "Spring Internship Guide",
+  //       link: "https://www.google.com",
+  //     },
+  //     {
+  //       title: "Networking Tips & Strategies",
+  //       link: "https://www.google.com",
+  //     },
+  //     {
+  //       title: "Study Abroad Opportunities",
+  //       link: "https://www.google.com",
+  //     },
+  //     {
+  //       title: "Alumni Success Stories",
+  //       link: "https://www.google.com",
+  //     },
+  //   ],
+  // },
+  // {
+  //   newsLetterDate: "02/16/26 - 02/22/26",
+  //   content:
+  //     "Welcome to this week’s BRASA newsletter! We’re sharing upcoming events, helpful resources, and highlights from our community. Join study night, mixers, workshops, and cultural celebrations. Explore career tips, internship guides, and alumni insights. Stay connected, bring friends, and check back for updates. Thank you for supporting BRASA. Your presence keeps our mission strong, vibrant, welcoming, and proudly Brazilian all year.",
+  //   events: [
+  //     {
+  //       eventTitle: "BRASA Study Night",
+  //       eventDate: "02/12/2026",
+  //       moreInfoLink: "https://www.google.com",
+  //     },
+  //     {
+  //       eventTitle: "Brazilian Culture Mixer",
+  //       eventDate: "02/20/2026",
+  //       moreInfoLink: "https://www.google.com",
+  //     },
+  //     {
+  //       eventTitle: "Guest Speaker: Career in Tech",
+  //       eventDate: "02/25/2026",
+  //       moreInfoLink: "https://www.google.com",
+  //     },
+  //     {
+  //       eventTitle: "Churrasco Social",
+  //       eventDate: "03/01/2026",
+  //       moreInfoLink: "https://www.google.com",
+  //     },
+  //     {
+  //       eventTitle: "Finance Workshop",
+  //       eventDate: "03/05/2026",
+  //       moreInfoLink: "https://www.google.com",
+  //     },
+  //   ],
+  //   dontMissThis: [
+  //     {
+  //       title: "Resume Workshop Slides",
+  //       link: "https://www.google.com",
+  //     },
+  //     {
+  //       title: "Spring Internship Guide",
+  //       link: "https://www.google.com",
+  //     },
+  //     {
+  //       title: "Networking Tips & Strategies",
+  //       link: "https://www.google.com",
+  //     },
+  //     {
+  //       title: "Study Abroad Opportunities",
+  //       link: "https://www.google.com",
+  //     },
+  //     {
+  //       title: "Alumni Success Stories",
+  //       link: "https://www.google.com",
+  //     },
+  //   ],
+  // }
 ];
 
 //GalleryBoxData array for easier implementation with .map
