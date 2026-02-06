@@ -1,3 +1,16 @@
+export interface newsletterPostData {
+  newsLetterDate: string;
+  content: string;
+  events: Array<{
+    eventTitle: string;
+    eventDate: string;
+    moreInfoLink: string;
+  }>;
+  dontMissThis: Array<{
+    title: string;
+    link: string;
+  }>;
+}
 // You can include shared interfaces/types in a separate file
 // and then use them in any component by importing them. For
 // example, to import the interface below do:
@@ -71,4 +84,10 @@ export interface GalleryBoxData {
   date: string;
   driveLink: string;
   eventDesc: string;
+}
+
+export interface newsLetterPostData {
+  date: string;
+  bigText: string;
+  
 }
