@@ -1,5 +1,5 @@
-import { type FC } from "react";
 import type { newsletterPostData } from "@interfaces";
+import { type FC } from "react";
 import newsletter_image from "../../../public/static/newsletter/newsletter-image.jpeg";
 
 interface Props {
@@ -23,6 +23,9 @@ const NewsletterPostCard: FC<Props> = ({ post, className }) => {
       <div className="relative z-10">
         <header className="flex flex-col gap-3 md:gap-4">
           <h2 className="text-2xl md:text-3xl font-bold text-black">{post.newsLetterDate}</h2>
+          <p className="text-sm md:text-base font-semibold uppercase tracking-wide text-black/60">
+            Skill of the week
+          </p>
         </header>
 
         <p className="mt-6 text-base md:text-lg text-black/70 leading-relaxed">{post.content}</p>

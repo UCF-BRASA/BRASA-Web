@@ -33,10 +33,8 @@ const Newsletter: NextPage<Props> = ({ isMobile }) => {
     }, 220);
   };
 
-  const goPrev = () =>
-    startTransition(page > 0 ? page - 1 : lastIndex, "prev");
-  const goNext = () =>
-    startTransition(page < lastIndex ? page + 1 : 0, "next");
+  const goPrev = () => startTransition(page > 0 ? page - 1 : lastIndex, "prev");
+  const goNext = () => startTransition(page < lastIndex ? page + 1 : 0, "next");
 
   const handlers = useSwipeable({
     onSwipedLeft: goNext,
@@ -52,11 +50,11 @@ const Newsletter: NextPage<Props> = ({ isMobile }) => {
       <div className="text-center flex flex-col justify-center items-center mb-8">
         <h4 className="font-bold text-sm tracking-[0.3rem] text-gray-700">STAY IN THE LOOP</h4>
         <h1 className="pt-5 font-bold text-5xl tracking-[0.1rem] text-black">Newsletter</h1>
-        <p className="pt-4 text-gray-500 text-sm italic">
+        {/* <p className="pt-4 text-gray-500 text-sm italic">
           {isMobile
             ? "Swipe or use the arrows to browse the newsletter"
             : "Use the arrows below to browse the newsletter"}
-        </p>
+        </p> */}
       </div>
 
       <div className="flex flex-col items-center justify-center mt-10" {...handlers}>
@@ -101,8 +99,8 @@ const Newsletter: NextPage<Props> = ({ isMobile }) => {
                   isVisible
                     ? "opacity-100 translate-x-0"
                     : direction === "next"
-                      ? "opacity-0 -translate-x-6"
-                      : "opacity-0 translate-x-6"
+                    ? "opacity-0 -translate-x-6"
+                    : "opacity-0 translate-x-6"
                 }`}
               >
                 <NewsletterPostCard post={orderedPosts[page]} />

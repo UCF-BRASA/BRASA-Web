@@ -84,10 +84,11 @@ import nicole_pic from "../../public/static/meet-board/prev-board/nicole_pic.jpe
 import rafa_pic from "../../public/static/meet-board/prev-board/rafa.jpeg";
 
 // Newsletter pics
-import newsletter_image from "../..newsletter-image.jpeg";
-import { faNewspaper } from "@fortawesome/free-solid-svg-icons";  
+import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 
 // Upcoming Event Pictures
+import film_event_pic from "../../public/static/upcoming-events/film-event.jpeg";
+import ginga_valentines_pic from "../../public/static/upcoming-events/ginga-valentines.jpeg";
 // Board pic
 import board_pic from "../../public/static/become-member/member-box/board_pic.jpg";
 
@@ -779,121 +780,95 @@ export const MOBILE_SIDEBAR_DATA: MobileSidebarData[] = [
     name: "Newsletter",
     route: "/newsletter",
     icon: faNewspaper,
-  }
+  },
 ];
 
 export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
+  {
+    image: film_event_pic,
+    date: "02/10/2026",
+    time: "7:30 PM",
+    location: "UCF Nicholson School of Communication and Media (NSC)",
+    eventName: '"O Agente Secreto" Movie Screening',
+    eventDescription:
+      "Ready to dive into 1970s Recife? Join us for a screening of The Secret Agent, starring Wagner Moura! Experience this immersive journey into Brazilian history and cinema. See you there!",
+    eventType: "Social",
+    isPaid: false,
+    moreInfoLink: "https://www.instagram.com/p/DUbYfX7EUkW/?hl=en",
+    buyTicketLink: "",
+    isAnnounced: true,
+  },
+  {
+    image: ginga_valentines_pic,
+    date: "02/13/2026",
+    time: "9:00PM - 2:00AM",
+    location: "33 E Pine St, Orlando, FL 32801",
+    eventName: "Ginga F*NK Valentines",
+    eventDescription:
+      "Carnaval season meets Valentine's Day There's no better way to celebrate than F*NK Valentines",
+    eventType: "Social",
+    isPaid: true,
+    moreInfoLink: "https://www.instagram.com/p/DUb67YZEQ1E/?hl=en",
+    buyTicketLink: "https://posh.vip/e/ginga-fnk-valentines?t=brasa",
+    isAnnounced: true,
+  },
 ];
 
 export const NEWS_LETTER_DATA: newsletterPostData[] = [
-  // {
-  //   newsLetterDate: "02/09/26 - 02/15/26",
-  //   content:
-  //     "Welcome to this week’s BRASA newsletter! We’re sharing upcoming events, helpful resources, and highlights from our community. Join study night, mixers, workshops, and cultural celebrations. Explore career tips, internship guides, and alumni insights. Stay connected, bring friends, and check back for updates. Thank you for supporting BRASA. Your presence keeps our mission strong, vibrant, welcoming, and proudly Brazilian all year.",
-  //   events: [
-  //     {
-  //       eventTitle: "BRASA Study Night",
-  //       eventDate: "02/12/2026",
-  //       moreInfoLink: "https://www.google.com",
-  //     },
-  //     {
-  //       eventTitle: "Brazilian Culture Mixer",
-  //       eventDate: "02/20/2026",
-  //       moreInfoLink: "https://www.google.com",
-  //     },
-  //     {
-  //       eventTitle: "Guest Speaker: Career in Tech",
-  //       eventDate: "02/25/2026",
-  //       moreInfoLink: "https://www.google.com",
-  //     },
-  //     {
-  //       eventTitle: "Churrasco Social",
-  //       eventDate: "03/01/2026",
-  //       moreInfoLink: "https://www.google.com",
-  //     },
-  //     {
-  //       eventTitle: "Finance Workshop",
-  //       eventDate: "03/05/2026",
-  //       moreInfoLink: "https://www.google.com",
-  //     },
-  //   ],
-  //   dontMissThis: [
-  //     {
-  //       title: "Resume Workshop Slides",
-  //       link: "https://www.google.com",
-  //     },
-  //     {
-  //       title: "Spring Internship Guide",
-  //       link: "https://www.google.com",
-  //     },
-  //     {
-  //       title: "Networking Tips & Strategies",
-  //       link: "https://www.google.com",
-  //     },
-  //     {
-  //       title: "Study Abroad Opportunities",
-  //       link: "https://www.google.com",
-  //     },
-  //     {
-  //       title: "Alumni Success Stories",
-  //       link: "https://www.google.com",
-  //     },
-  //   ],
-  // },
-  // {
-  //   newsLetterDate: "02/16/26 - 02/22/26",
-  //   content:
-  //     "Welcome to this week’s BRASA newsletter! We’re sharing upcoming events, helpful resources, and highlights from our community. Join study night, mixers, workshops, and cultural celebrations. Explore career tips, internship guides, and alumni insights. Stay connected, bring friends, and check back for updates. Thank you for supporting BRASA. Your presence keeps our mission strong, vibrant, welcoming, and proudly Brazilian all year.",
-  //   events: [
-  //     {
-  //       eventTitle: "BRASA Study Night",
-  //       eventDate: "02/12/2026",
-  //       moreInfoLink: "https://www.google.com",
-  //     },
-  //     {
-  //       eventTitle: "Brazilian Culture Mixer",
-  //       eventDate: "02/20/2026",
-  //       moreInfoLink: "https://www.google.com",
-  //     },
-  //     {
-  //       eventTitle: "Guest Speaker: Career in Tech",
-  //       eventDate: "02/25/2026",
-  //       moreInfoLink: "https://www.google.com",
-  //     },
-  //     {
-  //       eventTitle: "Churrasco Social",
-  //       eventDate: "03/01/2026",
-  //       moreInfoLink: "https://www.google.com",
-  //     },
-  //     {
-  //       eventTitle: "Finance Workshop",
-  //       eventDate: "03/05/2026",
-  //       moreInfoLink: "https://www.google.com",
-  //     },
-  //   ],
-  //   dontMissThis: [
-  //     {
-  //       title: "Resume Workshop Slides",
-  //       link: "https://www.google.com",
-  //     },
-  //     {
-  //       title: "Spring Internship Guide",
-  //       link: "https://www.google.com",
-  //     },
-  //     {
-  //       title: "Networking Tips & Strategies",
-  //       link: "https://www.google.com",
-  //     },
-  //     {
-  //       title: "Study Abroad Opportunities",
-  //       link: "https://www.google.com",
-  //     },
-  //     {
-  //       title: "Alumni Success Stories",
-  //       link: "https://www.google.com",
-  //     },
-  //   ],
-  // }
+  {
+    newsLetterDate: "02/09/26 - 02/15/26",
+    content:
+      "The STAR Method simplifies interview preparation by organizing responses into four key pillars: Situation, Task, Action, and Result. By detailing the context, your specific responsibilities, the steps you took, and the final outcome, you provide a clear, impactful narrative. This structured approach highlights your problem-solving skills and lessons learned, helping you stand out as a professional, effective communicator",
+    events: [
+      {
+        eventTitle: '"O Agente Secreto" Movie Screening (BRASA Event)',
+        eventDate: "02/10/2026",
+        moreInfoLink: "https://ucfbrasa.com/events",
+      },
+      {
+        eventTitle: "UCF Rosen College Presents Universal",
+        eventDate: "02/11/2026",
+        moreInfoLink: "https://ucf.joinhandshake.com/stu/events/1889388",
+      },
+      {
+        eventTitle: "Get LinkedIn with Disney",
+        eventDate: "02/11/2026",
+        moreInfoLink: "https://ucf.joinhandshake.com/stu/events/1871297",
+      },
+      {
+        eventTitle: "Summer Research Funding",
+        eventDate: "02/12/2026",
+        moreInfoLink: "https://ucf.joinhandshake.com/stu/events/1872526",
+      },
+      {
+        eventTitle: "Ginga F*NK Valentines (BRASA Event)",
+        eventDate: "02/13/2026",
+        moreInfoLink: "https://ucfbrasa.com/events",
+      },
+    ],
+    dontMissThis: [
+      {
+        title: "Disney Internships Summer/Fall 2026",
+        link: "https://www.disneycareers.com/en/search-jobs/internship/Orlando%2C%20FL/391/1/4/6252001-4155751-4167060-4167147/28x53834/-81x37924/100/2",
+      },
+      {
+        title: "BNY Summer Internship Program",
+        link: "https://eofe.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs/preview/72948/?keyword=internship&location=Orlando%2C+FL%2C+United+States&locationId=300000090199458&locationLevel=city&mode=location&radius=25&radiusUnit=MI",
+      },
+      {
+        title: "Amazon Intern - Fulfillment Area",
+        link: "https://eofe.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs/preview/72948/?keyword=internship&location=Orlando%2C+FL%2C+United+States&locationId=300000090199458&locationLevel=city&mode=location&radius=25&radiusUnit=MI",
+      },
+      {
+        title: "Schindler Group - Sales Support Intern",
+        link: "https://www.linkedin.com/jobs/view/4348133858/",
+      },
+      {
+        title: "KPMG - Summer/winter 2026-2027 Internships",
+        link: "https://www.kpmguscareers.com/job-search/?career-level-parents=Early%20Career%7C&career-level=&spage=1",
+      },
+    ],
+  },
 ];
 
 //GalleryBoxData array for easier implementation with .map
