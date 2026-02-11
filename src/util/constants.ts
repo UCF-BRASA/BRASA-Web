@@ -855,6 +855,11 @@ export const NEWS_LETTER_DATA: newsletterPostData[] = [
         moreInfoLink: "https://ucf.joinhandshake.com/stu/events/1872526",
       },
       {
+        eventTitle: "Study Session",
+        eventDate: "02/12/2026",
+        moreInfoLink: "https://ucfbrasa.com/events",
+      },
+      {
         eventTitle: "Ginga F*NK Valentines (BRASA Event)",
         eventDate: "02/13/2026",
         moreInfoLink: "https://ucfbrasa.com/events",
