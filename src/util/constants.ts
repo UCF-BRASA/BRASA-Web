@@ -799,6 +799,20 @@ export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
     isAnnounced: true,
   },
   {
+    image: study_sesh_pic_landing,
+    date: "02/12/2026",
+    time: "4:00PM - 7:00PM",
+    location: "UCF John C. Hitt Library",
+    eventName: "Study Session",
+    eventDescription:
+      "Join us to study",
+    eventType: "Professional",
+    isPaid: false,
+    moreInfoLink: "",
+    buyTicketLink: "",
+    isAnnounced: false,
+  },
+  {
     image: ginga_valentines_pic,
     date: "02/13/2026",
     time: "9:00PM - 2:00AM",
