@@ -1,8 +1,7 @@
 import {
   faInstagram,
   faLinkedinIn,
-  faTiktok,
-  faWhatsapp,
+  faWhatsapp
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -144,7 +143,7 @@ const DesktopFooter: FC = () => {
             </div>
 
             {/* TikTok section */}
-            <div className="flex flex-col text-left pt-4">
+            {/* <div className="flex flex-col text-left pt-4">
               <div className="flex flex-row items-center">
                 <a
                   href="https://www.tiktok.com/@brasa.ucf"
@@ -163,7 +162,7 @@ const DesktopFooter: FC = () => {
                   TikTok
                 </a>
               </div>
-            </div>
+            </div> */}
 
             {/* Email section */}
             <div className="flex flex-col text-left pt-4">

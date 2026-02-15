@@ -37,11 +37,12 @@ const Newsletter: NextPage<Props> = ({ isMobile }) => {
   const goNext = () => startTransition(page < lastIndex ? page + 1 : 0, "next");
 
   const handlers = useSwipeable({
-    onSwipedLeft: goNext,
-    onSwipedRight: goPrev,
-    preventScrollOnSwipe: true,
-    trackMouse: true,
+    onSwipedLeft: isMobile ? goNext : undefined,
+    onSwipedRight: isMobile ? goPrev : undefined,
+    preventScrollOnSwipe: isMobile,
+    trackMouse: false,
   });
+  const swipeHandlers = isMobile ? handlers : {};
 
   return (
     <main className="bg-white h-full overflow-x-hidden">
@@ -57,7 +58,7 @@ const Newsletter: NextPage<Props> = ({ isMobile }) => {
         </p> */}
       </div>
 
-      <div className="flex flex-col items-center justify-center mt-10" {...handlers}>
+      <div className="flex flex-col items-center justify-center mt-10" {...swipeHandlers}>
         <div
           className="
             relative flex justify-center items-center 
