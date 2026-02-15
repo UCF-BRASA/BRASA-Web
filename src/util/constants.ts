@@ -87,8 +87,6 @@ import rafa_pic from "../../public/static/meet-board/prev-board/rafa.jpeg";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 
 // Upcoming Event Pictures
-import film_event_pic from "../../public/static/upcoming-events/film-event.jpeg";
-import ginga_valentines_pic from "../../public/static/upcoming-events/ginga-valentines.jpeg";
 // Board pic
 import board_pic from "../../public/static/become-member/member-box/board_pic.jpg";
 
@@ -785,45 +783,17 @@ export const MOBILE_SIDEBAR_DATA: MobileSidebarData[] = [
 
 export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
   {
-    image: film_event_pic,
-    date: "02/10/2026",
-    time: "7:30 PM",
-    location: "UCF Nicholson School of Communication and Media (NSC)",
-    eventName: '"O Agente Secreto" Movie Screening',
+    image: churras_event_pic,
+    date: "02/21/2026",
+    time: "1:00PM - 6:00PM",
+    location: "TBD",
+    eventName: "Churrasco da BRASA",
     eventDescription:
-      "Ready to dive into 1970s Recife? Join us for a screening of The Secret Agent, starring Wagner Moura! Experience this immersive journey into Brazilian history and cinema. See you there!",
+      "Our FIRST churrasco of the semester is officially on the calendar! And trust us, you don't want to miss this one",
     eventType: "Social",
     isPaid: false,
-    moreInfoLink: "https://www.instagram.com/p/DUbYfX7EUkW/?hl=en",
+    moreInfoLink: "https://www.instagram.com/p/DUrPe6aDZlp/",
     buyTicketLink: "",
-    isAnnounced: true,
-  },
-  {
-    image: study_sesh_pic_landing,
-    date: "02/12/2026",
-    time: "4:00PM - 7:00PM",
-    location: "UCF John C. Hitt Library",
-    eventName: "Study Session",
-    eventDescription:
-      "Join us to study",
-    eventType: "Professional",
-    isPaid: false,
-    moreInfoLink: "",
-    buyTicketLink: "",
-    isAnnounced: false,
-  },
-  {
-    image: ginga_valentines_pic,
-    date: "02/13/2026",
-    time: "9:00PM - 2:00AM",
-    location: "33 E Pine St, Orlando, FL 32801",
-    eventName: "Ginga F*NK Valentines",
-    eventDescription:
-      "Carnaval season meets Valentine's Day There's no better way to celebrate than F*NK Valentines",
-    eventType: "Social",
-    isPaid: true,
-    moreInfoLink: "https://www.instagram.com/p/DUb67YZEQ1E/?hl=en",
-    buyTicketLink: "https://posh.vip/e/ginga-fnk-valentines?t=brasa",
     isAnnounced: true,
   },
 ];
@@ -881,6 +851,55 @@ export const NEWS_LETTER_DATA: newsletterPostData[] = [
       {
         title: "Schindler Group - Sales Support Intern",
         link: "https://www.linkedin.com/jobs/view/4348133858/",
+      },
+      {
+        title: "KPMG - Summer/winter 2026-2027 Internships",
+        link: "https://www.kpmguscareers.com/job-search/?career-level-parents=Early%20Career%7C&career-level=&spage=1",
+      },
+    ],
+  },
+  {
+    newsLetterDate: "02/15/26 - 02/22/26",
+    content:
+      'The "Elevator Pitch" is a concise thirty to forty-five second introduction designed to make a strong first impression during networking events or interviews. To master this skill, you should introduce your name and role, explain your relevant experience, and highlight a unique strength or achievement. Ending with a clear goal ensures you leave a professional, lasting impact on your listener.',
+    events: [
+      {
+        eventTitle: "Critiques & Career Express Drop-In",
+        eventDate: "02/17/2026",
+        moreInfoLink: "https://ucf.joinhandshake.com/stu/events/1870641",
+      },
+      {
+        eventTitle: "Northwestern Mutual EXCHANGE",
+        eventDate: "02/17/2026",
+        moreInfoLink: "https://events.ucf.edu/event/4029455/northwestern-mutual-exchange/",
+      },
+      {
+        eventTitle: "Kennedy Space Center 2026 Annual Career & Networking Event",
+        eventDate: "02/21/2026",
+        moreInfoLink: "https://ucf.joinhandshake.com/stu/events/1911217",
+      },
+      {
+        eventTitle: "Churrasco da BRASA (BRASA Event)",
+        eventDate: "02/21/2026",
+        moreInfoLink: "https://ucfbrasa.com/events",
+      },
+    ],
+    dontMissThis: [
+      {
+        title: "Disney Internships Summer/Fall 2026",
+        link: "https://www.disneycareers.com/en/search-jobs/internship/Orlando%2C%20FL/391/1/4/6252001-4155751-4167060-4167147/28x53834/-81x37924/100/2",
+      },
+      {
+        title: "BNY Summer Internship Program",
+        link: "https://eofe.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs/preview/72948/?keyword=internship&location=Orlando%2C+FL%2C+United+States&locationId=300000090199458&locationLevel=city&mode=location&radius=25&radiusUnit=MI",
+      },
+      {
+        title: "ALDI District Manager Intern",
+        link: "https://ucf.joinhandshake.com/jobs/10670114?searchId=73078e99-fc5f-4426-a0c7-d8883b6fa91e",
+      },
+      {
+        title: "RS&H Mechanical Engineering Intern",
+        link: "https://ucf.joinhandshake.com/jobs/10682346?searchId=b6f32bd7-4e4d-4e89-b93a-3924bbe96111",
       },
       {
         title: "KPMG - Summer/winter 2026-2027 Internships",
