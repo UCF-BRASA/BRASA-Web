@@ -21,30 +21,41 @@ import guest_speaker_landing_pic from "../../public/static/landing/our-events/gu
 import study_sesh_pic_landing from "../../public/static/landing/our-events/study-sesh-pic1.jpg";
 import workshop_pic_landing from "../../public/static/landing/our-events/workshop-landing.jpg";
 
-// Temporary pictures for 2025 "Previous Board"
-import luana_pre from "../../public/static/meet-board-new/Luana_Agramunt.jpg";
-import mel_pre from "../../public/static/meet-board-new/Mel_Wolff.jpg";
-// Current meet the board pictures
-import ana25_26 from "../../public/static/meet-board-25_26/Ana_Beatriz_Napravnik_Dantas.jpg";
-import bia25_26 from "../../public/static/meet-board-25_26/Beatriz_Bernauer_Alencar.jpg";
-import caio_vodka25_26 from "../../public/static/meet-board-25_26/Caio_Amaral_Campos.jpg";
-import caio25_26 from "../../public/static/meet-board-25_26/Caio_Rosa_Rocha.jpg";
-import cecilia25_26 from "../../public/static/meet-board-25_26/Cecilia_Martins.jpg";
-import chris25_26 from "../../public/static/meet-board-25_26/Christopher_Pavie_Suarez.jpg";
-import david25_26 from "../../public/static/meet-board-25_26/David_Duek_Guarino.jpg";
-import gabs25_26 from "../../public/static/meet-board-25_26/Gabriel_Morais.jpg";
-import gui25_26 from "../../public/static/meet-board-25_26/Guilherme_Vilhena.jpg";
-import bertollo25_26 from "../../public/static/meet-board-25_26/Isabella_Bertollo_Garcia.jpg";
-import joao25_26 from "../../public/static/meet-board-25_26/João_Pedro_Campi.jpg";
-import julia25_26 from "../../public/static/meet-board-25_26/Julia_Wataki_De_Freitas.jpg";
-import luisa25_26 from "../../public/static/meet-board-25_26/Luisa_Brizolim_Quesada.jpg";
-import mazi25_26 from "../../public/static/meet-board-25_26/Mariana_Vicentin_Remedio.jpg";
-import seabra25_26 from "../../public/static/meet-board-25_26/Matheus_De_Sá_Barreto_Seabra.jpg";
-import matheus25_26 from "../../public/static/meet-board-25_26/Matheus_Santos_Gomes.jpg";
-import murilo25_26 from "../../public/static/meet-board-25_26/Murilo_Marques_De_Paula.jpg";
-import paulo25_26 from "../../public/static/meet-board-25_26/Paulo_Fernandes_Nascimento.jpg";
-import roberta25_26 from "../../public/static/meet-board-25_26/Roberta_Adami_Barreto.jpg";
-import samuel25_26 from "../../public/static/meet-board-25_26/Samuel_Schmidt.jpg";
+//Current Board pictures
+import AmandaPD from "../../public/static/meet-board/meet-board-spring26/Amanda Piana Loyola Peres.jpeg";
+import AnaPresida from "../../public/static/meet-board/meet-board-spring26/Ana Beatriz Napravnik Dantas.jpg";
+import BiaHeadEvents from "../../public/static/meet-board/meet-board-spring26/Beatriz Bernauer Alencar.jpeg";
+import CaioVodka from "../../public/static/meet-board/meet-board-spring26/Caio Amaral Campos.jpg";
+import CaioHeadPD from "../../public/static/meet-board/meet-board-spring26/Caio Rosa Rocha.jpeg";
+import CeciEvents from "../../public/static/meet-board/meet-board-spring26/Cecilia Martins.jpeg";
+import ChrisVice from "../../public/static/meet-board/meet-board-new/chris-pic-new.jpg";
+import DavidFinance from "../../public/static/meet-board/meet-board-spring26/David Borba Rodrigues.jpeg";
+import DavidPD from "../../public/static/meet-board/meet-board-spring26/David Duek Guarino.jpeg";
+import DiogoEvents from "../../public/static/meet-board/meet-board-spring26/Diogo de Moraes Short.jpeg";
+import GabFinance from "../../public/static/meet-board/meet-board-spring26/Gabriel Morais.jpg";
+import GabrielEvents from "../../public/static/meet-board/meet-board-spring26/Gabriel Rotsen.jpeg";
+import GuiMarketing from "../../public/static/meet-board/meet-board-spring26/Guilherme Vilhena.jpeg";
+import IsabellaFinance from "../../public/static/meet-board/meet-board-spring26/Isabella Bertollo Garcia.jpeg";
+import IsabellaMarketing from "../../public/static/meet-board/meet-board-spring26/Isabella Mota.jpeg";
+import IsadoraMarketing from "../../public/static/meet-board/meet-board-spring26/Isadora Biscaro.jpeg";
+import LuisaTech from "../../public/static/meet-board/meet-board-spring26/Luisa Brizolim Quesada.jpeg";
+import MariEvents from "../../public/static/meet-board/meet-board-spring26/Mariana Machado Goncalves.jpeg";
+import MatheusHeadFinance from "../../public/static/meet-board/meet-board-spring26/Matheus Santos Gomes.jpg";
+import Mel from "../../public/static/meet-board/meet-board-spring26/Mel Wolff.jpeg";
+import MuriloPD from "../../public/static/meet-board/meet-board-spring26/Murilo Marques De Paula.jpg";
+import PauloHeadTech from "../../public/static/meet-board/meet-board-spring26/Paulo Fernandes Nascimento.jpg";
+import RafaelFinance from "../../public/static/meet-board/meet-board-spring26/Rafael Paolinelli.jpeg";
+import SamucaTech from "../../public/static/meet-board/meet-board-spring26/Samuel Schmidt.jpeg";
+import ViniTech from "../../public/static/meet-board/meet-board-spring26/Vinicius Cazoto Costa.jpeg";
+import MaziHeadMark from "../../public/static/meet-board/meet-board-spring26/Mariana Vicentin Remedio.jpeg";
+
+// 2025 Board pictures from meet-board-new
+import nino_newpic from "../../public/static/meet-board/meet-board-new/Nino_Portugal.jpg";
+import ana25_26 from "../../public/static/meet-board/meet-board-new/Ana_Beatriz_Dantas.jpg";
+import chris25_26 from "../../public/static/meet-board/meet-board-new/chris-pic-new.jpg";
+import luana_pre from "../../public/static/meet-board/meet-board-new/Luana_Agramunt.jpg";
+import matheus25_26 from "../../public/static/meet-board/meet-board-new/Matheus_Gomes.jpg";
+import mel_pre from "../../public/static/meet-board/meet-board-new/Mel_Wolff.jpg";
 
 // Old Meet the Board images (We might use put these on a previous board members section but its TBD)
 import carol_pic from "../../public/static/meet-board/carol_pic.jpg";
@@ -567,7 +578,7 @@ export const PREV_EBOARD_MEMBERS: PrevBoardTabs[] = [
 export const EBOARD_MEMBERS: EBoardData[] = [
   {
     id: 1,
-    image: ana25_26,
+    image: AnaPresida,
     imageAlt: "Ana Beatriz Dantas Picture",
     officerName: "Ana Beatriz Dantas",
     officerTitle: "President",
@@ -577,7 +588,7 @@ export const EBOARD_MEMBERS: EBoardData[] = [
   },
   {
     id: 2,
-    image: chris25_26,
+    image: ChrisVice,
     imageAlt: "Christopher Pavie Suarez Picture",
     officerName: "Christopher Pavie Suarez",
     officerTitle: "Vice President",
@@ -587,7 +598,7 @@ export const EBOARD_MEMBERS: EBoardData[] = [
   },
   {
     id: 3,
-    image: mazi25_26,
+    image: MaziHeadMark,
     imageAlt: "Mariana Vicentin Remedio Picture",
     officerName: "Mariana Vicentin Remedio",
     officerTitle: "Head of Marketing",
@@ -597,7 +608,7 @@ export const EBOARD_MEMBERS: EBoardData[] = [
   },
   {
     id: 4,
-    image: caio25_26,
+    image: CaioHeadPD,
     imageAlt: "Caio Rosa Rocha Picture",
     officerName: "Caio Rosa Rocha",
     officerTitle: "Head of Professional Development",
@@ -607,7 +618,7 @@ export const EBOARD_MEMBERS: EBoardData[] = [
   },
   {
     id: 5,
-    image: paulo25_26,
+    image: PauloHeadTech,
     imageAlt: "Paulo Fernandes Nascimento Picture",
     officerName: "Paulo Nascimento",
     officerTitle: "Head of Technology",
@@ -617,7 +628,7 @@ export const EBOARD_MEMBERS: EBoardData[] = [
   },
   {
     id: 6,
-    image: matheus25_26,
+    image: MatheusHeadFinance,
     imageAlt: "Matheus Gomes Picture",
     officerName: "Matheus Gomes",
     officerTitle: "Head of Finance",
@@ -627,10 +638,20 @@ export const EBOARD_MEMBERS: EBoardData[] = [
   },
   {
     id: 7,
-    image: bia25_26,
+    image: BiaHeadEvents,
     imageAlt: "Beatriz Bernauer Alencar Picture",
     officerName: "Beatriz Bernauer Alencar",
     officerTitle: "Head of Events",
+    officerBio:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    officerLinkedIn: "https://www.linkedin.com/in/leonora-carvalho-vaz-de-siqueira-525095210/",
+  },
+  {
+    id: 7,
+    image: Mel,
+    imageAlt: "Mel Wolff Picture",
+    officerName: "Mel Wolff",
+    officerTitle: "Head of External Affairs",
     officerBio:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     officerLinkedIn: "https://www.linkedin.com/in/leonora-carvalho-vaz-de-siqueira-525095210/",
@@ -640,82 +661,112 @@ export const EBOARD_MEMBERS: EBoardData[] = [
 // Move this to DB
 export const BOARD_MEMBERS: BoardData[] = [
   {
-    image: luisa25_26,
+    image: LuisaTech,
     imageAlt: "Luisa Brizolim Quesada Picture",
     officerTitle: "Tech Team Analyst",
     officerName: "Luisa Brizolim Quesada",
   },
   {
-    image: seabra25_26,
-    imageAlt: "Seabra Picture",
+    image: SamucaTech,
+    imageAlt: "Samuel Schmidt Picture",
     officerTitle: "Tech Team Analyst",
-    officerName: "Matheus De Sá Barreto Seabra",
+    officerName: "Samuel Schmidt",
   },
   {
-    image: gui25_26,
-    imageAlt: "Guilherme Vilhena Picture",
-    officerTitle: "Marketing Analyst",
-    officerName: "Guilherme Vilhena",
+    image: ViniTech,
+    imageAlt: "Vinicius Cazoto Costa Picture",
+    officerTitle: "Tech Team Analyst",
+    officerName: "Vinicius Cazoto Costa",
   },
   {
-    image: roberta25_26,
-    imageAlt: "Roberta Adami Barreto Picture",
-    officerTitle: "Marketing Analyst",
-    officerName: "Roberta Adami Barreto",
-  },
-  {
-    image: murilo25_26,
-    imageAlt: "Murilo Marques De Paula Picture",
-    officerTitle: "Professional Development Analyst",
-    officerName: "Murilo Marques De Paula",
-  },
-  {
-    image: david25_26,
-    imageAlt: "David Duek Guarino Picture",
-    officerTitle: "Professional Development Analyst",
-    officerName: "David Duek Guarino",
-  },
-  {
-    image: gabs25_26,
+    image: GabFinance,
     imageAlt: "Gabriel Morais Picture",
     officerTitle: "Finance Analyst",
     officerName: "Gabriel Morais",
   },
   {
-    image: bertollo25_26,
-    imageAlt: "Isabella Bertollo Picture",
+    image: RafaelFinance,
+    imageAlt: "Rafael Paolinelli Picture",
+    officerTitle: "Finance Analyst",
+    officerName: "Rafael Paolinelli",
+  },
+  {
+    image: IsabellaFinance,
+    imageAlt: "Isabella Bertollo Garcia Picture",
     officerTitle: "Finance Analyst",
     officerName: "Isabella Bertollo Garcia",
   },
   {
-    image: joao25_26,
-    imageAlt: "João Pedro Campi Picture",
+    image: DavidFinance,
+    imageAlt: "David Borba Rodrigues Picture",
     officerTitle: "Finance Analyst",
-    officerName: "João Pedro Campi",
+    officerName: "David Borba Rodrigues",
   },
   {
-    image: caio_vodka25_26,
-    imageAlt: "Caio Amaral Campos Picture",
+    image: MuriloPD,
+    imageAlt: "Murilo Marques De Paula Picture",
+    officerTitle: "Professional Development Analyst",
+    officerName: "Murilo Marques De Paula",
+  },
+  {
+    image: DavidPD,
+    imageAlt: "David Duek Guarino Picture",
+    officerTitle: "Professional Development Analyst",
+    officerName: "David Duek Guarino",
+  },
+  {
+    image: AmandaPD,
+    imageAlt: "Amanda Piana Loyola Peres Picture",
+    officerTitle: "Professional Development Analyst",
+    officerName: "Amanda Piana Loyola Peres",
+  },
+  {
+    image: IsadoraMarketing,
+    imageAlt: "Isadora Biscaro Picture",
+    officerTitle: "Marketing Analyst",
+    officerName: "Isadora Biscaro",
+  },
+  {
+    image: GuiMarketing,
+    imageAlt: "Guilherme Vilhena Picture",
+    officerTitle: "Marketing Analyst",
+    officerName: "Guilherme Vilhena",
+  },
+  {
+    image: IsabellaMarketing,
+    imageAlt: "Isabella Mota Picture",
+    officerTitle: "Marketing Analyst",
+    officerName: "Isabella Mota",
+  },
+  {
+    image: CaioVodka,
+    imageAlt: "Caio Vodka Picture",
     officerTitle: "Events Analyst",
     officerName: "Caio Amaral Campos",
   },
   {
-    image: julia25_26,
-    imageAlt: "Julia Wataki De Freitas Picture",
-    officerTitle: "Events Analyst",
-    officerName: "Julia Wataki De Freitas",
-  },
-  {
-    image: cecilia25_26,
+    image: CeciEvents,
     imageAlt: "Cecilia Martins Picture",
     officerTitle: "Events Analyst",
     officerName: "Cecilia Martins",
   },
   {
-    image: samuel25_26,
-    imageAlt: "Samuel Schmidt Picture",
+    image: DiogoEvents,
+    imageAlt: "Diogo De Moraes Short Picture",
     officerTitle: "Events Analyst",
-    officerName: "Samuel Schmidt",
+    officerName: "Diogo De Moraes Short",
+  },
+  {
+    image: MariEvents,
+    imageAlt: "Mariana Machado Goncalves Picture",
+    officerTitle: "Events Analyst",
+    officerName: "Mariana Machado Goncalves",
+  },
+  {
+    image: GabrielEvents,
+    imageAlt: "Gabriel Rotsen Picture",
+    officerTitle: "Events Analyst",
+    officerName: "Gabriel Rotsen",
   },
 ];
 
@@ -782,6 +833,34 @@ export const MOBILE_SIDEBAR_DATA: MobileSidebarData[] = [
 ];
 
 export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
+  {
+    image: study_sesh_pic_landing,
+    date: "02/12/2026",
+    time: "4:00PM - 7:00PM",
+    location: "UCF John C. Hitt Library",
+    eventName: "Study Session",
+    eventDescription:
+      "Enhance your focus and academic success! Join our club members for our study sessions in the library. We've booked a private room. bring your books and let's ace these exams together! (ROOM 370B)",
+    eventType: "Professional",
+    isPaid: false,
+    moreInfoLink: "",
+    buyTicketLink: "",
+    isAnnounced: false,
+  },
+  {
+    image: ginga_valentines_pic,
+    date: "02/13/2026",
+    time: "9:00PM - 2:00AM",
+    location: "33 E Pine St, Orlando, FL 32801",
+    eventName: "Ginga F*NK Valentines",
+    eventDescription:
+      "Carnaval season meets Valentine's Day There's no better way to celebrate than F*NK Valentines",
+    eventType: "Social",
+    isPaid: true,
+    moreInfoLink: "https://www.instagram.com/p/DUb67YZEQ1E/?hl=en",
+    buyTicketLink: "https://posh.vip/e/ginga-fnk-valentines?t=brasa",
+    isAnnounced: true,
+  },
   {
     image: churras_event_pic,
     date: "02/21/2026",
