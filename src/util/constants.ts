@@ -50,7 +50,6 @@ import ViniTech from "../../public/static/meet-board/meet-board-spring26/Viniciu
 import MaziHeadMark from "../../public/static/meet-board/meet-board-spring26/Mariana Vicentin Remedio.jpeg";
 
 // 2025 Board pictures from meet-board-new
-import nino_newpic from "../../public/static/meet-board/meet-board-new/Nino_Portugal.jpg";
 import ana25_26 from "../../public/static/meet-board/meet-board-new/Ana_Beatriz_Dantas.jpg";
 import chris25_26 from "../../public/static/meet-board/meet-board-new/chris-pic-new.jpg";
 import luana_pre from "../../public/static/meet-board/meet-board-new/Luana_Agramunt.jpg";
@@ -758,9 +757,9 @@ export const BOARD_MEMBERS: BoardData[] = [
   },
   {
     image: MariEvents,
-    imageAlt: "Mariana Machado Goncalves Picture",
+    imageAlt: "Mariana Machado Gonçalves Picture",
     officerTitle: "Events Analyst",
-    officerName: "Mariana Machado Goncalves",
+    officerName: "Mariana Machado Gonçalves",
   },
   {
     image: GabrielEvents,
@@ -833,34 +832,6 @@ export const MOBILE_SIDEBAR_DATA: MobileSidebarData[] = [
 ];
 
 export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
-  {
-    image: study_sesh_pic_landing,
-    date: "02/12/2026",
-    time: "4:00PM - 7:00PM",
-    location: "UCF John C. Hitt Library",
-    eventName: "Study Session",
-    eventDescription:
-      "Enhance your focus and academic success! Join our club members for our study sessions in the library. We've booked a private room. bring your books and let's ace these exams together! (ROOM 370B)",
-    eventType: "Professional",
-    isPaid: false,
-    moreInfoLink: "",
-    buyTicketLink: "",
-    isAnnounced: false,
-  },
-  {
-    image: ginga_valentines_pic,
-    date: "02/13/2026",
-    time: "9:00PM - 2:00AM",
-    location: "33 E Pine St, Orlando, FL 32801",
-    eventName: "Ginga F*NK Valentines",
-    eventDescription:
-      "Carnaval season meets Valentine's Day There's no better way to celebrate than F*NK Valentines",
-    eventType: "Social",
-    isPaid: true,
-    moreInfoLink: "https://www.instagram.com/p/DUb67YZEQ1E/?hl=en",
-    buyTicketLink: "https://posh.vip/e/ginga-fnk-valentines?t=brasa",
-    isAnnounced: true,
-  },
   {
     image: churras_event_pic,
     date: "02/21/2026",
