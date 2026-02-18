@@ -224,7 +224,6 @@ const MeetTheBoard: NextPage<Props> = ({ isMobile }) => {
               </Tabs>
             </div>
           </section>
-          <JoinNewsletter />
         </div>
       )}
     </main>
