@@ -958,7 +958,7 @@ export const NEWS_LETTER_DATA: newsletterPostData[] = [
     ],
   },
   {
-    newsLetterDate: "02/23/26 - 03/01/26",
+    newsLetterDate: "02/22/26 - 03/01/26",
     content:
       "Self-advocacy means clearly communicating your needs, goals, and contributions. In academic settings, it involves asking questions, requesting feedback, and confidently articulating your value. Being assertive boosts self-esteem, reduces stress, and improves academic performance. Students who advocate for themselves access more opportunities and build professional confidence. This week, challenge yourself to speak up and claim the opportunities you deserve!",
     events: [
