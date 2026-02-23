@@ -22,13 +22,13 @@ import study_sesh_pic_landing from "../../public/static/landing/our-events/study
 import workshop_pic_landing from "../../public/static/landing/our-events/workshop-landing.jpg";
 
 //Current Board pictures
+import ChrisVice from "../../public/static/meet-board/meet-board-new/chris-pic-new.jpg";
 import AmandaPD from "../../public/static/meet-board/meet-board-spring26/Amanda Piana Loyola Peres.jpeg";
 import AnaPresida from "../../public/static/meet-board/meet-board-spring26/Ana Beatriz Napravnik Dantas.jpg";
 import BiaHeadEvents from "../../public/static/meet-board/meet-board-spring26/Beatriz Bernauer Alencar.jpeg";
 import CaioVodka from "../../public/static/meet-board/meet-board-spring26/Caio Amaral Campos.jpg";
 import CaioHeadPD from "../../public/static/meet-board/meet-board-spring26/Caio Rosa Rocha.jpeg";
 import CeciEvents from "../../public/static/meet-board/meet-board-spring26/Cecilia Martins.jpeg";
-import ChrisVice from "../../public/static/meet-board/meet-board-new/chris-pic-new.jpg";
 import DavidFinance from "../../public/static/meet-board/meet-board-spring26/David Borba Rodrigues.jpeg";
 import DavidPD from "../../public/static/meet-board/meet-board-spring26/David Duek Guarino.jpeg";
 import DiogoEvents from "../../public/static/meet-board/meet-board-spring26/Diogo de Moraes Short.jpeg";
@@ -40,6 +40,7 @@ import IsabellaMarketing from "../../public/static/meet-board/meet-board-spring2
 import IsadoraMarketing from "../../public/static/meet-board/meet-board-spring26/Isadora Biscaro.jpeg";
 import LuisaTech from "../../public/static/meet-board/meet-board-spring26/Luisa Brizolim Quesada.jpeg";
 import MariEvents from "../../public/static/meet-board/meet-board-spring26/Mariana Machado Goncalves.jpeg";
+import MaziHeadMark from "../../public/static/meet-board/meet-board-spring26/Mariana Vicentin Remedio.jpeg";
 import MatheusHeadFinance from "../../public/static/meet-board/meet-board-spring26/Matheus Santos Gomes.jpg";
 import Mel from "../../public/static/meet-board/meet-board-spring26/Mel Wolff.jpeg";
 import MuriloPD from "../../public/static/meet-board/meet-board-spring26/Murilo Marques De Paula.jpg";
@@ -47,7 +48,6 @@ import PauloHeadTech from "../../public/static/meet-board/meet-board-spring26/Pa
 import RafaelFinance from "../../public/static/meet-board/meet-board-spring26/Rafael Paolinelli.jpeg";
 import SamucaTech from "../../public/static/meet-board/meet-board-spring26/Samuel Schmidt.jpeg";
 import ViniTech from "../../public/static/meet-board/meet-board-spring26/Vinicius Cazoto Costa.jpeg";
-import MaziHeadMark from "../../public/static/meet-board/meet-board-spring26/Mariana Vicentin Remedio.jpeg";
 
 // 2025 Board pictures from meet-board-new
 import ana25_26 from "../../public/static/meet-board/meet-board-new/Ana_Beatriz_Dantas.jpg";
@@ -97,6 +97,8 @@ import rafa_pic from "../../public/static/meet-board/prev-board/rafa.jpeg";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 
 // Upcoming Event Pictures
+import guestSpeaker_pic from "../../public/static/upcoming-events/guestSpeaker_pic.jpeg";
+
 // Board pic
 import board_pic from "../../public/static/become-member/member-box/board_pic.jpg";
 
@@ -846,7 +848,23 @@ export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
     buyTicketLink: "",
     isAnnounced: true,
   },
+
+  {
+    image: guestSpeaker_pic,
+    date: "02/25/2026",
+    time: "7:00PM",
+    location: "12715 Pegasus Dr, Orlando, FL 32816",
+    eventName: "Guest Speaker: Daniel Coragem",
+    eventDescription:
+      "Join us at Sand Key Room 220 for a special Guest Speaker event with Daniel Coragem, Director of Operation at Nona FC. Learn about leadership and professional growth in the sports industry.",
+    eventType: "Professional",
+    isPaid: false,
+    moreInfoLink: "https://www.instagram.com/p/DU6API1DbbC/", // replace with IG link if needed
+    buyTicketLink: "",
+    isAnnounced: true,
+  },
 ];
+
 
 export const NEWS_LETTER_DATA: newsletterPostData[] = [
   {
