@@ -22,13 +22,13 @@ import study_sesh_pic_landing from "../../public/static/landing/our-events/study
 import workshop_pic_landing from "../../public/static/landing/our-events/workshop-landing.jpg";
 
 //Current Board pictures
+import ChrisVice from "../../public/static/meet-board/meet-board-new/chris-pic-new.jpg";
 import AmandaPD from "../../public/static/meet-board/meet-board-spring26/Amanda Piana Loyola Peres.jpeg";
 import AnaPresida from "../../public/static/meet-board/meet-board-spring26/Ana Beatriz Napravnik Dantas.jpg";
 import BiaHeadEvents from "../../public/static/meet-board/meet-board-spring26/Beatriz Bernauer Alencar.jpeg";
 import CaioVodka from "../../public/static/meet-board/meet-board-spring26/Caio Amaral Campos.jpg";
 import CaioHeadPD from "../../public/static/meet-board/meet-board-spring26/Caio Rosa Rocha.jpeg";
 import CeciEvents from "../../public/static/meet-board/meet-board-spring26/Cecilia Martins.jpeg";
-import ChrisVice from "../../public/static/meet-board/meet-board-new/chris-pic-new.jpg";
 import DavidFinance from "../../public/static/meet-board/meet-board-spring26/David Borba Rodrigues.jpeg";
 import DavidPD from "../../public/static/meet-board/meet-board-spring26/David Duek Guarino.jpeg";
 import DiogoEvents from "../../public/static/meet-board/meet-board-spring26/Diogo de Moraes Short.jpeg";
@@ -40,6 +40,7 @@ import IsabellaMarketing from "../../public/static/meet-board/meet-board-spring2
 import IsadoraMarketing from "../../public/static/meet-board/meet-board-spring26/Isadora Biscaro.jpeg";
 import LuisaTech from "../../public/static/meet-board/meet-board-spring26/Luisa Brizolim Quesada.jpeg";
 import MariEvents from "../../public/static/meet-board/meet-board-spring26/Mariana Machado Goncalves.jpeg";
+import MaziHeadMark from "../../public/static/meet-board/meet-board-spring26/Mariana Vicentin Remedio.jpeg";
 import MatheusHeadFinance from "../../public/static/meet-board/meet-board-spring26/Matheus Santos Gomes.jpg";
 import Mel from "../../public/static/meet-board/meet-board-spring26/Mel Wolff.jpeg";
 import MuriloPD from "../../public/static/meet-board/meet-board-spring26/Murilo Marques De Paula.jpg";
@@ -47,7 +48,6 @@ import PauloHeadTech from "../../public/static/meet-board/meet-board-spring26/Pa
 import RafaelFinance from "../../public/static/meet-board/meet-board-spring26/Rafael Paolinelli.jpeg";
 import SamucaTech from "../../public/static/meet-board/meet-board-spring26/Samuel Schmidt.jpeg";
 import ViniTech from "../../public/static/meet-board/meet-board-spring26/Vinicius Cazoto Costa.jpeg";
-import MaziHeadMark from "../../public/static/meet-board/meet-board-spring26/Mariana Vicentin Remedio.jpeg";
 
 // 2025 Board pictures from meet-board-new
 import ana25_26 from "../../public/static/meet-board/meet-board-new/Ana_Beatriz_Dantas.jpg";
@@ -97,6 +97,8 @@ import rafa_pic from "../../public/static/meet-board/prev-board/rafa.jpeg";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 
 // Upcoming Event Pictures
+import guestSpeaker_pic from "../../public/static/upcoming-events/guestSpeaker_pic.jpeg";
+
 // Board pic
 import board_pic from "../../public/static/become-member/member-box/board_pic.jpg";
 
@@ -846,7 +848,23 @@ export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
     buyTicketLink: "",
     isAnnounced: true,
   },
+
+  {
+    image: guestSpeaker_pic,
+    date: "02/25/2026",
+    time: "7:00PM",
+    location: "12715 Pegasus Dr, Orlando, FL 32816",
+    eventName: "Guest Speaker: Daniel Coragem",
+    eventDescription:
+      "Join us at Sand Key Room 220 for a special Guest Speaker event with Daniel Coragem, Director of Operation at Nona FC. Learn about leadership and professional growth in the sports industry.",
+    eventType: "Professional",
+    isPaid: false,
+    moreInfoLink: "https://www.instagram.com/p/DU6API1DbbC/", // replace with IG link if needed
+    buyTicketLink: "",
+    isAnnounced: true,
+  },
 ];
+
 
 export const NEWS_LETTER_DATA: newsletterPostData[] = [
   {
@@ -954,6 +972,75 @@ export const NEWS_LETTER_DATA: newsletterPostData[] = [
       {
         title: "KPMG - Summer/winter 2026-2027 Internships",
         link: "https://www.kpmguscareers.com/job-search/?career-level-parents=Early%20Career%7C&career-level=&spage=1",
+      },
+    ],
+  },
+  {
+    newsLetterDate: "02/22/26 - 03/01/26",
+    content:
+      "Self-advocacy means clearly communicating your needs, goals, and contributions. In academic settings, it involves asking questions, requesting feedback, and confidently articulating your value. Being assertive boosts self-esteem, reduces stress, and improves academic performance. Students who advocate for themselves access more opportunities and build professional confidence. This week, challenge yourself to speak up and claim the opportunities you deserve!",
+    events: [
+      {
+        eventTitle: "Talk Smart: Networking Health, Law, & Grad School",
+        eventDate: "02/23/2026",
+        moreInfoLink: "https://ucf.joinhandshake.com/stu/events/1873124",
+      },
+      {
+        eventTitle: "Art of Negotiation",
+        eventDate: "02/23/2026",
+        moreInfoLink: "https://ucf.campuslabs.com/engage/event/12263025",
+      },
+      {
+        eventTitle: "LinkedIn 101 Workshop",
+        eventDate: "02/25/2026",
+        moreInfoLink: "https://ucf.campuslabs.com/engage/event/12251363",
+      },
+      {
+        eventTitle: "BRASA Guest Speaker",
+        eventDate: "02/25/2026",
+        moreInfoLink: "https://ucfbrasa.com/events",
+      },
+      {
+        eventTitle: "The Invitational Job Fair",
+        eventDate: "02/26/2026",
+        moreInfoLink:
+          "https://business.ucf.edu/5-reasons-to-attend-the-ucf-business-invitational/",
+      },
+      {
+        eventTitle: "Dress to Impress with Style Encore",
+        eventDate: "02/28/2026",
+        moreInfoLink:
+          "https://business.ucf.edu/5-reasons-to-attend-the-ucf-business-invitational/",
+      },
+    ],
+    dontMissThis: [
+      {
+        title: "Enterprise-Management Trainee Intern",
+        link: "https://www.enterprisemobility.com/en/careers/job.html/543139/orlando/management-trainee-intern",
+      },
+      {
+        title: "USTA Undergraduate Intern Summer 2026",
+        link: "https://careers-usta.icims.com/jobs/intro",
+      },
+      {
+        title: "Dyverse Internal Marketing Internship (Spring 2026)",
+        link: "https://dyversemarketing.hire.trakstar.com/jobs/fk0pkna/",
+      },
+      {
+        title: "Target Store Assets Protection Executive Intern",
+        link: "https://target.wd5.myworkdayjobs.com/targetcareers/job/4750-Millenia-Plaza-Way-OrlandoFL-32839-2434/Store-Assets-Protection-Executive-Intern--Store-Leadership-Intern----Orlando--FL--Starting-Summer-2026--_R0000403141?gh_src=Handshake&iisn=Handshake&iis=Handshake&src=Handshake&source=Handshake&ref=Handshake&utm_medium=Handshake&referral=Handshake&utm_source=Handshake&__jvst=Handshake&__jvsd=Handshake&sourceDetails=Handshake&trid=Handshake",
+      },
+      {
+        title: "DeAngelis Construction Management Internship",
+        link: "https://app.joinhandshake.com/public/jobs/10753727?utm_source=web&utm_campaign=job_share&utm_medium=copy_link&utm_content=stu-copy_link-job_page",
+      },
+      {
+        title: "AdventHealth: Nonclinical Healthcare Internships",
+        link: "https://app.joinhandshake.com/public/jobs/10742175?utm_source=web&utm_campaign=job_share&utm_medium=copy_link&utm_content=stu-copy_link-job_page",
+      },
+      {
+        title: "SCS Civil or Environmental Engineering Intern",
+        link: "https://app.joinhandshake.com/jobs/10702301",
       },
     ],
   },
