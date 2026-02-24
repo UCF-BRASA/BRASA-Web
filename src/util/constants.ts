@@ -834,20 +834,20 @@ export const MOBILE_SIDEBAR_DATA: MobileSidebarData[] = [
 ];
 
 export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
-  {
-    image: churras_event_pic,
-    date: "02/21/2026",
-    time: "1:00PM - 6:00PM",
-    location: "TBD",
-    eventName: "Churrasco da BRASA",
-    eventDescription:
-      "Our FIRST churrasco of the semester is officially on the calendar! And trust us, you don't want to miss this one",
-    eventType: "Social",
-    isPaid: false,
-    moreInfoLink: "https://www.instagram.com/p/DUrPe6aDZlp/",
-    buyTicketLink: "",
-    isAnnounced: true,
-  },
+  //{
+  //  image: churras_event_pic,
+  //  date: "02/21/2026",
+  //  time: "1:00PM - 6:00PM",
+  //  location: "TBD",
+  //  eventName: "Churrasco da BRASA",
+  // eventDescription:
+  //   "Our FIRST churrasco of the semester is officially on the calendar! And trust us, you don't want to miss this one",
+  // eventType: "Social",
+  // isPaid: false,
+  // moreInfoLink: "https://www.instagram.com/p/DUrPe6aDZlp/",
+  // buyTicketLink: "",
+  //isAnnounced: true,
+  //},
 
   {
     image: guestSpeaker_pic,
