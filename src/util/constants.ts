@@ -97,7 +97,7 @@ import rafa_pic from "../../public/static/meet-board/prev-board/rafa.jpeg";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 
 // Upcoming Event Pictures
-import guestSpeaker_pic from "../../public/static/upcoming-events/guestSpeaker_pic.jpeg";
+import brasa_bounce_pic from "../../public/static/upcoming-events/Bounce-event-brasa.jpg";
 
 // Board pic
 import board_pic from "../../public/static/become-member/member-box/board_pic.jpg";
@@ -753,9 +753,9 @@ export const BOARD_MEMBERS: BoardData[] = [
   },
   {
     image: DiogoEvents,
-    imageAlt: "Diogo De Moraes Short Picture",
+    imageAlt: "Diogo de Moraes Short Picture",
     officerTitle: "Events Analyst",
-    officerName: "Diogo De Moraes Short",
+    officerName: "Diogo de Moraes Short",
   },
   {
     image: MariEvents,
@@ -850,17 +850,17 @@ export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
   //},
 
   {
-    image: guestSpeaker_pic,
-    date: "02/25/2026",
-    time: "7:00PM",
-    location: "12715 Pegasus Dr, Orlando, FL 32816",
-    eventName: "Guest Speaker: Daniel Coragem",
+    image: brasa_bounce_pic,
+    date: "03/05/2026",
+    time: "9:00PM - 2:00AM",
+    location: "12100 Challenger Pkwy, Orlando, FL 32826",
+    eventName: "BRASA x BOUNCE",
     eventDescription:
-      "Join us at Sand Key Room 220 for a special Guest Speaker event with Daniel Coragem, Director of Operation at Nona FC. Learn about leadership and professional growth in the sports industry.",
-    eventType: "Professional",
-    isPaid: false,
-    moreInfoLink: "https://www.instagram.com/p/DU6API1DbbC/", // replace with IG link if needed
-    buyTicketLink: "",
+      "The night you've been waiting for is back. And this time… we're doing it bigger.",
+    eventType: "Social",
+    isPaid: true,
+    moreInfoLink: "https://www.instagram.com/p/DVL6fa5DbAJ/?igsh=N3NhMmg5NDd6cDR0", // replace with IG link if needed
+    buyTicketLink: "https://posh.vip/e/brasa-x-bounce",
     isAnnounced: true,
   },
 ];
@@ -1041,6 +1041,51 @@ export const NEWS_LETTER_DATA: newsletterPostData[] = [
       {
         title: "SCS Civil or Environmental Engineering Intern",
         link: "https://app.joinhandshake.com/jobs/10702301",
+      },
+    ],
+  },
+  {
+    newsLetterDate: "03/01/26 - 03/08/26",
+    content:
+      "Critical thinking is the ability to analyze information and question assumptions to make well-informed decisions instead of automatically accepting everything. In college, this involves understanding formula origins, questioning strange results, and connecting concepts across different subjects. Professionally, it means avoiding blind task execution and identifying process improvements to prevent rework by thinking before acting.",
+    events: [
+      {
+        eventTitle: "Business Industry Day",
+        eventDate: "03/03/2026",
+        moreInfoLink: "https://app.joinhandshake.com/events/1865142/share_preview",
+      },
+      {
+        eventTitle: "Engineering and Technical Industry Day",
+        eventDate: "03/04/2026",
+        moreInfoLink: "https://app.joinhandshake.com/events/1865146/share_preview",
+      },
+      {
+        eventTitle: "BRASA x BOUNCE (Brasa Event)",
+        eventDate: "03/05/2026",
+        moreInfoLink: "https://ucfbrasa.com/events",
+      },
+      {
+        eventTitle: "How to Start Your Business",
+        eventDate: "03/05/2026",
+        moreInfoLink: "https://events.blackthorn.io/en/6g3Q8Wa7/how-to-start-your-business-5a1eVOBlHtV/overview",
+      },
+    ],
+    dontMissThis: [
+      {
+        title: "Amazon Automation Engineer Intern",
+        link: "https://www.linkedin.com/jobs/view/4364513887/",
+      },
+      {
+        title: "Tesla Intern - Reliability Mechanical Test Engineer",
+        link: "https://www.linkedin.com/jobs/view/4376104586/",
+      },
+      {
+        title: "Nasdaq - Business Analyst Intern",
+        link: "https://www.linkedin.com/jobs/view/4376104586/",
+      },
+      {
+        title: "FrankCrum - Marketing and Social Media Internship",
+        link: "https://www.linkedin.com/jobs/view/4376104586/",
       },
     ],
   },
