@@ -2,7 +2,6 @@ import { faCalendar, faClock } from "@fortawesome/free-regular-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { UpcomingEventsData } from "@interfaces";
-import Image from "next/image";
 import { FC } from "react";
 
 interface Props extends UpcomingEventsData {
@@ -10,7 +9,6 @@ interface Props extends UpcomingEventsData {
 }
 
 const UpcomingEventCard: FC<Props> = ({
-  image,
   eventName,
   eventDescription,
   location,
@@ -34,25 +32,24 @@ const UpcomingEventCard: FC<Props> = ({
     <section>
       {isMobile ? (
         <div className="h-full w-full flex justify-center items-center mb-10">
-          <div className="flex flex-col w-[22rem] bg-white border-1 border-black/[0.2] rounded-lg shadow-md">
-            <Image
-              src={image}
-              alt={eventName}
-              sizes="100vw"
-              className="object-cover rounded overflow-hidden w-full"
-            />
-
-            <div className="absolute px-2 py-1 bg-main-brasa-yellow mt-[0.6rem] ml-[0.6rem] rounded-full">
+          <div className="flex flex-col w-[22rem] bg-white border-1 border-black/[0.2] rounded-lg shadow-md relative">
+            <div className="absolute px-2 py-1 bg-main-brasa-yellow -top-3 -left-3 rounded-full shadow">
               <div className="w-full h-full flex justify-center items-center">
-                <span className="font-semi-bold text-sm text-black break-normal">{eventType}</span>
+                <span className="font-semibold text-sm text-black break-normal">{eventType}</span>
               </div>
             </div>
-            <div className="px-4">
-              <div className="w-full my-4">
+            <div className="px-6 py-6">
+              <div className="w-full mb-4">
                 <h3 className="font-bold text-[1.6rem] grow text-black text-left">{eventName}</h3>
               </div>
 
-              <div id="date" className="flex flex-row gap-2 items-center justify-start">
+              <div className="w-full mb-6">
+                <span className="text-black/[0.7] font-regular items-center text-[1rem]">
+                  {eventDescription}
+                </span>
+              </div>
+
+              <div id="date" className="flex flex-row gap-2 items-center justify-start mb-2">
                 <FontAwesomeIcon icon={faCalendar} />
                 <span className="text-black/[0.6] font-regular text-md">{date}</span>
               </div>
@@ -153,22 +150,15 @@ const UpcomingEventCard: FC<Props> = ({
           </div>
         </div>
       ) : (
-        <div className="bg-white shadow-2xl mb-20 grid grid-cols-2 mx-40 rounded-3xl border-1 border-black/[0.2]">
-          <div className="absolute px-4 py-1 bg-main-brasa-yellow mt-4 ml-4 rounded-full">
+        <div className="bg-white shadow-2xl mb-20 flex flex-col mx-40 rounded-3xl border-1 border-black/[0.2] relative py-12 px-16">
+          <div className="absolute px-4 py-1 bg-main-brasa-yellow top-6 left-6 rounded-full shadow">
             <div className="w-full h-full flex justify-center items-center">
-              <span className="font-semi-bold text-sm text-black break-normal">{eventType}</span>
+              <span className="font-semibold text-sm text-black break-normal">{eventType}</span>
             </div>
           </div>
-          <Image
-            src={image}
-            alt={eventName}
-            sizes="100vw"
-            // Might have to change "fill" to object cover later
-            className="rounded-l-3xl h-[25rem] w-[50rem] object-cover"
-          />
-          <div className="flex flex-col px-10 gap-y-2 justify-center">
-            <h3 className="text-black font-bold items-center text-[1.6rem]">{eventName}</h3>
-            <span className="mb-4 text-black/[0.6] font-regular items-center text-[1rem]">
+          <div className="flex flex-col gap-y-4 justify-center w-full">
+            <h3 className="text-black font-bold items-center text-[2rem] text-center mb-2">{eventName}</h3>
+            <span className="mb-6 text-black/[0.7] font-regular text-center text-[1.1rem] max-w-4xl mx-auto">
               {eventDescription}
             </span>
             <div id="date" className="flex flex-row gap-2 items-center justify-start">
@@ -182,20 +172,20 @@ const UpcomingEventCard: FC<Props> = ({
             {/* isAnnounced start */}
             {isAnnounced ? (
               <>
-                <div id="location" className="flex flex-row">
+              <div id="location" className="flex flex-row mt-2">
                   {/* Button to open Google Maps */}
                   <button
-                    className="flex fa-lg items-center justify-start"
+                  className="flex fa-lg items-center justify-start gap-2"
                     style={{ background: "none", border: "none", cursor: "pointer" }}
                     onClick={openGoogleMaps}
                   >
                     <FontAwesomeIcon icon={faLocationDot} /> {/* style={{ color: "#eb0a0a" }} */}
-                    <span className="flex text-black/[0.6] text-left font-light text-base text-[1.08rem] ml-1">
+                  <span className="flex text-black/[0.6] text-left font-light text-base text-[1.08rem]">
                       {location}
                     </span>
                   </button>
                 </div>
-                <div className="w-full font-medium flex gap-10 text-center mt-10">
+              <div className="w-full font-medium flex gap-10 text-center mt-8">
                   {isPaid ? (
                     <>
                       <a

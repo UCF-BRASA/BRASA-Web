@@ -27,7 +27,6 @@ export interface LandingPageEventsInfo {
 
 //Decalre "structs" here
 export interface UpcomingEventsData {
-  image: StaticImageData;
   date: string;
   time: string;
   location: string;
