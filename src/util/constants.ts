@@ -97,7 +97,7 @@ import rafa_pic from "../../public/static/meet-board/prev-board/rafa.jpeg";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 
 // Upcoming Event Pictures
-import brasa_bounce_pic from "../../public/static/upcoming-events/Bounce-event-brasa.jpg";
+import brasa_bounce_pic from "../../public/static/upcoming-events/Bounce-event-brasa.jpeg";
 
 // Board pic
 import board_pic from "../../public/static/become-member/member-box/board_pic.jpg";
@@ -851,16 +851,16 @@ export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
 
   {
     image: brasa_bounce_pic,
-    date: "03/05/2026",
-    time: "9:00PM - 2:00AM",
+    date: "10/09/2026",
+    time: "10:00PM - 2:00AM",
     location: "12100 Challenger Pkwy, Orlando, FL 32826",
     eventName: "BRASA x BOUNCE",
     eventDescription:
       "The night you've been waiting for is back. And this time… we're doing it bigger.",
     eventType: "Social",
     isPaid: true,
-    moreInfoLink: "https://www.instagram.com/p/DVL6fa5DbAJ/?igsh=N3NhMmg5NDd6cDR0", // replace with IG link if needed
-    buyTicketLink: "https://posh.vip/e/brasa-x-bounce",
+    moreInfoLink: "https://www.instagram.com/p/DczA6Suy9fW/", // replace with IG link if needed
+    buyTicketLink: "https://posh.vip/e/ucf-brasa-x-bounce-lights-out-shades-on",
     isAnnounced: true,
   },
 ];
