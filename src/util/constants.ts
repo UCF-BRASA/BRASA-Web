@@ -849,6 +849,7 @@ export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
   //isAnnounced: true,
   //},
 
+  /*
   {
     image: brasa_bounce_pic,
     date: "10/09/2026",
@@ -864,7 +865,7 @@ export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
     isAnnounced: true,
   },
 ];
-
+*/
 
 export const NEWS_LETTER_DATA: newsletterPostData[] = [
   {
