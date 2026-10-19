@@ -868,6 +868,46 @@ export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
 
 export const NEWS_LETTER_DATA: newsletterPostData[] = [
   {
+    newsLetterDate: "09/21/26 - 09/27/26",
+    content:
+      "Systemic thinking is the ability to analyze how individual parts interact within a larger context, understanding that changing one variable can cause ripple effects throughout the entire system. In college, this involves seeing how isolated formulas, theories, and historical events connect to form larger frameworks rather than treating each assignment as a standalone requirement. Professionally, it means evaluating how your immediate tasks impact upstream inputs and downstream teams, allowing you to design scalable solutions and solve root causes instead of constantly patching surface level symptoms.",
+    events: [
+      {
+        eventTitle: 'Cardio Dance (BRASA Event)',
+        eventDate: "09/23/2026",
+        moreInfoLink: "https://docs.google.com/forms/d/e/1FAIpQLSeqGz8BOk86H8ciP5aPpjXajbnMfU3ECE4h5hAIdRkSFxqh4w/viewform?usp=header",
+      },
+      {
+        eventTitle: "Meet & Mentor (BRASA Event)",
+        eventDate: "09/24/2026",
+        moreInfoLink: "",
+      },
+      {
+        eventTitle: "UCF Football Game",
+        eventDate: "09/26/2026",
+        moreInfoLink: "",
+      },
+    ],
+    dontMissThis: [
+      {
+        title: "Electrical and Mechanical Lab Test and Validation Summer 2027 Intern",
+        link: "https://app.joinhandshake.com/jobs/11324402?utm_source=ios&utm_medium=share",
+      },
+      {
+        title: "Engineering Internship - Summer 2027 - Orlando, FL",
+        link: "https://app.joinhandshake.com/jobs/11390301?utm_source=ios&utm_medium=share",
+      },
+      {
+        title: "WDI Project Controls Estimating Intern",
+        link: "https://app.joinhandshake.com/jobs/11365778?utm_source=ios&utm_medium=share",
+      },
+      {
+        title: "2027 Quantitative Masters Internship Program - Investments - Quantitative Investing - New York",
+        link: "https://app.joinhandshake.com/jobs/11458406?utm_source=ios&utm_medium=share",
+      },
+    ],
+  },
+  {
     newsLetterDate: "02/09/26 - 02/15/26",
     content:
       "The STAR Method simplifies interview preparation by organizing responses into four key pillars: Situation, Task, Action, and Result. By detailing the context, your specific responsibilities, the steps you took, and the final outcome, you provide a clear, impactful narrative. This structured approach highlights your problem-solving skills and lessons learned, helping you stand out as a professional, effective communicator",
