@@ -97,7 +97,7 @@ import rafa_pic from "../../public/static/meet-board/prev-board/rafa.jpeg";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 
 // Upcoming Event Pictures
-import brasa_bounce_pic from "../../public/static/upcoming-events/Bounce-event-brasa.jpg";
+import brasa_bounce_pic from "../../public/static/upcoming-events/Bounce-event-brasa.jpeg";
 
 // Board pic
 import board_pic from "../../public/static/become-member/member-box/board_pic.jpg";
@@ -851,22 +851,62 @@ export const UPCOMING_EVENTS_DATA: UpcomingEventsData[] = [
 
   {
     image: brasa_bounce_pic,
-    date: "03/05/2026",
-    time: "9:00PM - 2:00AM",
+    date: "10/09/2026",
+    time: "10:00PM - 2:00AM",
     location: "12100 Challenger Pkwy, Orlando, FL 32826",
     eventName: "BRASA x BOUNCE",
     eventDescription:
       "The night you've been waiting for is back. And this time… we're doing it bigger.",
     eventType: "Social",
     isPaid: true,
-    moreInfoLink: "https://www.instagram.com/p/DVL6fa5DbAJ/?igsh=N3NhMmg5NDd6cDR0", // replace with IG link if needed
-    buyTicketLink: "https://posh.vip/e/brasa-x-bounce",
+    moreInfoLink: "https://www.instagram.com/p/DczA6Suy9fW/", // replace with IG link if needed
+    buyTicketLink: "https://posh.vip/e/ucf-brasa-x-bounce-lights-out-shades-on",
     isAnnounced: true,
   },
 ];
 
 
 export const NEWS_LETTER_DATA: newsletterPostData[] = [
+  {
+    newsLetterDate: "09/21/26 - 09/27/26",
+    content:
+      "Systemic thinking is the ability to analyze how individual parts interact within a larger context, understanding that changing one variable can cause ripple effects throughout the entire system. In college, this involves seeing how isolated formulas, theories, and historical events connect to form larger frameworks rather than treating each assignment as a standalone requirement. Professionally, it means evaluating how your immediate tasks impact upstream inputs and downstream teams, allowing you to design scalable solutions and solve root causes instead of constantly patching surface level symptoms.",
+    events: [
+      {
+        eventTitle: 'Cardio Dance (BRASA Event)',
+        eventDate: "09/23/2026",
+        moreInfoLink: "https://docs.google.com/forms/d/e/1FAIpQLSeqGz8BOk86H8ciP5aPpjXajbnMfU3ECE4h5hAIdRkSFxqh4w/viewform?usp=header",
+      },
+      {
+        eventTitle: "Meet & Mentor (BRASA Event)",
+        eventDate: "09/24/2026",
+        moreInfoLink: "",
+      },
+      {
+        eventTitle: "UCF Football Game",
+        eventDate: "09/26/2026",
+        moreInfoLink: "",
+      },
+    ],
+    dontMissThis: [
+      {
+        title: "Electrical and Mechanical Lab Test and Validation Summer 2027 Intern",
+        link: "https://app.joinhandshake.com/jobs/11324402?utm_source=ios&utm_medium=share",
+      },
+      {
+        title: "Engineering Internship - Summer 2027 - Orlando, FL",
+        link: "https://app.joinhandshake.com/jobs/11390301?utm_source=ios&utm_medium=share",
+      },
+      {
+        title: "WDI Project Controls Estimating Intern",
+        link: "https://app.joinhandshake.com/jobs/11365778?utm_source=ios&utm_medium=share",
+      },
+      {
+        title: "2027 Quantitative Masters Internship Program - Investments - Quantitative Investing - New York",
+        link: "https://app.joinhandshake.com/jobs/11458406?utm_source=ios&utm_medium=share",
+      },
+    ],
+  },
   {
     newsLetterDate: "02/09/26 - 02/15/26",
     content:
